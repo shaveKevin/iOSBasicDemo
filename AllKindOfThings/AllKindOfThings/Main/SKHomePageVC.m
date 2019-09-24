@@ -43,7 +43,8 @@ UITableViewDelegate
     [self addCellText:@"Runloop" class:@"SKRunloopVC"];
     [self addCellText:@"Block" class:@"SKBlockVC"];
     [self addCellText:@"KVC&KVO" class:@"SKKVCKVOVC"];
-    
+    [self addCellText:@"Delegate" class:@"SKDelegateVC"];
+    [self addCellText:@"属性" class:@"SKPropertyVC"];
     
     [self.tableView reloadData];
 }

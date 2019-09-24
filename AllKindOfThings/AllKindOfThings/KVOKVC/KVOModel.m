@@ -7,6 +7,11 @@
 //
 
 #import "KVOModel.h"
+
+@interface KVOModel ()
+
+
+@end
 @implementation KVOModel
 
 - (void)setAge:(NSInteger)age {

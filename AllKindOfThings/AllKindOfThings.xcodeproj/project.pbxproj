@@ -36,6 +36,8 @@
 		D70F4CA02339C60C005C2381 /* Block 深入浅出.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D70F4C9E2339C60C005C2381 /* Block 深入浅出.jpg */; };
 		D70F4CA4233A01BE005C2381 /* SKKVCKVOVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CA3233A01BE005C2381 /* SKKVCKVOVC.m */; };
 		D70F4CA7233A01D7005C2381 /* KVOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CA5233A01D7005C2381 /* KVOModel.m */; };
+		D70F4CAB233A0772005C2381 /* SKDelegateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CAA233A0772005C2381 /* SKDelegateVC.m */; };
+		D70F4CB0233A1E22005C2381 /* SKPropertyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CAF233A1E22005C2381 /* SKPropertyVC.m */; };
 		D78EEB0B2333283C0001467B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EEB0A2333283C0001467B /* AppDelegate.m */; };
 		D78EEB0E2333283C0001467B /* SKHomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EEB0D2333283C0001467B /* SKHomePageVC.m */; };
 		D78EEB112333283C0001467B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78EEB0F2333283C0001467B /* Main.storyboard */; };
@@ -110,6 +112,11 @@
 		D70F4CA3233A01BE005C2381 /* SKKVCKVOVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKKVCKVOVC.m; sourceTree = "<group>"; };
 		D70F4CA5233A01D7005C2381 /* KVOModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOModel.m; sourceTree = "<group>"; };
 		D70F4CA6233A01D7005C2381 /* KVOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOModel.h; sourceTree = "<group>"; };
+		D70F4CA9233A0772005C2381 /* SKDelegateVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKDelegateVC.h; sourceTree = "<group>"; };
+		D70F4CAA233A0772005C2381 /* SKDelegateVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKDelegateVC.m; sourceTree = "<group>"; };
+		D70F4CAC233A07A8005C2381 /* SKDelegateProtocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKDelegateProtocal.h; sourceTree = "<group>"; };
+		D70F4CAE233A1E22005C2381 /* SKPropertyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKPropertyVC.h; sourceTree = "<group>"; };
+		D70F4CAF233A1E22005C2381 /* SKPropertyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKPropertyVC.m; sourceTree = "<group>"; };
 		D78EEB062333283C0001467B /* 练习Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "练习Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78EEB092333283C0001467B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D78EEB0A2333283C0001467B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -310,6 +317,25 @@
 			path = KVOKVC;
 			sourceTree = "<group>";
 		};
+		D70F4CA8233A0762005C2381 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				D70F4CA9233A0772005C2381 /* SKDelegateVC.h */,
+				D70F4CAA233A0772005C2381 /* SKDelegateVC.m */,
+				D70F4CAC233A07A8005C2381 /* SKDelegateProtocal.h */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		D70F4CAD233A1BBB005C2381 /* Property */ = {
+			isa = PBXGroup;
+			children = (
+				D70F4CAE233A1E22005C2381 /* SKPropertyVC.h */,
+				D70F4CAF233A1E22005C2381 /* SKPropertyVC.m */,
+			);
+			path = Property;
+			sourceTree = "<group>";
+		};
 		D78EEAFD2333283C0001467B = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +357,8 @@
 		D78EEB082333283C0001467B /* AllKindOfThings */ = {
 			isa = PBXGroup;
 			children = (
+				D70F4CAD233A1BBB005C2381 /* Property */,
+				D70F4CA8233A0762005C2381 /* Delegate */,
 				D70F4CA1233A0191005C2381 /* KVOKVC */,
 				D700F660233479420054ADDA /* Block */,
 				D700F65C233478B10054ADDA /* RunLoop */,
@@ -468,6 +496,7 @@
 				D70F4C872339C402005C2381 /* SemaphoreTest.m in Sources */,
 				D700F6632334794F0054ADDA /* SKBlockVC.m in Sources */,
 				D78EEB0E2333283C0001467B /* SKHomePageVC.m in Sources */,
+				D70F4CB0233A1E22005C2381 /* SKPropertyVC.m in Sources */,
 				D700F66C2334AA650054ADDA /* SKClansVC.m in Sources */,
 				D700F64D233389400054ADDA /* SKRuntimeVC.m in Sources */,
 				D700F64923332B2B0054ADDA /* SKThreadDeadLockVC.m in Sources */,
@@ -478,6 +507,7 @@
 				D70F4C8E2339C402005C2381 /* SubDemo.m in Sources */,
 				D70F4C962339C402005C2381 /* TestExpand.m in Sources */,
 				D700F6692334AA5A0054ADDA /* SKDiscoveryVC.m in Sources */,
+				D70F4CAB233A0772005C2381 /* SKDelegateVC.m in Sources */,
 				D78EEB192333283D0001467B /* main.m in Sources */,
 				D70F4CA4233A01BE005C2381 /* SKKVCKVOVC.m in Sources */,
 				D700F66F2334AA800054ADDA /* SKPersonalCenterVC.m in Sources */,
