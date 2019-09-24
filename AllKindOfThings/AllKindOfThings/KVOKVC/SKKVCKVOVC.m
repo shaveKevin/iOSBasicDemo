@@ -1,27 +1,24 @@
 //
-//  ViewController.m
-//  KVO-Nature-Demo
+//  SKKVCKVOVC.m
+//  AllKindOfThings
 //
-//  Created by shavekevin on 2019/8/19.
-//  Copyright © 2019 shavekevin. All rights reserved.
+//  Created by shavekevin on 2019/9/24.
+//  Copyright © 2019 小风. All rights reserved.
 //
-// 探究KVO本质，一切理论从实践开始。
-#import "ViewController.h"
-#import "KVOModel.h"
 
+#import "SKKVCKVOVC.h"
+#import "KVOModel.h"
 // KVO - Key-Value- Observing 键值监听  用于监听某个对象中属性的改变
 // KVC - Key-Value- Coding 键值编码 主要用于不调用setter方法就更改或者访问对象的属性，这只是在动态地访问或更改对象的属性，而不是在编译期。
-
-@interface ViewController ()
-
+@interface SKKVCKVOVC ()
 
 @end
 
-
-@implementation ViewController
+@implementation SKKVCKVOVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self modelValueChange];
     
 }
@@ -53,6 +50,5 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     NSLog(@"监听到===%@===的%@===改变了%@===", object, keyPath,change);
 }
-
 
 @end

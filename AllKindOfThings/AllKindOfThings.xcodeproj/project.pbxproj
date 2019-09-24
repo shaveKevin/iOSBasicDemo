@@ -16,6 +16,26 @@
 		D700F66C2334AA650054ADDA /* SKClansVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D700F66B2334AA650054ADDA /* SKClansVC.m */; };
 		D700F66F2334AA800054ADDA /* SKPersonalCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D700F66E2334AA800054ADDA /* SKPersonalCenterVC.m */; };
 		D70EF39E2334738C002D0AB0 /* NSObject+SKRuntimeAssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D70EF39D2334738C002D0AB0 /* NSObject+SKRuntimeAssociatedObject.m */; };
+		D70F4C862339C401005C2381 /* BlockTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C5C2339C401005C2381 /* BlockTool.m */; };
+		D70F4C872339C402005C2381 /* SemaphoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C5E2339C401005C2381 /* SemaphoreTest.m */; };
+		D70F4C892339C402005C2381 /* DownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C662339C401005C2381 /* DownLoadManager.m */; };
+		D70F4C8C2339C402005C2381 /* SSDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C6D2339C401005C2381 /* SSDemo.m */; };
+		D70F4C8E2339C402005C2381 /* SubDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C6F2339C401005C2381 /* SubDemo.m */; };
+		D70F4C8F2339C402005C2381 /* PropertyDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C732339C401005C2381 /* PropertyDemo.m */; };
+		D70F4C912339C402005C2381 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C752339C401005C2381 /* TestModel.m */; };
+		D70F4C922339C402005C2381 /* RetainCycleModule.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C762339C401005C2381 /* RetainCycleModule.m */; };
+		D70F4C932339C402005C2381 /* NSObject+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C772339C401005C2381 /* NSObject+Add.m */; };
+		D70F4C942339C402005C2381 /* NSObject+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C792339C401005C2381 /* NSObject+Addition.m */; };
+		D70F4C952339C402005C2381 /* TestExpand+test.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C7B2339C401005C2381 /* TestExpand+test.m */; };
+		D70F4C962339C402005C2381 /* TestExpand.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C7C2339C401005C2381 /* TestExpand.m */; };
+		D70F4C992339C402005C2381 /* TestExpand+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C822339C401005C2381 /* TestExpand+Additions.m */; };
+		D70F4C9A2339C402005C2381 /* MoreTimeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C832339C401005C2381 /* MoreTimeTest.m */; };
+		D70F4C9B2339C402005C2381 /* ShortDemo1.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C842339C401005C2381 /* ShortDemo1.m */; };
+		D70F4C9C2339C402005C2381 /* BlockTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C852339C401005C2381 /* BlockTest.m */; };
+		D70F4C9F2339C60C005C2381 /* Block的深度探究.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D70F4C9D2339C60C005C2381 /* Block的深度探究.jpg */; };
+		D70F4CA02339C60C005C2381 /* Block 深入浅出.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D70F4C9E2339C60C005C2381 /* Block 深入浅出.jpg */; };
+		D70F4CA4233A01BE005C2381 /* SKKVCKVOVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CA3233A01BE005C2381 /* SKKVCKVOVC.m */; };
+		D70F4CA7233A01D7005C2381 /* KVOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CA5233A01D7005C2381 /* KVOModel.m */; };
 		D78EEB0B2333283C0001467B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EEB0A2333283C0001467B /* AppDelegate.m */; };
 		D78EEB0E2333283C0001467B /* SKHomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EEB0D2333283C0001467B /* SKHomePageVC.m */; };
 		D78EEB112333283C0001467B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78EEB0F2333283C0001467B /* Main.storyboard */; };
@@ -45,6 +65,51 @@
 		D700F66E2334AA800054ADDA /* SKPersonalCenterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKPersonalCenterVC.m; sourceTree = "<group>"; };
 		D70EF39C2334738C002D0AB0 /* NSObject+SKRuntimeAssociatedObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SKRuntimeAssociatedObject.h"; sourceTree = "<group>"; };
 		D70EF39D2334738C002D0AB0 /* NSObject+SKRuntimeAssociatedObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SKRuntimeAssociatedObject.m"; sourceTree = "<group>"; };
+		D70F4C5B2339C401005C2381 /* PropertyDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyDemo.h; sourceTree = "<group>"; };
+		D70F4C5C2339C401005C2381 /* BlockTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockTool.m; sourceTree = "<group>"; };
+		D70F4C5D2339C401005C2381 /* NSObject+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Addition.h"; sourceTree = "<group>"; };
+		D70F4C5E2339C401005C2381 /* SemaphoreTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SemaphoreTest.m; sourceTree = "<group>"; };
+		D70F4C5F2339C401005C2381 /* NSObject+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Add.h"; sourceTree = "<group>"; };
+		D70F4C602339C401005C2381 /* PropertyDemo-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "PropertyDemo-arm64.cpp"; sourceTree = "<group>"; };
+		D70F4C612339C401005C2381 /* RetainCycleModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetainCycleModule.h; sourceTree = "<group>"; };
+		D70F4C622339C401005C2381 /* TestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
+		D70F4C632339C401005C2381 /* ShortDemo1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortDemo1.h; sourceTree = "<group>"; };
+		D70F4C652339C401005C2381 /* DownLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadManager.h; sourceTree = "<group>"; };
+		D70F4C662339C401005C2381 /* DownLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadManager.m; sourceTree = "<group>"; };
+		D70F4C672339C401005C2381 /* MoreTimeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTimeTest.h; sourceTree = "<group>"; };
+		D70F4C682339C401005C2381 /* BlockTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockTest.h; sourceTree = "<group>"; };
+		D70F4C692339C401005C2381 /* ShortDemo1-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "ShortDemo1-arm64.cpp"; sourceTree = "<group>"; };
+		D70F4C6B2339C401005C2381 /* SubDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubDemo.h; sourceTree = "<group>"; };
+		D70F4C6C2339C401005C2381 /* SubDemo-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SubDemo-arm64.cpp"; sourceTree = "<group>"; };
+		D70F4C6D2339C401005C2381 /* SSDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDemo.m; sourceTree = "<group>"; };
+		D70F4C6E2339C401005C2381 /* SSbDemo-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SSbDemo-arm64.cpp"; sourceTree = "<group>"; };
+		D70F4C6F2339C401005C2381 /* SubDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubDemo.m; sourceTree = "<group>"; };
+		D70F4C702339C401005C2381 /* SSDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDemo.h; sourceTree = "<group>"; };
+		D70F4C722339C401005C2381 /* BlockTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockTool.h; sourceTree = "<group>"; };
+		D70F4C732339C401005C2381 /* PropertyDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyDemo.m; sourceTree = "<group>"; };
+		D70F4C742339C401005C2381 /* NSObject+Addition-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "NSObject+Addition-arm64.cpp"; sourceTree = "<group>"; };
+		D70F4C752339C401005C2381 /* TestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
+		D70F4C762339C401005C2381 /* RetainCycleModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetainCycleModule.m; sourceTree = "<group>"; };
+		D70F4C772339C401005C2381 /* NSObject+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Add.m"; sourceTree = "<group>"; };
+		D70F4C782339C401005C2381 /* SemaphoreTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SemaphoreTest.h; sourceTree = "<group>"; };
+		D70F4C792339C401005C2381 /* NSObject+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Addition.m"; sourceTree = "<group>"; };
+		D70F4C7B2339C401005C2381 /* TestExpand+test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TestExpand+test.m"; sourceTree = "<group>"; };
+		D70F4C7C2339C401005C2381 /* TestExpand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestExpand.m; sourceTree = "<group>"; };
+		D70F4C7D2339C401005C2381 /* TestExpand-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "TestExpand-arm64.cpp"; sourceTree = "<group>"; };
+		D70F4C7E2339C401005C2381 /* TestExpand+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestExpand+Additions.h"; sourceTree = "<group>"; };
+		D70F4C7F2339C401005C2381 /* TestExpand+test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestExpand+test.h"; sourceTree = "<group>"; };
+		D70F4C802339C401005C2381 /* TestExpand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestExpand.h; sourceTree = "<group>"; };
+		D70F4C812339C401005C2381 /* TestExpand+Additions-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "TestExpand+Additions-arm64.cpp"; sourceTree = "<group>"; };
+		D70F4C822339C401005C2381 /* TestExpand+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TestExpand+Additions.m"; sourceTree = "<group>"; };
+		D70F4C832339C401005C2381 /* MoreTimeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTimeTest.m; sourceTree = "<group>"; };
+		D70F4C842339C401005C2381 /* ShortDemo1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortDemo1.m; sourceTree = "<group>"; };
+		D70F4C852339C401005C2381 /* BlockTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockTest.m; sourceTree = "<group>"; };
+		D70F4C9D2339C60C005C2381 /* Block的深度探究.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Block的深度探究.jpg"; sourceTree = "<group>"; };
+		D70F4C9E2339C60C005C2381 /* Block 深入浅出.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Block 深入浅出.jpg"; sourceTree = "<group>"; };
+		D70F4CA2233A01BE005C2381 /* SKKVCKVOVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKKVCKVOVC.h; sourceTree = "<group>"; };
+		D70F4CA3233A01BE005C2381 /* SKKVCKVOVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKKVCKVOVC.m; sourceTree = "<group>"; };
+		D70F4CA5233A01D7005C2381 /* KVOModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOModel.m; sourceTree = "<group>"; };
+		D70F4CA6233A01D7005C2381 /* KVOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOModel.h; sourceTree = "<group>"; };
 		D78EEB062333283C0001467B /* 练习Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "练习Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78EEB092333283C0001467B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D78EEB0A2333283C0001467B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -149,8 +214,100 @@
 			children = (
 				D700F6612334794F0054ADDA /* SKBlockVC.h */,
 				D700F6622334794F0054ADDA /* SKBlockVC.m */,
+				D70F4C9E2339C60C005C2381 /* Block 深入浅出.jpg */,
+				D70F4C9D2339C60C005C2381 /* Block的深度探究.jpg */,
+				D70F4C5A2339C401005C2381 /* BlockTest */,
 			);
 			path = Block;
+			sourceTree = "<group>";
+		};
+		D70F4C5A2339C401005C2381 /* BlockTest */ = {
+			isa = PBXGroup;
+			children = (
+				D70F4C682339C401005C2381 /* BlockTest.h */,
+				D70F4C852339C401005C2381 /* BlockTest.m */,
+				D70F4C722339C401005C2381 /* BlockTool.h */,
+				D70F4C5C2339C401005C2381 /* BlockTool.m */,
+				D70F4C642339C401005C2381 /* DownLoadManager */,
+				D70F4C672339C401005C2381 /* MoreTimeTest.h */,
+				D70F4C832339C401005C2381 /* MoreTimeTest.m */,
+				D70F4C5F2339C401005C2381 /* NSObject+Add.h */,
+				D70F4C772339C401005C2381 /* NSObject+Add.m */,
+				D70F4C742339C401005C2381 /* NSObject+Addition-arm64.cpp */,
+				D70F4C5D2339C401005C2381 /* NSObject+Addition.h */,
+				D70F4C792339C401005C2381 /* NSObject+Addition.m */,
+				D70F4C602339C401005C2381 /* PropertyDemo-arm64.cpp */,
+				D70F4C5B2339C401005C2381 /* PropertyDemo.h */,
+				D70F4C732339C401005C2381 /* PropertyDemo.m */,
+				D70F4C612339C401005C2381 /* RetainCycleModule.h */,
+				D70F4C762339C401005C2381 /* RetainCycleModule.m */,
+				D70F4C782339C401005C2381 /* SemaphoreTest.h */,
+				D70F4C5E2339C401005C2381 /* SemaphoreTest.m */,
+				D70F4C692339C401005C2381 /* ShortDemo1-arm64.cpp */,
+				D70F4C632339C401005C2381 /* ShortDemo1.h */,
+				D70F4C842339C401005C2381 /* ShortDemo1.m */,
+				D70F4C6A2339C401005C2381 /* SubDemo */,
+				D70F4C7A2339C401005C2381 /* TestExpanded */,
+				D70F4C622339C401005C2381 /* TestModel.h */,
+				D70F4C752339C401005C2381 /* TestModel.m */,
+				D70F4C712339C401005C2381 /* Time */,
+			);
+			path = BlockTest;
+			sourceTree = "<group>";
+		};
+		D70F4C642339C401005C2381 /* DownLoadManager */ = {
+			isa = PBXGroup;
+			children = (
+				D70F4C652339C401005C2381 /* DownLoadManager.h */,
+				D70F4C662339C401005C2381 /* DownLoadManager.m */,
+			);
+			path = DownLoadManager;
+			sourceTree = "<group>";
+		};
+		D70F4C6A2339C401005C2381 /* SubDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D70F4C6B2339C401005C2381 /* SubDemo.h */,
+				D70F4C6C2339C401005C2381 /* SubDemo-arm64.cpp */,
+				D70F4C6D2339C401005C2381 /* SSDemo.m */,
+				D70F4C6E2339C401005C2381 /* SSbDemo-arm64.cpp */,
+				D70F4C6F2339C401005C2381 /* SubDemo.m */,
+				D70F4C702339C401005C2381 /* SSDemo.h */,
+			);
+			path = SubDemo;
+			sourceTree = "<group>";
+		};
+		D70F4C712339C401005C2381 /* Time */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Time;
+			sourceTree = "<group>";
+		};
+		D70F4C7A2339C401005C2381 /* TestExpanded */ = {
+			isa = PBXGroup;
+			children = (
+				D70F4C7B2339C401005C2381 /* TestExpand+test.m */,
+				D70F4C7C2339C401005C2381 /* TestExpand.m */,
+				D70F4C7D2339C401005C2381 /* TestExpand-arm64.cpp */,
+				D70F4C7E2339C401005C2381 /* TestExpand+Additions.h */,
+				D70F4C7F2339C401005C2381 /* TestExpand+test.h */,
+				D70F4C802339C401005C2381 /* TestExpand.h */,
+				D70F4C812339C401005C2381 /* TestExpand+Additions-arm64.cpp */,
+				D70F4C822339C401005C2381 /* TestExpand+Additions.m */,
+			);
+			path = TestExpanded;
+			sourceTree = "<group>";
+		};
+		D70F4CA1233A0191005C2381 /* KVOKVC */ = {
+			isa = PBXGroup;
+			children = (
+				D70F4CA2233A01BE005C2381 /* SKKVCKVOVC.h */,
+				D70F4CA3233A01BE005C2381 /* SKKVCKVOVC.m */,
+				D70F4CA6233A01D7005C2381 /* KVOModel.h */,
+				D70F4CA5233A01D7005C2381 /* KVOModel.m */,
+			);
+			path = KVOKVC;
 			sourceTree = "<group>";
 		};
 		D78EEAFD2333283C0001467B = {
@@ -174,6 +331,7 @@
 		D78EEB082333283C0001467B /* AllKindOfThings */ = {
 			isa = PBXGroup;
 			children = (
+				D70F4CA1233A0191005C2381 /* KVOKVC */,
 				D700F660233479420054ADDA /* Block */,
 				D700F65C233478B10054ADDA /* RunLoop */,
 				D700F646233328C00054ADDA /* Main */,
@@ -250,7 +408,9 @@
 			files = (
 				D78EEB162333283D0001467B /* LaunchScreen.storyboard in Resources */,
 				D78EEB132333283D0001467B /* Assets.xcassets in Resources */,
+				D70F4CA02339C60C005C2381 /* Block 深入浅出.jpg in Resources */,
 				D78EEB112333283C0001467B /* Main.storyboard in Resources */,
+				D70F4C9F2339C60C005C2381 /* Block的深度探究.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +463,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D70F4C8C2339C402005C2381 /* SSDemo.m in Sources */,
+				D70F4C932339C402005C2381 /* NSObject+Add.m in Sources */,
+				D70F4C872339C402005C2381 /* SemaphoreTest.m in Sources */,
 				D700F6632334794F0054ADDA /* SKBlockVC.m in Sources */,
 				D78EEB0E2333283C0001467B /* SKHomePageVC.m in Sources */,
 				D700F66C2334AA650054ADDA /* SKClansVC.m in Sources */,
@@ -310,11 +473,26 @@
 				D700F64923332B2B0054ADDA /* SKThreadDeadLockVC.m in Sources */,
 				D7E3DC5F2334B8D4008F7B95 /* SKUINavigationController.m in Sources */,
 				D70EF39E2334738C002D0AB0 /* NSObject+SKRuntimeAssociatedObject.m in Sources */,
+				D70F4C922339C402005C2381 /* RetainCycleModule.m in Sources */,
+				D70F4C942339C402005C2381 /* NSObject+Addition.m in Sources */,
+				D70F4C8E2339C402005C2381 /* SubDemo.m in Sources */,
+				D70F4C962339C402005C2381 /* TestExpand.m in Sources */,
 				D700F6692334AA5A0054ADDA /* SKDiscoveryVC.m in Sources */,
 				D78EEB192333283D0001467B /* main.m in Sources */,
+				D70F4CA4233A01BE005C2381 /* SKKVCKVOVC.m in Sources */,
 				D700F66F2334AA800054ADDA /* SKPersonalCenterVC.m in Sources */,
+				D70F4C912339C402005C2381 /* TestModel.m in Sources */,
+				D70F4C952339C402005C2381 /* TestExpand+test.m in Sources */,
 				D78EEB0B2333283C0001467B /* AppDelegate.m in Sources */,
+				D70F4C8F2339C402005C2381 /* PropertyDemo.m in Sources */,
+				D70F4CA7233A01D7005C2381 /* KVOModel.m in Sources */,
+				D70F4C9C2339C402005C2381 /* BlockTest.m in Sources */,
+				D70F4C992339C402005C2381 /* TestExpand+Additions.m in Sources */,
+				D70F4C9A2339C402005C2381 /* MoreTimeTest.m in Sources */,
 				D700F65F233478EA0054ADDA /* SKRunloopVC.m in Sources */,
+				D70F4C9B2339C402005C2381 /* ShortDemo1.m in Sources */,
+				D70F4C862339C401005C2381 /* BlockTool.m in Sources */,
+				D70F4C892339C402005C2381 /* DownLoadManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,15 +637,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M6834L34N9;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AllKindOfThings/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shavekevin.-";
 				PRODUCT_NAME = "练习Demo";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 arm64e";
 			};
 			name = Debug;
 		};
@@ -478,15 +658,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M6834L34N9;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AllKindOfThings/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shavekevin.-";
 				PRODUCT_NAME = "练习Demo";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 arm64e";
 			};
 			name = Release;
 		};
