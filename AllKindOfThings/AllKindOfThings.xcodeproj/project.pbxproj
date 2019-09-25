@@ -38,6 +38,12 @@
 		D70F4CA7233A01D7005C2381 /* KVOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CA5233A01D7005C2381 /* KVOModel.m */; };
 		D70F4CAB233A0772005C2381 /* SKDelegateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CAA233A0772005C2381 /* SKDelegateVC.m */; };
 		D70F4CB0233A1E22005C2381 /* SKPropertyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CAF233A1E22005C2381 /* SKPropertyVC.m */; };
+		D70F4CB8233AF9ED005C2381 /* SKSegementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CB7233AF9ED005C2381 /* SKSegementVC.m */; };
+		D70F4CBB233AFFC5005C2381 /* SKSegementOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CBA233AFFC5005C2381 /* SKSegementOneVC.m */; };
+		D70F4CBE233AFFD1005C2381 /* SKSegementTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CBD233AFFD1005C2381 /* SKSegementTwoVC.m */; };
+		D70F4CC3233B5FF8005C2381 /* SKProprtyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CC2233B5FF8005C2381 /* SKProprtyModel.m */; };
+		D70F4CC8233B7174005C2381 /* SKSynthesizeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CC7233B7174005C2381 /* SKSynthesizeModel.m */; };
+		D70F4CCB233B72ED005C2381 /* SKPropertyTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CCA233B72ED005C2381 /* SKPropertyTestModel.m */; };
 		D78EEB0B2333283C0001467B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EEB0A2333283C0001467B /* AppDelegate.m */; };
 		D78EEB0E2333283C0001467B /* SKHomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EEB0D2333283C0001467B /* SKHomePageVC.m */; };
 		D78EEB112333283C0001467B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78EEB0F2333283C0001467B /* Main.storyboard */; };
@@ -117,6 +123,20 @@
 		D70F4CAC233A07A8005C2381 /* SKDelegateProtocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKDelegateProtocal.h; sourceTree = "<group>"; };
 		D70F4CAE233A1E22005C2381 /* SKPropertyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKPropertyVC.h; sourceTree = "<group>"; };
 		D70F4CAF233A1E22005C2381 /* SKPropertyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKPropertyVC.m; sourceTree = "<group>"; };
+		D70F4CB6233AF9ED005C2381 /* SKSegementVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSegementVC.h; sourceTree = "<group>"; };
+		D70F4CB7233AF9ED005C2381 /* SKSegementVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSegementVC.m; sourceTree = "<group>"; };
+		D70F4CB9233AFFC5005C2381 /* SKSegementOneVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSegementOneVC.h; sourceTree = "<group>"; };
+		D70F4CBA233AFFC5005C2381 /* SKSegementOneVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSegementOneVC.m; sourceTree = "<group>"; };
+		D70F4CBC233AFFD1005C2381 /* SKSegementTwoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSegementTwoVC.h; sourceTree = "<group>"; };
+		D70F4CBD233AFFD1005C2381 /* SKSegementTwoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSegementTwoVC.m; sourceTree = "<group>"; };
+		D70F4CBF233B17DE005C2381 /* SKPropertyVCarm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SKPropertyVCarm64.cpp; sourceTree = "<group>"; };
+		D70F4CC1233B5FF8005C2381 /* SKProprtyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKProprtyModel.h; sourceTree = "<group>"; };
+		D70F4CC2233B5FF8005C2381 /* SKProprtyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKProprtyModel.m; sourceTree = "<group>"; };
+		D70F4CC4233B61AA005C2381 /* SKProprtyModel-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKProprtyModel-arm64.cpp"; sourceTree = "<group>"; };
+		D70F4CC6233B7174005C2381 /* SKSynthesizeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSynthesizeModel.h; sourceTree = "<group>"; };
+		D70F4CC7233B7174005C2381 /* SKSynthesizeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSynthesizeModel.m; sourceTree = "<group>"; };
+		D70F4CC9233B72ED005C2381 /* SKPropertyTestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKPropertyTestModel.h; sourceTree = "<group>"; };
+		D70F4CCA233B72ED005C2381 /* SKPropertyTestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKPropertyTestModel.m; sourceTree = "<group>"; };
 		D78EEB062333283C0001467B /* 练习Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "练习Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78EEB092333283C0001467B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D78EEB0A2333283C0001467B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -332,8 +352,37 @@
 			children = (
 				D70F4CAE233A1E22005C2381 /* SKPropertyVC.h */,
 				D70F4CAF233A1E22005C2381 /* SKPropertyVC.m */,
+				D70F4CC1233B5FF8005C2381 /* SKProprtyModel.h */,
+				D70F4CC2233B5FF8005C2381 /* SKProprtyModel.m */,
+				D70F4CC6233B7174005C2381 /* SKSynthesizeModel.h */,
+				D70F4CC7233B7174005C2381 /* SKSynthesizeModel.m */,
+				D70F4CC9233B72ED005C2381 /* SKPropertyTestModel.h */,
+				D70F4CCA233B72ED005C2381 /* SKPropertyTestModel.m */,
+				D70F4CC4233B61AA005C2381 /* SKProprtyModel-arm64.cpp */,
+				D70F4CBF233B17DE005C2381 /* SKPropertyVCarm64.cpp */,
 			);
 			path = Property;
+			sourceTree = "<group>";
+		};
+		D70F4CB1233AF95C005C2381 /* UIFeature */ = {
+			isa = PBXGroup;
+			children = (
+				D70F4CB5233AF9D7005C2381 /* UISegement */,
+			);
+			path = UIFeature;
+			sourceTree = "<group>";
+		};
+		D70F4CB5233AF9D7005C2381 /* UISegement */ = {
+			isa = PBXGroup;
+			children = (
+				D70F4CB6233AF9ED005C2381 /* SKSegementVC.h */,
+				D70F4CB7233AF9ED005C2381 /* SKSegementVC.m */,
+				D70F4CB9233AFFC5005C2381 /* SKSegementOneVC.h */,
+				D70F4CBA233AFFC5005C2381 /* SKSegementOneVC.m */,
+				D70F4CBC233AFFD1005C2381 /* SKSegementTwoVC.h */,
+				D70F4CBD233AFFD1005C2381 /* SKSegementTwoVC.m */,
+			);
+			path = UISegement;
 			sourceTree = "<group>";
 		};
 		D78EEAFD2333283C0001467B = {
@@ -357,6 +406,7 @@
 		D78EEB082333283C0001467B /* AllKindOfThings */ = {
 			isa = PBXGroup;
 			children = (
+				D70F4CB1233AF95C005C2381 /* UIFeature */,
 				D70F4CAD233A1BBB005C2381 /* Property */,
 				D70F4CA8233A0762005C2381 /* Delegate */,
 				D70F4CA1233A0191005C2381 /* KVOKVC */,
@@ -493,6 +543,8 @@
 			files = (
 				D70F4C8C2339C402005C2381 /* SSDemo.m in Sources */,
 				D70F4C932339C402005C2381 /* NSObject+Add.m in Sources */,
+				D70F4CCB233B72ED005C2381 /* SKPropertyTestModel.m in Sources */,
+				D70F4CC8233B7174005C2381 /* SKSynthesizeModel.m in Sources */,
 				D70F4C872339C402005C2381 /* SemaphoreTest.m in Sources */,
 				D700F6632334794F0054ADDA /* SKBlockVC.m in Sources */,
 				D78EEB0E2333283C0001467B /* SKHomePageVC.m in Sources */,
@@ -503,10 +555,12 @@
 				D7E3DC5F2334B8D4008F7B95 /* SKUINavigationController.m in Sources */,
 				D70EF39E2334738C002D0AB0 /* NSObject+SKRuntimeAssociatedObject.m in Sources */,
 				D70F4C922339C402005C2381 /* RetainCycleModule.m in Sources */,
+				D70F4CB8233AF9ED005C2381 /* SKSegementVC.m in Sources */,
 				D70F4C942339C402005C2381 /* NSObject+Addition.m in Sources */,
 				D70F4C8E2339C402005C2381 /* SubDemo.m in Sources */,
 				D70F4C962339C402005C2381 /* TestExpand.m in Sources */,
 				D700F6692334AA5A0054ADDA /* SKDiscoveryVC.m in Sources */,
+				D70F4CBB233AFFC5005C2381 /* SKSegementOneVC.m in Sources */,
 				D70F4CAB233A0772005C2381 /* SKDelegateVC.m in Sources */,
 				D78EEB192333283D0001467B /* main.m in Sources */,
 				D70F4CA4233A01BE005C2381 /* SKKVCKVOVC.m in Sources */,
@@ -515,9 +569,11 @@
 				D70F4C952339C402005C2381 /* TestExpand+test.m in Sources */,
 				D78EEB0B2333283C0001467B /* AppDelegate.m in Sources */,
 				D70F4C8F2339C402005C2381 /* PropertyDemo.m in Sources */,
+				D70F4CC3233B5FF8005C2381 /* SKProprtyModel.m in Sources */,
 				D70F4CA7233A01D7005C2381 /* KVOModel.m in Sources */,
 				D70F4C9C2339C402005C2381 /* BlockTest.m in Sources */,
 				D70F4C992339C402005C2381 /* TestExpand+Additions.m in Sources */,
+				D70F4CBE233AFFD1005C2381 /* SKSegementTwoVC.m in Sources */,
 				D70F4C9A2339C402005C2381 /* MoreTimeTest.m in Sources */,
 				D700F65F233478EA0054ADDA /* SKRunloopVC.m in Sources */,
 				D70F4C9B2339C402005C2381 /* ShortDemo1.m in Sources */,
