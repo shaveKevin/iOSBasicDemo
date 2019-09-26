@@ -8,6 +8,8 @@
 
 #import "SKRuntimeVC.h"
 #import "NSObject+SKRuntimeAssociatedObject.h"
+#import "SKRuntimePerson.h"
+#import "SKMessageSendAction.h"
 
 @interface SKRuntimeVC ()
 
@@ -23,7 +25,8 @@
     [self setupLayout];
     
     [self runtimeProperty];
-    
+    [self methodSendNil];
+    [self messageSendUnrecognizedSelector];
 }
 
 - (void)setupViews {
@@ -40,7 +43,6 @@
 }
 
 
-
 - (void)runtimeProperty {
     // 对类添加属性 采用的是runtime
     NSObject *objc = [[NSObject alloc] init];
@@ -49,5 +51,15 @@
     
 }
 
+- (void)methodSendNil{
+    SKRuntimePerson *person = [[SKRuntimePerson alloc]init];
+    [person takeAction];
+    [person testMsgSendAction];
+}
+
+- (void)messageSendUnrecognizedSelector {
+    SKMessageSendAction *msgSend = [[SKMessageSendAction alloc]init];
+    [msgSend takeActions];
+}
 
 @end

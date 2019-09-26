@@ -9,7 +9,7 @@
 #import "SKProprtyModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
+// 面试题：@synthesize和@dynamic分别有什么作用？
 @interface SKSynthesizeModel : SKProprtyModel
 
 @end

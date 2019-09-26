@@ -44,6 +44,9 @@
 		D70F4CC3233B5FF8005C2381 /* SKProprtyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CC2233B5FF8005C2381 /* SKProprtyModel.m */; };
 		D70F4CC8233B7174005C2381 /* SKSynthesizeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CC7233B7174005C2381 /* SKSynthesizeModel.m */; };
 		D70F4CCB233B72ED005C2381 /* SKPropertyTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CCA233B72ED005C2381 /* SKPropertyTestModel.m */; };
+		D70F4CCF233C4D53005C2381 /* SKSortAlgorithmVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CCE233C4D53005C2381 /* SKSortAlgorithmVC.m */; };
+		D70F4CD6233C9346005C2381 /* SKRuntimePerson.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CD5233C9346005C2381 /* SKRuntimePerson.m */; };
+		D70F4D03233CAFF7005C2381 /* SKMessageSendAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4D02233CAFF7005C2381 /* SKMessageSendAction.m */; };
 		D78EEB0B2333283C0001467B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EEB0A2333283C0001467B /* AppDelegate.m */; };
 		D78EEB0E2333283C0001467B /* SKHomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EEB0D2333283C0001467B /* SKHomePageVC.m */; };
 		D78EEB112333283C0001467B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78EEB0F2333283C0001467B /* Main.storyboard */; };
@@ -137,6 +140,15 @@
 		D70F4CC7233B7174005C2381 /* SKSynthesizeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSynthesizeModel.m; sourceTree = "<group>"; };
 		D70F4CC9233B72ED005C2381 /* SKPropertyTestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKPropertyTestModel.h; sourceTree = "<group>"; };
 		D70F4CCA233B72ED005C2381 /* SKPropertyTestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKPropertyTestModel.m; sourceTree = "<group>"; };
+		D70F4CCD233C4D53005C2381 /* SKSortAlgorithmVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSortAlgorithmVC.h; sourceTree = "<group>"; };
+		D70F4CCE233C4D53005C2381 /* SKSortAlgorithmVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSortAlgorithmVC.m; sourceTree = "<group>"; };
+		D70F4CD0233C57B9005C2381 /* SKSynthesizeModel-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKSynthesizeModel-arm64.cpp"; sourceTree = "<group>"; };
+		D70F4CD2233C58DA005C2381 /* SKPropertyTestModel-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKPropertyTestModel-arm64.cpp"; sourceTree = "<group>"; };
+		D70F4CD4233C9346005C2381 /* SKRuntimePerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKRuntimePerson.h; sourceTree = "<group>"; };
+		D70F4CD5233C9346005C2381 /* SKRuntimePerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKRuntimePerson.m; sourceTree = "<group>"; };
+		D70F4CFF233CA8A6005C2381 /* SKRuntimePerson-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKRuntimePerson-arm64.cpp"; sourceTree = "<group>"; };
+		D70F4D01233CAFF7005C2381 /* SKMessageSendAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKMessageSendAction.h; sourceTree = "<group>"; };
+		D70F4D02233CAFF7005C2381 /* SKMessageSendAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKMessageSendAction.m; sourceTree = "<group>"; };
 		D78EEB062333283C0001467B /* 练习Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "练习Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78EEB092333283C0001467B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D78EEB0A2333283C0001467B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -223,6 +235,11 @@
 			children = (
 				D70EF39C2334738C002D0AB0 /* NSObject+SKRuntimeAssociatedObject.h */,
 				D70EF39D2334738C002D0AB0 /* NSObject+SKRuntimeAssociatedObject.m */,
+				D70F4CD4233C9346005C2381 /* SKRuntimePerson.h */,
+				D70F4CD5233C9346005C2381 /* SKRuntimePerson.m */,
+				D70F4D01233CAFF7005C2381 /* SKMessageSendAction.h */,
+				D70F4D02233CAFF7005C2381 /* SKMessageSendAction.m */,
+				D70F4CFF233CA8A6005C2381 /* SKRuntimePerson-arm64.cpp */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -356,8 +373,10 @@
 				D70F4CC2233B5FF8005C2381 /* SKProprtyModel.m */,
 				D70F4CC6233B7174005C2381 /* SKSynthesizeModel.h */,
 				D70F4CC7233B7174005C2381 /* SKSynthesizeModel.m */,
+				D70F4CD0233C57B9005C2381 /* SKSynthesizeModel-arm64.cpp */,
 				D70F4CC9233B72ED005C2381 /* SKPropertyTestModel.h */,
 				D70F4CCA233B72ED005C2381 /* SKPropertyTestModel.m */,
+				D70F4CD2233C58DA005C2381 /* SKPropertyTestModel-arm64.cpp */,
 				D70F4CC4233B61AA005C2381 /* SKProprtyModel-arm64.cpp */,
 				D70F4CBF233B17DE005C2381 /* SKPropertyVCarm64.cpp */,
 			);
@@ -385,6 +404,15 @@
 			path = UISegement;
 			sourceTree = "<group>";
 		};
+		D70F4CCC233C4D2D005C2381 /* Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				D70F4CCD233C4D53005C2381 /* SKSortAlgorithmVC.h */,
+				D70F4CCE233C4D53005C2381 /* SKSortAlgorithmVC.m */,
+			);
+			path = Algorithm;
+			sourceTree = "<group>";
+		};
 		D78EEAFD2333283C0001467B = {
 			isa = PBXGroup;
 			children = (
@@ -406,6 +434,7 @@
 		D78EEB082333283C0001467B /* AllKindOfThings */ = {
 			isa = PBXGroup;
 			children = (
+				D70F4CCC233C4D2D005C2381 /* Algorithm */,
 				D70F4CB1233AF95C005C2381 /* UIFeature */,
 				D70F4CAD233A1BBB005C2381 /* Property */,
 				D70F4CA8233A0762005C2381 /* Delegate */,
@@ -546,9 +575,11 @@
 				D70F4CCB233B72ED005C2381 /* SKPropertyTestModel.m in Sources */,
 				D70F4CC8233B7174005C2381 /* SKSynthesizeModel.m in Sources */,
 				D70F4C872339C402005C2381 /* SemaphoreTest.m in Sources */,
+				D70F4CD6233C9346005C2381 /* SKRuntimePerson.m in Sources */,
 				D700F6632334794F0054ADDA /* SKBlockVC.m in Sources */,
 				D78EEB0E2333283C0001467B /* SKHomePageVC.m in Sources */,
 				D70F4CB0233A1E22005C2381 /* SKPropertyVC.m in Sources */,
+				D70F4D03233CAFF7005C2381 /* SKMessageSendAction.m in Sources */,
 				D700F66C2334AA650054ADDA /* SKClansVC.m in Sources */,
 				D700F64D233389400054ADDA /* SKRuntimeVC.m in Sources */,
 				D700F64923332B2B0054ADDA /* SKThreadDeadLockVC.m in Sources */,
@@ -578,6 +609,7 @@
 				D700F65F233478EA0054ADDA /* SKRunloopVC.m in Sources */,
 				D70F4C9B2339C402005C2381 /* ShortDemo1.m in Sources */,
 				D70F4C862339C401005C2381 /* BlockTool.m in Sources */,
+				D70F4CCF233C4D53005C2381 /* SKSortAlgorithmVC.m in Sources */,
 				D70F4C892339C402005C2381 /* DownLoadManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,7 @@
 
 #import "SKPropertyVC.h"
 #import <Masonry/Masonry.h>
+#import "SKPropertyTestModel.h"
 
 @interface SKPropertyVC ()
 
@@ -16,6 +17,10 @@
 @property (nonatomic, strong) UILabel *extLabel;
  
 @property (nonatomic, strong) UIScrollView *mainScrollView;
+
+@property (nonatomic, strong) UILabel *textsynLabel;
+
+@property (nonatomic, strong) UILabel *extSynLabel;
 
 @end
 
@@ -29,8 +34,7 @@
     [self setupLayout];
     [self normalMethod];
     [self nssetMethod];
-    
-    
+    [self testSynthesizeAndDynamic];
 }
 
 - (void)setupViews {
@@ -39,6 +43,9 @@
     [self.view addSubview:self.mainScrollView];
     [self.mainScrollView addSubview:self.extLabel];
     [self.mainScrollView addSubview:self.textLabel];
+    [self.mainScrollView addSubview:self.extSynLabel];
+    [self.mainScrollView addSubview:self.textsynLabel];
+
     
 }
 
@@ -46,6 +53,8 @@
     
     self.extLabel.text = @"深拷贝&浅拷贝";
     self.textLabel.text = @"  非集合对象\n\n1. [不可变对象 copy]  --浅复制 --- 地址不变,\n\n2.[不可变对象 mutableCopy]  --深复制 --地址发生变化,\n\n3.[可变对象 copy] -- 深复制  -- 地址发生变化，\n\n4.[可变对象 mutableCopy] --深复制 --地址发生变化。\n\n浅拷贝的时候 更改原值 才可能会影响新值。深拷贝相当于直接开辟一个空间copy出来一个副本 除了值没变 其他都变了。\n\n 集合对象\n\n1.[不可变对象 copy]   浅复制 因为地址没变\n\n2. [不可变对象  mutableCopy] 深复制 因为地址变了 但是里面的元素地址并没有改变 说明这是复制只是单层深复制,也就是说集合对象的深拷贝只是单层的深拷贝。集合元素并没有被深拷贝到\n\n3.[可变对象  copy] 单层深复制\n\n4. [不可变对象 mutableCopy] 单层深复制,值不变，对象地址发生改变。\n\n深拷贝的时候 对原对象做操作不会影响拷贝对象的行为，但是如果对里面元素做操作 可能会受影响。因为集合中的元素并未被拷贝到。\n\n总结来说，复制有三种：\n\n1.浅复制(shallow copy)：在浅复制操作时，对于被复制对象的每一层都是指针复制。\n\n2.深复制(one-level-deep copy)：在深复制操作时，对于被复制对象，至少有一层是深复制。\n\n3.完全复制(real-deep copy)：在完全复制操作时，对于被复制对象的每一层都是对象复制。";
+    self.extSynLabel.text = @"@synthesize和@dynamic分别有什么作用?";
+    self.textsynLabel.text = @" 1. @proprerty 有两个对应的词，一个是@synthesize一个是@sdynamic，如果@synthesize和@dynamic都没写。那么默认的就是@synthesize  var = _var;\n\n2. @synthesize 的语义是如果你没有手动实现setter 和 getter 方法。那么编译器会自动为你加上这两个方法。\n\n3. @dynamic 告诉编译器，setter和getter方法由用户自己实现，不自动生成。(对于readonly的属性只需要提供getter即可)假如一个属性被声明为@dynamic var 如果你没有实现setter 和getter方法，虽然编译的时候不会报错，但是当程序运行到 instance.var = someVar 的时候，由于缺少setter方法 而crash 报错信息为:（-[SKPropertyTestModel setTitle:]: unrecognized selector sent to instance 0x2803a51a0） 当运行到someVar= var的时候。由于缺少getter 方法而crash.报错信息为:（ -[SKPropertyTestModel title]: unrecognized selector sent to instance 0x2829a0160）在编译的时候没问题，在运行的时候才会去执行对应的方法，这就是所谓的动态绑定。";
 }
 
 - (void)setupLayout {
@@ -60,6 +69,18 @@
     }];
     [self.textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.extLabel.mas_bottom).offset(10);
+        make.left.mas_equalTo(15);
+        make.right.mas_equalTo(-15);
+//        make.bottom.mas_equalTo(-15);
+    }];
+    
+    [self.extSynLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(15);
+        make.right.mas_equalTo(-15);
+        make.top.equalTo(self.textLabel.mas_bottom).offset(15);
+    }];
+    [self.textsynLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.extSynLabel.mas_bottom).offset(10);
         make.left.mas_equalTo(15);
         make.right.mas_equalTo(-15);
         make.bottom.mas_equalTo(-15);
@@ -137,7 +158,7 @@
     
     // 3.[可变对象  copy] 单层深复制
     // 4. [不可变对象 mutableCopy] 单层深复制
-    // 值不变，对象地址发生改变。 值
+    // 值不变，对象地址发生改变。
     NSMutableArray *array  = dataArray.mutableCopy;
     NSMutableArray *arrayCopy = [array copy];
     NSMutableArray *arrayMutableCopy = [array mutableCopy];
@@ -146,6 +167,14 @@
     NSLog(@"array  首地址  is %p, arrayCopy  首地址 is %p, arrayMutableCopy   首地址 is %p ",array[0],arrayCopy[0],arrayMutableCopy[0]);
     
     
+}
+
+- (void)testSynthesizeAndDynamic {
+    SKPropertyTestModel *model = [[SKPropertyTestModel alloc]init];
+    model.title =  @"title";
+    NSLog(@"%@",model.title);
+    
+    [model takeActions];
 }
 
 - (UILabel *)textLabel {
@@ -166,7 +195,24 @@
     }
     return _extLabel;
 }
+- (UILabel *)extSynLabel {
+    if (!_extSynLabel ) {
+           _extSynLabel = [[UILabel alloc]init];
+           _extSynLabel.textColor = [UIColor blackColor];
+           _extSynLabel.textAlignment = NSTextAlignmentCenter;
+       }
+       return _extSynLabel;
+}
 
+-(UILabel *)textsynLabel {
+    if (!_textsynLabel ) {
+          _textsynLabel = [[UILabel alloc]init];
+          _textsynLabel.textColor = [UIColor blackColor];
+          _textsynLabel.numberOfLines = 0;
+          _textsynLabel.preferredMaxLayoutWidth = CGRectGetWidth([UIScreen mainScreen].bounds) - 30;
+      }
+    return _textsynLabel;
+}
 - (UIScrollView *)mainScrollView {
     if (!_mainScrollView) {
         _mainScrollView = [[UIScrollView alloc]init];

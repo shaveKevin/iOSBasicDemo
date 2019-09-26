@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="1916" y="-824"/>
         </scene>
-        <!--发现-->
+        <!--算法-->
         <scene sceneID="60y-gK-xhm">
             <objects>
                 <viewController id="fxJ-JO-1oy" customClass="SKDiscoveryVC" sceneMemberID="viewController">
@@ -36,17 +36,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="w4J-UY-f9S"/>
                     </view>
-                    <navigationItem key="navigationItem" title="发现" id="TAd-gp-Zqu"/>
+                    <navigationItem key="navigationItem" title="算法" id="TAd-gp-Zqu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cyb-Di-rkf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1893" y="-173"/>
         </scene>
-        <!--发现-->
+        <!--算法-->
         <scene sceneID="6Mp-JG-GGI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yAH-WK-TLT" customClass="SKUINavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="发现" image="tabbar_icon_found_normal" selectedImage="tabbar_icon_found_select" id="B3W-x1-TDZ"/>
+                    <tabBarItem key="tabBarItem" title="算法" image="tabbar_icon_found_normal" selectedImage="tabbar_icon_found_select" id="B3W-x1-TDZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="knc-1m-6Ai">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

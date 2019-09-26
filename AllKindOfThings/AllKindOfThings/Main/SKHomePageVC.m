@@ -96,6 +96,4 @@ UITableViewDelegate
     return _tableView;
 }
 
-
-
 @end
