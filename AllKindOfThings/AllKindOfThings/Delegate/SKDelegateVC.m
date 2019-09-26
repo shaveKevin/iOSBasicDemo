@@ -13,6 +13,7 @@
 @interface SKDelegateVC ()<SKDelegateProtocal>
 
 @property (nonatomic, assign) id<SKDelegateProtocal>  delegate;
+
 @end
 
 @implementation SKDelegateVC

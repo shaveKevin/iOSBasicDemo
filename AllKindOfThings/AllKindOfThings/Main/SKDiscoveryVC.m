@@ -40,9 +40,9 @@ UITableViewDelegate
 
     [self addCellText:@"排序算法" class:@"SKSortAlgorithmVC"];
 
-    
     [self.tableView reloadData];
 }
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
