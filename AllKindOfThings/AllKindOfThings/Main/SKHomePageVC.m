@@ -45,6 +45,8 @@ UITableViewDelegate
     [self addCellText:@"KVC&KVO" class:@"SKKVCKVOVC"];
     [self addCellText:@"Delegate" class:@"SKDelegateVC"];
     [self addCellText:@"属性" class:@"SKPropertyVC"];
+    [self addCellText:@"对象" class:@"SKObjectObjectVC"];
+
     
     [self.tableView reloadData];
 }

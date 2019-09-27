@@ -47,6 +47,11 @@
 		D70F4CCF233C4D53005C2381 /* SKSortAlgorithmVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CCE233C4D53005C2381 /* SKSortAlgorithmVC.m */; };
 		D70F4CD6233C9346005C2381 /* SKRuntimePerson.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CD5233C9346005C2381 /* SKRuntimePerson.m */; };
 		D70F4D03233CAFF7005C2381 /* SKMessageSendAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4D02233CAFF7005C2381 /* SKMessageSendAction.m */; };
+		D70F4D50233DA4A0005C2381 /* SKRuntimeOtherObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4D4F233DA4A0005C2381 /* SKRuntimeOtherObject.m */; };
+		D70F4D7B233E061C005C2381 /* SKObjectObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4D7A233E061C005C2381 /* SKObjectObject.m */; };
+		D70F4D7E233E062D005C2381 /* SKObjectObjectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4D7D233E062D005C2381 /* SKObjectObjectVC.m */; };
+		D70F4D81233E08FE005C2381 /* SKSubObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4D80233E08FE005C2381 /* SKSubObject.m */; };
+		D70F4D85233E11B3005C2381 /* 类继承经典图.png in Resources */ = {isa = PBXBuildFile; fileRef = D70F4D84233E11B3005C2381 /* 类继承经典图.png */; };
 		D78EEB0B2333283C0001467B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EEB0A2333283C0001467B /* AppDelegate.m */; };
 		D78EEB0E2333283C0001467B /* SKHomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EEB0D2333283C0001467B /* SKHomePageVC.m */; };
 		D78EEB112333283C0001467B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78EEB0F2333283C0001467B /* Main.storyboard */; };
@@ -149,6 +154,17 @@
 		D70F4CFF233CA8A6005C2381 /* SKRuntimePerson-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKRuntimePerson-arm64.cpp"; sourceTree = "<group>"; };
 		D70F4D01233CAFF7005C2381 /* SKMessageSendAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKMessageSendAction.h; sourceTree = "<group>"; };
 		D70F4D02233CAFF7005C2381 /* SKMessageSendAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKMessageSendAction.m; sourceTree = "<group>"; };
+		D70F4D4E233DA4A0005C2381 /* SKRuntimeOtherObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKRuntimeOtherObject.h; sourceTree = "<group>"; };
+		D70F4D4F233DA4A0005C2381 /* SKRuntimeOtherObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKRuntimeOtherObject.m; sourceTree = "<group>"; };
+		D70F4D76233DD964005C2381 /* SKMessageSendAction-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKMessageSendAction-arm64.cpp"; sourceTree = "<group>"; };
+		D70F4D79233E061C005C2381 /* SKObjectObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKObjectObject.h; sourceTree = "<group>"; };
+		D70F4D7A233E061C005C2381 /* SKObjectObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKObjectObject.m; sourceTree = "<group>"; };
+		D70F4D7C233E062D005C2381 /* SKObjectObjectVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKObjectObjectVC.h; sourceTree = "<group>"; };
+		D70F4D7D233E062D005C2381 /* SKObjectObjectVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKObjectObjectVC.m; sourceTree = "<group>"; };
+		D70F4D7F233E08FE005C2381 /* SKSubObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSubObject.h; sourceTree = "<group>"; };
+		D70F4D80233E08FE005C2381 /* SKSubObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSubObject.m; sourceTree = "<group>"; };
+		D70F4D82233E0A64005C2381 /* SKSubObject-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKSubObject-arm64.cpp"; sourceTree = "<group>"; };
+		D70F4D84233E11B3005C2381 /* 类继承经典图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "类继承经典图.png"; sourceTree = "<group>"; };
 		D78EEB062333283C0001467B /* 练习Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "练习Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78EEB092333283C0001467B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D78EEB0A2333283C0001467B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -239,6 +255,9 @@
 				D70F4CD5233C9346005C2381 /* SKRuntimePerson.m */,
 				D70F4D01233CAFF7005C2381 /* SKMessageSendAction.h */,
 				D70F4D02233CAFF7005C2381 /* SKMessageSendAction.m */,
+				D70F4D76233DD964005C2381 /* SKMessageSendAction-arm64.cpp */,
+				D70F4D4E233DA4A0005C2381 /* SKRuntimeOtherObject.h */,
+				D70F4D4F233DA4A0005C2381 /* SKRuntimeOtherObject.m */,
 				D70F4CFF233CA8A6005C2381 /* SKRuntimePerson-arm64.cpp */,
 			);
 			path = Class;
@@ -413,6 +432,21 @@
 			path = Algorithm;
 			sourceTree = "<group>";
 		};
+		D70F4D78233E0607005C2381 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				D70F4D79233E061C005C2381 /* SKObjectObject.h */,
+				D70F4D7A233E061C005C2381 /* SKObjectObject.m */,
+				D70F4D7F233E08FE005C2381 /* SKSubObject.h */,
+				D70F4D80233E08FE005C2381 /* SKSubObject.m */,
+				D70F4D82233E0A64005C2381 /* SKSubObject-arm64.cpp */,
+				D70F4D7C233E062D005C2381 /* SKObjectObjectVC.h */,
+				D70F4D7D233E062D005C2381 /* SKObjectObjectVC.m */,
+				D70F4D84233E11B3005C2381 /* 类继承经典图.png */,
+			);
+			path = Object;
+			sourceTree = "<group>";
+		};
 		D78EEAFD2333283C0001467B = {
 			isa = PBXGroup;
 			children = (
@@ -434,6 +468,7 @@
 		D78EEB082333283C0001467B /* AllKindOfThings */ = {
 			isa = PBXGroup;
 			children = (
+				D70F4D78233E0607005C2381 /* Object */,
 				D70F4CCC233C4D2D005C2381 /* Algorithm */,
 				D70F4CB1233AF95C005C2381 /* UIFeature */,
 				D70F4CAD233A1BBB005C2381 /* Property */,
@@ -516,6 +551,7 @@
 				D78EEB162333283D0001467B /* LaunchScreen.storyboard in Resources */,
 				D78EEB132333283D0001467B /* Assets.xcassets in Resources */,
 				D70F4CA02339C60C005C2381 /* Block 深入浅出.jpg in Resources */,
+				D70F4D85233E11B3005C2381 /* 类继承经典图.png in Resources */,
 				D78EEB112333283C0001467B /* Main.storyboard in Resources */,
 				D70F4C9F2339C60C005C2381 /* Block的深度探究.jpg in Resources */,
 			);
@@ -572,9 +608,11 @@
 			files = (
 				D70F4C8C2339C402005C2381 /* SSDemo.m in Sources */,
 				D70F4C932339C402005C2381 /* NSObject+Add.m in Sources */,
+				D70F4D50233DA4A0005C2381 /* SKRuntimeOtherObject.m in Sources */,
 				D70F4CCB233B72ED005C2381 /* SKPropertyTestModel.m in Sources */,
 				D70F4CC8233B7174005C2381 /* SKSynthesizeModel.m in Sources */,
 				D70F4C872339C402005C2381 /* SemaphoreTest.m in Sources */,
+				D70F4D7B233E061C005C2381 /* SKObjectObject.m in Sources */,
 				D70F4CD6233C9346005C2381 /* SKRuntimePerson.m in Sources */,
 				D700F6632334794F0054ADDA /* SKBlockVC.m in Sources */,
 				D78EEB0E2333283C0001467B /* SKHomePageVC.m in Sources */,
@@ -590,11 +628,13 @@
 				D70F4C942339C402005C2381 /* NSObject+Addition.m in Sources */,
 				D70F4C8E2339C402005C2381 /* SubDemo.m in Sources */,
 				D70F4C962339C402005C2381 /* TestExpand.m in Sources */,
+				D70F4D7E233E062D005C2381 /* SKObjectObjectVC.m in Sources */,
 				D700F6692334AA5A0054ADDA /* SKDiscoveryVC.m in Sources */,
 				D70F4CBB233AFFC5005C2381 /* SKSegementOneVC.m in Sources */,
 				D70F4CAB233A0772005C2381 /* SKDelegateVC.m in Sources */,
 				D78EEB192333283D0001467B /* main.m in Sources */,
 				D70F4CA4233A01BE005C2381 /* SKKVCKVOVC.m in Sources */,
+				D70F4D81233E08FE005C2381 /* SKSubObject.m in Sources */,
 				D700F66F2334AA800054ADDA /* SKPersonalCenterVC.m in Sources */,
 				D70F4C912339C402005C2381 /* TestModel.m in Sources */,
 				D70F4C952339C402005C2381 /* TestExpand+test.m in Sources */,
