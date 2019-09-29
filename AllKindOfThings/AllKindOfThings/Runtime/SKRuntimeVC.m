@@ -105,17 +105,20 @@
     } else {
         NSLog(@"没有返回值");
     }
-       
+       // 这题意原本就是错误的。没有返回值 瞎接收什么
     id returnValue = [self performSelector:@selector(testReturnValueMethod)];
+    // 闪退的时候 在这里 ->  0x107a85c9f <+591>: movq   %rax, -0x50(%rbp)
+    // 0x107a85c9f 指令在内存中的地址， <+591  和上一个指令的；偏移地址差>将寄存器rax的值 (源操作数)写入rbp寄存器(目标操作数)
     if (returnValue) {
         NSLog(@"returnValue===%@",returnValue);
     } else {
         NSLog(@"returnValue ==没有返回值");
     }
+    // 如果app闪退 可以通过LLDB的bt命令打印错误堆栈 （bt是thread backtrace的缩写） thread return 命令行终端某个方法可以返回想要的值
 }
 
 - (void)testReturnValueMethod {
-  // 这里添加方法的时候会闪退。只要执行方法就闪退。 (汇编问题)原因应该是performSelector的returnvalue为0x0， 当执行方法里面为空的时候，没有改变寄存器的地址。所以0x0在PerformSelector的时候地址还为0x0.如果方法里面调用堆栈的时候，最后导致0x0不能被access所以就报bad access错误了。
+  // 这里添加方法的时候会闪退。只要执行方法就闪退。 (汇编问题)原因应该是performSelector的returnvalue为x0， 当执行方法里面为空的时候，没有改变寄存器的地址。所以x0在PerformSelector的时候地址还为x0.如果方法里面调用堆栈的时候，最后导致x0不能被access所以就报bad access错误了。
     NSLog(@"this is method");
 }
 
