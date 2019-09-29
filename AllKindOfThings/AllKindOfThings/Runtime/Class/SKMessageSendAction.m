@@ -72,7 +72,7 @@ void testMethod (id  self, SEL  _cmd) {
 - (id)forwardingTargetForSelector:(SEL)aSelector {
     NSLog(@"2.挽救闪退 step two  :forwardingTargetForSelector");
     // 打开注释即可测试第三步
-    return  [super forwardingTargetForSelector:aSelector];
+//    return  [super forwardingTargetForSelector:aSelector];
     
     if (aSelector == @selector(testUnrecognizedSelector)) {
         SKRuntimeOtherObject  *obj  = [[SKRuntimeOtherObject alloc]init];
@@ -85,12 +85,12 @@ void testMethod (id  self, SEL  _cmd) {
 // 找到对应的标识 然后继续执行消息转发走到第一步，接着走forwardInvocation 创建一个NSInvocation对象，然后直接调用方法invokeWithTarget
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
     NSLog(@"3.1挽救闪退 step three  :methodSignatureForSelector");
+    
     SKRuntimeOtherObject  *obj  = [[SKRuntimeOtherObject alloc]init];
     if (aSelector == @selector(testUnrecognizedSelector)) {
         // 这个标识代表的是：
         //只要参数相同以及是否有返回值(不管返回值类型是否相同)都相同的话，返回的标识就是相同。。也就是说 这个标识代表的是是否一类方法。
         NSMethodSignature *methodSignature = [obj methodSignatureForSelector:@selector(stepThreeUnrecognizedSelector)];
-
         return methodSignature;
     }
     return [super methodSignatureForSelector:aSelector];
@@ -115,17 +115,23 @@ void testMethod (id  self, SEL  _cmd) {
  1.挽救闪退 step  one add method 保证不crash
  3.2挽救闪退 step three & step two :forwardInvocation
  */
-// 重写系统的方法doesNotRecognizeSelector:不super 也不会挂  一般处理这个用的是消息转发  一般不重写这个方法
+// 重写系统的方法doesNotRecognizeSelector:
 - (void)doesNotRecognizeSelector:(SEL)aSelector {
     
     NSLog(@"方法名是：%@",NSStringFromSelector(aSelector));
-    NSLog(@"补救措施都没有 等着挂了吧");
-//    [super doesNotRecognizeSelector:aSelector];
+    NSLog(@"走到这里说明：补救措施都没有 等着挂了吧 == 看来是后娘养的");
+    [super doesNotRecognizeSelector:aSelector];
 }
 
 // 关于NSMethodSignature  可参考 ： https://www.jianshu.com/p/70a8b3f62107
 
 // 关于OC的消息发送和转发原理 可参考： https://xiaozhuanlan.com/topic/9417083256
+// 延伸提问： NSInvocation invokeWithTarget  和performSelector：withObject：有什么区别？
+// 答:performSelector：withObject：这种类型的方法最多有两个参数
+// NSInvocation 可以设置多个参数。
+// 使用方式不同：通过NSObject类生成方法签名。通过方法签名生成invocation。设置方法的调用者以及选择器和参数。如果有返回值 获取返回值
+// performSelector：withObject： 直接调用即可 - (id)performSelector:(SEL)aSelector withObject:(id)object1 withObject:(id)object2
+// 具体实例 见SKRuntimeVC
 
 
 

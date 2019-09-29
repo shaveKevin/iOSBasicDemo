@@ -23,10 +23,14 @@
     [self setupViews];
     [self setupData];
     [self setupLayout];
-    
+    // 对类添加属性
     [self runtimeProperty];
+    // 发送空消息给一个对象会怎么样
     [self methodSendNil];
+    // 消息转发机制
     [self messageSendUnrecognizedSelector];
+    // 通过invocation和performselector执行方法的区别
+    [self invocationAndPerformSelector];
 }
 
 - (void)setupViews {
@@ -60,6 +64,68 @@
 - (void)messageSendUnrecognizedSelector {
     SKMessageSendAction *msgSend = [[SKMessageSendAction alloc]init];
     [msgSend takeActions];
+}
+
+- (void)invocationAndPerformSelector {
+    
+    // 1. NSInvocation
+    // 第一步生成方法签名
+    NSMethodSignature *methodSignature = [[self class] instanceMethodSignatureForSelector:@selector(invocationArgs:args2:args3:)];
+    // 第二步由方法签名生成NSInvocation
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSignature];
+    // 第三步设置方法调用者
+    invocation.target = self;
+    // 第四步设置方法
+    invocation.selector = @selector(invocationArgs:args2:args3:);
+    // 第五步设置参数 注意参数
+    NSString *args1 = @"第一个参数";
+    NSString *args2 = @"第二个参数";
+    NSString *args3 = @"第三个参数";
+// 为啥设置参数要从第三个开始呢 因为第一个和第二个被self 和 _cmd 占用了
+    [invocation setArgument:&args1 atIndex:2];
+    [invocation setArgument:&args2 atIndex:3];
+    [invocation setArgument:&args3 atIndex:4];
+    // 第六步执行
+    [invocation invoke];
+// 第七步判断有无返回值 返回为signLength 为8
+//    const char *sign = methodSignature.methodReturnType;
+    NSUInteger signLength = methodSignature.methodReturnLength;
+    // 返回值大于0 的时候
+    if (signLength!=0) {
+        // 有返回值
+        NSLog(@"有返回值");
+    } else{
+        NSLog(@"没有返回值");
+    }
+    // 2. PerformSelector:object(最多支持两个参数) 通过id很容易就判断出 返回值类型 注意这里返回只能是个对象。。基本数据类型不行。。。
+    
+   id perfromSele  = [self performSelector:@selector(performSelectorS:arg2:) withObject:@"第一个参数" withObject:@"第二个参数"];
+    if (perfromSele) {
+        NSLog(@"打印结果为===%@",perfromSele);
+    } else {
+        NSLog(@"没有返回值");
+    }
+       
+    id returnValue = [self performSelector:@selector(testReturnValueMethod)];
+    if (returnValue) {
+        NSLog(@"returnValue===%@",returnValue);
+    } else {
+        NSLog(@"returnValue ==没有返回值");
+    }
+}
+
+- (void)testReturnValueMethod {
+  // 这里添加方法的时候会闪退。只要执行方法就闪退。 (汇编问题)原因应该是performSelector的returnvalue为0x0， 当执行方法里面为空的时候，没有改变寄存器的地址。所以0x0在PerformSelector的时候地址还为0x0.如果方法里面调用堆栈的时候，最后导致0x0不能被access所以就报bad access错误了。
+    NSLog(@"this is method");
+}
+
+- (void )performSelectorS:(NSString *)args1 arg2:(NSString *)args2 {
+    NSLog(@"performSelectorS args1 %@   args2 %@",args1,args2);
+}
+
+- (NSString *)invocationArgs:(NSString *)args1 args2:(NSString *)args2 args3:(NSString *)args3 {
+    NSLog(@"args1 %@  args2 %@  args3 %@",args1,args2,args3);
+    return @"xxx";
 }
 
 @end

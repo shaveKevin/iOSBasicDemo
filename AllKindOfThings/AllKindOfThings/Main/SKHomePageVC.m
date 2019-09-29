@@ -46,6 +46,7 @@ UITableViewDelegate
     [self addCellText:@"Delegate" class:@"SKDelegateVC"];
     [self addCellText:@"属性" class:@"SKPropertyVC"];
     [self addCellText:@"对象" class:@"SKObjectObjectVC"];
+    [self addCellText:@"UI" class:@"SKSegementVC"];
 
     
     [self.tableView reloadData];
