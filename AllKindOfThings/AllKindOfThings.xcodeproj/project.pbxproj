@@ -52,6 +52,8 @@
 		D70F4D7E233E062D005C2381 /* SKObjectObjectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4D7D233E062D005C2381 /* SKObjectObjectVC.m */; };
 		D70F4D81233E08FE005C2381 /* SKSubObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4D80233E08FE005C2381 /* SKSubObject.m */; };
 		D70F4D85233E11B3005C2381 /* 类继承经典图.png in Resources */ = {isa = PBXBuildFile; fileRef = D70F4D84233E11B3005C2381 /* 类继承经典图.png */; };
+		D70F4DB423420435005C2381 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4DB323420435005C2381 /* Aspects.m */; };
+		D70F4DB723420491005C2381 /* NSObject+SKHookSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4DB623420491005C2381 /* NSObject+SKHookSelector.m */; };
 		D78EEB0B2333283C0001467B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EEB0A2333283C0001467B /* AppDelegate.m */; };
 		D78EEB0E2333283C0001467B /* SKHomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EEB0D2333283C0001467B /* SKHomePageVC.m */; };
 		D78EEB112333283C0001467B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78EEB0F2333283C0001467B /* Main.storyboard */; };
@@ -165,6 +167,10 @@
 		D70F4D80233E08FE005C2381 /* SKSubObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSubObject.m; sourceTree = "<group>"; };
 		D70F4D82233E0A64005C2381 /* SKSubObject-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKSubObject-arm64.cpp"; sourceTree = "<group>"; };
 		D70F4D84233E11B3005C2381 /* 类继承经典图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "类继承经典图.png"; sourceTree = "<group>"; };
+		D70F4DB223420435005C2381 /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
+		D70F4DB323420435005C2381 /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
+		D70F4DB523420491005C2381 /* NSObject+SKHookSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SKHookSelector.h"; sourceTree = "<group>"; };
+		D70F4DB623420491005C2381 /* NSObject+SKHookSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SKHookSelector.m"; sourceTree = "<group>"; };
 		D78EEB062333283C0001467B /* 练习Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "练习Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78EEB092333283C0001467B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D78EEB0A2333283C0001467B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -447,6 +453,17 @@
 			path = Object;
 			sourceTree = "<group>";
 		};
+		D70F4DB123420422005C2381 /* Aspects */ = {
+			isa = PBXGroup;
+			children = (
+				D70F4DB223420435005C2381 /* Aspects.h */,
+				D70F4DB323420435005C2381 /* Aspects.m */,
+				D70F4DB523420491005C2381 /* NSObject+SKHookSelector.h */,
+				D70F4DB623420491005C2381 /* NSObject+SKHookSelector.m */,
+			);
+			path = Aspects;
+			sourceTree = "<group>";
+		};
 		D78EEAFD2333283C0001467B = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +485,7 @@
 		D78EEB082333283C0001467B /* AllKindOfThings */ = {
 			isa = PBXGroup;
 			children = (
+				D70F4DB123420422005C2381 /* Aspects */,
 				D70F4D78233E0607005C2381 /* Object */,
 				D70F4CCC233C4D2D005C2381 /* Algorithm */,
 				D70F4CB1233AF95C005C2381 /* UIFeature */,
@@ -629,6 +647,7 @@
 				D70F4C8E2339C402005C2381 /* SubDemo.m in Sources */,
 				D70F4C962339C402005C2381 /* TestExpand.m in Sources */,
 				D70F4D7E233E062D005C2381 /* SKObjectObjectVC.m in Sources */,
+				D70F4DB423420435005C2381 /* Aspects.m in Sources */,
 				D700F6692334AA5A0054ADDA /* SKDiscoveryVC.m in Sources */,
 				D70F4CBB233AFFC5005C2381 /* SKSegementOneVC.m in Sources */,
 				D70F4CAB233A0772005C2381 /* SKDelegateVC.m in Sources */,
@@ -642,6 +661,7 @@
 				D70F4C8F2339C402005C2381 /* PropertyDemo.m in Sources */,
 				D70F4CC3233B5FF8005C2381 /* SKProprtyModel.m in Sources */,
 				D70F4CA7233A01D7005C2381 /* KVOModel.m in Sources */,
+				D70F4DB723420491005C2381 /* NSObject+SKHookSelector.m in Sources */,
 				D70F4C9C2339C402005C2381 /* BlockTest.m in Sources */,
 				D70F4C992339C402005C2381 /* TestExpand+Additions.m in Sources */,
 				D70F4CBE233AFFD1005C2381 /* SKSegementTwoVC.m in Sources */,

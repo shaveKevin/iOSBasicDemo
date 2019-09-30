@@ -45,6 +45,7 @@
 //         我是挽救闪退添加的方法保证不crash
 + (BOOL)resolveInstanceMethod:(SEL)sel {
     NSLog(@"1.挽救闪退 step  one add method 保证不crash");
+    // 注意这里有方法缓存。 第一次调用之后。再次调用直接走方法 这里就不走了。
     // 打开注释即可测试第二步
     return YES;
 // 这个判断可以不用写。因为既然走这里了，证明找不到方法，便于理解才这样写。
@@ -70,9 +71,10 @@ void testMethod (id  self, SEL  _cmd) {
 // 打印结果:1.挽救闪退 step  one add method 保证不crash
 //        2.挽救闪退 step two  :forwardingTargetForSelector
 - (id)forwardingTargetForSelector:(SEL)aSelector {
+    // 这里没有缓存。每调用一次就会走一次方法
     NSLog(@"2.挽救闪退 step two  :forwardingTargetForSelector");
     // 打开注释即可测试第三步
-//    return  [super forwardingTargetForSelector:aSelector];
+    return  [super forwardingTargetForSelector:aSelector];
     
     if (aSelector == @selector(testUnrecognizedSelector)) {
         SKRuntimeOtherObject  *obj  = [[SKRuntimeOtherObject alloc]init];
@@ -84,23 +86,34 @@ void testMethod (id  self, SEL  _cmd) {
 //通过打印可以看出 走到第三步的时候，根据NSMethodSignature
 // 找到对应的标识 然后继续执行消息转发走到第一步，接着走forwardInvocation 创建一个NSInvocation对象，然后直接调用方法invokeWithTarget
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
-    NSLog(@"3.1挽救闪退 step three  :methodSignatureForSelector");
     
+    return [super methodSignatureForSelector:aSelector];
+
+    NSLog(@"3.1挽救闪退 step three  :methodSignatureForSelector");
+    // 当再次调用的时候resolveInstanceMethod 只会走一次。剩下的方法都会走。
     SKRuntimeOtherObject  *obj  = [[SKRuntimeOtherObject alloc]init];
     if (aSelector == @selector(testUnrecognizedSelector)) {
         // 这个标识代表的是：
         //只要参数相同以及是否有返回值(不管返回值类型是否相同)都相同的话，返回的标识就是相同。。也就是说 这个标识代表的是是否一类方法。
-        NSMethodSignature *methodSignature = [obj methodSignatureForSelector:@selector(stepThreeUnrecognizedSelector)];
+        NSMethodSignature *methodSignature = [obj methodSignatureForSelector:@selector(stepThreeUnrecognizedSelector:)];
         return methodSignature;
     }
     return [super methodSignatureForSelector:aSelector];
 }
-
+// 这里实例是将方法转发给其他类
 - (void)forwardInvocation:(NSInvocation *)anInvocation {
+    [super forwardInvocation:anInvocation];
+    return;
     NSLog(@"3.2挽救闪退 step three & step two :forwardInvocation");
     SEL sel = [anInvocation selector];
     SKRuntimeOtherObject  *obj  = [[SKRuntimeOtherObject alloc]init];
     if ([obj respondsToSelector:sel]) {
+        // 转发到那个方法
+        [anInvocation setSelector:@selector(stepThreeUnrecognizedSelector:)];
+        NSString *args = @"==this is parame";
+        // 为啥从2开始呢。因为一个是self 和 _cmd
+        // 添加参数
+        [anInvocation setArgument:&args atIndex:2];
         [anInvocation invokeWithTarget:obj];
     } else {
         [super forwardInvocation:anInvocation];

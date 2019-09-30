@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)testUnrecognizedSelector;
 
-- (void)stepThreeUnrecognizedSelector;
+- (void)stepThreeUnrecognizedSelector:(NSString *)parame;
 
 
 - (NSString *)stepThreeUnrecognizedSelectorTwo:(NSString *)one two:(NSString *)two;

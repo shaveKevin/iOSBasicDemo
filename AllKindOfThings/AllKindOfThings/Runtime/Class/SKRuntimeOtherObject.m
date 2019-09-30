@@ -15,8 +15,8 @@
     NSLog(@"我是其他类的方法");
 }
 
-- (void)stepThreeUnrecognizedSelector {
-    NSLog(@"我是第三步 消息转发到其他类的方法");
+- (void)stepThreeUnrecognizedSelector:(NSString *)parame {
+    NSLog(@"我是第三步 消息转发到其他类的方法，参数是：%@",parame);
 }
 
 - (NSString *)stepThreeUnrecognizedSelectorTwo:(NSString *)one two:(NSString *)two{

@@ -30,9 +30,15 @@
     // 消息转发机制
     [self messageSendUnrecognizedSelector];
     // 通过invocation和performselector执行方法的区别
+    return;
     [self invocationAndPerformSelector];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self messageSendUnrecognizedSelector];
+
+}
 - (void)setupViews {
     self.view.backgroundColor = [UIColor whiteColor];
 
@@ -109,6 +115,7 @@
     id returnValue = [self performSelector:@selector(testReturnValueMethod)];
     // 闪退的时候 在这里 ->  0x107a85c9f <+591>: movq   %rax, -0x50(%rbp)
     // 0x107a85c9f 指令在内存中的地址， <+591  和上一个指令的；偏移地址差>将寄存器rax的值 (源操作数)写入rbp寄存器(目标操作数)
+    // 注意 没有返回值 这个时候返回时个随机类型的。。可以是NSCFString 也可以是NSTaggedDate
     if (returnValue) {
         NSLog(@"returnValue===%@",returnValue);
     } else {
