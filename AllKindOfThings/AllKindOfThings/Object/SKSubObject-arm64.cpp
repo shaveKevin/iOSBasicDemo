@@ -106,8 +106,10 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKSubObject_bd172c_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"\345\257\214\345\243\253\345\261\261\344\270\213",12};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKSubObject_bd172c_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"thisisSubMethod",15};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKSubObject_67f200_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"\345\257\214\345\243\253\345\261\261\344\270\213",12};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKSubObject_67f200_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"thisisSubMethod",15};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKSubObject_67f200_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"[self class] == %@   %p",23};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKSubObject_67f200_mi_3 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"[super class] == %@   %p",24};
 
 
 
@@ -1312,6 +1314,8 @@ void qsort_r(void *__base, size_t __nel, size_t __width, void *,
      int (* _Nonnull __compar)(void *, const void *, const void *));
 int radixsort(const unsigned char **__base, int __nel, const unsigned char *__table,
      unsigned __endbyte);
+int rpmatch(const char *)
+ __attribute__((availability(macos,introduced=10.15))) __attribute__((availability(ios,introduced=13.0))) __attribute__((availability(tvos,introduced=13.0))) __attribute__((availability(watchos,introduced=6.0)));
 int sradixsort(const unsigned char **__base, int __nel, const unsigned char *__table,
      unsigned __endbyte);
 void sranddev(void);
@@ -33677,6 +33681,11 @@ struct NSUserActivity_IMPL {
 
 
 
+
+// @property (nullable, copy) NSString* targetContentIdentifier __attribute__((availability(macos,introduced=10.15))) __attribute__((availability(ios,introduced=13.0))) __attribute__((availability(watchos,introduced=6.0))) __attribute__((availability(tvos,introduced=13.0)));
+
+
+
 // - (void)becomeCurrent;
 
 
@@ -33832,13 +33841,14 @@ struct SKObjectObject_IMPL {
 // @property (nonatomic, strong) NSString *ObjectObjectString;
 
 // - (void)printObjectObject;
+
 // + (void)thisisSuperMethod;
+
 /* @end */
 
 #pragma clang assume_nonnull end
 
 #pragma clang assume_nonnull begin
-
 
 #ifndef _REWRITER_typedef_SKSubObject
 #define _REWRITER_typedef_SKSubObject
@@ -33871,22 +33881,28 @@ struct SKSubObject_IMPL {
 
 /* @end */
 
-
-
-
-
-
-
 // @implementation SKSubObject
 
+
+
 static void _I_SKSubObject_printSubObject(SKSubObject * self, SEL _cmd) {
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKSubObject_bd172c_mi_0);
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKSubObject_67f200_mi_0);
 }
 
 
 static void _C_SKSubObject_thisisSubMethod(Class self, SEL _cmd) {
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKSubObject_bd172c_mi_1);
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKSubObject_67f200_mi_1);
 }
+
+static instancetype _I_SKSubObject_init(SKSubObject * self, SEL _cmd) {
+
+    if (self = ((SKSubObject *(*)(__rw_objc_super *, SEL))(void *)objc_msgSendSuper)((__rw_objc_super){(id)self, (id)class_getSuperclass(objc_getClass("SKSubObject"))}, sel_registerName("init"))) {
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKSubObject_67f200_mi_2,NSStringFromClass(((Class (*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("class"))),((Class (*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("class")));
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKSubObject_67f200_mi_3,NSStringFromClass(((Class (*)(__rw_objc_super *, SEL))(void *)objc_msgSendSuper)((__rw_objc_super){(id)self, (id)class_getSuperclass(objc_getClass("SKSubObject"))}, sel_registerName("class"))),((Class (*)(__rw_objc_super *, SEL))(void *)objc_msgSendSuper)((__rw_objc_super){(id)self, (id)class_getSuperclass(objc_getClass("SKSubObject"))}, sel_registerName("class")));
+    }
+    return self;
+}
+
 
 static NSString * _Nonnull _I_SKSubObject_subObjectString(SKSubObject * self, SEL _cmd) { return (*(NSString * _Nonnull *)((char *)self + OBJC_IVAR_$_SKSubObject$_subObjectString)); }
 static void _I_SKSubObject_setSubObjectString_(SKSubObject * self, SEL _cmd, NSString * _Nonnull subObjectString) { (*(NSString * _Nonnull *)((char *)self + OBJC_IVAR_$_SKSubObject$_subObjectString)) = subObjectString; }
@@ -33979,11 +33995,12 @@ static struct /*_ivar_list_t*/ {
 static struct /*_method_list_t*/ {
 	unsigned int entsize;  // sizeof(struct _objc_method)
 	unsigned int method_count;
-	struct _objc_method method_list[5];
+	struct _objc_method method_list[6];
 } _OBJC_$_INSTANCE_METHODS_SKSubObject __attribute__ ((used, section ("__DATA,__objc_const"))) = {
 	sizeof(_objc_method),
-	5,
+	6,
 	{{(struct objc_selector *)"printSubObject", "v16@0:8", (void *)_I_SKSubObject_printSubObject},
+	{(struct objc_selector *)"init", "@16@0:8", (void *)_I_SKSubObject_init},
 	{(struct objc_selector *)"subObjectString", "@16@0:8", (void *)_I_SKSubObject_subObjectString},
 	{(struct objc_selector *)"setSubObjectString:", "v24@0:8@16", (void *)_I_SKSubObject_setSubObjectString_},
 	{(struct objc_selector *)"priObjectString", "@16@0:8", (void *)_I_SKSubObject_priObjectString},

@@ -16,7 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *ObjectObjectString;
 
 - (void)printObjectObject;
+
 + (void)thisisSuperMethod;
+
+- (id)printClass;
+
 @end
 
 NS_ASSUME_NONNULL_END

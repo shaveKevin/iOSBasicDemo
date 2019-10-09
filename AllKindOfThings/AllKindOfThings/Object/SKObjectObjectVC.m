@@ -8,6 +8,7 @@
 //
 
 #import "SKObjectObjectVC.h"
+#import "SKSubObject.h"
 
 @interface SKObjectObjectVC ()
 
@@ -31,6 +32,7 @@
 }
 
 - (void)setupData {
+    SKSubObject *objc = [[SKSubObject alloc]init];
     
 }
 

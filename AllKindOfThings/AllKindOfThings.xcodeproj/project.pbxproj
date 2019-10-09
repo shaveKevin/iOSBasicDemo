@@ -181,6 +181,7 @@
 		D78EEB152333283D0001467B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D78EEB172333283D0001467B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D78EEB182333283D0001467B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D7CD140A234DE3B500082006 /* NSObject+SKRuntimeAssociatedObject-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "NSObject+SKRuntimeAssociatedObject-arm64.cpp"; sourceTree = "<group>"; };
 		D7E3DC5D2334B8D4008F7B95 /* SKUINavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKUINavigationController.h; sourceTree = "<group>"; };
 		D7E3DC5E2334B8D4008F7B95 /* SKUINavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKUINavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -257,6 +258,7 @@
 			children = (
 				D70EF39C2334738C002D0AB0 /* NSObject+SKRuntimeAssociatedObject.h */,
 				D70EF39D2334738C002D0AB0 /* NSObject+SKRuntimeAssociatedObject.m */,
+				D7CD140A234DE3B500082006 /* NSObject+SKRuntimeAssociatedObject-arm64.cpp */,
 				D70F4CD4233C9346005C2381 /* SKRuntimePerson.h */,
 				D70F4CD5233C9346005C2381 /* SKRuntimePerson.m */,
 				D70F4D01233CAFF7005C2381 /* SKMessageSendAction.h */,

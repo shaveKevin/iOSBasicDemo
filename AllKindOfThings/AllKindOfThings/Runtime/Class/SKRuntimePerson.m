@@ -51,8 +51,6 @@
 // objc的源代码
 
  // runtime.h（类在runtime中的定义）
- // http://weibo.com/luohanchenyilong/
- // https://github.com/ChenYilong
 /*
  struct objc_class {
    Class isa OBJC_ISA_AVAILABILITY; //isa指针指向Meta Class，因为Objc的类的本身也是一个Object，为了处理这个关系，runtime就创造了Meta Class，当给类发送[NSObject alloc]这样消息时，实际上是把这个消息发给了Class Object
@@ -86,6 +84,13 @@
 - (void)foo {
     NSLog(@"执行方法foo");
 }
+
+// 面试题解答：runtime如何通过selector找到对应的IMP地址(分别考虑类方法和实例方法)
+/*
+  通过clang分析我们可以知道 每个类对象都有一个方法列表，方法列表中记录着方法的名称，方法实现，以及参数类型。其实selector本质就是方法名称，
+  通过这个方法名称就可以在方法列表中找到对应的方法实现。
+ */
+
 
 
 @end

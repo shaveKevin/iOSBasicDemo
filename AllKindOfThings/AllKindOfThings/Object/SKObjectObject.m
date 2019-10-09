@@ -17,4 +17,10 @@
 + (void)thisisSuperMethod {
     NSLog(@"thisisSuperMethod");
 }
+
+
+- (id)printClass {
+    NSLog(@"1.1 SKObjectObject ===%@",self);
+    return self;
+}
 @end

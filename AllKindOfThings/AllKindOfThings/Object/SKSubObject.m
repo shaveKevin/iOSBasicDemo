@@ -34,9 +34,12 @@
  metaClass也是一个指针：metaClass的isa指向的是根metaClass.如果该metaClass是根，metaClass指向自身，metaClasse的super Class指向父metaClass,如果该metaClas是根，则指向该metaClass对应的类。
    其中根对象就是NSObject，它的superclass指针指向nil
  
- 简单a的来说：一个对象的isa指向哪个class，代表它是那个类的对象。那么对于class来说，它也是一个对象，它的isa指针指向什么呢？
+ 简单的来说：一个对象的isa指向那个class，代表它是那个类的对象。那么对于class来说，它也是一个对象，它的isa指针指向什么呢？
 
  对于Class来说，也就需要一个描述他的类，也就是“类的类”，而meta正是“关于某事自身的某事”的解释，所以MetaClass就因此而生了。
+类对象既然称为对象，那它也就是一个实例。类对象中也有一个isa指针指向它的元类(meta class)，即类对象是元类的实例。元类内部存放的是类方法列表。根元类的isa指针指向自己，super class指针指向NSObject类。
+ // 面试题解答： 一个objc对象的isa指针指向什么，有什么作用？
+               指向它的类对象，从而可以找到对象上的方法。
  */
 @implementation SKSubObject
 
@@ -48,6 +51,71 @@
 + (void)thisisSubMethod {
     NSLog(@"thisisSubMethod");
 }
+// 面试题：下面的代码输出什么？
+/*
+  - (instancetype)init {
+      
+      if (self = [super init]) {
+          NSLog(@"[self class] == %@   %p",NSStringFromClass([self class]),[self class]);
+          NSLog(@"[super class] == %@   %p",NSStringFromClass([super class]),[super class]);
+      }
+      return self;
+  }
+ // 答案都输出 SKSubObject  并且两者的地址都是相同的。
+ 这里主要考察的是OC中关于self和super的理解。 一般的我们都知道self是指向的调用这几个方法的这个类的本身。那么super呢。其实super是一个Magic Keyword，
+ 它的本质是一个编译器标示符，和self都指向同一个消息接受者。他们的不同点在于super会告诉编译器，调用class这个方法的时候，要去父类的方法，而不是本类里的。
+ 
+ 当使用self调用方法的时候，会从当前类的方法列表中开始找，如果没有，就从父类再找；而当使用super的时候，则从父类的方法列表中开始找，然后调用父类的这个方法。
+ 这也就是为什么不推荐在init方法中使用点语法。如果想访问实例变量iVar应该使用下划线(_iVar) 而非点语法(self.ivar)
+ 
+点语法的坏处就是子类可能复写setter，假如person有一个子类叫Ming,这个子类专门标识哪些名字有Ming的人，该子类可能会重写LastName属性对应的设置方法。
+ */
+- (instancetype)init {
+    
+    if (self = [super init]) {
+        NSLog(@"[self class] == %@   %p",NSStringFromClass([self class]),[self class]);
+        //[self class] 调用的时候 直接是objc_msgSend(id self, SEL sel);
+        // objc_msgSend((id)self, sel_registerName("class"))
+        // [super class]调用的时候是objc_msgSendSuper(struct objc_super *super, SEL  sel);
+        NSLog(@"[super class] == %@   %p",NSStringFromClass([super class]),[super class]);
+        //     objc_msgSendSuper((__rw_objc_super){(id)self, (id)class_getSuperclass(objc_getClass("SKSubObject"))}, sel_registerName("class")))
+        
+        NSLog(@"1.[self printClass] == %@",[self printClass]);
+        NSLog(@"2.[super printClass] == %@",[super printClass]);
+
+    }
+    return self;
+}
+
+- (id)printClass {
+    NSLog(@"1.2 SKSubObject ===%@",self);
+    return [super printClass];
+}
+
+/*
+ objc_super 是一个结构体
+ struct objc_super {
+       __unsafe_unretained id receiver;
+       __unsafe_unretained Class super_class;
+ };
+ */
+// 总结：
+/*
+ 1. 当我们在调用[self class]的时候，实际先调用的是objc_msgSend函数，第一个参数是当前SKSubObject这个实例，然后在SKSubObject类里面去找-(Class)class; 这个方法,如果没有就去父类(SKObjectObject)里面找,如果也没有那就到了基类NSObject类。而在runtime中对class方法的实现返回的是当前类本身。
+ 2. 当我们在调用[super class]的时候，会被转换成objc_msgSendSuper函数，第一步先构造objc_super结构体，结构体第一个成员就是self，第二个成员就是
+ (id)class_getSuperclass(objc_getClass("SKSubObject"))实际上这个时候返回的是SKObjectObject 第二步是从SKObjectObject类中去找-(Class)class;
+ 没有，然后去NSObject中去找，最后内部是使用objc_msgSend(objc_super receiver, @selector(class))去调用。 这个时候的调用和[self class ]基本一样。所以结果返回仍然是SKSubObject。
+ // 可以这么简单的理解。 [super class]调用只是一个标记。告诉编译器我调用的方法都从父类中取(其实找class 方法的话最终都是在基类NSObject中)，而打印的时候仍然是本类的方法。
+ 
+ */
+// runtime中对class的实现
+  /*
+   - (Class)class {
+      return object_getClass(self);
+   }
+   */
+      
+      
 @end
 
 /*
@@ -111,4 +179,5 @@
 /*
  1.ios isa 是什么鬼??? https://blog.csdn.net/yst19910702/article/details/51443901
  2.Why is MetaClass in Objective-C？  https://juejin.im/entry/59bb8b895188257e70531bf9
+ 3.刨根问底Objective－C Runtime（1）－ Self & Super  https://blog.csdn.net/u011344883/article/details/41512683
  */

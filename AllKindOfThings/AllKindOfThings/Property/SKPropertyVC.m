@@ -131,7 +131,6 @@
     NSMutableString *mutableStringMutableCopy = [mutableStringCopy mutableCopy];
     [mutableStringCopy stringByAppendingString:@"====附加的字符串"];
     
-    
     NSLog(@"mutableStringCopy value is %@   &  copy之后 value is %@  & mutableCopy 之后value is  %@",mutableStringCopy,mutableStringXXX,mutableStringMutableCopy);
 
     NSLog(@"可变字符串 address is %p   &  copy之后地址 is %p  & mutableCopy 之后地址is  %p",mutableStringCopy,mutableStringXXX,mutableStringMutableCopy);
