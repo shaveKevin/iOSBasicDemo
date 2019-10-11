@@ -7,7 +7,7 @@
 //
 
 #import "SKRunloopVC.h"
-
+#import "SKRunLoopObject.h"
 @interface SKRunloopVC ()
 
 @end
@@ -20,7 +20,7 @@
     [self setupViews];
     [self setupData];
     [self setupLayout];
-    
+    [self methodActions];
 }
 
 - (void)setupViews {
@@ -37,5 +37,11 @@
     
 }
 
+- (void)methodActions {
+    [self runLoopTest];
+}
 
+- (void)runLoopTest {
+    SKRunLoopObject *runloopObj = [[SKRunLoopObject alloc]init];
+}
 @end

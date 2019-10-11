@@ -54,6 +54,7 @@
 		D70F4D85233E11B3005C2381 /* 类继承经典图.png in Resources */ = {isa = PBXBuildFile; fileRef = D70F4D84233E11B3005C2381 /* 类继承经典图.png */; };
 		D70F4DB423420435005C2381 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4DB323420435005C2381 /* Aspects.m */; };
 		D70F4DB723420491005C2381 /* NSObject+SKHookSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4DB623420491005C2381 /* NSObject+SKHookSelector.m */; };
+		D732311923505289008635DB /* SKRunLoopObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D732311823505289008635DB /* SKRunLoopObject.m */; };
 		D78EEB0B2333283C0001467B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EEB0A2333283C0001467B /* AppDelegate.m */; };
 		D78EEB0E2333283C0001467B /* SKHomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EEB0D2333283C0001467B /* SKHomePageVC.m */; };
 		D78EEB112333283C0001467B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78EEB0F2333283C0001467B /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		D78EEB162333283D0001467B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78EEB142333283D0001467B /* LaunchScreen.storyboard */; };
 		D78EEB192333283D0001467B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EEB182333283D0001467B /* main.m */; };
 		D7E3DC5F2334B8D4008F7B95 /* SKUINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E3DC5E2334B8D4008F7B95 /* SKUINavigationController.m */; };
+		D7F21415234F382600C85498 /* SKRuntimeWeakObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D7F21414234F382600C85498 /* SKRuntimeWeakObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -171,6 +173,8 @@
 		D70F4DB323420435005C2381 /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
 		D70F4DB523420491005C2381 /* NSObject+SKHookSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SKHookSelector.h"; sourceTree = "<group>"; };
 		D70F4DB623420491005C2381 /* NSObject+SKHookSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SKHookSelector.m"; sourceTree = "<group>"; };
+		D732311723505289008635DB /* SKRunLoopObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKRunLoopObject.h; sourceTree = "<group>"; };
+		D732311823505289008635DB /* SKRunLoopObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKRunLoopObject.m; sourceTree = "<group>"; };
 		D78EEB062333283C0001467B /* 练习Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "练习Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78EEB092333283C0001467B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D78EEB0A2333283C0001467B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -181,9 +185,12 @@
 		D78EEB152333283D0001467B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D78EEB172333283D0001467B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D78EEB182333283D0001467B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D78F15A6234F0E530056E71F /* SKObjectObject-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKObjectObject-arm64.cpp"; sourceTree = "<group>"; };
 		D7CD140A234DE3B500082006 /* NSObject+SKRuntimeAssociatedObject-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "NSObject+SKRuntimeAssociatedObject-arm64.cpp"; sourceTree = "<group>"; };
 		D7E3DC5D2334B8D4008F7B95 /* SKUINavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKUINavigationController.h; sourceTree = "<group>"; };
 		D7E3DC5E2334B8D4008F7B95 /* SKUINavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKUINavigationController.m; sourceTree = "<group>"; };
+		D7F21413234F382600C85498 /* SKRuntimeWeakObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKRuntimeWeakObject.h; sourceTree = "<group>"; };
+		D7F21414234F382600C85498 /* SKRuntimeWeakObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKRuntimeWeakObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +265,8 @@
 			children = (
 				D70EF39C2334738C002D0AB0 /* NSObject+SKRuntimeAssociatedObject.h */,
 				D70EF39D2334738C002D0AB0 /* NSObject+SKRuntimeAssociatedObject.m */,
+				D7F21413234F382600C85498 /* SKRuntimeWeakObject.h */,
+				D7F21414234F382600C85498 /* SKRuntimeWeakObject.m */,
 				D7CD140A234DE3B500082006 /* NSObject+SKRuntimeAssociatedObject-arm64.cpp */,
 				D70F4CD4233C9346005C2381 /* SKRuntimePerson.h */,
 				D70F4CD5233C9346005C2381 /* SKRuntimePerson.m */,
@@ -276,6 +285,7 @@
 			children = (
 				D700F65D233478EA0054ADDA /* SKRunloopVC.h */,
 				D700F65E233478EA0054ADDA /* SKRunloopVC.m */,
+				D732311623505250008635DB /* Class */,
 			);
 			path = RunLoop;
 			sourceTree = "<group>";
@@ -445,6 +455,7 @@
 			children = (
 				D70F4D79233E061C005C2381 /* SKObjectObject.h */,
 				D70F4D7A233E061C005C2381 /* SKObjectObject.m */,
+				D78F15A6234F0E530056E71F /* SKObjectObject-arm64.cpp */,
 				D70F4D7F233E08FE005C2381 /* SKSubObject.h */,
 				D70F4D80233E08FE005C2381 /* SKSubObject.m */,
 				D70F4D82233E0A64005C2381 /* SKSubObject-arm64.cpp */,
@@ -464,6 +475,15 @@
 				D70F4DB623420491005C2381 /* NSObject+SKHookSelector.m */,
 			);
 			path = Aspects;
+			sourceTree = "<group>";
+		};
+		D732311623505250008635DB /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				D732311723505289008635DB /* SKRunLoopObject.h */,
+				D732311823505289008635DB /* SKRunLoopObject.m */,
+			);
+			path = Class;
 			sourceTree = "<group>";
 		};
 		D78EEAFD2333283C0001467B = {
@@ -643,6 +663,8 @@
 				D700F64923332B2B0054ADDA /* SKThreadDeadLockVC.m in Sources */,
 				D7E3DC5F2334B8D4008F7B95 /* SKUINavigationController.m in Sources */,
 				D70EF39E2334738C002D0AB0 /* NSObject+SKRuntimeAssociatedObject.m in Sources */,
+				D7F21415234F382600C85498 /* SKRuntimeWeakObject.m in Sources */,
+				D732311923505289008635DB /* SKRunLoopObject.m in Sources */,
 				D70F4C922339C402005C2381 /* RetainCycleModule.m in Sources */,
 				D70F4CB8233AF9ED005C2381 /* SKSegementVC.m in Sources */,
 				D70F4C942339C402005C2381 /* NSObject+Addition.m in Sources */,

@@ -90,7 +90,69 @@
   通过clang分析我们可以知道 每个类对象都有一个方法列表，方法列表中记录着方法的名称，方法实现，以及参数类型。其实selector本质就是方法名称，
   通过这个方法名称就可以在方法列表中找到对应的方法实现。
  */
+// 面试题解答：_objc_msgForward函数是做什么的，直接调用它将会发生什么？
+/*
+ _objc_msgForward 是IMP类型的。，主要用于消息转发。当向一个对象发送一条消息，但它没有实现的时候，_objc_msgForward会尝试做消息转发。
+我们可以这样创建一个_objc_msgForward对象：     IMP msgForwardIMP = _objc_msgForward;
+  在objc向对象发送一个消息和objc_msgSend函数之间有什么关系的时候，起到了消息传递的作用。在消息传递过程中，objc_msgSend 的动作比较清晰：首先在Class的缓存中查找IMP(没缓存就初始化缓存)，如果没有去父类进行查找。如果查找到NSObject类仍然没有实现，则用_objc_msgForward函数指针替代IMP,最后执行这个IMP.
+ 
+ 对于_objc_msgForward这里有关三个函数使用伪代码来表示：--具体可以看 runtime源码
+  id  objc_msgSend(id self, SEL op, ...) {
+      if(!self) return nil;
+      IMP imp = class_getMethodImplementation(self->isa, SEL op);
+      imp(self,op, ...);// 调用这两段代码
+  }
+ // 查找IMP 实现
+   IMP class_getMethodImplementation(Class cls, SEL sel) {
+    IMP imp;
+    if (!cls  ||  !sel) return nil;
+    imp = lookUpImpOrNil(cls, sel, nil,YES, YES, YES);
+    // Translate forwarding function to C-callable external version
+    if (!imp) {
+        return _objc_msgForward;
+    }
+    return imp;
+}
+ // 查看实现是否为空(源码是这样的)
+ IMP lookUpImpOrNil(Class cls, SEL sel, id inst,
+                    bool initialize, bool cache, bool resolver)
+ {
+     IMP imp = lookUpImpOrForward(cls, sel, inst, initialize, cache, resolver);
+     if (imp == _objc_msgForward_impcache) return nil;
+     else return imp;
+ }
+ //  这一步可以总结为:
+ IMP lookUpImpOrNil(Class cls, SEL sel) {
+     if (!cls->initialize()) {
+         _class_initialize(cls);
+     }
+  
+     Class curClass = cls;
+     IMP imp = nil;
+     do { //先查缓存,缓存没有时重建,仍旧没有则向父类查询
+         if (!curClass) break;
+         if (!curClass->cache) fill_cache(cls, curClass);
+         imp = cache_getImp(curClass, sel);
+         if (imp) break;
+     } while (curClass = curClass->superclass);
+  
+     return imp;
+ }
+  
+ // _objc_msgFowrard 在进行消息转发的过程中会涉及一下这几个方法
+   1. resolveInstanceMethod: 方法(resolveClassMethod)
+   2. forwardingTargetForSelector:
+   3. methodSignatureForSelector
+   4. forwardInvocation:
+   5. doesNotRecognizeSelector:
 
+ 
+  直接调用_objc_msgFoward 是非常危险的事。如果用不好会导致程序crash，直接调用的话 会跳过消息发送(objc_msgSend)，直接进入消息转发(_objc_msgFoward)阶段
+ 有哪些场景需要用到_objc_msgFoward 最常见的是你想获取方法对应的NSInvocation对象的时候。例如：jspatch和rac
 
+ */
 
+// 延伸资料：
+// 1.iOS中的SEL和IMP到底是什么?  https://blog.csdn.net/dkq972958298/article/details/69942077
+// 2.
 @end

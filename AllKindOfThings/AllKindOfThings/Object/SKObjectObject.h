@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+// 面试题：objc中的类方法和实例方法有什么本质区别和联系？
 @interface SKObjectObject : NSObject
 
 

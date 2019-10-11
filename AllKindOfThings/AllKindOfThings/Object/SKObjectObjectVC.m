@@ -34,6 +34,10 @@
 - (void)setupData {
     SKSubObject *objc = [[SKSubObject alloc]init];
     
+    SKObjectObject *obb = [[SKObjectObject alloc]init];
+    [obb printObjectObject];
+    [SKObjectObject thisisSuperMethod];
+    NSLog(@"SKObjectObject class is ==%p",[SKObjectObject class]);
 }
 
 - (void)setupLayout {

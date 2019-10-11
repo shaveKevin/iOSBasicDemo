@@ -5324,6 +5324,7 @@ IMP lookUpImpOrForward(Class cls, SEL sel, id inst,
     // Try superclass caches and method lists.
     {
         unsigned attempts = unreasonableClassCount();
+        // 当前类找不到 就从父类中找。 然后看在不在缓存中。如果不在缓存中就加入缓存。
         for (Class curClass = cls->superclass;
              curClass != nil;
              curClass = curClass->superclass)
@@ -5337,6 +5338,7 @@ IMP lookUpImpOrForward(Class cls, SEL sel, id inst,
             imp = cache_getImp(curClass, sel);
             if (imp) {
                 if (imp != (IMP)_objc_msgForward_impcache) {
+                    // 如果没有命中cache 那么就添加到cache中
                     // Found the method in a superclass. Cache it in this class.
                     log_and_fill_cache(cls, imp, sel, inst, curClass);
                     goto done;
@@ -6894,6 +6896,7 @@ static void free_class(Class cls)
 
 void objc_disposeClassPair(Class cls)
 {
+    // 销毁之前先加锁
     mutex_locker_t lock(runtimeLock);
 
     checkIsKnownClass(cls);
