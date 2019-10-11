@@ -10,6 +10,10 @@
 #import "SKRunLoopObject.h"
 @interface SKRunloopVC ()
 
+@property (nonatomic, strong) NSTimer *schemeTimer;
+
+@property (nonatomic, assign) NSInteger  timeValue;
+
 @end
 
 @implementation SKRunloopVC
@@ -30,7 +34,7 @@
 }
 
 - (void)setupData {
-    
+    self.timeValue = 0;
 }
 
 - (void)setupLayout {
@@ -38,10 +42,29 @@
 }
 
 - (void)methodActions {
-    [self runLoopTest];
+    
+    [self runloopState];
 }
 
 - (void)runLoopTest {
     SKRunLoopObject *runloopObj = [[SKRunLoopObject alloc]init];
+    [runloopObj runtimeTest];
 }
+
+- (void)runloopState {
+    
+}
+
+- (NSTimer *)schemeTimer {
+    if (!_schemeTimer) {
+        _schemeTimer = [NSTimer timerWithTimeInterval:5.0f target:self selector:@selector(printLog) userInfo:nil repeats:YES];
+    }
+    return _schemeTimer;
+}
+
+- (void)printLog {
+    self.timeValue ++;
+    NSLog(@"timeValue is  %@",@(self.timeValue));
+}
+
 @end
