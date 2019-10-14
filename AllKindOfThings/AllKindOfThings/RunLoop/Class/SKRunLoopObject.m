@@ -139,6 +139,32 @@
 //  面试题：4.猜想runloop内部是如何实现的？
 /*
   答：一般来说，一个线程一次只能执行一个任务，执行完成后线程会退出。如果我们需要一个机制，让线程能随时处理事件但并不退出，通常的代码逻辑是这样的。
- 
+ ```
+ function loop (){
+     initialize();
+     do {
+         var message = get_next_message();
+         process_message(message);
+     } while(message!= quit)
+ }
+ ```
+ 或者使用伪代码来展示：
+```
+ int main (int argc, char *argv[]) {
+     // 程序一直运行状态
+     while (AppIsRunning) {
+         // 处于睡眠状态，。等待唤醒
+         id whoWakeMe = SleepForWakingUp();
+         // 获取唤醒事件
+         id event = GetEvent(whoWakeMe);
+         // 开始处理唤醒事件
+         HandleEvent(event);
+         return 0;
+     }
+ }
+```
+ 可参考： CFRunLoop https://github.com/ming1016/study/wiki/CFRunLoop
+
  */
-  
+
+
