@@ -38,12 +38,13 @@
     [super viewDidAppear:animated];
     // 1. 纳秒级定时器测试
     /*
-    SKTimerTest *test = [[SKTimerTest alloc]init];
     [test matchAbsoluteTime];
      2.DisplayLinkTest
        [self.timerTest testCADisplayLink];
+     3. GCD test
+     [self.timerTest  testGCDTimer];
+
      */
-    self.timerTest = [[SKTimerTest alloc]init];
 
   
 }

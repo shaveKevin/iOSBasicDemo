@@ -92,19 +92,21 @@ static uint64_t nanos_to_abs(uint64_t nanos) {
           dispatch_cancel(self.timer);
           self.timer = nil;
       }
+    // 创建主队列
       dispatch_queue_t queue = dispatch_get_main_queue();
       //创建一个定时器（dispatch_source_t本质上还是一个OC对象）
       self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
-      //设置定时器的各种属性
+      //设置定时器的开始时间
       dispatch_time_t start = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0*NSEC_PER_SEC));
-      uint64_t interval = (uint64_t)(1.0*NSEC_PER_SEC);
+    //设置定时器的时间间隔
+      uint64_t interval = (uint64_t)(5.0*NSEC_PER_SEC);
+    // 设置当前timer为执行者
       dispatch_source_set_timer(self.timer, start, interval, 0);
-      //设置回调
+      //设置定时器定时方法回调
       __weak typeof(self) weakSelf = self;
       dispatch_source_set_event_handler(self.timer, ^{
           //定时器需要执行的操作
           [weakSelf addMethod];
-         
       });
       //启动定时器（默认是暂停）--- 注意它暂停之后其实就是销毁了。。。重新开启的时候需要重新加载
       dispatch_resume(self.timer);
