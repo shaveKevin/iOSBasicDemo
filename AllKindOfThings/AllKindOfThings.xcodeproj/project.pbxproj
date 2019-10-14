@@ -55,6 +55,7 @@
 		D70F4DB423420435005C2381 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4DB323420435005C2381 /* Aspects.m */; };
 		D70F4DB723420491005C2381 /* NSObject+SKHookSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4DB623420491005C2381 /* NSObject+SKHookSelector.m */; };
 		D732311923505289008635DB /* SKRunLoopObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D732311823505289008635DB /* SKRunLoopObject.m */; };
+		D758F42E235446C600ED60EC /* SKTimerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D758F42D235446C600ED60EC /* SKTimerTest.m */; };
 		D78EEB0B2333283C0001467B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EEB0A2333283C0001467B /* AppDelegate.m */; };
 		D78EEB0E2333283C0001467B /* SKHomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EEB0D2333283C0001467B /* SKHomePageVC.m */; };
 		D78EEB112333283C0001467B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78EEB0F2333283C0001467B /* Main.storyboard */; };
@@ -175,6 +176,8 @@
 		D70F4DB623420491005C2381 /* NSObject+SKHookSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SKHookSelector.m"; sourceTree = "<group>"; };
 		D732311723505289008635DB /* SKRunLoopObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKRunLoopObject.h; sourceTree = "<group>"; };
 		D732311823505289008635DB /* SKRunLoopObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKRunLoopObject.m; sourceTree = "<group>"; };
+		D758F42C235446C600ED60EC /* SKTimerTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKTimerTest.h; sourceTree = "<group>"; };
+		D758F42D235446C600ED60EC /* SKTimerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKTimerTest.m; sourceTree = "<group>"; };
 		D78EEB062333283C0001467B /* 练习Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "练习Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78EEB092333283C0001467B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D78EEB0A2333283C0001467B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -482,6 +485,8 @@
 			children = (
 				D732311723505289008635DB /* SKRunLoopObject.h */,
 				D732311823505289008635DB /* SKRunLoopObject.m */,
+				D758F42C235446C600ED60EC /* SKTimerTest.h */,
+				D758F42D235446C600ED60EC /* SKTimerTest.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -540,6 +545,7 @@
 				D78EEB032333283C0001467B /* Frameworks */,
 				D78EEB042333283C0001467B /* Resources */,
 				0BA41212A1C71FA6F1EB38DB /* [CP] Embed Pods Frameworks */,
+				A4268BD8005E62CAC7763F2B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -639,6 +645,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllKindOfThings/Pods-AllKindOfThings-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A4268BD8005E62CAC7763F2B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllKindOfThings/Pods-AllKindOfThings-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllKindOfThings/Pods-AllKindOfThings-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllKindOfThings/Pods-AllKindOfThings-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -689,6 +712,7 @@
 				D70F4C9C2339C402005C2381 /* BlockTest.m in Sources */,
 				D70F4C992339C402005C2381 /* TestExpand+Additions.m in Sources */,
 				D70F4CBE233AFFD1005C2381 /* SKSegementTwoVC.m in Sources */,
+				D758F42E235446C600ED60EC /* SKTimerTest.m in Sources */,
 				D70F4C9A2339C402005C2381 /* MoreTimeTest.m in Sources */,
 				D700F65F233478EA0054ADDA /* SKRunloopVC.m in Sources */,
 				D70F4C9B2339C402005C2381 /* ShortDemo1.m in Sources */,

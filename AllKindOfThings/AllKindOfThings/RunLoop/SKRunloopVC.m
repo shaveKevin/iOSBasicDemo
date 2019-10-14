@@ -9,12 +9,17 @@
 #import "SKRunloopVC.h"
 #import "SKRunLoopObject.h"
 #import <Masonry/Masonry.h>
+#import <DSTBaseDevUtils/DSTWeakProxy.h>
+#import "SKTimerTest.h"
 
 @interface SKRunloopVC ()
 
 @property (nonatomic, strong) NSTimer *schemeTimer;
 
 @property (nonatomic, assign) NSInteger  timeValue;
+
+@property (nonatomic, strong) SKTimerTest  *timerTest;
+
 
 @end
 
@@ -27,6 +32,20 @@
     [self setupData];
     [self setupLayout];
     [self methodActions];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    // 1. 纳秒级定时器测试
+    /*
+    SKTimerTest *test = [[SKTimerTest alloc]init];
+    [test matchAbsoluteTime];
+     2.DisplayLinkTest
+       [self.timerTest testCADisplayLink];
+     */
+    self.timerTest = [[SKTimerTest alloc]init];
+
+  
 }
 
 - (void)setupViews {
@@ -93,7 +112,6 @@
   ```
  if (@available(iOS 10.0, *)) {
         self.schemeTimer = [NSTimer timerWithTimeInterval:1.0f repeats:YES block:^(NSTimer * _Nonnull timer) {
-            
         }];
     } else {
         // Fallback on earlier versions
@@ -106,7 +124,8 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [self stopTimer];
+    // 注意:这样写不保险，首先不能确定这里消失的时机 是否要停掉定时器.
+  //   [self stopTimer];
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self stopTimer];
@@ -119,12 +138,18 @@
 
 - (NSTimer *)schemeTimer {
     if (!_schemeTimer) {
-        _schemeTimer = [NSTimer timerWithTimeInterval:5.0f target:self selector:@selector(printLog) userInfo:nil repeats:YES];
+        _schemeTimer = [NSTimer timerWithTimeInterval:5.0f target:[DSTWeakProxy proxyWithTarget:self] selector:@selector(printLog) userInfo:nil repeats:YES];
         [[NSRunLoop currentRunLoop] addTimer:_schemeTimer forMode:NSRunLoopCommonModes];
     }
     return _schemeTimer;
 }
 
+- (SKTimerTest *)timerTest {
+    if (!_timerTest) {
+        _timerTest = [[SKTimerTest alloc]init];
+    }
+    return _timerTest;
+}
 - (void)printLog {
     self.timeValue ++;
     NSLog(@"timeValue is  %@",@(self.timeValue));
@@ -133,7 +158,7 @@
 - (void)dealloc {
     if (_schemeTimer) {
         _schemeTimer = nil;
-        NSLog(@"%@",_schemeTimer);
+        NSLog(@"已销毁 ===timer  %@",_schemeTimer);
     } else {
         NSLog(@"不存在");
     }

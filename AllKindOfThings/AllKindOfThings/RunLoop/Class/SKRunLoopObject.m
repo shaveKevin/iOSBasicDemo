@@ -45,6 +45,19 @@
     NSLog(@"==========%@===============",@(self.timerNumber));
 }
 
+
+- (void)asycThreadMethod {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+       
+        NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(asycTimerAction) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop]run];
+    });
+    // runloop 用来循环处理响应事件，每个线程都有一个runloop。apple不允许自己创建runloop而且只有主线程的runloop是默认打开的。其他线程的runloop需要使用就必须手动打开。scheduledTimerWithTimeInterval这个方法创建好NSTimer以后会自动将它添加到当前线程的runloop中，非主线程只有调用run方法定时器才能开始工作。
+}
+
+- (void)asycTimerAction {
+    
+}
 @end
 
 //  面试题解答：1.runloop和线程有什么关系？
@@ -113,6 +126,14 @@
       如果我们把一个NSTimer对象以NSDefaultRunLoopMode(kCFRunloopDefaultMode)添加到主运行循环中的时候，scrollview滚动过程会因为mode的切，而导致NSTimer将不再被调度。
  同时因为mode还是可以定制的；所以。timer及时会被scrollview的滑动影响的问题可以通过将timer添加到NSRunloopCommonModes（kCFRunLoopCommonModes）来解决。
  
+ 如果NSTimer当前处于NSDefaultRunLoopMode中，此时界面上有滚动事件发生，则RunLoop会瞬间切换至UITrackingRunLoopMode模式。这意味着NSTimer会被暂停调用响应方法，直至滚动事件被处理完，当滚动事件被处理完后，RunLoop又会被瞬间切换至NSDefaultRunLoopMode模式，此时线程会查看该mode下是否有相应事件等待处理，有则继续，没有的话，runloop会进入休眠状态，直至被事件再次唤醒。
+ 占位mode：NSRunLoopCommonModes，它包含以上两种mode，处于该mode下的事件会在两种mode下都有效。也即mode切换过程中不会中断事件的处理。
+ （如果想让NSTimer同时在两种mode下都有效，该怎么办呢？
+ 答：要么将该NSTimer单独添加至两种mode下，要么一次性加入两种mode下NSRunLoopCommonModes。
+ Mode应用场景：轮播时，如果想拖拽查看某一页时暂停定时器；上下滑动UITableView时，不影响分页滚动界面的自动滚动。
+ 正常情况下，轮播时，定时器会自动暂停等待，不需要额外的暂停操作，但是当拖拽事件结束后，会发现恢复自动滚动瞬间，滚动的比较快，影响体验；所以正确的做法是先invalidate & nil,拖拽结束后再重新创建NSTimer。
+
+ 可以参考链接：iOS趣味篇：NSTimer到底准不准？ https://www.jianshu.com/p/d5845842b7d3 
  */
 
 //  面试题：4.猜想runloop内部是如何实现的？

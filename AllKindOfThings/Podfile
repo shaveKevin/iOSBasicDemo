@@ -7,4 +7,7 @@ target 'AllKindOfThings' do
 
   # Pods for AllKindOfThings
  pod 'Masonry', '~> 1.1.0'
+ 
+ pod 'DSTBaseDevUtils', :git => 'git@github.com:iOSDevelopShareTeam/DSTBaseDevUtils.git', :branch => 'master'
+
 end

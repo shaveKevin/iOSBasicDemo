@@ -1,16 +1,39 @@
 PODS:
+  - DSTBaseDevUtils (0.0.3):
+    - DSTBaseDevUtils/DSTBaseTool (= 0.0.3)
+    - DSTBaseDevUtils/DSTUIKit (= 0.0.3)
+  - DSTBaseDevUtils/DSTBaseTool (0.0.3):
+    - DSTBaseDevUtils/DSTBaseTool/DSTWeakProxyUtil (= 0.0.3)
+  - DSTBaseDevUtils/DSTBaseTool/DSTWeakProxyUtil (0.0.3)
+  - DSTBaseDevUtils/DSTUIKit (0.0.3):
+    - DSTBaseDevUtils/DSTUIKit/DSTButton (= 0.0.3)
+    - DSTBaseDevUtils/DSTUIKit/DSTString (= 0.0.3)
+  - DSTBaseDevUtils/DSTUIKit/DSTButton (0.0.3)
+  - DSTBaseDevUtils/DSTUIKit/DSTString (0.0.3)
   - Masonry (1.1.0)
 
 DEPENDENCIES:
+  - "DSTBaseDevUtils (from `git@github.com:iOSDevelopShareTeam/DSTBaseDevUtils.git`, branch `master`)"
   - Masonry (~> 1.1.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Masonry
 
+EXTERNAL SOURCES:
+  DSTBaseDevUtils:
+    :branch: master
+    :git: "git@github.com:iOSDevelopShareTeam/DSTBaseDevUtils.git"
+
+CHECKOUT OPTIONS:
+  DSTBaseDevUtils:
+    :commit: b7c5ed3a890a2787c665194f7bf2f8248cb3bdae
+    :git: "git@github.com:iOSDevelopShareTeam/DSTBaseDevUtils.git"
+
 SPEC CHECKSUMS:
+  DSTBaseDevUtils: 0f443561ef6febb97fbc37d8b42bc8984b5a280a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: cddaf6fca162a164d5528095db1f0e0f4b642b3e
+PODFILE CHECKSUM: 3df59f57ac57b3317fd074f02c9544055cafd572
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.8.3
