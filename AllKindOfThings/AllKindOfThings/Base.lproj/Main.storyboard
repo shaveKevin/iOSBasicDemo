@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SfC-5U-zg8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SfC-5U-zg8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,17 +26,19 @@
             </objects>
             <point key="canvasLocation" x="1916" y="-824"/>
         </scene>
-        <!--算法-->
+        <!--算法练习-->
         <scene sceneID="60y-gK-xhm">
             <objects>
-                <viewController id="fxJ-JO-1oy" customClass="SKDiscoveryVC" sceneMemberID="viewController">
+                <viewController id="fxJ-JO-1oy" customClass="SKAlgorithmBaseVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WcO-N8-2tt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="w4J-UY-f9S"/>
                     </view>
-                    <navigationItem key="navigationItem" title="算法" id="TAd-gp-Zqu"/>
+                    <navigationItem key="navigationItem" title="算法练习" id="TAd-gp-Zqu">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Kwl-zc-lff"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cyb-Di-rkf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -101,27 +103,29 @@
             </objects>
             <point key="canvasLocation" x="-3270" y="759"/>
         </scene>
-        <!--部落-->
+        <!--计算机基础-->
         <scene sceneID="0b3-cw-B7X">
             <objects>
-                <viewController id="opM-FG-GCF" sceneMemberID="viewController">
+                <viewController id="opM-FG-GCF" customClass="SKPCBasicTechVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VUF-xz-wtn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Tid-Y8-ioH"/>
                     </view>
-                    <navigationItem key="navigationItem" title="部落" id="FFV-ah-Agn"/>
+                    <navigationItem key="navigationItem" title="计算机基础" id="FFV-ah-Agn">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Jxq-q7-t4j"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2w-k1-GbH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1993" y="514"/>
         </scene>
-        <!--部落-->
+        <!--基础-->
         <scene sceneID="Oc7-A3-EuF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AaI-DU-WYF" customClass="SKUINavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="部落" image="tabbar_icon_clans_normal" selectedImage="tabbar_icon_clans_select" id="fRB-rt-XYX"/>
+                    <tabBarItem key="tabBarItem" title="基础" image="tabbar_icon_clans_normal" selectedImage="tabbar_icon_clans_select" id="fRB-rt-XYX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jTK-QE-JKf">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -147,7 +151,7 @@
                         <viewLayoutGuide key="safeArea" id="W9c-2B-hGV"/>
                     </view>
                     <navigationItem key="navigationItem" title="我的" id="r3u-xr-KC2">
-                        <barButtonItem key="backBarButtonItem" title="返回" id="Wal-cT-Msc"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="Wal-cT-Msc"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Clz-6Y-7yv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

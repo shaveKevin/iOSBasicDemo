@@ -8,179 +8,79 @@
 
 /* Begin PBXBuildFile section */
 		901E0FD8760229F33EE8E763 /* Pods_AllKindOfThings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C2B4090AEC7EF161233AE8 /* Pods_AllKindOfThings.framework */; };
-		D700F64923332B2B0054ADDA /* SKThreadDeadLockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D700F64823332B2B0054ADDA /* SKThreadDeadLockVC.m */; };
-		D700F64D233389400054ADDA /* SKRuntimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D700F64C233389400054ADDA /* SKRuntimeVC.m */; };
-		D700F65F233478EA0054ADDA /* SKRunloopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D700F65E233478EA0054ADDA /* SKRunloopVC.m */; };
-		D700F6632334794F0054ADDA /* SKBlockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D700F6622334794F0054ADDA /* SKBlockVC.m */; };
-		D700F6692334AA5A0054ADDA /* SKDiscoveryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D700F6682334AA5A0054ADDA /* SKDiscoveryVC.m */; };
-		D700F66C2334AA650054ADDA /* SKClansVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D700F66B2334AA650054ADDA /* SKClansVC.m */; };
+		D700F6692334AA5A0054ADDA /* SKAlgorithmBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D700F6682334AA5A0054ADDA /* SKAlgorithmBaseVC.m */; };
+		D700F66C2334AA650054ADDA /* SKPCBasicTechVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D700F66B2334AA650054ADDA /* SKPCBasicTechVC.m */; };
 		D700F66F2334AA800054ADDA /* SKPersonalCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D700F66E2334AA800054ADDA /* SKPersonalCenterVC.m */; };
-		D70EF39E2334738C002D0AB0 /* NSObject+SKRuntimeAssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D70EF39D2334738C002D0AB0 /* NSObject+SKRuntimeAssociatedObject.m */; };
-		D70F4C862339C401005C2381 /* BlockTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C5C2339C401005C2381 /* BlockTool.m */; };
-		D70F4C872339C402005C2381 /* SemaphoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C5E2339C401005C2381 /* SemaphoreTest.m */; };
-		D70F4C892339C402005C2381 /* DownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C662339C401005C2381 /* DownLoadManager.m */; };
-		D70F4C8C2339C402005C2381 /* SSDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C6D2339C401005C2381 /* SSDemo.m */; };
-		D70F4C8E2339C402005C2381 /* SubDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C6F2339C401005C2381 /* SubDemo.m */; };
-		D70F4C8F2339C402005C2381 /* PropertyDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C732339C401005C2381 /* PropertyDemo.m */; };
-		D70F4C912339C402005C2381 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C752339C401005C2381 /* TestModel.m */; };
-		D70F4C922339C402005C2381 /* RetainCycleModule.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C762339C401005C2381 /* RetainCycleModule.m */; };
-		D70F4C932339C402005C2381 /* NSObject+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C772339C401005C2381 /* NSObject+Add.m */; };
-		D70F4C942339C402005C2381 /* NSObject+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C792339C401005C2381 /* NSObject+Addition.m */; };
-		D70F4C952339C402005C2381 /* TestExpand+test.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C7B2339C401005C2381 /* TestExpand+test.m */; };
-		D70F4C962339C402005C2381 /* TestExpand.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C7C2339C401005C2381 /* TestExpand.m */; };
-		D70F4C992339C402005C2381 /* TestExpand+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C822339C401005C2381 /* TestExpand+Additions.m */; };
-		D70F4C9A2339C402005C2381 /* MoreTimeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C832339C401005C2381 /* MoreTimeTest.m */; };
-		D70F4C9B2339C402005C2381 /* ShortDemo1.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C842339C401005C2381 /* ShortDemo1.m */; };
-		D70F4C9C2339C402005C2381 /* BlockTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4C852339C401005C2381 /* BlockTest.m */; };
-		D70F4C9F2339C60C005C2381 /* Block的深度探究.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D70F4C9D2339C60C005C2381 /* Block的深度探究.jpg */; };
-		D70F4CA02339C60C005C2381 /* Block 深入浅出.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D70F4C9E2339C60C005C2381 /* Block 深入浅出.jpg */; };
-		D70F4CA4233A01BE005C2381 /* SKKVCKVOVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CA3233A01BE005C2381 /* SKKVCKVOVC.m */; };
-		D70F4CA7233A01D7005C2381 /* KVOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CA5233A01D7005C2381 /* KVOModel.m */; };
-		D70F4CAB233A0772005C2381 /* SKDelegateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CAA233A0772005C2381 /* SKDelegateVC.m */; };
-		D70F4CB0233A1E22005C2381 /* SKPropertyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CAF233A1E22005C2381 /* SKPropertyVC.m */; };
-		D70F4CB8233AF9ED005C2381 /* SKSegementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CB7233AF9ED005C2381 /* SKSegementVC.m */; };
-		D70F4CBB233AFFC5005C2381 /* SKSegementOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CBA233AFFC5005C2381 /* SKSegementOneVC.m */; };
-		D70F4CBE233AFFD1005C2381 /* SKSegementTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CBD233AFFD1005C2381 /* SKSegementTwoVC.m */; };
-		D70F4CC3233B5FF8005C2381 /* SKProprtyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CC2233B5FF8005C2381 /* SKProprtyModel.m */; };
-		D70F4CC8233B7174005C2381 /* SKSynthesizeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CC7233B7174005C2381 /* SKSynthesizeModel.m */; };
-		D70F4CCB233B72ED005C2381 /* SKPropertyTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CCA233B72ED005C2381 /* SKPropertyTestModel.m */; };
 		D70F4CCF233C4D53005C2381 /* SKSortAlgorithmVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CCE233C4D53005C2381 /* SKSortAlgorithmVC.m */; };
-		D70F4CD6233C9346005C2381 /* SKRuntimePerson.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4CD5233C9346005C2381 /* SKRuntimePerson.m */; };
-		D70F4D03233CAFF7005C2381 /* SKMessageSendAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4D02233CAFF7005C2381 /* SKMessageSendAction.m */; };
-		D70F4D50233DA4A0005C2381 /* SKRuntimeOtherObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4D4F233DA4A0005C2381 /* SKRuntimeOtherObject.m */; };
-		D70F4D7B233E061C005C2381 /* SKObjectObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4D7A233E061C005C2381 /* SKObjectObject.m */; };
-		D70F4D7E233E062D005C2381 /* SKObjectObjectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4D7D233E062D005C2381 /* SKObjectObjectVC.m */; };
-		D70F4D81233E08FE005C2381 /* SKSubObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4D80233E08FE005C2381 /* SKSubObject.m */; };
-		D70F4D85233E11B3005C2381 /* 类继承经典图.png in Resources */ = {isa = PBXBuildFile; fileRef = D70F4D84233E11B3005C2381 /* 类继承经典图.png */; };
-		D70F4DB423420435005C2381 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4DB323420435005C2381 /* Aspects.m */; };
-		D70F4DB723420491005C2381 /* NSObject+SKHookSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4DB623420491005C2381 /* NSObject+SKHookSelector.m */; };
-		D732311923505289008635DB /* SKRunLoopObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D732311823505289008635DB /* SKRunLoopObject.m */; };
-		D758F42E235446C600ED60EC /* SKTimerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D758F42D235446C600ED60EC /* SKTimerTest.m */; };
-		D758F45F23547F4700ED60EC /* SKAutoReleaseTestObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D758F45E23547F4700ED60EC /* SKAutoReleaseTestObj.m */; };
 		D78EEB0B2333283C0001467B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EEB0A2333283C0001467B /* AppDelegate.m */; };
 		D78EEB0E2333283C0001467B /* SKHomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EEB0D2333283C0001467B /* SKHomePageVC.m */; };
 		D78EEB112333283C0001467B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78EEB0F2333283C0001467B /* Main.storyboard */; };
 		D78EEB132333283D0001467B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D78EEB122333283D0001467B /* Assets.xcassets */; };
 		D78EEB162333283D0001467B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78EEB142333283D0001467B /* LaunchScreen.storyboard */; };
 		D78EEB192333283D0001467B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EEB182333283D0001467B /* main.m */; };
+		D7C9C51D2355A69700146CA5 /* SKRunloopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C3232355A69600146CA5 /* SKRunloopVC.m */; };
+		D7C9C51E2355A69700146CA5 /* SKTimerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C3252355A69600146CA5 /* SKTimerTest.m */; };
+		D7C9C51F2355A69700146CA5 /* SKRunLoopObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C3262355A69600146CA5 /* SKRunLoopObject.m */; };
+		D7C9C5202355A69700146CA5 /* SKPropertyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C32E2355A69600146CA5 /* SKPropertyVC.m */; };
+		D7C9C5212355A69700146CA5 /* SKPropertyTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C32F2355A69600146CA5 /* SKPropertyTestModel.m */; };
+		D7C9C5222355A69700146CA5 /* SKSynthesizeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C3302355A69600146CA5 /* SKSynthesizeModel.m */; };
+		D7C9C5232355A69700146CA5 /* SKProprtyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C3312355A69600146CA5 /* SKProprtyModel.m */; };
+		D7C9C5242355A69700146CA5 /* SKAutoReleaseTestObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C3332355A69600146CA5 /* SKAutoReleaseTestObj.m */; };
+		D7C9C52A2355A69700146CA5 /* SKMessageSendAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C33F2355A69600146CA5 /* SKMessageSendAction.m */; };
+		D7C9C52B2355A69700146CA5 /* SKRuntimeOtherObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C3422355A69600146CA5 /* SKRuntimeOtherObject.m */; };
+		D7C9C52C2355A69700146CA5 /* SKRuntimeWeakObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C3432355A69600146CA5 /* SKRuntimeWeakObject.m */; };
+		D7C9C52F2355A69700146CA5 /* SKRuntimePerson.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C3462355A69600146CA5 /* SKRuntimePerson.m */; };
+		D7C9C5302355A69700146CA5 /* NSObject+SKRuntimeAssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C3472355A69600146CA5 /* NSObject+SKRuntimeAssociatedObject.m */; };
+		D7C9C5312355A69700146CA5 /* SKRuntimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C3492355A69600146CA5 /* SKRuntimeVC.m */; };
+		D7C9C5322355A69700146CA5 /* SKDelegateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C34C2355A69600146CA5 /* SKDelegateVC.m */; };
+		D7C9C5332355A69700146CA5 /* 类继承经典图.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C9C34F2355A69600146CA5 /* 类继承经典图.png */; };
+		D7C9C5352355A69700146CA5 /* SKSubObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C3532355A69600146CA5 /* SKSubObject.m */; };
+		D7C9C5372355A69700146CA5 /* SKObjectObjectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C3552355A69600146CA5 /* SKObjectObjectVC.m */; };
+		D7C9C5382355A69700146CA5 /* SKObjectObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C3562355A69600146CA5 /* SKObjectObject.m */; };
+		D7C9C5392355A69700146CA5 /* SKSegementTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C35A2355A69600146CA5 /* SKSegementTwoVC.m */; };
+		D7C9C53A2355A69700146CA5 /* SKSegementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C35B2355A69600146CA5 /* SKSegementVC.m */; };
+		D7C9C53B2355A69700146CA5 /* SKSegementOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C35E2355A69600146CA5 /* SKSegementOneVC.m */; };
+		D7C9C53C2355A69700146CA5 /* SKThreadDeadLockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C3612355A69600146CA5 /* SKThreadDeadLockVC.m */; };
+		D7C9C53D2355A69700146CA5 /* NSObject+SKHookSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C3642355A69600146CA5 /* NSObject+SKHookSelector.m */; };
+		D7C9C66A2355A69700146CA5 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C4DE2355A69700146CA5 /* Aspects.m */; };
+		D7C9C66B2355A69700146CA5 /* KVOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C4E22355A69700146CA5 /* KVOModel.m */; };
+		D7C9C66C2355A69700146CA5 /* SKKVCKVOVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C4E32355A69700146CA5 /* SKKVCKVOVC.m */; };
+		D7C9C66D2355A69700146CA5 /* Block 深入浅出.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7C9C4E62355A69700146CA5 /* Block 深入浅出.jpg */; };
+		D7C9C66E2355A69700146CA5 /* SKBlockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C4E72355A69700146CA5 /* SKBlockVC.m */; };
+		D7C9C66F2355A69700146CA5 /* Block的深度探究.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7C9C4E82355A69700146CA5 /* Block的深度探究.jpg */; };
+		D7C9C6702355A69700146CA5 /* BlockTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C4EB2355A69700146CA5 /* BlockTool.m */; };
+		D7C9C6712355A69700146CA5 /* SemaphoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C4ED2355A69700146CA5 /* SemaphoreTest.m */; };
+		D7C9C6732355A69700146CA5 /* DownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C4F52355A69700146CA5 /* DownLoadManager.m */; };
+		D7C9C6762355A69700146CA5 /* SSDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C4FC2355A69700146CA5 /* SSDemo.m */; };
+		D7C9C6782355A69700146CA5 /* SubDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C4FE2355A69700146CA5 /* SubDemo.m */; };
+		D7C9C6792355A69700146CA5 /* PropertyDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C5022355A69700146CA5 /* PropertyDemo.m */; };
+		D7C9C67B2355A69700146CA5 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C5042355A69700146CA5 /* TestModel.m */; };
+		D7C9C67C2355A69700146CA5 /* RetainCycleModule.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C5052355A69700146CA5 /* RetainCycleModule.m */; };
+		D7C9C67D2355A69700146CA5 /* NSObject+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C5062355A69700146CA5 /* NSObject+Add.m */; };
+		D7C9C67E2355A69700146CA5 /* NSObject+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C5082355A69700146CA5 /* NSObject+Addition.m */; };
+		D7C9C67F2355A69700146CA5 /* TestExpand+test.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C50A2355A69700146CA5 /* TestExpand+test.m */; };
+		D7C9C6802355A69700146CA5 /* TestExpand.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C50B2355A69700146CA5 /* TestExpand.m */; };
+		D7C9C6832355A69700146CA5 /* TestExpand+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C5112355A69700146CA5 /* TestExpand+Additions.m */; };
+		D7C9C6842355A69700146CA5 /* MoreTimeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C5122355A69700146CA5 /* MoreTimeTest.m */; };
+		D7C9C6852355A69700146CA5 /* ShortDemo1.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C5132355A69700146CA5 /* ShortDemo1.m */; };
+		D7C9C6862355A69700146CA5 /* BlockTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C5142355A69700146CA5 /* BlockTest.m */; };
+		D7C9C68A2355A79F00146CA5 /* SKPCNetworkingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C9C6892355A79F00146CA5 /* SKPCNetworkingVC.m */; };
+		D7C9C68C2355C87900146CA5 /* 对象释放时机图.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7C9C68B2355C87900146CA5 /* 对象释放时机图.jpg */; };
 		D7E3DC5F2334B8D4008F7B95 /* SKUINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E3DC5E2334B8D4008F7B95 /* SKUINavigationController.m */; };
-		D7F21415234F382600C85498 /* SKRuntimeWeakObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D7F21414234F382600C85498 /* SKRuntimeWeakObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		15C2B4090AEC7EF161233AE8 /* Pods_AllKindOfThings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllKindOfThings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A7FC359C60902B124FEBC2E /* Pods-AllKindOfThings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllKindOfThings.release.xcconfig"; path = "Target Support Files/Pods-AllKindOfThings/Pods-AllKindOfThings.release.xcconfig"; sourceTree = "<group>"; };
 		8BB2E0137D895E7586529F58 /* Pods-AllKindOfThings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllKindOfThings.debug.xcconfig"; path = "Target Support Files/Pods-AllKindOfThings/Pods-AllKindOfThings.debug.xcconfig"; sourceTree = "<group>"; };
-		D700F64723332B2B0054ADDA /* SKThreadDeadLockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKThreadDeadLockVC.h; sourceTree = "<group>"; };
-		D700F64823332B2B0054ADDA /* SKThreadDeadLockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKThreadDeadLockVC.m; sourceTree = "<group>"; };
-		D700F64B233389400054ADDA /* SKRuntimeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKRuntimeVC.h; sourceTree = "<group>"; };
-		D700F64C233389400054ADDA /* SKRuntimeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKRuntimeVC.m; sourceTree = "<group>"; };
-		D700F65D233478EA0054ADDA /* SKRunloopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKRunloopVC.h; sourceTree = "<group>"; };
-		D700F65E233478EA0054ADDA /* SKRunloopVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKRunloopVC.m; sourceTree = "<group>"; };
-		D700F6612334794F0054ADDA /* SKBlockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKBlockVC.h; sourceTree = "<group>"; };
-		D700F6622334794F0054ADDA /* SKBlockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKBlockVC.m; sourceTree = "<group>"; };
-		D700F6672334AA5A0054ADDA /* SKDiscoveryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKDiscoveryVC.h; sourceTree = "<group>"; };
-		D700F6682334AA5A0054ADDA /* SKDiscoveryVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKDiscoveryVC.m; sourceTree = "<group>"; };
-		D700F66A2334AA650054ADDA /* SKClansVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKClansVC.h; sourceTree = "<group>"; };
-		D700F66B2334AA650054ADDA /* SKClansVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKClansVC.m; sourceTree = "<group>"; };
+		D700F6672334AA5A0054ADDA /* SKAlgorithmBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKAlgorithmBaseVC.h; sourceTree = "<group>"; };
+		D700F6682334AA5A0054ADDA /* SKAlgorithmBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKAlgorithmBaseVC.m; sourceTree = "<group>"; };
+		D700F66A2334AA650054ADDA /* SKPCBasicTechVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKPCBasicTechVC.h; sourceTree = "<group>"; };
+		D700F66B2334AA650054ADDA /* SKPCBasicTechVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKPCBasicTechVC.m; sourceTree = "<group>"; };
 		D700F66D2334AA800054ADDA /* SKPersonalCenterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKPersonalCenterVC.h; sourceTree = "<group>"; };
 		D700F66E2334AA800054ADDA /* SKPersonalCenterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKPersonalCenterVC.m; sourceTree = "<group>"; };
-		D70EF39C2334738C002D0AB0 /* NSObject+SKRuntimeAssociatedObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SKRuntimeAssociatedObject.h"; sourceTree = "<group>"; };
-		D70EF39D2334738C002D0AB0 /* NSObject+SKRuntimeAssociatedObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SKRuntimeAssociatedObject.m"; sourceTree = "<group>"; };
-		D70F4C5B2339C401005C2381 /* PropertyDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyDemo.h; sourceTree = "<group>"; };
-		D70F4C5C2339C401005C2381 /* BlockTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockTool.m; sourceTree = "<group>"; };
-		D70F4C5D2339C401005C2381 /* NSObject+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Addition.h"; sourceTree = "<group>"; };
-		D70F4C5E2339C401005C2381 /* SemaphoreTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SemaphoreTest.m; sourceTree = "<group>"; };
-		D70F4C5F2339C401005C2381 /* NSObject+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Add.h"; sourceTree = "<group>"; };
-		D70F4C602339C401005C2381 /* PropertyDemo-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "PropertyDemo-arm64.cpp"; sourceTree = "<group>"; };
-		D70F4C612339C401005C2381 /* RetainCycleModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetainCycleModule.h; sourceTree = "<group>"; };
-		D70F4C622339C401005C2381 /* TestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
-		D70F4C632339C401005C2381 /* ShortDemo1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortDemo1.h; sourceTree = "<group>"; };
-		D70F4C652339C401005C2381 /* DownLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadManager.h; sourceTree = "<group>"; };
-		D70F4C662339C401005C2381 /* DownLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadManager.m; sourceTree = "<group>"; };
-		D70F4C672339C401005C2381 /* MoreTimeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTimeTest.h; sourceTree = "<group>"; };
-		D70F4C682339C401005C2381 /* BlockTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockTest.h; sourceTree = "<group>"; };
-		D70F4C692339C401005C2381 /* ShortDemo1-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "ShortDemo1-arm64.cpp"; sourceTree = "<group>"; };
-		D70F4C6B2339C401005C2381 /* SubDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubDemo.h; sourceTree = "<group>"; };
-		D70F4C6C2339C401005C2381 /* SubDemo-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SubDemo-arm64.cpp"; sourceTree = "<group>"; };
-		D70F4C6D2339C401005C2381 /* SSDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDemo.m; sourceTree = "<group>"; };
-		D70F4C6E2339C401005C2381 /* SSbDemo-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SSbDemo-arm64.cpp"; sourceTree = "<group>"; };
-		D70F4C6F2339C401005C2381 /* SubDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubDemo.m; sourceTree = "<group>"; };
-		D70F4C702339C401005C2381 /* SSDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDemo.h; sourceTree = "<group>"; };
-		D70F4C722339C401005C2381 /* BlockTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockTool.h; sourceTree = "<group>"; };
-		D70F4C732339C401005C2381 /* PropertyDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyDemo.m; sourceTree = "<group>"; };
-		D70F4C742339C401005C2381 /* NSObject+Addition-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "NSObject+Addition-arm64.cpp"; sourceTree = "<group>"; };
-		D70F4C752339C401005C2381 /* TestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
-		D70F4C762339C401005C2381 /* RetainCycleModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetainCycleModule.m; sourceTree = "<group>"; };
-		D70F4C772339C401005C2381 /* NSObject+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Add.m"; sourceTree = "<group>"; };
-		D70F4C782339C401005C2381 /* SemaphoreTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SemaphoreTest.h; sourceTree = "<group>"; };
-		D70F4C792339C401005C2381 /* NSObject+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Addition.m"; sourceTree = "<group>"; };
-		D70F4C7B2339C401005C2381 /* TestExpand+test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TestExpand+test.m"; sourceTree = "<group>"; };
-		D70F4C7C2339C401005C2381 /* TestExpand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestExpand.m; sourceTree = "<group>"; };
-		D70F4C7D2339C401005C2381 /* TestExpand-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "TestExpand-arm64.cpp"; sourceTree = "<group>"; };
-		D70F4C7E2339C401005C2381 /* TestExpand+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestExpand+Additions.h"; sourceTree = "<group>"; };
-		D70F4C7F2339C401005C2381 /* TestExpand+test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestExpand+test.h"; sourceTree = "<group>"; };
-		D70F4C802339C401005C2381 /* TestExpand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestExpand.h; sourceTree = "<group>"; };
-		D70F4C812339C401005C2381 /* TestExpand+Additions-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "TestExpand+Additions-arm64.cpp"; sourceTree = "<group>"; };
-		D70F4C822339C401005C2381 /* TestExpand+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TestExpand+Additions.m"; sourceTree = "<group>"; };
-		D70F4C832339C401005C2381 /* MoreTimeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTimeTest.m; sourceTree = "<group>"; };
-		D70F4C842339C401005C2381 /* ShortDemo1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortDemo1.m; sourceTree = "<group>"; };
-		D70F4C852339C401005C2381 /* BlockTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockTest.m; sourceTree = "<group>"; };
-		D70F4C9D2339C60C005C2381 /* Block的深度探究.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Block的深度探究.jpg"; sourceTree = "<group>"; };
-		D70F4C9E2339C60C005C2381 /* Block 深入浅出.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Block 深入浅出.jpg"; sourceTree = "<group>"; };
-		D70F4CA2233A01BE005C2381 /* SKKVCKVOVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKKVCKVOVC.h; sourceTree = "<group>"; };
-		D70F4CA3233A01BE005C2381 /* SKKVCKVOVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKKVCKVOVC.m; sourceTree = "<group>"; };
-		D70F4CA5233A01D7005C2381 /* KVOModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOModel.m; sourceTree = "<group>"; };
-		D70F4CA6233A01D7005C2381 /* KVOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOModel.h; sourceTree = "<group>"; };
-		D70F4CA9233A0772005C2381 /* SKDelegateVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKDelegateVC.h; sourceTree = "<group>"; };
-		D70F4CAA233A0772005C2381 /* SKDelegateVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKDelegateVC.m; sourceTree = "<group>"; };
-		D70F4CAC233A07A8005C2381 /* SKDelegateProtocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKDelegateProtocal.h; sourceTree = "<group>"; };
-		D70F4CAE233A1E22005C2381 /* SKPropertyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKPropertyVC.h; sourceTree = "<group>"; };
-		D70F4CAF233A1E22005C2381 /* SKPropertyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKPropertyVC.m; sourceTree = "<group>"; };
-		D70F4CB6233AF9ED005C2381 /* SKSegementVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSegementVC.h; sourceTree = "<group>"; };
-		D70F4CB7233AF9ED005C2381 /* SKSegementVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSegementVC.m; sourceTree = "<group>"; };
-		D70F4CB9233AFFC5005C2381 /* SKSegementOneVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSegementOneVC.h; sourceTree = "<group>"; };
-		D70F4CBA233AFFC5005C2381 /* SKSegementOneVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSegementOneVC.m; sourceTree = "<group>"; };
-		D70F4CBC233AFFD1005C2381 /* SKSegementTwoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSegementTwoVC.h; sourceTree = "<group>"; };
-		D70F4CBD233AFFD1005C2381 /* SKSegementTwoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSegementTwoVC.m; sourceTree = "<group>"; };
-		D70F4CBF233B17DE005C2381 /* SKPropertyVCarm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SKPropertyVCarm64.cpp; sourceTree = "<group>"; };
-		D70F4CC1233B5FF8005C2381 /* SKProprtyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKProprtyModel.h; sourceTree = "<group>"; };
-		D70F4CC2233B5FF8005C2381 /* SKProprtyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKProprtyModel.m; sourceTree = "<group>"; };
-		D70F4CC4233B61AA005C2381 /* SKProprtyModel-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKProprtyModel-arm64.cpp"; sourceTree = "<group>"; };
-		D70F4CC6233B7174005C2381 /* SKSynthesizeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSynthesizeModel.h; sourceTree = "<group>"; };
-		D70F4CC7233B7174005C2381 /* SKSynthesizeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSynthesizeModel.m; sourceTree = "<group>"; };
-		D70F4CC9233B72ED005C2381 /* SKPropertyTestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKPropertyTestModel.h; sourceTree = "<group>"; };
-		D70F4CCA233B72ED005C2381 /* SKPropertyTestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKPropertyTestModel.m; sourceTree = "<group>"; };
 		D70F4CCD233C4D53005C2381 /* SKSortAlgorithmVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSortAlgorithmVC.h; sourceTree = "<group>"; };
 		D70F4CCE233C4D53005C2381 /* SKSortAlgorithmVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSortAlgorithmVC.m; sourceTree = "<group>"; };
-		D70F4CD0233C57B9005C2381 /* SKSynthesizeModel-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKSynthesizeModel-arm64.cpp"; sourceTree = "<group>"; };
-		D70F4CD2233C58DA005C2381 /* SKPropertyTestModel-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKPropertyTestModel-arm64.cpp"; sourceTree = "<group>"; };
-		D70F4CD4233C9346005C2381 /* SKRuntimePerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKRuntimePerson.h; sourceTree = "<group>"; };
-		D70F4CD5233C9346005C2381 /* SKRuntimePerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKRuntimePerson.m; sourceTree = "<group>"; };
-		D70F4CFF233CA8A6005C2381 /* SKRuntimePerson-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKRuntimePerson-arm64.cpp"; sourceTree = "<group>"; };
-		D70F4D01233CAFF7005C2381 /* SKMessageSendAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKMessageSendAction.h; sourceTree = "<group>"; };
-		D70F4D02233CAFF7005C2381 /* SKMessageSendAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKMessageSendAction.m; sourceTree = "<group>"; };
-		D70F4D4E233DA4A0005C2381 /* SKRuntimeOtherObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKRuntimeOtherObject.h; sourceTree = "<group>"; };
-		D70F4D4F233DA4A0005C2381 /* SKRuntimeOtherObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKRuntimeOtherObject.m; sourceTree = "<group>"; };
-		D70F4D76233DD964005C2381 /* SKMessageSendAction-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKMessageSendAction-arm64.cpp"; sourceTree = "<group>"; };
-		D70F4D79233E061C005C2381 /* SKObjectObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKObjectObject.h; sourceTree = "<group>"; };
-		D70F4D7A233E061C005C2381 /* SKObjectObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKObjectObject.m; sourceTree = "<group>"; };
-		D70F4D7C233E062D005C2381 /* SKObjectObjectVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKObjectObjectVC.h; sourceTree = "<group>"; };
-		D70F4D7D233E062D005C2381 /* SKObjectObjectVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKObjectObjectVC.m; sourceTree = "<group>"; };
-		D70F4D7F233E08FE005C2381 /* SKSubObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSubObject.h; sourceTree = "<group>"; };
-		D70F4D80233E08FE005C2381 /* SKSubObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSubObject.m; sourceTree = "<group>"; };
-		D70F4D82233E0A64005C2381 /* SKSubObject-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKSubObject-arm64.cpp"; sourceTree = "<group>"; };
-		D70F4D84233E11B3005C2381 /* 类继承经典图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "类继承经典图.png"; sourceTree = "<group>"; };
-		D70F4DB223420435005C2381 /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
-		D70F4DB323420435005C2381 /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
-		D70F4DB523420491005C2381 /* NSObject+SKHookSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SKHookSelector.h"; sourceTree = "<group>"; };
-		D70F4DB623420491005C2381 /* NSObject+SKHookSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SKHookSelector.m"; sourceTree = "<group>"; };
-		D732311723505289008635DB /* SKRunLoopObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKRunLoopObject.h; sourceTree = "<group>"; };
-		D732311823505289008635DB /* SKRunLoopObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKRunLoopObject.m; sourceTree = "<group>"; };
-		D758F42C235446C600ED60EC /* SKTimerTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKTimerTest.h; sourceTree = "<group>"; };
-		D758F42D235446C600ED60EC /* SKTimerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKTimerTest.m; sourceTree = "<group>"; };
-		D758F45D23547F4700ED60EC /* SKAutoReleaseTestObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKAutoReleaseTestObj.h; sourceTree = "<group>"; };
-		D758F45E23547F4700ED60EC /* SKAutoReleaseTestObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKAutoReleaseTestObj.m; sourceTree = "<group>"; };
 		D78EEB062333283C0001467B /* 练习Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "练习Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78EEB092333283C0001467B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D78EEB0A2333283C0001467B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -191,12 +91,118 @@
 		D78EEB152333283D0001467B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D78EEB172333283D0001467B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D78EEB182333283D0001467B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D78F15A6234F0E530056E71F /* SKObjectObject-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKObjectObject-arm64.cpp"; sourceTree = "<group>"; };
-		D7CD140A234DE3B500082006 /* NSObject+SKRuntimeAssociatedObject-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "NSObject+SKRuntimeAssociatedObject-arm64.cpp"; sourceTree = "<group>"; };
+		D7C9C3232355A69600146CA5 /* SKRunloopVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKRunloopVC.m; sourceTree = "<group>"; };
+		D7C9C3252355A69600146CA5 /* SKTimerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTimerTest.m; sourceTree = "<group>"; };
+		D7C9C3262355A69600146CA5 /* SKRunLoopObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKRunLoopObject.m; sourceTree = "<group>"; };
+		D7C9C3272355A69600146CA5 /* SKTimerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTimerTest.h; sourceTree = "<group>"; };
+		D7C9C3282355A69600146CA5 /* SKRunLoopObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKRunLoopObject.h; sourceTree = "<group>"; };
+		D7C9C3292355A69600146CA5 /* SKRunloopVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKRunloopVC.h; sourceTree = "<group>"; };
+		D7C9C32B2355A69600146CA5 /* SKProprtyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKProprtyModel.h; sourceTree = "<group>"; };
+		D7C9C32C2355A69600146CA5 /* SKSynthesizeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSynthesizeModel.h; sourceTree = "<group>"; };
+		D7C9C32D2355A69600146CA5 /* SKAutoReleaseTestObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKAutoReleaseTestObj.h; sourceTree = "<group>"; };
+		D7C9C32E2355A69600146CA5 /* SKPropertyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKPropertyVC.m; sourceTree = "<group>"; };
+		D7C9C32F2355A69600146CA5 /* SKPropertyTestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKPropertyTestModel.m; sourceTree = "<group>"; };
+		D7C9C3302355A69600146CA5 /* SKSynthesizeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSynthesizeModel.m; sourceTree = "<group>"; };
+		D7C9C3312355A69600146CA5 /* SKProprtyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKProprtyModel.m; sourceTree = "<group>"; };
+		D7C9C3322355A69600146CA5 /* SKPropertyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKPropertyVC.h; sourceTree = "<group>"; };
+		D7C9C3332355A69600146CA5 /* SKAutoReleaseTestObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKAutoReleaseTestObj.m; sourceTree = "<group>"; };
+		D7C9C3342355A69600146CA5 /* SKPropertyTestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKPropertyTestModel.h; sourceTree = "<group>"; };
+		D7C9C3352355A69600146CA5 /* SKSynthesizeModel-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKSynthesizeModel-arm64.cpp"; sourceTree = "<group>"; };
+		D7C9C3362355A69600146CA5 /* SKProprtyModel-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKProprtyModel-arm64.cpp"; sourceTree = "<group>"; };
+		D7C9C3372355A69600146CA5 /* SKPropertyVCarm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SKPropertyVCarm64.cpp; sourceTree = "<group>"; };
+		D7C9C3382355A69600146CA5 /* SKPropertyTestModel-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKPropertyTestModel-arm64.cpp"; sourceTree = "<group>"; };
+		D7C9C33A2355A69600146CA5 /* SKRuntimeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKRuntimeVC.h; sourceTree = "<group>"; };
+		D7C9C33C2355A69600146CA5 /* SKRuntimeWeakObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKRuntimeWeakObject.h; sourceTree = "<group>"; };
+		D7C9C33D2355A69600146CA5 /* SKRuntimeOtherObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKRuntimeOtherObject.h; sourceTree = "<group>"; };
+		D7C9C33E2355A69600146CA5 /* SKRuntimePerson-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKRuntimePerson-arm64.cpp"; sourceTree = "<group>"; };
+		D7C9C33F2355A69600146CA5 /* SKMessageSendAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKMessageSendAction.m; sourceTree = "<group>"; };
+		D7C9C3402355A69600146CA5 /* NSObject+SKRuntimeAssociatedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SKRuntimeAssociatedObject.h"; sourceTree = "<group>"; };
+		D7C9C3412355A69600146CA5 /* SKRuntimePerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKRuntimePerson.h; sourceTree = "<group>"; };
+		D7C9C3422355A69600146CA5 /* SKRuntimeOtherObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKRuntimeOtherObject.m; sourceTree = "<group>"; };
+		D7C9C3432355A69600146CA5 /* SKRuntimeWeakObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKRuntimeWeakObject.m; sourceTree = "<group>"; };
+		D7C9C3442355A69600146CA5 /* NSObject+SKRuntimeAssociatedObject-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "NSObject+SKRuntimeAssociatedObject-arm64.cpp"; sourceTree = "<group>"; };
+		D7C9C3452355A69600146CA5 /* SKMessageSendAction-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKMessageSendAction-arm64.cpp"; sourceTree = "<group>"; };
+		D7C9C3462355A69600146CA5 /* SKRuntimePerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKRuntimePerson.m; sourceTree = "<group>"; };
+		D7C9C3472355A69600146CA5 /* NSObject+SKRuntimeAssociatedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SKRuntimeAssociatedObject.m"; sourceTree = "<group>"; };
+		D7C9C3482355A69600146CA5 /* SKMessageSendAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKMessageSendAction.h; sourceTree = "<group>"; };
+		D7C9C3492355A69600146CA5 /* SKRuntimeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKRuntimeVC.m; sourceTree = "<group>"; };
+		D7C9C34B2355A69600146CA5 /* SKDelegateProtocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKDelegateProtocal.h; sourceTree = "<group>"; };
+		D7C9C34C2355A69600146CA5 /* SKDelegateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKDelegateVC.m; sourceTree = "<group>"; };
+		D7C9C34D2355A69600146CA5 /* SKDelegateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKDelegateVC.h; sourceTree = "<group>"; };
+		D7C9C34F2355A69600146CA5 /* 类继承经典图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "类继承经典图.png"; sourceTree = "<group>"; };
+		D7C9C3502355A69600146CA5 /* SKSubObject-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKSubObject-arm64.cpp"; sourceTree = "<group>"; };
+		D7C9C3512355A69600146CA5 /* SKObjectObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKObjectObject.h; sourceTree = "<group>"; };
+		D7C9C3522355A69600146CA5 /* SKObjectObjectVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKObjectObjectVC.h; sourceTree = "<group>"; };
+		D7C9C3532355A69600146CA5 /* SKSubObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSubObject.m; sourceTree = "<group>"; };
+		D7C9C3542355A69600146CA5 /* SKObjectObject-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKObjectObject-arm64.cpp"; sourceTree = "<group>"; };
+		D7C9C3552355A69600146CA5 /* SKObjectObjectVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKObjectObjectVC.m; sourceTree = "<group>"; };
+		D7C9C3562355A69600146CA5 /* SKObjectObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKObjectObject.m; sourceTree = "<group>"; };
+		D7C9C3572355A69600146CA5 /* SKSubObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSubObject.h; sourceTree = "<group>"; };
+		D7C9C35A2355A69600146CA5 /* SKSegementTwoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSegementTwoVC.m; sourceTree = "<group>"; };
+		D7C9C35B2355A69600146CA5 /* SKSegementVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSegementVC.m; sourceTree = "<group>"; };
+		D7C9C35C2355A69600146CA5 /* SKSegementOneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSegementOneVC.h; sourceTree = "<group>"; };
+		D7C9C35D2355A69600146CA5 /* SKSegementTwoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSegementTwoVC.h; sourceTree = "<group>"; };
+		D7C9C35E2355A69600146CA5 /* SKSegementOneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSegementOneVC.m; sourceTree = "<group>"; };
+		D7C9C35F2355A69600146CA5 /* SKSegementVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSegementVC.h; sourceTree = "<group>"; };
+		D7C9C3612355A69600146CA5 /* SKThreadDeadLockVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKThreadDeadLockVC.m; sourceTree = "<group>"; };
+		D7C9C3622355A69600146CA5 /* SKThreadDeadLockVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKThreadDeadLockVC.h; sourceTree = "<group>"; };
+		D7C9C3642355A69600146CA5 /* NSObject+SKHookSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SKHookSelector.m"; sourceTree = "<group>"; };
+		D7C9C3652355A69600146CA5 /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
+		D7C9C4DD2355A69700146CA5 /* NSObject+SKHookSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SKHookSelector.h"; sourceTree = "<group>"; };
+		D7C9C4DE2355A69700146CA5 /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
+		D7C9C4E02355A69700146CA5 /* SKKVCKVOVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKKVCKVOVC.h; sourceTree = "<group>"; };
+		D7C9C4E12355A69700146CA5 /* KVOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOModel.h; sourceTree = "<group>"; };
+		D7C9C4E22355A69700146CA5 /* KVOModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOModel.m; sourceTree = "<group>"; };
+		D7C9C4E32355A69700146CA5 /* SKKVCKVOVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKKVCKVOVC.m; sourceTree = "<group>"; };
+		D7C9C4E52355A69700146CA5 /* SKBlockVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKBlockVC.h; sourceTree = "<group>"; };
+		D7C9C4E62355A69700146CA5 /* Block 深入浅出.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Block 深入浅出.jpg"; sourceTree = "<group>"; };
+		D7C9C4E72355A69700146CA5 /* SKBlockVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKBlockVC.m; sourceTree = "<group>"; };
+		D7C9C4E82355A69700146CA5 /* Block的深度探究.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Block的深度探究.jpg"; sourceTree = "<group>"; };
+		D7C9C4EA2355A69700146CA5 /* PropertyDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyDemo.h; sourceTree = "<group>"; };
+		D7C9C4EB2355A69700146CA5 /* BlockTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockTool.m; sourceTree = "<group>"; };
+		D7C9C4EC2355A69700146CA5 /* NSObject+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Addition.h"; sourceTree = "<group>"; };
+		D7C9C4ED2355A69700146CA5 /* SemaphoreTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SemaphoreTest.m; sourceTree = "<group>"; };
+		D7C9C4EE2355A69700146CA5 /* NSObject+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Add.h"; sourceTree = "<group>"; };
+		D7C9C4EF2355A69700146CA5 /* PropertyDemo-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "PropertyDemo-arm64.cpp"; sourceTree = "<group>"; };
+		D7C9C4F02355A69700146CA5 /* RetainCycleModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetainCycleModule.h; sourceTree = "<group>"; };
+		D7C9C4F12355A69700146CA5 /* TestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
+		D7C9C4F22355A69700146CA5 /* ShortDemo1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortDemo1.h; sourceTree = "<group>"; };
+		D7C9C4F42355A69700146CA5 /* DownLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadManager.h; sourceTree = "<group>"; };
+		D7C9C4F52355A69700146CA5 /* DownLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadManager.m; sourceTree = "<group>"; };
+		D7C9C4F62355A69700146CA5 /* MoreTimeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTimeTest.h; sourceTree = "<group>"; };
+		D7C9C4F72355A69700146CA5 /* BlockTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockTest.h; sourceTree = "<group>"; };
+		D7C9C4F82355A69700146CA5 /* ShortDemo1-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "ShortDemo1-arm64.cpp"; sourceTree = "<group>"; };
+		D7C9C4FA2355A69700146CA5 /* SubDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubDemo.h; sourceTree = "<group>"; };
+		D7C9C4FB2355A69700146CA5 /* SubDemo-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SubDemo-arm64.cpp"; sourceTree = "<group>"; };
+		D7C9C4FC2355A69700146CA5 /* SSDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDemo.m; sourceTree = "<group>"; };
+		D7C9C4FD2355A69700146CA5 /* SSbDemo-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SSbDemo-arm64.cpp"; sourceTree = "<group>"; };
+		D7C9C4FE2355A69700146CA5 /* SubDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubDemo.m; sourceTree = "<group>"; };
+		D7C9C4FF2355A69700146CA5 /* SSDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDemo.h; sourceTree = "<group>"; };
+		D7C9C5012355A69700146CA5 /* BlockTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockTool.h; sourceTree = "<group>"; };
+		D7C9C5022355A69700146CA5 /* PropertyDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyDemo.m; sourceTree = "<group>"; };
+		D7C9C5032355A69700146CA5 /* NSObject+Addition-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "NSObject+Addition-arm64.cpp"; sourceTree = "<group>"; };
+		D7C9C5042355A69700146CA5 /* TestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
+		D7C9C5052355A69700146CA5 /* RetainCycleModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetainCycleModule.m; sourceTree = "<group>"; };
+		D7C9C5062355A69700146CA5 /* NSObject+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Add.m"; sourceTree = "<group>"; };
+		D7C9C5072355A69700146CA5 /* SemaphoreTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SemaphoreTest.h; sourceTree = "<group>"; };
+		D7C9C5082355A69700146CA5 /* NSObject+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Addition.m"; sourceTree = "<group>"; };
+		D7C9C50A2355A69700146CA5 /* TestExpand+test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TestExpand+test.m"; sourceTree = "<group>"; };
+		D7C9C50B2355A69700146CA5 /* TestExpand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestExpand.m; sourceTree = "<group>"; };
+		D7C9C50C2355A69700146CA5 /* TestExpand-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "TestExpand-arm64.cpp"; sourceTree = "<group>"; };
+		D7C9C50D2355A69700146CA5 /* TestExpand+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestExpand+Additions.h"; sourceTree = "<group>"; };
+		D7C9C50E2355A69700146CA5 /* TestExpand+test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestExpand+test.h"; sourceTree = "<group>"; };
+		D7C9C50F2355A69700146CA5 /* TestExpand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestExpand.h; sourceTree = "<group>"; };
+		D7C9C5102355A69700146CA5 /* TestExpand+Additions-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "TestExpand+Additions-arm64.cpp"; sourceTree = "<group>"; };
+		D7C9C5112355A69700146CA5 /* TestExpand+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TestExpand+Additions.m"; sourceTree = "<group>"; };
+		D7C9C5122355A69700146CA5 /* MoreTimeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTimeTest.m; sourceTree = "<group>"; };
+		D7C9C5132355A69700146CA5 /* ShortDemo1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortDemo1.m; sourceTree = "<group>"; };
+		D7C9C5142355A69700146CA5 /* BlockTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockTest.m; sourceTree = "<group>"; };
+		D7C9C6882355A79F00146CA5 /* SKPCNetworkingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKPCNetworkingVC.h; sourceTree = "<group>"; };
+		D7C9C6892355A79F00146CA5 /* SKPCNetworkingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKPCNetworkingVC.m; sourceTree = "<group>"; };
+		D7C9C68B2355C87900146CA5 /* 对象释放时机图.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "对象释放时机图.jpg"; sourceTree = "<group>"; };
+		D7C9C68D2355CEBC00146CA5 /* SKAutoReleaseTestObj-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKAutoReleaseTestObj-arm64.cpp"; sourceTree = "<group>"; };
 		D7E3DC5D2334B8D4008F7B95 /* SKUINavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKUINavigationController.h; sourceTree = "<group>"; };
 		D7E3DC5E2334B8D4008F7B95 /* SKUINavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKUINavigationController.m; sourceTree = "<group>"; };
-		D7F21413234F382600C85498 /* SKRuntimeWeakObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKRuntimeWeakObject.h; sourceTree = "<group>"; };
-		D7F21414234F382600C85498 /* SKRuntimeWeakObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKRuntimeWeakObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,15 +234,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D700F645233328B20054ADDA /* Thread */ = {
-			isa = PBXGroup;
-			children = (
-				D700F64723332B2B0054ADDA /* SKThreadDeadLockVC.h */,
-				D700F64823332B2B0054ADDA /* SKThreadDeadLockVC.m */,
-			);
-			path = Thread;
-			sourceTree = "<group>";
-		};
 		D700F646233328C00054ADDA /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,209 +241,16 @@
 				D78EEB0A2333283C0001467B /* AppDelegate.m */,
 				D78EEB0C2333283C0001467B /* SKHomePageVC.h */,
 				D78EEB0D2333283C0001467B /* SKHomePageVC.m */,
-				D700F6672334AA5A0054ADDA /* SKDiscoveryVC.h */,
-				D700F6682334AA5A0054ADDA /* SKDiscoveryVC.m */,
-				D700F66A2334AA650054ADDA /* SKClansVC.h */,
-				D700F66B2334AA650054ADDA /* SKClansVC.m */,
+				D700F6672334AA5A0054ADDA /* SKAlgorithmBaseVC.h */,
+				D700F6682334AA5A0054ADDA /* SKAlgorithmBaseVC.m */,
+				D700F66A2334AA650054ADDA /* SKPCBasicTechVC.h */,
+				D700F66B2334AA650054ADDA /* SKPCBasicTechVC.m */,
 				D700F66D2334AA800054ADDA /* SKPersonalCenterVC.h */,
 				D700F66E2334AA800054ADDA /* SKPersonalCenterVC.m */,
 				D7E3DC5D2334B8D4008F7B95 /* SKUINavigationController.h */,
 				D7E3DC5E2334B8D4008F7B95 /* SKUINavigationController.m */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		D700F64A2333892B0054ADDA /* Runtime */ = {
-			isa = PBXGroup;
-			children = (
-				D700F64B233389400054ADDA /* SKRuntimeVC.h */,
-				D700F64C233389400054ADDA /* SKRuntimeVC.m */,
-				D700F6552334729B0054ADDA /* Class */,
-			);
-			path = Runtime;
-			sourceTree = "<group>";
-		};
-		D700F6552334729B0054ADDA /* Class */ = {
-			isa = PBXGroup;
-			children = (
-				D70EF39C2334738C002D0AB0 /* NSObject+SKRuntimeAssociatedObject.h */,
-				D70EF39D2334738C002D0AB0 /* NSObject+SKRuntimeAssociatedObject.m */,
-				D7F21413234F382600C85498 /* SKRuntimeWeakObject.h */,
-				D7F21414234F382600C85498 /* SKRuntimeWeakObject.m */,
-				D7CD140A234DE3B500082006 /* NSObject+SKRuntimeAssociatedObject-arm64.cpp */,
-				D70F4CD4233C9346005C2381 /* SKRuntimePerson.h */,
-				D70F4CD5233C9346005C2381 /* SKRuntimePerson.m */,
-				D70F4D01233CAFF7005C2381 /* SKMessageSendAction.h */,
-				D70F4D02233CAFF7005C2381 /* SKMessageSendAction.m */,
-				D70F4D76233DD964005C2381 /* SKMessageSendAction-arm64.cpp */,
-				D70F4D4E233DA4A0005C2381 /* SKRuntimeOtherObject.h */,
-				D70F4D4F233DA4A0005C2381 /* SKRuntimeOtherObject.m */,
-				D70F4CFF233CA8A6005C2381 /* SKRuntimePerson-arm64.cpp */,
-			);
-			path = Class;
-			sourceTree = "<group>";
-		};
-		D700F65C233478B10054ADDA /* RunLoop */ = {
-			isa = PBXGroup;
-			children = (
-				D700F65D233478EA0054ADDA /* SKRunloopVC.h */,
-				D700F65E233478EA0054ADDA /* SKRunloopVC.m */,
-				D732311623505250008635DB /* Class */,
-			);
-			path = RunLoop;
-			sourceTree = "<group>";
-		};
-		D700F660233479420054ADDA /* Block */ = {
-			isa = PBXGroup;
-			children = (
-				D700F6612334794F0054ADDA /* SKBlockVC.h */,
-				D700F6622334794F0054ADDA /* SKBlockVC.m */,
-				D70F4C9E2339C60C005C2381 /* Block 深入浅出.jpg */,
-				D70F4C9D2339C60C005C2381 /* Block的深度探究.jpg */,
-				D70F4C5A2339C401005C2381 /* BlockTest */,
-			);
-			path = Block;
-			sourceTree = "<group>";
-		};
-		D70F4C5A2339C401005C2381 /* BlockTest */ = {
-			isa = PBXGroup;
-			children = (
-				D70F4C682339C401005C2381 /* BlockTest.h */,
-				D70F4C852339C401005C2381 /* BlockTest.m */,
-				D70F4C722339C401005C2381 /* BlockTool.h */,
-				D70F4C5C2339C401005C2381 /* BlockTool.m */,
-				D70F4C642339C401005C2381 /* DownLoadManager */,
-				D70F4C672339C401005C2381 /* MoreTimeTest.h */,
-				D70F4C832339C401005C2381 /* MoreTimeTest.m */,
-				D70F4C5F2339C401005C2381 /* NSObject+Add.h */,
-				D70F4C772339C401005C2381 /* NSObject+Add.m */,
-				D70F4C742339C401005C2381 /* NSObject+Addition-arm64.cpp */,
-				D70F4C5D2339C401005C2381 /* NSObject+Addition.h */,
-				D70F4C792339C401005C2381 /* NSObject+Addition.m */,
-				D70F4C602339C401005C2381 /* PropertyDemo-arm64.cpp */,
-				D70F4C5B2339C401005C2381 /* PropertyDemo.h */,
-				D70F4C732339C401005C2381 /* PropertyDemo.m */,
-				D70F4C612339C401005C2381 /* RetainCycleModule.h */,
-				D70F4C762339C401005C2381 /* RetainCycleModule.m */,
-				D70F4C782339C401005C2381 /* SemaphoreTest.h */,
-				D70F4C5E2339C401005C2381 /* SemaphoreTest.m */,
-				D70F4C692339C401005C2381 /* ShortDemo1-arm64.cpp */,
-				D70F4C632339C401005C2381 /* ShortDemo1.h */,
-				D70F4C842339C401005C2381 /* ShortDemo1.m */,
-				D70F4C6A2339C401005C2381 /* SubDemo */,
-				D70F4C7A2339C401005C2381 /* TestExpanded */,
-				D70F4C622339C401005C2381 /* TestModel.h */,
-				D70F4C752339C401005C2381 /* TestModel.m */,
-				D70F4C712339C401005C2381 /* Time */,
-			);
-			path = BlockTest;
-			sourceTree = "<group>";
-		};
-		D70F4C642339C401005C2381 /* DownLoadManager */ = {
-			isa = PBXGroup;
-			children = (
-				D70F4C652339C401005C2381 /* DownLoadManager.h */,
-				D70F4C662339C401005C2381 /* DownLoadManager.m */,
-			);
-			path = DownLoadManager;
-			sourceTree = "<group>";
-		};
-		D70F4C6A2339C401005C2381 /* SubDemo */ = {
-			isa = PBXGroup;
-			children = (
-				D70F4C6B2339C401005C2381 /* SubDemo.h */,
-				D70F4C6C2339C401005C2381 /* SubDemo-arm64.cpp */,
-				D70F4C6D2339C401005C2381 /* SSDemo.m */,
-				D70F4C6E2339C401005C2381 /* SSbDemo-arm64.cpp */,
-				D70F4C6F2339C401005C2381 /* SubDemo.m */,
-				D70F4C702339C401005C2381 /* SSDemo.h */,
-			);
-			path = SubDemo;
-			sourceTree = "<group>";
-		};
-		D70F4C712339C401005C2381 /* Time */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Time;
-			sourceTree = "<group>";
-		};
-		D70F4C7A2339C401005C2381 /* TestExpanded */ = {
-			isa = PBXGroup;
-			children = (
-				D70F4C7B2339C401005C2381 /* TestExpand+test.m */,
-				D70F4C7C2339C401005C2381 /* TestExpand.m */,
-				D70F4C7D2339C401005C2381 /* TestExpand-arm64.cpp */,
-				D70F4C7E2339C401005C2381 /* TestExpand+Additions.h */,
-				D70F4C7F2339C401005C2381 /* TestExpand+test.h */,
-				D70F4C802339C401005C2381 /* TestExpand.h */,
-				D70F4C812339C401005C2381 /* TestExpand+Additions-arm64.cpp */,
-				D70F4C822339C401005C2381 /* TestExpand+Additions.m */,
-			);
-			path = TestExpanded;
-			sourceTree = "<group>";
-		};
-		D70F4CA1233A0191005C2381 /* KVOKVC */ = {
-			isa = PBXGroup;
-			children = (
-				D70F4CA2233A01BE005C2381 /* SKKVCKVOVC.h */,
-				D70F4CA3233A01BE005C2381 /* SKKVCKVOVC.m */,
-				D70F4CA6233A01D7005C2381 /* KVOModel.h */,
-				D70F4CA5233A01D7005C2381 /* KVOModel.m */,
-			);
-			path = KVOKVC;
-			sourceTree = "<group>";
-		};
-		D70F4CA8233A0762005C2381 /* Delegate */ = {
-			isa = PBXGroup;
-			children = (
-				D70F4CA9233A0772005C2381 /* SKDelegateVC.h */,
-				D70F4CAA233A0772005C2381 /* SKDelegateVC.m */,
-				D70F4CAC233A07A8005C2381 /* SKDelegateProtocal.h */,
-			);
-			path = Delegate;
-			sourceTree = "<group>";
-		};
-		D70F4CAD233A1BBB005C2381 /* Property */ = {
-			isa = PBXGroup;
-			children = (
-				D70F4CAE233A1E22005C2381 /* SKPropertyVC.h */,
-				D70F4CAF233A1E22005C2381 /* SKPropertyVC.m */,
-				D70F4CC1233B5FF8005C2381 /* SKProprtyModel.h */,
-				D70F4CC2233B5FF8005C2381 /* SKProprtyModel.m */,
-				D70F4CC6233B7174005C2381 /* SKSynthesizeModel.h */,
-				D70F4CC7233B7174005C2381 /* SKSynthesizeModel.m */,
-				D70F4CD0233C57B9005C2381 /* SKSynthesizeModel-arm64.cpp */,
-				D70F4CC9233B72ED005C2381 /* SKPropertyTestModel.h */,
-				D70F4CCA233B72ED005C2381 /* SKPropertyTestModel.m */,
-				D70F4CD2233C58DA005C2381 /* SKPropertyTestModel-arm64.cpp */,
-				D70F4CC4233B61AA005C2381 /* SKProprtyModel-arm64.cpp */,
-				D70F4CBF233B17DE005C2381 /* SKPropertyVCarm64.cpp */,
-				D758F45D23547F4700ED60EC /* SKAutoReleaseTestObj.h */,
-				D758F45E23547F4700ED60EC /* SKAutoReleaseTestObj.m */,
-			);
-			path = Property;
-			sourceTree = "<group>";
-		};
-		D70F4CB1233AF95C005C2381 /* UIFeature */ = {
-			isa = PBXGroup;
-			children = (
-				D70F4CB5233AF9D7005C2381 /* UISegement */,
-			);
-			path = UIFeature;
-			sourceTree = "<group>";
-		};
-		D70F4CB5233AF9D7005C2381 /* UISegement */ = {
-			isa = PBXGroup;
-			children = (
-				D70F4CB6233AF9ED005C2381 /* SKSegementVC.h */,
-				D70F4CB7233AF9ED005C2381 /* SKSegementVC.m */,
-				D70F4CB9233AFFC5005C2381 /* SKSegementOneVC.h */,
-				D70F4CBA233AFFC5005C2381 /* SKSegementOneVC.m */,
-				D70F4CBC233AFFD1005C2381 /* SKSegementTwoVC.h */,
-				D70F4CBD233AFFD1005C2381 /* SKSegementTwoVC.m */,
-			);
-			path = UISegement;
 			sourceTree = "<group>";
 		};
 		D70F4CCC233C4D2D005C2381 /* Algorithm */ = {
@@ -456,44 +260,6 @@
 				D70F4CCE233C4D53005C2381 /* SKSortAlgorithmVC.m */,
 			);
 			path = Algorithm;
-			sourceTree = "<group>";
-		};
-		D70F4D78233E0607005C2381 /* Object */ = {
-			isa = PBXGroup;
-			children = (
-				D70F4D79233E061C005C2381 /* SKObjectObject.h */,
-				D70F4D7A233E061C005C2381 /* SKObjectObject.m */,
-				D78F15A6234F0E530056E71F /* SKObjectObject-arm64.cpp */,
-				D70F4D7F233E08FE005C2381 /* SKSubObject.h */,
-				D70F4D80233E08FE005C2381 /* SKSubObject.m */,
-				D70F4D82233E0A64005C2381 /* SKSubObject-arm64.cpp */,
-				D70F4D7C233E062D005C2381 /* SKObjectObjectVC.h */,
-				D70F4D7D233E062D005C2381 /* SKObjectObjectVC.m */,
-				D70F4D84233E11B3005C2381 /* 类继承经典图.png */,
-			);
-			path = Object;
-			sourceTree = "<group>";
-		};
-		D70F4DB123420422005C2381 /* Aspects */ = {
-			isa = PBXGroup;
-			children = (
-				D70F4DB223420435005C2381 /* Aspects.h */,
-				D70F4DB323420435005C2381 /* Aspects.m */,
-				D70F4DB523420491005C2381 /* NSObject+SKHookSelector.h */,
-				D70F4DB623420491005C2381 /* NSObject+SKHookSelector.m */,
-			);
-			path = Aspects;
-			sourceTree = "<group>";
-		};
-		D732311623505250008635DB /* Class */ = {
-			isa = PBXGroup;
-			children = (
-				D732311723505289008635DB /* SKRunLoopObject.h */,
-				D732311823505289008635DB /* SKRunLoopObject.m */,
-				D758F42C235446C600ED60EC /* SKTimerTest.h */,
-				D758F42D235446C600ED60EC /* SKTimerTest.m */,
-			);
-			path = Class;
 			sourceTree = "<group>";
 		};
 		D78EEAFD2333283C0001467B = {
@@ -517,18 +283,10 @@
 		D78EEB082333283C0001467B /* AllKindOfThings */ = {
 			isa = PBXGroup;
 			children = (
-				D70F4DB123420422005C2381 /* Aspects */,
-				D70F4D78233E0607005C2381 /* Object */,
+				D7C9C6872355A71400146CA5 /* PCBasicTech */,
+				D7C9C3212355A69600146CA5 /* iOSTech */,
 				D70F4CCC233C4D2D005C2381 /* Algorithm */,
-				D70F4CB1233AF95C005C2381 /* UIFeature */,
-				D70F4CAD233A1BBB005C2381 /* Property */,
-				D70F4CA8233A0762005C2381 /* Delegate */,
-				D70F4CA1233A0191005C2381 /* KVOKVC */,
-				D700F660233479420054ADDA /* Block */,
-				D700F65C233478B10054ADDA /* RunLoop */,
 				D700F646233328C00054ADDA /* Main */,
-				D700F64A2333892B0054ADDA /* Runtime */,
-				D700F645233328B20054ADDA /* Thread */,
 				D78EEB0F2333283C0001467B /* Main.storyboard */,
 				D78EEB122333283D0001467B /* Assets.xcassets */,
 				D78EEB142333283D0001467B /* LaunchScreen.storyboard */,
@@ -536,6 +294,274 @@
 				D78EEB182333283D0001467B /* main.m */,
 			);
 			path = AllKindOfThings;
+			sourceTree = "<group>";
+		};
+		D7C9C3212355A69600146CA5 /* iOSTech */ = {
+			isa = PBXGroup;
+			children = (
+				D7C9C3222355A69600146CA5 /* RunLoop */,
+				D7C9C32A2355A69600146CA5 /* Property */,
+				D7C9C3392355A69600146CA5 /* Runtime */,
+				D7C9C34A2355A69600146CA5 /* Delegate */,
+				D7C9C34E2355A69600146CA5 /* Object */,
+				D7C9C3582355A69600146CA5 /* UIFeature */,
+				D7C9C3602355A69600146CA5 /* Thread */,
+				D7C9C3632355A69600146CA5 /* Aspects */,
+				D7C9C4DF2355A69700146CA5 /* KVOKVC */,
+				D7C9C4E42355A69700146CA5 /* Block */,
+			);
+			path = iOSTech;
+			sourceTree = "<group>";
+		};
+		D7C9C3222355A69600146CA5 /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				D7C9C3292355A69600146CA5 /* SKRunloopVC.h */,
+				D7C9C3232355A69600146CA5 /* SKRunloopVC.m */,
+				D7C9C3242355A69600146CA5 /* Class */,
+			);
+			path = RunLoop;
+			sourceTree = "<group>";
+		};
+		D7C9C3242355A69600146CA5 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				D7C9C3272355A69600146CA5 /* SKTimerTest.h */,
+				D7C9C3252355A69600146CA5 /* SKTimerTest.m */,
+				D7C9C3282355A69600146CA5 /* SKRunLoopObject.h */,
+				D7C9C3262355A69600146CA5 /* SKRunLoopObject.m */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		D7C9C32A2355A69600146CA5 /* Property */ = {
+			isa = PBXGroup;
+			children = (
+				D7C9C32D2355A69600146CA5 /* SKAutoReleaseTestObj.h */,
+				D7C9C3332355A69600146CA5 /* SKAutoReleaseTestObj.m */,
+				D7C9C68D2355CEBC00146CA5 /* SKAutoReleaseTestObj-arm64.cpp */,
+				D7C9C3382355A69600146CA5 /* SKPropertyTestModel-arm64.cpp */,
+				D7C9C3342355A69600146CA5 /* SKPropertyTestModel.h */,
+				D7C9C32F2355A69600146CA5 /* SKPropertyTestModel.m */,
+				D7C9C3322355A69600146CA5 /* SKPropertyVC.h */,
+				D7C9C32E2355A69600146CA5 /* SKPropertyVC.m */,
+				D7C9C3372355A69600146CA5 /* SKPropertyVCarm64.cpp */,
+				D7C9C3362355A69600146CA5 /* SKProprtyModel-arm64.cpp */,
+				D7C9C32B2355A69600146CA5 /* SKProprtyModel.h */,
+				D7C9C3312355A69600146CA5 /* SKProprtyModel.m */,
+				D7C9C3352355A69600146CA5 /* SKSynthesizeModel-arm64.cpp */,
+				D7C9C32C2355A69600146CA5 /* SKSynthesizeModel.h */,
+				D7C9C3302355A69600146CA5 /* SKSynthesizeModel.m */,
+				D7C9C68B2355C87900146CA5 /* 对象释放时机图.jpg */,
+			);
+			path = Property;
+			sourceTree = "<group>";
+		};
+		D7C9C3392355A69600146CA5 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				D7C9C33B2355A69600146CA5 /* Class */,
+				D7C9C33A2355A69600146CA5 /* SKRuntimeVC.h */,
+				D7C9C3492355A69600146CA5 /* SKRuntimeVC.m */,
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
+		D7C9C33B2355A69600146CA5 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				D7C9C3442355A69600146CA5 /* NSObject+SKRuntimeAssociatedObject-arm64.cpp */,
+				D7C9C3402355A69600146CA5 /* NSObject+SKRuntimeAssociatedObject.h */,
+				D7C9C3472355A69600146CA5 /* NSObject+SKRuntimeAssociatedObject.m */,
+				D7C9C3452355A69600146CA5 /* SKMessageSendAction-arm64.cpp */,
+				D7C9C3482355A69600146CA5 /* SKMessageSendAction.h */,
+				D7C9C33F2355A69600146CA5 /* SKMessageSendAction.m */,
+				D7C9C33D2355A69600146CA5 /* SKRuntimeOtherObject.h */,
+				D7C9C3422355A69600146CA5 /* SKRuntimeOtherObject.m */,
+				D7C9C33E2355A69600146CA5 /* SKRuntimePerson-arm64.cpp */,
+				D7C9C3412355A69600146CA5 /* SKRuntimePerson.h */,
+				D7C9C3462355A69600146CA5 /* SKRuntimePerson.m */,
+				D7C9C33C2355A69600146CA5 /* SKRuntimeWeakObject.h */,
+				D7C9C3432355A69600146CA5 /* SKRuntimeWeakObject.m */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		D7C9C34A2355A69600146CA5 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				D7C9C34B2355A69600146CA5 /* SKDelegateProtocal.h */,
+				D7C9C34C2355A69600146CA5 /* SKDelegateVC.m */,
+				D7C9C34D2355A69600146CA5 /* SKDelegateVC.h */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		D7C9C34E2355A69600146CA5 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				D7C9C34F2355A69600146CA5 /* 类继承经典图.png */,
+				D7C9C3502355A69600146CA5 /* SKSubObject-arm64.cpp */,
+				D7C9C3512355A69600146CA5 /* SKObjectObject.h */,
+				D7C9C3522355A69600146CA5 /* SKObjectObjectVC.h */,
+				D7C9C3532355A69600146CA5 /* SKSubObject.m */,
+				D7C9C3542355A69600146CA5 /* SKObjectObject-arm64.cpp */,
+				D7C9C3552355A69600146CA5 /* SKObjectObjectVC.m */,
+				D7C9C3562355A69600146CA5 /* SKObjectObject.m */,
+				D7C9C3572355A69600146CA5 /* SKSubObject.h */,
+			);
+			path = Object;
+			sourceTree = "<group>";
+		};
+		D7C9C3582355A69600146CA5 /* UIFeature */ = {
+			isa = PBXGroup;
+			children = (
+				D7C9C3592355A69600146CA5 /* UISegement */,
+			);
+			path = UIFeature;
+			sourceTree = "<group>";
+		};
+		D7C9C3592355A69600146CA5 /* UISegement */ = {
+			isa = PBXGroup;
+			children = (
+				D7C9C35A2355A69600146CA5 /* SKSegementTwoVC.m */,
+				D7C9C35B2355A69600146CA5 /* SKSegementVC.m */,
+				D7C9C35C2355A69600146CA5 /* SKSegementOneVC.h */,
+				D7C9C35D2355A69600146CA5 /* SKSegementTwoVC.h */,
+				D7C9C35E2355A69600146CA5 /* SKSegementOneVC.m */,
+				D7C9C35F2355A69600146CA5 /* SKSegementVC.h */,
+			);
+			path = UISegement;
+			sourceTree = "<group>";
+		};
+		D7C9C3602355A69600146CA5 /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				D7C9C3612355A69600146CA5 /* SKThreadDeadLockVC.m */,
+				D7C9C3622355A69600146CA5 /* SKThreadDeadLockVC.h */,
+			);
+			path = Thread;
+			sourceTree = "<group>";
+		};
+		D7C9C3632355A69600146CA5 /* Aspects */ = {
+			isa = PBXGroup;
+			children = (
+				D7C9C3642355A69600146CA5 /* NSObject+SKHookSelector.m */,
+				D7C9C3652355A69600146CA5 /* Aspects.h */,
+				D7C9C4DD2355A69700146CA5 /* NSObject+SKHookSelector.h */,
+				D7C9C4DE2355A69700146CA5 /* Aspects.m */,
+			);
+			path = Aspects;
+			sourceTree = "<group>";
+		};
+		D7C9C4DF2355A69700146CA5 /* KVOKVC */ = {
+			isa = PBXGroup;
+			children = (
+				D7C9C4E12355A69700146CA5 /* KVOModel.h */,
+				D7C9C4E22355A69700146CA5 /* KVOModel.m */,
+				D7C9C4E02355A69700146CA5 /* SKKVCKVOVC.h */,
+				D7C9C4E32355A69700146CA5 /* SKKVCKVOVC.m */,
+			);
+			path = KVOKVC;
+			sourceTree = "<group>";
+		};
+		D7C9C4E42355A69700146CA5 /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				D7C9C4E62355A69700146CA5 /* Block 深入浅出.jpg */,
+				D7C9C4E82355A69700146CA5 /* Block的深度探究.jpg */,
+				D7C9C4E92355A69700146CA5 /* BlockTest */,
+				D7C9C4E52355A69700146CA5 /* SKBlockVC.h */,
+				D7C9C4E72355A69700146CA5 /* SKBlockVC.m */,
+			);
+			path = Block;
+			sourceTree = "<group>";
+		};
+		D7C9C4E92355A69700146CA5 /* BlockTest */ = {
+			isa = PBXGroup;
+			children = (
+				D7C9C4F72355A69700146CA5 /* BlockTest.h */,
+				D7C9C5142355A69700146CA5 /* BlockTest.m */,
+				D7C9C5012355A69700146CA5 /* BlockTool.h */,
+				D7C9C4EB2355A69700146CA5 /* BlockTool.m */,
+				D7C9C4F32355A69700146CA5 /* DownLoadManager */,
+				D7C9C4F62355A69700146CA5 /* MoreTimeTest.h */,
+				D7C9C5122355A69700146CA5 /* MoreTimeTest.m */,
+				D7C9C4EE2355A69700146CA5 /* NSObject+Add.h */,
+				D7C9C5062355A69700146CA5 /* NSObject+Add.m */,
+				D7C9C5032355A69700146CA5 /* NSObject+Addition-arm64.cpp */,
+				D7C9C4EC2355A69700146CA5 /* NSObject+Addition.h */,
+				D7C9C5082355A69700146CA5 /* NSObject+Addition.m */,
+				D7C9C4EF2355A69700146CA5 /* PropertyDemo-arm64.cpp */,
+				D7C9C4EA2355A69700146CA5 /* PropertyDemo.h */,
+				D7C9C5022355A69700146CA5 /* PropertyDemo.m */,
+				D7C9C4F02355A69700146CA5 /* RetainCycleModule.h */,
+				D7C9C5052355A69700146CA5 /* RetainCycleModule.m */,
+				D7C9C5072355A69700146CA5 /* SemaphoreTest.h */,
+				D7C9C4ED2355A69700146CA5 /* SemaphoreTest.m */,
+				D7C9C4F82355A69700146CA5 /* ShortDemo1-arm64.cpp */,
+				D7C9C4F22355A69700146CA5 /* ShortDemo1.h */,
+				D7C9C5132355A69700146CA5 /* ShortDemo1.m */,
+				D7C9C4F92355A69700146CA5 /* SubDemo */,
+				D7C9C5092355A69700146CA5 /* TestExpanded */,
+				D7C9C4F12355A69700146CA5 /* TestModel.h */,
+				D7C9C5042355A69700146CA5 /* TestModel.m */,
+				D7C9C5002355A69700146CA5 /* Time */,
+			);
+			path = BlockTest;
+			sourceTree = "<group>";
+		};
+		D7C9C4F32355A69700146CA5 /* DownLoadManager */ = {
+			isa = PBXGroup;
+			children = (
+				D7C9C4F42355A69700146CA5 /* DownLoadManager.h */,
+				D7C9C4F52355A69700146CA5 /* DownLoadManager.m */,
+			);
+			path = DownLoadManager;
+			sourceTree = "<group>";
+		};
+		D7C9C4F92355A69700146CA5 /* SubDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D7C9C4FA2355A69700146CA5 /* SubDemo.h */,
+				D7C9C4FB2355A69700146CA5 /* SubDemo-arm64.cpp */,
+				D7C9C4FC2355A69700146CA5 /* SSDemo.m */,
+				D7C9C4FD2355A69700146CA5 /* SSbDemo-arm64.cpp */,
+				D7C9C4FE2355A69700146CA5 /* SubDemo.m */,
+				D7C9C4FF2355A69700146CA5 /* SSDemo.h */,
+			);
+			path = SubDemo;
+			sourceTree = "<group>";
+		};
+		D7C9C5002355A69700146CA5 /* Time */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Time;
+			sourceTree = "<group>";
+		};
+		D7C9C5092355A69700146CA5 /* TestExpanded */ = {
+			isa = PBXGroup;
+			children = (
+				D7C9C50A2355A69700146CA5 /* TestExpand+test.m */,
+				D7C9C50B2355A69700146CA5 /* TestExpand.m */,
+				D7C9C50C2355A69700146CA5 /* TestExpand-arm64.cpp */,
+				D7C9C50D2355A69700146CA5 /* TestExpand+Additions.h */,
+				D7C9C50E2355A69700146CA5 /* TestExpand+test.h */,
+				D7C9C50F2355A69700146CA5 /* TestExpand.h */,
+				D7C9C5102355A69700146CA5 /* TestExpand+Additions-arm64.cpp */,
+				D7C9C5112355A69700146CA5 /* TestExpand+Additions.m */,
+			);
+			path = TestExpanded;
+			sourceTree = "<group>";
+		};
+		D7C9C6872355A71400146CA5 /* PCBasicTech */ = {
+			isa = PBXGroup;
+			children = (
+				D7C9C6882355A79F00146CA5 /* SKPCNetworkingVC.h */,
+				D7C9C6892355A79F00146CA5 /* SKPCNetworkingVC.m */,
+			);
+			path = PCBasicTech;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -600,11 +626,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D78EEB162333283D0001467B /* LaunchScreen.storyboard in Resources */,
+				D7C9C66F2355A69700146CA5 /* Block的深度探究.jpg in Resources */,
+				D7C9C66D2355A69700146CA5 /* Block 深入浅出.jpg in Resources */,
 				D78EEB132333283D0001467B /* Assets.xcassets in Resources */,
-				D70F4CA02339C60C005C2381 /* Block 深入浅出.jpg in Resources */,
-				D70F4D85233E11B3005C2381 /* 类继承经典图.png in Resources */,
 				D78EEB112333283C0001467B /* Main.storyboard in Resources */,
-				D70F4C9F2339C60C005C2381 /* Block的深度探究.jpg in Resources */,
+				D7C9C5332355A69700146CA5 /* 类继承经典图.png in Resources */,
+				D7C9C68C2355C87900146CA5 /* 对象释放时机图.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,57 +701,58 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D70F4C8C2339C402005C2381 /* SSDemo.m in Sources */,
-				D70F4C932339C402005C2381 /* NSObject+Add.m in Sources */,
-				D70F4D50233DA4A0005C2381 /* SKRuntimeOtherObject.m in Sources */,
-				D70F4CCB233B72ED005C2381 /* SKPropertyTestModel.m in Sources */,
-				D70F4CC8233B7174005C2381 /* SKSynthesizeModel.m in Sources */,
-				D70F4C872339C402005C2381 /* SemaphoreTest.m in Sources */,
-				D70F4D7B233E061C005C2381 /* SKObjectObject.m in Sources */,
-				D70F4CD6233C9346005C2381 /* SKRuntimePerson.m in Sources */,
-				D700F6632334794F0054ADDA /* SKBlockVC.m in Sources */,
+				D7C9C6832355A69700146CA5 /* TestExpand+Additions.m in Sources */,
+				D7C9C51F2355A69700146CA5 /* SKRunLoopObject.m in Sources */,
+				D7C9C5392355A69700146CA5 /* SKSegementTwoVC.m in Sources */,
+				D7C9C52A2355A69700146CA5 /* SKMessageSendAction.m in Sources */,
 				D78EEB0E2333283C0001467B /* SKHomePageVC.m in Sources */,
-				D70F4CB0233A1E22005C2381 /* SKPropertyVC.m in Sources */,
-				D70F4D03233CAFF7005C2381 /* SKMessageSendAction.m in Sources */,
-				D700F66C2334AA650054ADDA /* SKClansVC.m in Sources */,
-				D700F64D233389400054ADDA /* SKRuntimeVC.m in Sources */,
-				D700F64923332B2B0054ADDA /* SKThreadDeadLockVC.m in Sources */,
+				D7C9C51D2355A69700146CA5 /* SKRunloopVC.m in Sources */,
+				D7C9C6762355A69700146CA5 /* SSDemo.m in Sources */,
+				D7C9C53D2355A69700146CA5 /* NSObject+SKHookSelector.m in Sources */,
+				D7C9C6842355A69700146CA5 /* MoreTimeTest.m in Sources */,
+				D700F66C2334AA650054ADDA /* SKPCBasicTechVC.m in Sources */,
+				D7C9C5352355A69700146CA5 /* SKSubObject.m in Sources */,
+				D7C9C6792355A69700146CA5 /* PropertyDemo.m in Sources */,
+				D7C9C67E2355A69700146CA5 /* NSObject+Addition.m in Sources */,
+				D7C9C5242355A69700146CA5 /* SKAutoReleaseTestObj.m in Sources */,
+				D7C9C6852355A69700146CA5 /* ShortDemo1.m in Sources */,
+				D7C9C5312355A69700146CA5 /* SKRuntimeVC.m in Sources */,
+				D7C9C51E2355A69700146CA5 /* SKTimerTest.m in Sources */,
+				D7C9C5372355A69700146CA5 /* SKObjectObjectVC.m in Sources */,
 				D7E3DC5F2334B8D4008F7B95 /* SKUINavigationController.m in Sources */,
-				D70EF39E2334738C002D0AB0 /* NSObject+SKRuntimeAssociatedObject.m in Sources */,
-				D7F21415234F382600C85498 /* SKRuntimeWeakObject.m in Sources */,
-				D732311923505289008635DB /* SKRunLoopObject.m in Sources */,
-				D70F4C922339C402005C2381 /* RetainCycleModule.m in Sources */,
-				D70F4CB8233AF9ED005C2381 /* SKSegementVC.m in Sources */,
-				D70F4C942339C402005C2381 /* NSObject+Addition.m in Sources */,
-				D70F4C8E2339C402005C2381 /* SubDemo.m in Sources */,
-				D70F4C962339C402005C2381 /* TestExpand.m in Sources */,
-				D70F4D7E233E062D005C2381 /* SKObjectObjectVC.m in Sources */,
-				D70F4DB423420435005C2381 /* Aspects.m in Sources */,
-				D700F6692334AA5A0054ADDA /* SKDiscoveryVC.m in Sources */,
-				D70F4CBB233AFFC5005C2381 /* SKSegementOneVC.m in Sources */,
-				D70F4CAB233A0772005C2381 /* SKDelegateVC.m in Sources */,
+				D7C9C67D2355A69700146CA5 /* NSObject+Add.m in Sources */,
+				D700F6692334AA5A0054ADDA /* SKAlgorithmBaseVC.m in Sources */,
+				D7C9C67F2355A69700146CA5 /* TestExpand+test.m in Sources */,
+				D7C9C52B2355A69700146CA5 /* SKRuntimeOtherObject.m in Sources */,
 				D78EEB192333283D0001467B /* main.m in Sources */,
-				D70F4CA4233A01BE005C2381 /* SKKVCKVOVC.m in Sources */,
-				D70F4D81233E08FE005C2381 /* SKSubObject.m in Sources */,
-				D758F45F23547F4700ED60EC /* SKAutoReleaseTestObj.m in Sources */,
+				D7C9C5302355A69700146CA5 /* NSObject+SKRuntimeAssociatedObject.m in Sources */,
+				D7C9C53B2355A69700146CA5 /* SKSegementOneVC.m in Sources */,
+				D7C9C5232355A69700146CA5 /* SKProprtyModel.m in Sources */,
+				D7C9C68A2355A79F00146CA5 /* SKPCNetworkingVC.m in Sources */,
+				D7C9C6862355A69700146CA5 /* BlockTest.m in Sources */,
+				D7C9C5212355A69700146CA5 /* SKPropertyTestModel.m in Sources */,
+				D7C9C5322355A69700146CA5 /* SKDelegateVC.m in Sources */,
+				D7C9C66C2355A69700146CA5 /* SKKVCKVOVC.m in Sources */,
+				D7C9C6712355A69700146CA5 /* SemaphoreTest.m in Sources */,
+				D7C9C52C2355A69700146CA5 /* SKRuntimeWeakObject.m in Sources */,
+				D7C9C6802355A69700146CA5 /* TestExpand.m in Sources */,
+				D7C9C66E2355A69700146CA5 /* SKBlockVC.m in Sources */,
+				D7C9C67B2355A69700146CA5 /* TestModel.m in Sources */,
+				D7C9C67C2355A69700146CA5 /* RetainCycleModule.m in Sources */,
 				D700F66F2334AA800054ADDA /* SKPersonalCenterVC.m in Sources */,
-				D70F4C912339C402005C2381 /* TestModel.m in Sources */,
-				D70F4C952339C402005C2381 /* TestExpand+test.m in Sources */,
+				D7C9C5202355A69700146CA5 /* SKPropertyVC.m in Sources */,
+				D7C9C5382355A69700146CA5 /* SKObjectObject.m in Sources */,
+				D7C9C53C2355A69700146CA5 /* SKThreadDeadLockVC.m in Sources */,
+				D7C9C53A2355A69700146CA5 /* SKSegementVC.m in Sources */,
+				D7C9C5222355A69700146CA5 /* SKSynthesizeModel.m in Sources */,
+				D7C9C6782355A69700146CA5 /* SubDemo.m in Sources */,
 				D78EEB0B2333283C0001467B /* AppDelegate.m in Sources */,
-				D70F4C8F2339C402005C2381 /* PropertyDemo.m in Sources */,
-				D70F4CC3233B5FF8005C2381 /* SKProprtyModel.m in Sources */,
-				D70F4CA7233A01D7005C2381 /* KVOModel.m in Sources */,
-				D70F4DB723420491005C2381 /* NSObject+SKHookSelector.m in Sources */,
-				D70F4C9C2339C402005C2381 /* BlockTest.m in Sources */,
-				D70F4C992339C402005C2381 /* TestExpand+Additions.m in Sources */,
-				D70F4CBE233AFFD1005C2381 /* SKSegementTwoVC.m in Sources */,
-				D758F42E235446C600ED60EC /* SKTimerTest.m in Sources */,
-				D70F4C9A2339C402005C2381 /* MoreTimeTest.m in Sources */,
-				D700F65F233478EA0054ADDA /* SKRunloopVC.m in Sources */,
-				D70F4C9B2339C402005C2381 /* ShortDemo1.m in Sources */,
-				D70F4C862339C401005C2381 /* BlockTool.m in Sources */,
+				D7C9C6732355A69700146CA5 /* DownLoadManager.m in Sources */,
+				D7C9C66A2355A69700146CA5 /* Aspects.m in Sources */,
+				D7C9C52F2355A69700146CA5 /* SKRuntimePerson.m in Sources */,
+				D7C9C6702355A69700146CA5 /* BlockTool.m in Sources */,
 				D70F4CCF233C4D53005C2381 /* SKSortAlgorithmVC.m in Sources */,
-				D70F4C892339C402005C2381 /* DownLoadManager.m in Sources */,
+				D7C9C66B2355A69700146CA5 /* KVOModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -876,6 +904,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AllKindOfThings/iOSTech/Aspects/objc4-756.2/test/gcfiles",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shavekevin.-";
 				PRODUCT_NAME = "练习Demo";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -896,6 +928,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AllKindOfThings/iOSTech/Aspects/objc4-756.2/test/gcfiles",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shavekevin.-";
 				PRODUCT_NAME = "练习Demo";
