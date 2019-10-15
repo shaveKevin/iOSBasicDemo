@@ -56,6 +56,7 @@
 		D70F4DB723420491005C2381 /* NSObject+SKHookSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = D70F4DB623420491005C2381 /* NSObject+SKHookSelector.m */; };
 		D732311923505289008635DB /* SKRunLoopObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D732311823505289008635DB /* SKRunLoopObject.m */; };
 		D758F42E235446C600ED60EC /* SKTimerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D758F42D235446C600ED60EC /* SKTimerTest.m */; };
+		D758F45F23547F4700ED60EC /* SKAutoReleaseTestObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D758F45E23547F4700ED60EC /* SKAutoReleaseTestObj.m */; };
 		D78EEB0B2333283C0001467B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EEB0A2333283C0001467B /* AppDelegate.m */; };
 		D78EEB0E2333283C0001467B /* SKHomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EEB0D2333283C0001467B /* SKHomePageVC.m */; };
 		D78EEB112333283C0001467B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78EEB0F2333283C0001467B /* Main.storyboard */; };
@@ -178,6 +179,8 @@
 		D732311823505289008635DB /* SKRunLoopObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKRunLoopObject.m; sourceTree = "<group>"; };
 		D758F42C235446C600ED60EC /* SKTimerTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKTimerTest.h; sourceTree = "<group>"; };
 		D758F42D235446C600ED60EC /* SKTimerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKTimerTest.m; sourceTree = "<group>"; };
+		D758F45D23547F4700ED60EC /* SKAutoReleaseTestObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKAutoReleaseTestObj.h; sourceTree = "<group>"; };
+		D758F45E23547F4700ED60EC /* SKAutoReleaseTestObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKAutoReleaseTestObj.m; sourceTree = "<group>"; };
 		D78EEB062333283C0001467B /* 练习Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "练习Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78EEB092333283C0001467B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D78EEB0A2333283C0001467B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -419,6 +422,8 @@
 				D70F4CD2233C58DA005C2381 /* SKPropertyTestModel-arm64.cpp */,
 				D70F4CC4233B61AA005C2381 /* SKProprtyModel-arm64.cpp */,
 				D70F4CBF233B17DE005C2381 /* SKPropertyVCarm64.cpp */,
+				D758F45D23547F4700ED60EC /* SKAutoReleaseTestObj.h */,
+				D758F45E23547F4700ED60EC /* SKAutoReleaseTestObj.m */,
 			);
 			path = Property;
 			sourceTree = "<group>";
@@ -701,6 +706,7 @@
 				D78EEB192333283D0001467B /* main.m in Sources */,
 				D70F4CA4233A01BE005C2381 /* SKKVCKVOVC.m in Sources */,
 				D70F4D81233E08FE005C2381 /* SKSubObject.m in Sources */,
+				D758F45F23547F4700ED60EC /* SKAutoReleaseTestObj.m in Sources */,
 				D700F66F2334AA800054ADDA /* SKPersonalCenterVC.m in Sources */,
 				D70F4C912339C402005C2381 /* TestModel.m in Sources */,
 				D70F4C952339C402005C2381 /* TestExpand+test.m in Sources */,
