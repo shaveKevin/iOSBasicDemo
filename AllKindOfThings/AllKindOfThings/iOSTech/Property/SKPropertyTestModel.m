@@ -70,6 +70,9 @@
     NSLog(@"strongString 拼接之后 is  %@，copyStrings  拼接之后  is  %@",self.strongString,self.copString);
 }
 
+- (void)dealloc {
+    NSLog(@"%@",self);
+}
 // 面试题解答：用@property声明的NSString（或NSArray，NSDictionary）经常使用copy关键字，为什么？如果改用strong关键字，可能造成什么问题？
 /*
  /当定义属性为copy的时候，这里做的是拷贝单层深拷贝  当属性定义为strong 的时候你会发现 self.dataArray 受到 mutableArray值的影响

@@ -8,7 +8,18 @@
 
 #import "AppDelegate.h"
 #import "NSObject+SKHookSelector.h"
+/*
+ clang 命令
+ xcrun  -sdk iphoneos clang -arch arm64 -rewrite-objc xxx -o ooo.cpp
 
+ xcrun 是命令xcode  run
+ -sdk   iphoneos  调用iphoneos的sdk
+ -arch  arm64 这是arm64架构
+ -rewrite-objc  执行方法
+  xxx  原类
+ -o 输出
+ ooo.cpp 目标类
+ */
 @interface AppDelegate ()
 
 @end

@@ -106,6 +106,7 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKAutoReleaseTestObj_0695a1_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"\347\272\263\345\260\274",6};
 
 
 
@@ -33830,11 +33831,37 @@ struct SKAutoReleaseTestObj_IMPL {
 // @implementation SKAutoReleaseTestObj
 
 
+struct __SKAutoReleaseTestObj__init_block_impl_0 {
+  struct __block_impl impl;
+  struct __SKAutoReleaseTestObj__init_block_desc_0* Desc;
+  __SKAutoReleaseTestObj__init_block_impl_0(void *fp, struct __SKAutoReleaseTestObj__init_block_desc_0 *desc, int flags=0) {
+    impl.isa = &_NSConcreteStackBlock;
+    impl.Flags = flags;
+    impl.FuncPtr = fp;
+    Desc = desc;
+  }
+};
+static void __SKAutoReleaseTestObj__init_block_func_0(struct __SKAutoReleaseTestObj__init_block_impl_0 *__cself, id obj, NSUInteger idx, BOOL *stop) {
+
+
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKAutoReleaseTestObj_0695a1_mi_0);
+        }
+
+static struct __SKAutoReleaseTestObj__init_block_desc_0 {
+  size_t reserved;
+  size_t Block_size;
+} __SKAutoReleaseTestObj__init_block_desc_0_DATA = { 0, sizeof(struct __SKAutoReleaseTestObj__init_block_impl_0)};
+
 static instancetype _I_SKAutoReleaseTestObj_init(SKAutoReleaseTestObj * self, SEL _cmd) {
 
     if (self = ((SKAutoReleaseTestObj *(*)(__rw_objc_super *, SEL))(void *)objc_msgSendSuper)((__rw_objc_super){(id)self, (id)class_getSuperclass(objc_getClass("SKAutoReleaseTestObj"))}, sel_registerName("init"))) {
         /* @autoreleasepool */ { __AtAutoreleasePool __autoreleasepool; 
+
         }
+        NSArray *array = ((NSArray * _Nonnull (*)(id, SEL, ObjectType _Nonnull, ...))(void *)objc_msgSend)((id)objc_getClass("NSArray"), sel_registerName("arrayWithObjects:"), (id _Nonnull)((NSNumber *(*)(Class, SEL, int))(void *)objc_msgSend)(objc_getClass("NSNumber"), sel_registerName("numberWithInt:"), 1), ((NSNumber *(*)(Class, SEL, int))(void *)objc_msgSend)(objc_getClass("NSNumber"), sel_registerName("numberWithInt:"), 3), __null);
+
+        ((void (*)(id, SEL, void (^ _Nonnull)(ObjectType _Nonnull, NSUInteger, BOOL * _Nonnull)))(void *)objc_msgSend)((id)array, sel_registerName("enumerateObjectsUsingBlock:"), ((void (*)(id, NSUInteger, BOOL *))&__SKAutoReleaseTestObj__init_block_impl_0((void *)__SKAutoReleaseTestObj__init_block_func_0, &__SKAutoReleaseTestObj__init_block_desc_0_DATA)));
+
     }
     return self;
 }

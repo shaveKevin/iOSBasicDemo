@@ -15,7 +15,15 @@
     
     if (self = [super init]) {
         @autoreleasepool {
+        
         }
+        NSArray *array = [NSArray arrayWithObjects:@1,@3, nil];
+        
+        [array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            // 这里被一个局部@autoreleasepool包围着---- （这个没发现那里来的)
+            NSLog(@"纳尼");
+        }];
+        
     }
     return self;
 }
@@ -54,8 +62,166 @@
  线程，如果发现是子线程，以懒加载的形式创建一个子线程的runloop。并存储在一个全局的可变字典里，编程人员在调用[NSRunLoop CurrentRunLoop]时，是自动创建runloop的，而没办法手动创建。
   自定义的NSOperation和NSThread需要手动创建自动释放池，比如：自定义的NSOperation类中就必须添加自动释放池，否则出了作用域后，自动释放对象会因为没有自动释放池去处理它，而造成内存泄漏。
   
- 但是对于blockOperation和NSThread
-  
+ 但是对于blockOperation和invaocationOperation 这种默认的operation，系统已经帮我们封装好了。不需要手动创建自动释放池。
+ 
+  @autoreleasepool 当自动释放池被销毁或者耗尽的时候，会向自动释放池中所有的对象发送release消息，(当对象的引用计数为0的时候，就被释放掉了)释放自动释放池中的所有对象。
+ 
+ 如果在一个vc的viewdidlaod中创建一个autorelease对象。那么该对象会在viewdidappear方法执行前就被销毁了。
+ 这是因为vc在loadview的时候就add到window上，所以viewdidload和viewwillappear是在同一个runloop调用的。所以在viewwillappear上的时候这个autorelease的变量没有被销毁，依然存在。
+ 
+ 参考链接：黑幕背后的Autorelease http://blog.sunnyxx.com/2014/10/15/behind-autorelease/
+ */
+
+// 面试题解答:4.苹果是如何实现autoreleasepool的？
+/*
+ 通过clang可以看到autoreleasepool是：
+ ```
+ extern "C" __declspec(dllimport) void * objc_autoreleasePoolPush(void);
+ extern "C" __declspec(dllimport) void objc_autoreleasePoolPop(void *);
+
+ struct __AtAutoreleasePool {
+   __AtAutoreleasePool() {atautoreleasepoolobj = objc_autoreleasePoolPush();}
+   ~__AtAutoreleasePool() {objc_autoreleasePoolPop(atautoreleasepoolobj);}
+   void * atautoreleasepoolobj;
+ };
+ ```
+ 
+ autoreleasepool是以一个队列数组的形式实现。主要通过下面三个函数完成。
+ objc_autoreleasepoolPush
+ objc_autoreleasepoolPop
+ objc_autorelease
+  看函数名可以知道，对autorelease分别执行push 和pop 销毁对象的时候执行的是release操作。
+ 举例说明：
+ ```
+ - (void)autorelaseTest {
+     @autoreleasepool {
+         SKPropertyTestModel *model = [[SKPropertyTestModel alloc]init];
+         model.title = [NSString stringWithFormat:@"title is %@  ",@(1)];
+     }
+ }
+ 
+ 上面这段代码可以改写为
+
+ - (void)autorelaseTest {
+ 
+      {
+    void  *autoreleasepoolobj  = objc_autoreleasePoolPush();
+ // autoreleasepoolobj 就是哨兵对象
+ // 你执行的代码
+       SKPropertyTestModel *model = [[SKPropertyTestModel alloc]init];
+      model.title = [NSString stringWithFormat:@"title is %@  ",@(1)];
+ 
+ objc_autoreleasePoolPop(autoreleasepoolobj);
+        }
+
+  }
+ 
+ 在objc源码中可以发现, objc_autoreleasePoolPush();objc_autoreleasePoolPop();的实现是autoreleasepoopPage的实现。也就是说autoreleasepoolpage是对静态方法push和pop的封装。
+```
+ objc_autoreleasePoolPush(void)
+ {
+     return AutoreleasePoolPage::push();
+ }
+
+ void
+ objc_autoreleasePoolPop(void *ctxt)
+ {
+     AutoreleasePoolPage::pop(ctxt);
+ }
+ ```
+ autoreleasepoolpage是c++实现的一个类，通过源码NSObject类中 641行 class AutoreleasePoolPage  可以看出
+ 1.AutoreleasePoolPage 没有单独的结构，而是由若干个AutoreleasePoolPage以双向链表形式组合而成。(对应AutoreleasePoolPage源码中的` AutoreleasePoolPage * const parent;
+    AutoreleasePoolPage *child;`  parent和child指针)
+ 2.AutoreleasePool是按照线程一一对应的。(在AutoreleasePoolPage结构体中pthread_t const thread; 这个thread指的是当前页线程，如果对象所占不仅仅是一个page那么一个thread可以存在page)POOL_SENTINEL（哨兵对象）他只是nil的别名
+ 3.AutoreleasePoolPage每个对象都会开辟4096字节结存(也就是虚拟内存一页的大小)除了源码中给出的实例变量所占的空间，剩下的空间全部用来存储autorelease对象的地址(注意这里只是存的地址而已。。。) 如果添加的对象太多地址存储不下，那么就会开辟下一个page
+ 4.源码中的id *next 指针作为游标指向栈顶最新add进来的autorelease对象的下一个地址。
+ 5.magic 用于对当前 AutoreleasePoolPage 完整性的校验
+ 6.一个AutoreleasePoolPage的空间被占满的时候，会新建一个AutoreleasePoolPage对象，连接链表，后来的autorelease对象在新的page加入。
+ 所以向一个对象发送- autorelease消息，就是将这个对象加入到AutoreleasepoolPage的栈顶next指向的位置。
+ 
+ 
+ 释放时刻：
+ 每当进行一次objc_autoreleasePoolPush调用的时候，runtime向当前的AutoreleasePoolPage中add一个哨兵对象，值为0（也就是nil）
+ objc_autoreleasePoolPush()的返回值是这个哨兵对象的地址，被objc_autoreleasePoolPop(哨兵对象)作为入参。
+ 
+ 1. 根据传入的哨兵对象的地址找到哨兵对象所在的page
+ 2. 在当前page中，将晚于哨兵对象的插入的所以autorelease对象发送一次release消息，并向回移动next到正确位置。
+ 3. 从最新加入的对象一直向前清理，可以向前跨越多个page，知道找到哨兵所在的page。
+ 
+假如下面模拟的是哨兵对象以及其他对象在pool中的位置
+ 
+丨---------------------丨
+        page1
+ 1-1(假如这个为pop的时候对象的地址)
+ 1-2
+ 1-3
+ 1-4
+ 1-5
+丨---------------------丨
+ 
+丨---------------------丨
+           page2
+ 2-1
+ 2-2
+ 2-3
+ 2-4 (假如这个为哨兵 也就是push的时候传入的)
+ 2-5
+ 丨---------------------丨
+ 如果进行pop 操作会对page1中所有对象 以及 page2中2-1 ~ 2-4之前的对象都发送一次release消息。
+ //
+在NSObject.mm中 有一个autorelease方法：
+ ```
+ static inline id autorelease(id obj)
+ {
+     assert(obj);
+     assert(!obj->isTaggedPointer());
+     id *dest __unused = autoreleaseFast(obj);
+     assert(!dest  ||  dest == EMPTY_POOL_PLACEHOLDER  ||  *dest == obj);
+     return obj;
+ }
+ ```
+ 其中有一个函数叫autoreleaseFast
+ 
+ autorelease调用栈：
+ - [NSObject autorelease]
+ └── id objc_object::rootAutorelease()
+     └── id objc_object::rootAutorelease2()
+         └── static id AutoreleasePoolPage::autorelease(id obj)
+             └── static id AutoreleasePoolPage::autoreleaseFast(id obj)
+                 ├── id *add(id obj)
+                 ├── static id *autoreleaseFullPage(id obj, AutoreleasePoolPage *page)
+                 │   ├── AutoreleasePoolPage(AutoreleasePoolPage *newParent)
+                 │   └── id *add(id obj)
+                 └── static id *autoreleaseNoPage(id obj)
+                     ├── AutoreleasePoolPage(AutoreleasePoolPage *newParent)
+                     └── id *add(id obj)
+ 
+ 在调用autorelease的时候都会调用autoreleaseFast，那么和fast执行了什么操作呢？
+ 先看定义：
+ ``
+ static inline id *autoreleaseFast(id obj)
+ {
+    AutoreleasePoolPage *page = hotPage();
+    if (page && !page->full()) {
+        return page->add(obj);
+    } else if (page) {
+        return autoreleaseFullPage(obj, page);
+    } else {
+        return autoreleaseNoPage(obj);
+    }
+ }
+
+ ```
+  其中hotpage指的是当前正在使用的page。
+ 这里分为三种不同的情况
+ 1. 有hotpage并且hotpage不满的时候，这个时候后直接把需要autorelease对象添加到autoreleasepoolpage中
+ 2. 当有hotpage并且hotpage满的时候。这个时候会初始化一个新的页面 然后调用add方法把对象添加到autoreleasepoolpage中
+ 3. 没有hotpage的时候。这个时候回创建一个page 然后调用dd方法把对象添加到autoreleasepoolpage中
+
+ 参考链接：   1. 黑幕后的autorelease http://blog.sunnyxx.com/2014/10/15/behind-autorelease/
+
+              2.自动释放池的前世今生 https://github.com/draveness/analyze/blob/master/contents/objc/%E8%87%AA%E5%8A%A8%E9%87%8A%E6%94%BE%E6%B1%A0%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F.md
+ 
  */
 
 // 面试题解答：5.什么时候需要使用autoreleaseopool来解决问题？用来解决什么问题？
