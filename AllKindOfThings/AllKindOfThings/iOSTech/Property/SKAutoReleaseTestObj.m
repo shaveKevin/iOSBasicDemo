@@ -48,10 +48,13 @@
    在一个完整的运行循环结束之前，会被销毁。
  
    那么什么时间会创建自动释放池？
- 运行循环检测到时间并启动后，就会创建自动释放池。
+ 运行循环检测到事件并启动后，就会创建自动释放池。
  
- 从runloop的源码可知，子线程是默认没有runloop的。如果需要再子线程开启runloop
+ 从runloop的源码可知，子线程是默认没有runloop的。如果需要再子线程开启runloop，如果需要再子线程开启runloop，则需要调用[NSRunLoop CurrentRunLoop]方法，它内部实现是先检测
+ 线程，如果发现是子线程，以懒加载的形式创建一个子线程的runloop。并存储在一个全局的可变字典里，编程人员在调用[NSRunLoop CurrentRunLoop]时，是自动创建runloop的，而没办法手动创建。
+  自定义的NSOperation和NSThread需要手动创建自动释放池，比如：自定义的NSOperation类中就必须添加自动释放池，否则出了作用域后，自动释放对象会因为没有自动释放池去处理它，而造成内存泄漏。
   
+ 但是对于blockOperation和NSThread
   
  */
 
@@ -63,7 +66,7 @@
  例如：
         for ( id item  in  bigArray) {
           @autoreleasepool {
-            // do  sth taste  time
+            // do  sth taste  time  耗时  耗内存操作 如果不写容易造成内存不足，因为这里可能产生大量autorelease对象，没有及时的release掉容易造成内存不释放
                }
           }
 
