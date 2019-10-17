@@ -1,8 +1,8 @@
 //
-//  SKSegementOneVC.h
+//  SKThreadDeadLockVC.h
 //  AllKindOfThings
 //
-//  Created by shavekevin on 2019/9/25.
+//  Created by shavekevin on 2019/9/19.
 //  Copyright © 2019 小风. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SKSegementOneVC : UIViewController
+@interface SKThreadLearningVC : UIViewController
 
 @end
 

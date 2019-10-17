@@ -255,3 +255,20 @@
 
  参考链接：https://blog.csdn.net/qq_22389025/article/details/85162240
  */
+
+// 附加：
+/*
+ 看源码的时候看到了一个判断 if (isTaggedPointer()) return (uintptr_t)this;
+ 查了下这个Tagged Pointer
+
+ 参考链接： 聊聊伪指针 Tagged Pointer  https://www.jianshu.com/p/3176e30c040b
+ 源码中这个实现是这样的
+ ```
+ static inline bool
+ _objc_isTaggedPointer(const void * _Nullable ptr)
+ {
+     return ((uintptr_t)ptr & _OBJC_TAG_MASK) == _OBJC_TAG_MASK;
+ }
+ ```
+ 
+ */

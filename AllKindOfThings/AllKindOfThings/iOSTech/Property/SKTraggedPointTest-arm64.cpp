@@ -106,9 +106,11 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKProprtyModel_f63277_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"5",1};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKProprtyModel_f63277_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"25",2};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKProprtyModel_f63277_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"self.stringValue %p  self->__stringValue is %p",46};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKTraggedPointTest_d12b19_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"5",1};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKTraggedPointTest_d12b19_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"number1 class is %@",19};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKTraggedPointTest_d12b19_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"bigNumber class is  %@",22};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKTraggedPointTest_d12b19_mi_3 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"string class is  %@",19};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKTraggedPointTest_d12b19_mi_4 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"longString class is  %@",23};
 
 
 
@@ -33814,98 +33816,63 @@ struct NSUUID_IMPL {
 
 #pragma clang assume_nonnull end
 
-
 #pragma clang assume_nonnull begin
 
 
-#ifndef _REWRITER_typedef_SKProprtyModel
-#define _REWRITER_typedef_SKProprtyModel
-typedef struct objc_object SKProprtyModel;
-typedef struct {} _objc_exc_SKProprtyModel;
+#ifndef _REWRITER_typedef_SKTraggedPointTest
+#define _REWRITER_typedef_SKTraggedPointTest
+typedef struct objc_object SKTraggedPointTest;
+typedef struct {} _objc_exc_SKTraggedPointTest;
 #endif
 
-extern "C" unsigned long OBJC_IVAR_$_SKProprtyModel$_stringValue;
-extern "C" unsigned long OBJC_IVAR_$_SKProprtyModel$instanceTimeStamps;
-extern "C" unsigned long OBJC_IVAR_$_SKProprtyModel$animal;
-extern "C" unsigned long OBJC_IVAR_$_SKProprtyModel$_mouse;
-extern "C" unsigned long OBJC_IVAR_$_SKProprtyModel$_upAndDown;
-extern "C" unsigned long OBJC_IVAR_$_SKProprtyModel$_foo;
-struct SKProprtyModel_IMPL {
+extern "C" unsigned long OBJC_IVAR_$_SKTraggedPointTest$_intValue;
+struct SKTraggedPointTest_IMPL {
 	struct NSObject_IMPL NSObject_IVARS;
-	NSString *_foo;
-	NSString * _Nonnull instanceTimeStamps;
-	NSString * _Nonnull animal;
-	NSString * _Nonnull _mouse;
-	NSString * _Nonnull _upAndDown;
-	NSString *_stringValue;
+	NSInteger _intValue;
 };
 
-
-// @property (nonatomic, copy) NSString *timeStamps;
-
-// @property (nonatomic, copy) NSString *upAndDown;
-
-// @property (nonatomic, copy) NSString *foo;
-
-// @property (nonatomic, copy) NSString *animal;
-
-// @property (nonatomic, copy) NSString *mouse;
 
 /* @end */
 
 #pragma clang assume_nonnull end
 
-/** interface SKProprtyModel()
-{
-    NSString *_foo;
-**/ 
-// @property (nonatomic, copy) NSString *stringValue;
+
+// @interface SKTraggedPointTest ()
+
+// @property (nonatomic, assign) NSInteger intValue;
 
 /* @end */
 
-// @implementation SKProprtyModel
-// @synthesize timeStamps = instanceTimeStamps;
-static NSString * _Nonnull _I_SKProprtyModel_timeStamps(SKProprtyModel * self, SEL _cmd) { return (*(NSString * _Nonnull *)((char *)self + OBJC_IVAR_$_SKProprtyModel$instanceTimeStamps)); }
-extern "C" __declspec(dllimport) void objc_setProperty (id, SEL, long, id, bool, bool);
-
-static void _I_SKProprtyModel_setTimeStamps_(SKProprtyModel * self, SEL _cmd, NSString * _Nonnull timeStamps) { objc_setProperty (self, _cmd, __OFFSETOFIVAR__(struct SKProprtyModel, instanceTimeStamps), (id)timeStamps, 0, 1); }
+// @implementation SKTraggedPointTest
 
 
-// @synthesize animal;
-static NSString * _Nonnull _I_SKProprtyModel_animal(SKProprtyModel * self, SEL _cmd) { return (*(NSString * _Nonnull *)((char *)self + OBJC_IVAR_$_SKProprtyModel$animal)); }
-static void _I_SKProprtyModel_setAnimal_(SKProprtyModel * self, SEL _cmd, NSString * _Nonnull animal) { objc_setProperty (self, _cmd, __OFFSETOFIVAR__(struct SKProprtyModel, animal), (id)animal, 0, 1); }
+static instancetype _I_SKTraggedPointTest_init(SKTraggedPointTest * self, SEL _cmd) {
 
+    if (self = ((SKTraggedPointTest *(*)(__rw_objc_super *, SEL))(void *)objc_msgSendSuper)((__rw_objc_super){(id)self, (id)class_getSuperclass(objc_getClass("SKTraggedPointTest"))}, sel_registerName("init"))) {
+        NSNumber *number1 = ((NSNumber *(*)(Class, SEL, int))(void *)objc_msgSend)(objc_getClass("NSNumber"), sel_registerName("numberWithInt:"), (0));
+        NSNumber *bigNumber = ((NSNumber *(*)(Class, SEL, long))(void *)objc_msgSend)(objc_getClass("NSNumber"), sel_registerName("numberWithLong:"), (999999999999999L));
+        NSString *string = (NSString *)&__NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKTraggedPointTest_d12b19_mi_0;
+        NSString *longString = ((id (*)(id, SEL))(void *)objc_msgSend)((id)((id (*)(id, SEL))(void *)objc_msgSend)((id)string, sel_registerName("mutableCopy")), sel_registerName("copy"));
+        NSMutableString *mutableString = ((NSMutableString * _Nonnull (*)(id, SEL, NSString * _Nonnull))(void *)objc_msgSend)((id)objc_getClass("NSMutableString"), sel_registerName("stringWithString:"), (NSString *)string);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKTraggedPointTest_d12b19_mi_1,((Class (*)(id, SEL))(void *)objc_msgSend)((id)number1, sel_registerName("class")));
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKTraggedPointTest_d12b19_mi_2,((Class (*)(id, SEL))(void *)objc_msgSend)((id)bigNumber, sel_registerName("class")));
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKTraggedPointTest_d12b19_mi_3,((Class (*)(id, SEL))(void *)objc_msgSend)((id)string, sel_registerName("class")));
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKTraggedPointTest_d12b19_mi_4,((Class (*)(id, SEL))(void *)objc_msgSend)((id)longString, sel_registerName("class")));
 
-// @synthesize mouse = _mouse;
-static NSString * _Nonnull _I_SKProprtyModel_mouse(SKProprtyModel * self, SEL _cmd) { return (*(NSString * _Nonnull *)((char *)self + OBJC_IVAR_$_SKProprtyModel$_mouse)); }
-static void _I_SKProprtyModel_setMouse_(SKProprtyModel * self, SEL _cmd, NSString * _Nonnull mouse) { objc_setProperty (self, _cmd, __OFFSETOFIVAR__(struct SKProprtyModel, _mouse), (id)mouse, 0, 1); }
-
-
-
-static instancetype _I_SKProprtyModel_init(SKProprtyModel * self, SEL _cmd) {
-
-    if (self = ((SKProprtyModel *(*)(__rw_objc_super *, SEL))(void *)objc_msgSendSuper)((__rw_objc_super){(id)self, (id)class_getSuperclass(objc_getClass("SKProprtyModel"))}, sel_registerName("init"))) {
-        ((void (*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("testIntValue"));
     }
     return self;
 }
 
 
-static void _I_SKProprtyModel_testIntValue(SKProprtyModel * self, SEL _cmd) {
-    ((void (*)(id, SEL, NSString *))(void *)objc_msgSend)((id)self, sel_registerName("setStringValue:"), (NSString *)&__NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKProprtyModel_f63277_mi_0);
-    (*(NSString **)((char *)self + OBJC_IVAR_$_SKProprtyModel$_stringValue)) = (NSString *)&__NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKProprtyModel_f63277_mi_1;
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_b0_wtsz92hn2qg2znkty6jcjtj40000gn_T_SKProprtyModel_f63277_mi_2,((NSString *(*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("stringValue")),(*(NSString **)((char *)self + OBJC_IVAR_$_SKProprtyModel$_stringValue)));
 
+static void _I_SKTraggedPointTest_testIntValue(SKTraggedPointTest * self, SEL _cmd) {
+    ((void (*)(id, SEL, NSInteger))(void *)objc_msgSend)((id)self, sel_registerName("setIntValue:"), (NSInteger)5);
+    (*(NSInteger *)((char *)self + OBJC_IVAR_$_SKTraggedPointTest$_intValue)) = 15;
 }
 
-static NSString * _Nonnull _I_SKProprtyModel_upAndDown(SKProprtyModel * self, SEL _cmd) { return (*(NSString * _Nonnull *)((char *)self + OBJC_IVAR_$_SKProprtyModel$_upAndDown)); }
-static void _I_SKProprtyModel_setUpAndDown_(SKProprtyModel * self, SEL _cmd, NSString * _Nonnull upAndDown) { objc_setProperty (self, _cmd, __OFFSETOFIVAR__(struct SKProprtyModel, _upAndDown), (id)upAndDown, 0, 1); }
 
-static NSString * _Nonnull _I_SKProprtyModel_foo(SKProprtyModel * self, SEL _cmd) { return (*(NSString **)((char *)self + OBJC_IVAR_$_SKProprtyModel$_foo)); }
-static void _I_SKProprtyModel_setFoo_(SKProprtyModel * self, SEL _cmd, NSString * _Nonnull foo) { objc_setProperty (self, _cmd, __OFFSETOFIVAR__(struct SKProprtyModel, _foo), (id)foo, 0, 1); }
-
-static NSString * _I_SKProprtyModel_stringValue(SKProprtyModel * self, SEL _cmd) { return (*(NSString **)((char *)self + OBJC_IVAR_$_SKProprtyModel$_stringValue)); }
-static void _I_SKProprtyModel_setStringValue_(SKProprtyModel * self, SEL _cmd, NSString *stringValue) { objc_setProperty (self, _cmd, __OFFSETOFIVAR__(struct SKProprtyModel, _stringValue), (id)stringValue, 0, 1); }
+static NSInteger _I_SKTraggedPointTest_intValue(SKTraggedPointTest * self, SEL _cmd) { return (*(NSInteger *)((char *)self + OBJC_IVAR_$_SKTraggedPointTest$_intValue)); }
+static void _I_SKTraggedPointTest_setIntValue_(SKTraggedPointTest * self, SEL _cmd, NSInteger intValue) { (*(NSInteger *)((char *)self + OBJC_IVAR_$_SKTraggedPointTest$_intValue)) = intValue; }
 // @end
 
 struct _prop_t {
@@ -33975,69 +33942,35 @@ struct _category_t {
 extern "C" __declspec(dllimport) struct objc_cache _objc_empty_cache;
 #pragma warning(disable:4273)
 
-extern "C" unsigned long int OBJC_IVAR_$_SKProprtyModel$_foo __attribute__ ((used, section ("__DATA,__objc_ivar"))) = __OFFSETOFIVAR__(struct SKProprtyModel, _foo);
-extern "C" unsigned long int OBJC_IVAR_$_SKProprtyModel$instanceTimeStamps __attribute__ ((used, section ("__DATA,__objc_ivar"))) = __OFFSETOFIVAR__(struct SKProprtyModel, instanceTimeStamps);
-extern "C" unsigned long int OBJC_IVAR_$_SKProprtyModel$animal __attribute__ ((used, section ("__DATA,__objc_ivar"))) = __OFFSETOFIVAR__(struct SKProprtyModel, animal);
-extern "C" unsigned long int OBJC_IVAR_$_SKProprtyModel$_mouse __attribute__ ((used, section ("__DATA,__objc_ivar"))) = __OFFSETOFIVAR__(struct SKProprtyModel, _mouse);
-extern "C" unsigned long int OBJC_IVAR_$_SKProprtyModel$_upAndDown __attribute__ ((used, section ("__DATA,__objc_ivar"))) = __OFFSETOFIVAR__(struct SKProprtyModel, _upAndDown);
-extern "C" unsigned long int OBJC_IVAR_$_SKProprtyModel$_stringValue __attribute__ ((used, section ("__DATA,__objc_ivar"))) = __OFFSETOFIVAR__(struct SKProprtyModel, _stringValue);
+extern "C" unsigned long int OBJC_IVAR_$_SKTraggedPointTest$_intValue __attribute__ ((used, section ("__DATA,__objc_ivar"))) = __OFFSETOFIVAR__(struct SKTraggedPointTest, _intValue);
 
 static struct /*_ivar_list_t*/ {
 	unsigned int entsize;  // sizeof(struct _prop_t)
 	unsigned int count;
-	struct _ivar_t ivar_list[6];
-} _OBJC_$_INSTANCE_VARIABLES_SKProprtyModel __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	struct _ivar_t ivar_list[1];
+} _OBJC_$_INSTANCE_VARIABLES_SKTraggedPointTest __attribute__ ((used, section ("__DATA,__objc_const"))) = {
 	sizeof(_ivar_t),
-	6,
-	{{(unsigned long int *)&OBJC_IVAR_$_SKProprtyModel$_foo, "_foo", "@\"NSString\"", 3, 8},
-	 {(unsigned long int *)&OBJC_IVAR_$_SKProprtyModel$instanceTimeStamps, "instanceTimeStamps", "@\"NSString\"", 3, 8},
-	 {(unsigned long int *)&OBJC_IVAR_$_SKProprtyModel$animal, "animal", "@\"NSString\"", 3, 8},
-	 {(unsigned long int *)&OBJC_IVAR_$_SKProprtyModel$_mouse, "_mouse", "@\"NSString\"", 3, 8},
-	 {(unsigned long int *)&OBJC_IVAR_$_SKProprtyModel$_upAndDown, "_upAndDown", "@\"NSString\"", 3, 8},
-	 {(unsigned long int *)&OBJC_IVAR_$_SKProprtyModel$_stringValue, "_stringValue", "@\"NSString\"", 3, 8}}
+	1,
+	{{(unsigned long int *)&OBJC_IVAR_$_SKTraggedPointTest$_intValue, "_intValue", "q", 3, 8}}
 };
 
 static struct /*_method_list_t*/ {
 	unsigned int entsize;  // sizeof(struct _objc_method)
 	unsigned int method_count;
-	struct _objc_method method_list[14];
-} _OBJC_$_INSTANCE_METHODS_SKProprtyModel __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	struct _objc_method method_list[4];
+} _OBJC_$_INSTANCE_METHODS_SKTraggedPointTest __attribute__ ((used, section ("__DATA,__objc_const"))) = {
 	sizeof(_objc_method),
-	14,
-	{{(struct objc_selector *)"init", "@16@0:8", (void *)_I_SKProprtyModel_init},
-	{(struct objc_selector *)"testIntValue", "v16@0:8", (void *)_I_SKProprtyModel_testIntValue},
-	{(struct objc_selector *)"timeStamps", "@16@0:8", (void *)_I_SKProprtyModel_timeStamps},
-	{(struct objc_selector *)"setTimeStamps:", "v24@0:8@16", (void *)_I_SKProprtyModel_setTimeStamps_},
-	{(struct objc_selector *)"animal", "@16@0:8", (void *)_I_SKProprtyModel_animal},
-	{(struct objc_selector *)"setAnimal:", "v24@0:8@16", (void *)_I_SKProprtyModel_setAnimal_},
-	{(struct objc_selector *)"mouse", "@16@0:8", (void *)_I_SKProprtyModel_mouse},
-	{(struct objc_selector *)"setMouse:", "v24@0:8@16", (void *)_I_SKProprtyModel_setMouse_},
-	{(struct objc_selector *)"upAndDown", "@16@0:8", (void *)_I_SKProprtyModel_upAndDown},
-	{(struct objc_selector *)"setUpAndDown:", "v24@0:8@16", (void *)_I_SKProprtyModel_setUpAndDown_},
-	{(struct objc_selector *)"foo", "@16@0:8", (void *)_I_SKProprtyModel_foo},
-	{(struct objc_selector *)"setFoo:", "v24@0:8@16", (void *)_I_SKProprtyModel_setFoo_},
-	{(struct objc_selector *)"stringValue", "@16@0:8", (void *)_I_SKProprtyModel_stringValue},
-	{(struct objc_selector *)"setStringValue:", "v24@0:8@16", (void *)_I_SKProprtyModel_setStringValue_}}
+	4,
+	{{(struct objc_selector *)"init", "@16@0:8", (void *)_I_SKTraggedPointTest_init},
+	{(struct objc_selector *)"testIntValue", "v16@0:8", (void *)_I_SKTraggedPointTest_testIntValue},
+	{(struct objc_selector *)"intValue", "q16@0:8", (void *)_I_SKTraggedPointTest_intValue},
+	{(struct objc_selector *)"setIntValue:", "v24@0:8q16", (void *)_I_SKTraggedPointTest_setIntValue_}}
 };
 
-static struct /*_prop_list_t*/ {
-	unsigned int entsize;  // sizeof(struct _prop_t)
-	unsigned int count_of_properties;
-	struct _prop_t prop_list[5];
-} _OBJC_$_PROP_LIST_SKProprtyModel __attribute__ ((used, section ("__DATA,__objc_const"))) = {
-	sizeof(_prop_t),
-	5,
-	{{"timeStamps","T@\"NSString\",C,N,VinstanceTimeStamps"},
-	{"upAndDown","T@\"NSString\",C,N,V_upAndDown"},
-	{"foo","T@\"NSString\",C,N,V_foo"},
-	{"animal","T@\"NSString\",C,N,Vanimal"},
-	{"mouse","T@\"NSString\",C,N,V_mouse"}}
-};
-
-static struct _class_ro_t _OBJC_METACLASS_RO_$_SKProprtyModel __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+static struct _class_ro_t _OBJC_METACLASS_RO_$_SKTraggedPointTest __attribute__ ((used, section ("__DATA,__objc_const"))) = {
 	1, sizeof(struct _class_t), sizeof(struct _class_t), 
 	0, 
-	"SKProprtyModel",
+	"SKTraggedPointTest",
 	0, 
 	0, 
 	0, 
@@ -34045,49 +33978,49 @@ static struct _class_ro_t _OBJC_METACLASS_RO_$_SKProprtyModel __attribute__ ((us
 	0, 
 };
 
-static struct _class_ro_t _OBJC_CLASS_RO_$_SKProprtyModel __attribute__ ((used, section ("__DATA,__objc_const"))) = {
-	0, __OFFSETOFIVAR__(struct SKProprtyModel, _foo), sizeof(struct SKProprtyModel_IMPL), 
+static struct _class_ro_t _OBJC_CLASS_RO_$_SKTraggedPointTest __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	0, __OFFSETOFIVAR__(struct SKTraggedPointTest, _intValue), sizeof(struct SKTraggedPointTest_IMPL), 
 	0, 
-	"SKProprtyModel",
-	(const struct _method_list_t *)&_OBJC_$_INSTANCE_METHODS_SKProprtyModel,
+	"SKTraggedPointTest",
+	(const struct _method_list_t *)&_OBJC_$_INSTANCE_METHODS_SKTraggedPointTest,
 	0, 
-	(const struct _ivar_list_t *)&_OBJC_$_INSTANCE_VARIABLES_SKProprtyModel,
+	(const struct _ivar_list_t *)&_OBJC_$_INSTANCE_VARIABLES_SKTraggedPointTest,
 	0, 
-	(const struct _prop_list_t *)&_OBJC_$_PROP_LIST_SKProprtyModel,
+	0, 
 };
 
 extern "C" __declspec(dllimport) struct _class_t OBJC_METACLASS_$_NSObject;
 
-extern "C" __declspec(dllexport) struct _class_t OBJC_METACLASS_$_SKProprtyModel __attribute__ ((used, section ("__DATA,__objc_data"))) = {
+extern "C" __declspec(dllexport) struct _class_t OBJC_METACLASS_$_SKTraggedPointTest __attribute__ ((used, section ("__DATA,__objc_data"))) = {
 	0, // &OBJC_METACLASS_$_NSObject,
 	0, // &OBJC_METACLASS_$_NSObject,
 	0, // (void *)&_objc_empty_cache,
 	0, // unused, was (void *)&_objc_empty_vtable,
-	&_OBJC_METACLASS_RO_$_SKProprtyModel,
+	&_OBJC_METACLASS_RO_$_SKTraggedPointTest,
 };
 
 extern "C" __declspec(dllimport) struct _class_t OBJC_CLASS_$_NSObject;
 
-extern "C" __declspec(dllexport) struct _class_t OBJC_CLASS_$_SKProprtyModel __attribute__ ((used, section ("__DATA,__objc_data"))) = {
-	0, // &OBJC_METACLASS_$_SKProprtyModel,
+extern "C" __declspec(dllexport) struct _class_t OBJC_CLASS_$_SKTraggedPointTest __attribute__ ((used, section ("__DATA,__objc_data"))) = {
+	0, // &OBJC_METACLASS_$_SKTraggedPointTest,
 	0, // &OBJC_CLASS_$_NSObject,
 	0, // (void *)&_objc_empty_cache,
 	0, // unused, was (void *)&_objc_empty_vtable,
-	&_OBJC_CLASS_RO_$_SKProprtyModel,
+	&_OBJC_CLASS_RO_$_SKTraggedPointTest,
 };
-static void OBJC_CLASS_SETUP_$_SKProprtyModel(void ) {
-	OBJC_METACLASS_$_SKProprtyModel.isa = &OBJC_METACLASS_$_NSObject;
-	OBJC_METACLASS_$_SKProprtyModel.superclass = &OBJC_METACLASS_$_NSObject;
-	OBJC_METACLASS_$_SKProprtyModel.cache = &_objc_empty_cache;
-	OBJC_CLASS_$_SKProprtyModel.isa = &OBJC_METACLASS_$_SKProprtyModel;
-	OBJC_CLASS_$_SKProprtyModel.superclass = &OBJC_CLASS_$_NSObject;
-	OBJC_CLASS_$_SKProprtyModel.cache = &_objc_empty_cache;
+static void OBJC_CLASS_SETUP_$_SKTraggedPointTest(void ) {
+	OBJC_METACLASS_$_SKTraggedPointTest.isa = &OBJC_METACLASS_$_NSObject;
+	OBJC_METACLASS_$_SKTraggedPointTest.superclass = &OBJC_METACLASS_$_NSObject;
+	OBJC_METACLASS_$_SKTraggedPointTest.cache = &_objc_empty_cache;
+	OBJC_CLASS_$_SKTraggedPointTest.isa = &OBJC_METACLASS_$_SKTraggedPointTest;
+	OBJC_CLASS_$_SKTraggedPointTest.superclass = &OBJC_CLASS_$_NSObject;
+	OBJC_CLASS_$_SKTraggedPointTest.cache = &_objc_empty_cache;
 }
 #pragma section(".objc_inithooks$B", long, read, write)
 __declspec(allocate(".objc_inithooks$B")) static void *OBJC_CLASS_SETUP[] = {
-	(void *)&OBJC_CLASS_SETUP_$_SKProprtyModel,
+	(void *)&OBJC_CLASS_SETUP_$_SKTraggedPointTest,
 };
 static struct _class_t *L_OBJC_LABEL_CLASS_$ [1] __attribute__((used, section ("__DATA, __objc_classlist,regular,no_dead_strip")))= {
-	&OBJC_CLASS_$_SKProprtyModel,
+	&OBJC_CLASS_$_SKTraggedPointTest,
 };
 static struct IMAGE_INFO { unsigned version; unsigned flag; } _OBJC_IMAGE_INFO = { 0, 2 };

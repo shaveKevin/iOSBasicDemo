@@ -1,18 +1,19 @@
 //
-//  SKSegementVC.m
+//  SKThreadDeadLockVC.m
 //  AllKindOfThings
 //
-//  Created by shavekevin on 2019/9/25.
+//  Created by shavekevin on 2019/9/19.
 //  Copyright © 2019 小风. All rights reserved.
 //
 
-#import "SKSegementVC.h"
+#import "SKThreadLearningVC.h"
 
-@interface SKSegementVC ()
+@interface SKThreadLearningVC ()
+
 
 @end
 
-@implementation SKSegementVC
+@implementation SKThreadLearningVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -20,13 +21,11 @@
     [self setupViews];
     [self setupData];
     [self setupLayout];
-    
+
 }
 
 - (void)setupViews {
-    
     self.view.backgroundColor = [UIColor whiteColor];
-    
 }
 
 - (void)setupData {

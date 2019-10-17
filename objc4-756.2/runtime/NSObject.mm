@@ -645,7 +645,7 @@ class AutoreleasePoolPage
     // when the top level (i.e. libdispatch) pushes and pops pools but 
     // never uses them.
 #   define EMPTY_POOL_PLACEHOLDER ((id*)1)
-
+// 哨兵对象, 用来标识释放边界
 #   define POOL_BOUNDARY nil
     static pthread_key_t const key = AUTORELEASE_POOL_KEY;
     static uint8_t const SCRIBBLE = 0xA3;  // 0xA3A3A3A3 after releasing
@@ -779,12 +779,12 @@ class AutoreleasePoolPage
         protect();
         return ret;
     }
-
+    // 释放所有对象
     void releaseAll() 
     {
         releaseUntil(begin());
     }
-
+     // 释放对象
     void releaseUntil(id *stop) 
     {
         // Not recursive: we don't want to blow out the stack 
@@ -794,19 +794,22 @@ class AutoreleasePoolPage
             // Restart from hotPage() every time, in case -release 
             // autoreleased more objects
             AutoreleasePoolPage *page = hotPage();
+            // 如果当前page为空，那么设置活跃的page为它的父级
 
             // fixme I think this `while` can be `if`, but I can't prove it
             while (page->empty()) {
                 page = page->parent;
                 setHotPage(page);
             }
-
+            // 这可以理解为打开防护罩 让page 可操作
             page->unprotect();
             id obj = *--page->next;
             memset((void*)page->next, SCRIBBLE, sizeof(*page->next));
+            // 操作完毕 关闭防护罩
             page->protect();
 
             if (obj != POOL_BOUNDARY) {
+                // 如过适当的对象不是哨兵对象。那么执行release
                 objc_release(obj);
             }
         }
@@ -820,8 +823,8 @@ class AutoreleasePoolPage
         }
 #endif
     }
-
-    void kill() 
+    // kill方法会把当前页面以及子页面全部删除
+    void kill()
     {
         // Not recursive: we don't want to blow out the stack 
         // if a thread accumulates a stupendous amount of garbage
@@ -1066,6 +1069,7 @@ public:
         id *stop;
 
         if (token == (void*)EMPTY_POOL_PLACEHOLDER) {
+            //pool 中没有对象存入
             // Popping the top-level placeholder pool.
             if (hotPage()) {
                 // Pool was used. Pop its contents normally.

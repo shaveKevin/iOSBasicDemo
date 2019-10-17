@@ -20,6 +20,7 @@ typedef int(^MyBlockFive)(int a,int b);
 
 typedef void(^MyBlockCycle)(int a,int b);
 
+typedef void(^My_BlockCycle)(int a,int b);
 
 @interface SKBlockVC ()
 
@@ -37,6 +38,12 @@ typedef void(^MyBlockCycle)(int a,int b);
 
 @property (nonatomic, copy) int(^sumOf)(int a, int b);
 
+@property (nonatomic, assign) BOOL is_canFly;
+
+@property (nonatomic, strong) My_BlockCycle  block_Cycle;
+
+@property (nonatomic, strong) NSNotification *notification;
+
 @end
 
 @implementation SKBlockVC
@@ -47,6 +54,10 @@ typedef void(^MyBlockCycle)(int a,int b);
 
     [self blockTestAutoInLine];
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self test_canRetainCycle];
+    
+    [self testGCD];
     
 }
 
@@ -583,4 +594,63 @@ typedef void(^MyBlockCycle)(int a,int b);
 
 
 
+- (void)test_canRetainCycle {
+    __weak typeof(self)weakSelf = self;
+    
+    self.block_Cycle = ^(int a, int b) {
+        __strong typeof(weakSelf)strongSelf = weakSelf;
+        // 注意 如果这里用weak来i调用会报错：Dereferencing a __weak pointer is not allowed due to possible null value caused by race condition, assign it to strong variable first. 意思是：对一个weak‘指针的解引用是不允许的，因为可能在竞态条件下变成null，所以把他定义成strong属性
+        strongSelf->_is_canFly = YES;
+    };
+    self.block_Cycle(2, 3);
+}
+
+
+- (void)testGCD {
+    
+    // 这种不会产生循环引用
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self linkTest];
+    });
+    __weak typeof(self)weakSelf = self;
+    // 注意这里会产生循环引用，因为self 持有了block block 也持有了self;
+    _notification = [[NSNotificationCenter defaultCenter ] addObserverForName:@"test" object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+        __strong typeof(weakSelf)strongSelf = weakSelf;
+        [strongSelf linkTest];
+
+    }];
+    
+}
+
+- (void)dealloc {
+    NSLog(@"delloc了");
+}
+
 @end
+// 面试题解答：1.使用block时什么情况会发生引用循环，如何解决？
+/*
+ 答： 如果在block中使用附有__strong修饰符修饰的对象类型自动变量，那么block从栈复制到堆时，该对象为block所持有。这样容易引起循环引用。
+  简单的说：就是在一个对象中强引用了block，在block中又强引用了该对象，就会产生循环引用。(可参考方法:retainCycleIML)
+  解决方法是：1.这个对象使用__weak或者__block修饰符之后再block中使用。 注意arc下用__weak mrc下用__block
+          2.在block使用完之后 将block置为nil  例如将test_canRetainCycle 在 self.block_Cycle(2, 3); 执行之后加上self.block_Cycle = nil 也可解决循环引用的问题，但是如果block有一个方法并不是在block调用结束之后立即使用的，并且希望这个方法正确执行 那么这个方法就行不通了。只能采用第一种方式来解决。
+ 3. @weakly  @strongly
+ 其实weakly和strongly等价于
+ @weakify(self) = @autoreleasepool{} __weak __typeof__ (self) self_weak_ = self;
+ @strongify(self) = @autoreleasepool{} __strong __typeof__(self) self = self_weak_;
+
+
+ 例如：test_canRetainCycle中block外部的的__weak 和  block内部的__strong
+ (其中加__weak的时候是为了在block内部使用的时候不会强引用当前对象，不会造成引用计数+1，防止了循环引用。而用__strong的目的是一旦进入block执行，假设不允许self在这个执行过程中释放，就需要加入strongself，block执行完毕之后这个strongself会自动释放，m不会存在循环引用问题，如果要在block内多次访问self，那么需要使用strongself)
+
+ 
+ */
+// 面试题解答：2.在block内如何修改block外部变量？
+/*
+ 
+ */
+
+// 面试题解答：3.使用系统的某些block api（如UIView的block版本写动画时），是否也考虑引用循环问题？
+/*
+ 答：不需要考虑。产生循环引用的原因是相互引用。系统的api是单向引用，不会产生循环引用的问题，但是使用gcd和通知中心的时候需要考虑。拿gcd来说，如果gcd内部使用了self，而gcd的其他参数是属性变量的话，那么需要考虑循环引用。
+ */
+

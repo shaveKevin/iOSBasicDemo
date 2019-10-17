@@ -12,6 +12,8 @@
 {
     NSString *_foo;
 }
+@property (nonatomic, copy) NSString  *stringValue;
+
 @end
 /*
  通过runtime看其实现应该是这个样子的，可以看出这里定义的实际变量并不是timeStamps 而是 instanceTImeStamps
@@ -45,6 +47,23 @@ struct SKProprtyModel_IMPL {
 @synthesize animal;
 
 @synthesize mouse = _mouse;
+
+- (instancetype)init {
+    
+    if (self = [super init]) {
+        [self testIntValue];
+    }
+    return self;
+}
+
+- (void)testIntValue {
+    // 调用setter 方法
+    self.stringValue = @"5";
+    // -> 用来访问成员变量  只是使用了成员变量  并未做其他操作  不比如self.xx  内存语义的处理
+    self->_stringValue = @"25";
+    NSLog(@"self.stringValue %p  self->__stringValue is %p",self.stringValue,self->_stringValue);
+}
+
 @end
 
 

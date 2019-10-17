@@ -9,6 +9,7 @@
 #import "SKPropertyVC.h"
 #import <Masonry/Masonry.h>
 #import "SKPropertyTestModel.h"
+#import "SKTraggedPointTest.h"
 
 @interface SKPropertyVC ()
 
@@ -42,6 +43,8 @@ __weak id  reference = nil;
     [self testSynthesizeAndDynamic];
 //    [self autoreleasepoolMethod];
     [self autorelaseTest];
+    
+    [self traggPointTest];
 }
 
 - (void)setupViews {
@@ -146,6 +149,10 @@ __weak id  reference = nil;
     }
 }
 
+- (void)traggPointTest {
+    SKTraggedPointTest *test = [[SKTraggedPointTest alloc]init];
+    
+}
 
 // 非集合类
 

@@ -700,6 +700,9 @@ objc_object::autorelease()
 inline id 
 objc_object::rootAutorelease()
 {
+    //aggedPointer  这是个伪指针，包含两部分  一部分直接保存数据，另一部分作为特殊标记，表示这是应特别的指针，不指向任何一个地址
+    // 这里判断当前类指针 是不是伪指针  如果是 直接返回当前类
+
     if (isTaggedPointer()) return (id)this;
     if (prepareOptimizedReturn(ReturnAtPlus1)) return (id)this;
 
@@ -710,6 +713,7 @@ objc_object::rootAutorelease()
 inline uintptr_t 
 objc_object::rootRetainCount()
 {
+    
     if (isTaggedPointer()) return (uintptr_t)this;
 
     sidetable_lock();
@@ -943,7 +947,7 @@ objc_object::autorelease()
 }
 
 
-// Base autorelease implementation, ignoring overrides.
+// Base autorelease implementation, ignoring overrides. autorelease 的实现
 inline id 
 objc_object::rootAutorelease()
 {

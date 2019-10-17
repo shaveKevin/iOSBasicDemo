@@ -38,7 +38,7 @@ UITableViewDelegate
     self.titles = @[].mutableCopy;
     self.classNames = @[].mutableCopy;
 
-    [self addCellText:@"多线程" class:@"SKThreadDeadLockVC"];
+    [self addCellText:@"多线程" class:@"SKThreadLearningVC"];
     [self addCellText:@"Runtime" class:@"SKRuntimeVC"];
     [self addCellText:@"Runloop" class:@"SKRunloopVC"];
     [self addCellText:@"Block" class:@"SKBlockVC"];
