@@ -54,10 +54,11 @@ typedef void(^My_BlockCycle)(int a,int b);
 
     [self blockTestAutoInLine];
     self.view.backgroundColor = [UIColor whiteColor];
-    
     [self test_canRetainCycle];
-    
+    // 系统定义的block 是否需要检测循环引用
     [self testGCD];
+    // block 所在内存位置
+    [self blockLocation];
     
 }
 
@@ -622,6 +623,18 @@ typedef void(^My_BlockCycle)(int a,int b);
     
 }
 
+- (void)blockLocation {
+    __block int a = 10;
+    NSLog(@"定义前a的地址为： %p a的值为%@",&a,@(a));
+    void(^foo)(void) = ^ {
+        a = 15;
+        NSLog(@"block中a的地址为： %p a的值为%@",&a,@(a));
+    };
+    NSLog(@"定义后a的地址为： %p  a的值为%@",&a,@(a));
+    foo();
+    NSLog(@"调用后a的地址为： %p a的值为%@",&a,@(a));
+}
+
 - (void)dealloc {
     NSLog(@"delloc了");
 }
@@ -643,16 +656,37 @@ typedef void(^My_BlockCycle)(int a,int b);
  (其中加__weak的时候是为了在block内部使用的时候不会强引用当前对象，不会造成引用计数+1，防止了循环引用。而用__strong的目的是一旦进入block执行，假设不允许self在这个执行过程中释放，就需要加入strongself，block执行完毕之后这个strongself会自动释放，m不会存在循环引用问题，如果要在block内多次访问self，那么需要使用strongself)
 
  循环引用的检测可以参考FB开源的一个工具：FBRetainCycleDetector 腾讯在此基础上也封装了一个工具：MLeaksFinder  具体可以github搜索
- 
+ */
 // 面试题解答：2.在block内如何修改block外部变量？
  
 /*
  答：我们都知道：Block不允许修改外部变量的值，这里说的是外部变量的值，值得是栈中指针的内存地址，__block起到的作用是只要观察到该变量被block所持有。
-    就将外部的
+    就将外部栈中的地址放到了堆中，进而在block内部也可以修改外部变量的值。
+    Block不允许修改外部变量的值、apple这样设计。考虑到了block的特殊性。block是匿名内部类同样属于函数的范畴。变量进入到block，实际上已经改变了其作用域。在几个作用域进行切换的时候，如果不加上这样的限制，变量的可维护性就大大降低了。还有一种情况是，如果在block内部定义了临时变量，变量名字和外部的变量的名字相同。那么是不是被允许呢？正因为有这样的机制（不允许修改外部变量的值）所以这样的情景才能实现。 于是乎，栈区变成了红灯区，堆区变成了绿灯区。
+ ```
+ __block int a = 10;
+  NSLog(@"定义前a的地址为： %p a的值为%@",&a,@(a));
+  void(^foo)(void) = ^ {
+      a = 15;
+      NSLog(@"block中a的地址为： %p a的值为%@",&a,@(a));
+  };
+  NSLog(@"定义后a的地址为： %p  a的值为%@",&a,@(a));
+  foo();
+  NSLog(@"调用后a的地址为： %p a的值为%@",&a,@(a));
+ 打印结果为：
+ 定义前a的地址为： 0x16d7a7958 a的值为10
+ 定义后a的地址为： 0x282454c78  a的值为10
+ block中a的地址为： 0x282454c78 a的值为15
+ 调用后a的地址为： 0x282454c78 a的值为15
+ 可以看出在block执行之前 block值没有发生改变，
+ 
+ 
+ ```
+ 
  */
 
 // 面试题解答：3.使用系统的某些block api（如UIView的block版本写动画时），是否也考虑引用循环问题？
 /*
- 答：不需要考虑。产生循环引用的原因是相互引用。系统的api是单向引用，不会产生循环引用的问题，但是使用gcd和通知中心的时候需要考虑。拿gcd来说，如果gcd内部使用了self，而gcd的其他参数是属性变量的话，那么需要考虑循环引用。
+ 答：不需要考虑。产生循环引用的原因是相互引用。系统的api是单向引用，不会产生循环引用的问题，但是使用gcd和通知中心的时候需要考虑。拿gcd来说，如果gcd内部使用了self，而gcd的其他参数是属性变量的话，那么需要考虑循环引用。会不会产生循环引用以及要不要处理循环引用的问题，主要还是看使用的时候有没有形成环，如果形成环。那就需要处理循环引用的问题。
  */
 
