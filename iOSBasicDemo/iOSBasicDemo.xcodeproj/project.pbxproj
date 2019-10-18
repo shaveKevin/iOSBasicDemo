@@ -66,6 +66,8 @@
 		D73A189223595F1300C5FBF1 /* SKUINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A184323595F1300C5FBF1 /* SKUINavigationController.m */; };
 		D73A189323595F1300C5FBF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A184423595F1300C5FBF1 /* AppDelegate.m */; };
 		D73A189423595F1300C5FBF1 /* SKPCBasicTechVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A184623595F1300C5FBF1 /* SKPCBasicTechVC.m */; };
+		D73A189A2359968300C5FBF1 /* SKBlockLocationObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A18992359968300C5FBF1 /* SKBlockLocationObj.m */; };
+		D73A18A02359C0FB00C5FBF1 /* SKGCDTestObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A189F2359C0FB00C5FBF1 /* SKGCDTestObj.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -201,6 +203,12 @@
 		D73A184523595F1300C5FBF1 /* SKAlgorithmBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKAlgorithmBaseVC.h; sourceTree = "<group>"; };
 		D73A184623595F1300C5FBF1 /* SKPCBasicTechVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKPCBasicTechVC.m; sourceTree = "<group>"; };
 		D73A184723595F1300C5FBF1 /* SKHomePageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKHomePageVC.h; sourceTree = "<group>"; };
+		D73A1896235993F200C5FBF1 /* SKBlockVC-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKBlockVC-arm64.cpp"; sourceTree = "<group>"; };
+		D73A18982359968300C5FBF1 /* SKBlockLocationObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKBlockLocationObj.h; sourceTree = "<group>"; };
+		D73A18992359968300C5FBF1 /* SKBlockLocationObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKBlockLocationObj.m; sourceTree = "<group>"; };
+		D73A189B235998CD00C5FBF1 /* SKBlockLocationObj-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKBlockLocationObj-arm64.cpp"; sourceTree = "<group>"; };
+		D73A189E2359C0FB00C5FBF1 /* SKGCDTestObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKGCDTestObj.h; sourceTree = "<group>"; };
+		D73A189F2359C0FB00C5FBF1 /* SKGCDTestObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKGCDTestObj.m; sourceTree = "<group>"; };
 		D78EEB062333283C0001467B /* 练习Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "练习Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -376,6 +384,7 @@
 			children = (
 				D73A17F223595F1300C5FBF1 /* SKThreadLearningVC.h */,
 				D73A17F323595F1300C5FBF1 /* SKThreadLearningVC.m */,
+				D73A189D2359C0D900C5FBF1 /* GCD */,
 			);
 			path = Thread;
 			sourceTree = "<group>";
@@ -406,9 +415,13 @@
 			isa = PBXGroup;
 			children = (
 				D73A17FF23595F1300C5FBF1 /* SKBlockVC.h */,
-				D73A180023595F1300C5FBF1 /* Block 深入浅出.jpg */,
 				D73A180123595F1300C5FBF1 /* SKBlockVC.m */,
+				D73A1896235993F200C5FBF1 /* SKBlockVC-arm64.cpp */,
+				D73A180023595F1300C5FBF1 /* Block 深入浅出.jpg */,
 				D73A180223595F1300C5FBF1 /* Block的深度探究.jpg */,
+				D73A18982359968300C5FBF1 /* SKBlockLocationObj.h */,
+				D73A18992359968300C5FBF1 /* SKBlockLocationObj.m */,
+				D73A189B235998CD00C5FBF1 /* SKBlockLocationObj-arm64.cpp */,
 				D73A180323595F1300C5FBF1 /* BlockTest */,
 			);
 			path = Block;
@@ -527,6 +540,15 @@
 				D73A184723595F1300C5FBF1 /* SKHomePageVC.h */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		D73A189D2359C0D900C5FBF1 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				D73A189E2359C0FB00C5FBF1 /* SKGCDTestObj.h */,
+				D73A189F2359C0FB00C5FBF1 /* SKGCDTestObj.m */,
+			);
+			path = GCD;
 			sourceTree = "<group>";
 		};
 		D78EEAFD2333283C0001467B = {
@@ -700,6 +722,7 @@
 				D73A187D23595F1300C5FBF1 /* TestModel.m in Sources */,
 				D73A189423595F1300C5FBF1 /* SKPCBasicTechVC.m in Sources */,
 				D73A187F23595F1300C5FBF1 /* NSObject+Add.m in Sources */,
+				D73A189A2359968300C5FBF1 /* SKBlockLocationObj.m in Sources */,
 				D73A186023595F1300C5FBF1 /* NSObject+SKRuntimeAssociatedObject.m in Sources */,
 				D73A186A23595F1300C5FBF1 /* SKThreadLearningVC.m in Sources */,
 				D73A188B23595F1300C5FBF1 /* SKSortAlgorithmVC.m in Sources */,
@@ -710,6 +733,7 @@
 				D73A188523595F1300C5FBF1 /* TestExpand+Additions.m in Sources */,
 				D73A185A23595F1300C5FBF1 /* SKMessageSendAction.m in Sources */,
 				D73A184A23595F1300C5FBF1 /* SKTimerTest.m in Sources */,
+				D73A18A02359C0FB00C5FBF1 /* SKGCDTestObj.m in Sources */,
 				D73A184F23595F1300C5FBF1 /* SKPropertyTestModel.m in Sources */,
 				D73A187223595F1300C5FBF1 /* BlockTool.m in Sources */,
 				D73A187823595F1300C5FBF1 /* SSDemo.m in Sources */,

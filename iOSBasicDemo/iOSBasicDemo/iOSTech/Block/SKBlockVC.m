@@ -625,15 +625,43 @@ typedef void(^My_BlockCycle)(int a,int b);
 
 - (void)blockLocation {
     __block int a = 10;
-    NSLog(@"定义前a的地址为： %p a的值为%@",&a,@(a));
+    NSLog(@"定义前a的地址为： %p a的值为%@",&a,@(a));// 栈区
     void(^foo)(void) = ^ {
         a = 15;
-        NSLog(@"block中a的地址为： %p a的值为%@",&a,@(a));
+        NSLog(@"block中a的地址为： %p a的值为%@",&a,@(a));// 堆区
     };
-    NSLog(@"定义后a的地址为： %p  a的值为%@",&a,@(a));
+    NSLog(@"定义后a的地址为： %p  a的值为%@",&a,@(a));// 堆区
     foo();
-    NSLog(@"调用后a的地址为： %p a的值为%@",&a,@(a));
+    NSLog(@"调用后a的地址为： %p a的值为%@",&a,@(a));// 堆区
+    
+    [self testBlockStack];
+    
 }
+
+- (void)testBlockStack {
+    
+    // 打印%p为指针地址  %@ 后面用 &x  来修饰标识的是对象的地址
+     NSMutableString *blockString = [NSMutableString stringWithString:@"echo"];
+    NSLog(@"定义之前：------------------------------------\n blockString指向的堆中地址：%p；a在栈中的指针地址：%p", blockString, &blockString);
+    void(^blockTest)(void) = ^{
+        blockString.string = @"john  snow";
+        NSLog(@"block内部：------------------------------------\n blockString指向的堆中地址：%p；a在栈中的指针地址：%p", blockString, &blockString);
+        // 下面的这段代码会报错：Variable is not assignable (missing __block type specifier)
+        // blockString = [NSMutableString stringWithString:@"雅俗共赏"];
+    };
+    blockTest();
+    NSLog(@"调用之后：------------------------------------\n blockString指向的堆中地址：%p；a在栈中的指针地址：%p", blockString, &blockString);
+    //打印的结果为：
+     //定义之前：------------------------------------blockString指向的堆中地址：0x2838d4780；a在栈中的指针地址：0x16bb0f878
+     //block内部:------------------------------------blockString指向的堆中地址：0x2838d4780；a在栈中的指针地址：0x2838d4830
+     //调用之后：------------------------------------blockString指向的堆中地址：0x2838d4780；a在栈中的指针地址：0x16bb0f878
+    // 这里有个疑问:为什么打印%p在堆上，打印%@用&修饰在栈上?
+    // 这里的blockString已经由基本数据类型，变成了对象类型。block会对对象类型的指针进行copy。copy到堆中，但是并不会改变指针所指向的堆中的地址，所以在上面的代码中 block内部修改的实际是blockString指向的堆中的内容。
+    
+    // 上面说的不允许修改外部变量的值，这里说的外部变量 s值 值得是栈中指针的内存地址。栈是红灯区，堆才是绿灯区。不能修改的是“栈”不是：堆“。
+    
+}
+
 
 - (void)dealloc {
     NSLog(@"delloc了");
@@ -674,12 +702,52 @@ typedef void(^My_BlockCycle)(int a,int b);
   foo();
   NSLog(@"调用后a的地址为： %p a的值为%@",&a,@(a));
  打印结果为：
- 定义前a的地址为： 0x16d7a7958 a的值为10
- 定义后a的地址为： 0x282454c78  a的值为10
- block中a的地址为： 0x282454c78 a的值为15
- 调用后a的地址为： 0x282454c78 a的值为15
+ 定义前a的地址为： 0x16b92b958 a的值为10
+ 定义后a的地址为： 0x281594618  a的值为10
+ block中a的地址为： 0x281594618 a的值为15
+ 调用后a的地址为： 0x281594618 a的值为15
  可以看出在block执行之前 block值没有发生改变，
+ 执行完block之后 block的值发生改变。
+ 定义前的变量存储在栈上，定义后的变量存储在堆上
+ 定义后和block内部的block地址是一样的。block内部的变量会被copy到堆区。block内部打印的地址也就是堆的地址。因而可以知道
+ 定义后打印的地址也是堆地址。
+ 看到这里不禁会问 你怎么知道打印的是堆地址？
+ 把定义前和定义后两个地址转换为10进制
  
+       地址        16进制        10进制
+ 
+   0x16b92b958   16b92b958     6099745112
+   0x281594618   281594618     10760046104
+ 
+ 差值为 4660300992 大约 4444.40936279M
+ 
+ 因为堆地址要小于栈地址，又因为iOS 中一个进程中的栈区内存只有1M mac也只有8M，显然这个时候变量a已经在堆区了。
+
+ 这也充分说明了：变量a在定义前是在栈区，只要进入到block区域，就变成了堆区。这才是__block关键字的作用。
+     
+__block关键字修饰之后，int类型也从4个字节变成了32个字节，这是从Foundation框架malloc出来的。这也就证实了上面的结论。
+ (改变的原因是堆栈地址的变更)
+ ```
+  NSMutableString *blockString = [NSMutableString stringWithString:@"echo"];
+ NSLog(@"定义之前：------------------------------------\n blockString指向的堆中地址：%p；a在栈中的指针地址：%p", blockString, &blockString);
+ void(^blockTest)(void) = ^{
+     blockString.string = @"john  snow";
+     NSLog(@"block内部：------------------------------------\n blockString指向的堆中地址：%p；a在栈中的指针地址：%p", blockString, &blockString);
+     // 下面的这段代码会报错：Variable is not assignable (missing __block type specifier)
+     // blockString = [NSMutableString stringWithString:@"雅俗共赏"];
+ };
+ blockTest();
+ ```
+ NSLog(@"调用之后：------------------------------------\n blockString指向的堆中地址：%p；a在栈中的指针地址：%p", blockString, &blockString);
+ //打印的结果为：
+  //定义之前：------------------------------------blockString指向的堆中地址：0x2838d4780；a在栈中的指针地址：0x16bb0f878
+  //block内部:------------------------------------blockString指向的堆中地址：0x2838d4780；a在栈中的指针地址：0x2838d4830
+  //调用之后：------------------------------------blockString指向的堆中地址：0x2838d4780；a在栈中的指针地址：0x16bb0f878
+ // 这里有个疑问:为什么打印%p在堆上，打印%@用&修饰在栈上?
+ // 这里的blockString已经由基本数据类型，变成了对象类型。block会对对象类型的指针进行copy。copy到堆中，但是并不会改变指针所指向的堆中的地址，所以在上面的代码中 block内部修改的实际是blockString指向的堆中的内容。
+ 
+ // 上面说的不允许修改外部变量的值，这里说的外部变量的值 指的得是栈中指针的内存地址。栈是红灯区，堆才是绿灯区。不能修改的是“栈”不是：堆“。
+
  
  ```
  
