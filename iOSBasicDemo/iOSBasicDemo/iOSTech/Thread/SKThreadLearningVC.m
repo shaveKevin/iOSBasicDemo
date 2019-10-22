@@ -7,6 +7,8 @@
 //
 
 #import "SKThreadLearningVC.h"
+#import "SKGCDTestObj.h"
+#import "SKGCDPrintObj.h"
 
 @interface SKThreadLearningVC ()
 
@@ -21,7 +23,9 @@
     [self setupViews];
     [self setupData];
     [self setupLayout];
-
+    [self privateMethod];
+    [self threadMethodListAction];
+    
 }
 
 - (void)setupViews {
@@ -36,5 +40,24 @@
     
 }
 
+- (void)privateMethod {
+    SKGCDTestObj *obj = [[SKGCDTestObj alloc]init];
+//    [obj createSerialQueue];
+//    [obj createConcurrentQueue];
+//    [obj createDispatchBarrierAsync];
+//    [obj createDispatchNotify];
+//    [obj createDeadLock];
+//    [obj queueSetSpecificFunc];
+//    [obj reentrantMethod];
+//    [obj syncMainThread];
+    
+    
+    
+}
+
+- (void)threadMethodListAction {
+    SKGCDPrintObj *printObj = [[SKGCDPrintObj alloc]init];
+
+}
 
 @end
