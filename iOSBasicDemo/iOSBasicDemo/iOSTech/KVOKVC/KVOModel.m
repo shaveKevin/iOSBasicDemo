@@ -12,11 +12,25 @@
 
 
 @end
+
+
 @implementation KVOModel
 
-- (void)setAge:(NSInteger)age {
-    NSLog(@"age ============%@",@(age));
-    _age = age;
+- (instancetype)init {
+    
+    if (self = [super init]) {
+    }
+    return self;
 }
+
+
+//- (void)willChangeValueForKey:(NSString *)key {
+//    NSLog(@"willChangeValueForKey: %@",key);
+//}
+
+//- (void)didChangeValueForKey:(NSString *)key {
+//    NSLog(@"didChangeValueForKey: %@",key);
+//
+//}
 
 @end
