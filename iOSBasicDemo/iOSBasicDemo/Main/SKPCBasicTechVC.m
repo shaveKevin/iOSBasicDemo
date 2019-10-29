@@ -39,6 +39,7 @@ UITableViewDelegate
     self.classNames = @[].mutableCopy;
 
     [self addCellText:@"网络基本知识" class:@"SKPCNetworkingVC"];
+    [self addCellText:@"链表基础知识" class:@"SKLinkListVC"];
 
     [self.tableView reloadData];
 }

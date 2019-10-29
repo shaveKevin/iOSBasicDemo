@@ -39,6 +39,8 @@ UITableViewDelegate
     self.classNames = @[].mutableCopy;
 
     [self addCellText:@"排序算法" class:@"SKSortAlgorithmVC"];
+    [self addCellText:@"基础算法" class:@"SKBasicAlogrithmVC"];
+
 
     [self.tableView reloadData];
 }

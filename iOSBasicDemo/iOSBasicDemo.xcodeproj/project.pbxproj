@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		650EAEA170E9659055B10E12 /* Pods_iOSBasicDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EA8371E2221071062CFD67 /* Pods_iOSBasicDemo.framework */; };
 		D717BDBE2366CF7900D085A8 /* NSObject+SKKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = D717BDBD2366CF7900D085A8 /* NSObject+SKKVO.m */; };
+		D717BDE723682B7300D085A8 /* SKBasicAlogrithmVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D717BDE623682B7300D085A8 /* SKBasicAlogrithmVC.m */; };
 		D720129E23669A1D0072F534 /* SKKVOStudentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D720129D23669A1D0072F534 /* SKKVOStudentModel.m */; };
 		D73A184923595F1300C5FBF1 /* SKRunloopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A17B523595F1300C5FBF1 /* SKRunloopVC.m */; };
 		D73A184A23595F1300C5FBF1 /* SKTimerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A17B723595F1300C5FBF1 /* SKTimerTest.m */; };
@@ -70,6 +71,8 @@
 		D73A189423595F1300C5FBF1 /* SKPCBasicTechVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A184623595F1300C5FBF1 /* SKPCBasicTechVC.m */; };
 		D73A189A2359968300C5FBF1 /* SKBlockLocationObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A18992359968300C5FBF1 /* SKBlockLocationObj.m */; };
 		D73A18A02359C0FB00C5FBF1 /* SKGCDTestObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A189F2359C0FB00C5FBF1 /* SKGCDTestObj.m */; };
+		D79FEA9A2368411300419AEC /* SKLinkListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D79FEA992368411300419AEC /* SKLinkListNode.m */; };
+		D79FEA9D2368419A00419AEC /* SKLinkListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D79FEA9C2368419A00419AEC /* SKLinkListVC.m */; };
 		D7BC7ECE235EE89A00A562DA /* SKGCDPrintObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BC7ECD235EE89A00A562DA /* SKGCDPrintObj.m */; };
 		D7BC7ED123604C9300A562DA /* SKIBOutletObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BC7ED023604C9300A562DA /* SKIBOutletObj.m */; };
 		D7BC7ED523604CDB00A562DA /* SKLLDBTestObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BC7ED423604CDB00A562DA /* SKLLDBTestObj.m */; };
@@ -84,6 +87,8 @@
 		8BB2E0137D895E7586529F58 /* Pods-AllKindOfThings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllKindOfThings.debug.xcconfig"; path = "Target Support Files/Pods-AllKindOfThings/Pods-AllKindOfThings.debug.xcconfig"; sourceTree = "<group>"; };
 		D717BDBC2366CF7900D085A8 /* NSObject+SKKVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SKKVO.h"; sourceTree = "<group>"; };
 		D717BDBD2366CF7900D085A8 /* NSObject+SKKVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SKKVO.m"; sourceTree = "<group>"; };
+		D717BDE523682B7300D085A8 /* SKBasicAlogrithmVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKBasicAlogrithmVC.h; sourceTree = "<group>"; };
+		D717BDE623682B7300D085A8 /* SKBasicAlogrithmVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKBasicAlogrithmVC.m; sourceTree = "<group>"; };
 		D720129C23669A1D0072F534 /* SKKVOStudentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKKVOStudentModel.h; sourceTree = "<group>"; };
 		D720129D23669A1D0072F534 /* SKKVOStudentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKKVOStudentModel.m; sourceTree = "<group>"; };
 		D73A17B523595F1300C5FBF1 /* SKRunloopVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKRunloopVC.m; sourceTree = "<group>"; };
@@ -220,6 +225,10 @@
 		D73A189E2359C0FB00C5FBF1 /* SKGCDTestObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKGCDTestObj.h; sourceTree = "<group>"; };
 		D73A189F2359C0FB00C5FBF1 /* SKGCDTestObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKGCDTestObj.m; sourceTree = "<group>"; };
 		D78EEB062333283C0001467B /* 练习Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "练习Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D79FEA982368411300419AEC /* SKLinkListNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKLinkListNode.h; sourceTree = "<group>"; };
+		D79FEA992368411300419AEC /* SKLinkListNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKLinkListNode.m; sourceTree = "<group>"; };
+		D79FEA9B2368419A00419AEC /* SKLinkListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKLinkListVC.h; sourceTree = "<group>"; };
+		D79FEA9C2368419A00419AEC /* SKLinkListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKLinkListVC.m; sourceTree = "<group>"; };
 		D7BC7ECB235DA3E900A562DA /* SpacemanBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpacemanBlocks.h; sourceTree = "<group>"; };
 		D7BC7ECC235EE89A00A562DA /* SKGCDPrintObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKGCDPrintObj.h; sourceTree = "<group>"; };
 		D7BC7ECD235EE89A00A562DA /* SKGCDPrintObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKGCDPrintObj.m; sourceTree = "<group>"; };
@@ -535,6 +544,7 @@
 		D73A182F23595F1300C5FBF1 /* PCBasicTech */ = {
 			isa = PBXGroup;
 			children = (
+				D79FEA94236840BB00419AEC /* SKLinkList */,
 				D73A183023595F1300C5FBF1 /* SKPCNetworkingVC.h */,
 				D73A183123595F1300C5FBF1 /* SKPCNetworkingVC.m */,
 			);
@@ -546,6 +556,8 @@
 			children = (
 				D73A183423595F1300C5FBF1 /* SKSortAlgorithmVC.h */,
 				D73A183523595F1300C5FBF1 /* SKSortAlgorithmVC.m */,
+				D717BDE523682B7300D085A8 /* SKBasicAlogrithmVC.h */,
+				D717BDE623682B7300D085A8 /* SKBasicAlogrithmVC.m */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -596,6 +608,33 @@
 				D78EEB062333283C0001467B /* 练习Demo.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D79FEA94236840BB00419AEC /* SKLinkList */ = {
+			isa = PBXGroup;
+			children = (
+				D79FEA972368410000419AEC /* Class */,
+				D79FEA95236840D300419AEC /* VC */,
+			);
+			path = SKLinkList;
+			sourceTree = "<group>";
+		};
+		D79FEA95236840D300419AEC /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				D79FEA9B2368419A00419AEC /* SKLinkListVC.h */,
+				D79FEA9C2368419A00419AEC /* SKLinkListVC.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		D79FEA972368410000419AEC /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				D79FEA982368411300419AEC /* SKLinkListNode.h */,
+				D79FEA992368411300419AEC /* SKLinkListNode.m */,
+			);
+			path = Class;
 			sourceTree = "<group>";
 		};
 		D7BC7ED223604CC000A562DA /* LLdbTest */ = {
@@ -754,6 +793,7 @@
 				D73A188F23595F1300C5FBF1 /* SKAlgorithmBaseVC.m in Sources */,
 				D73A185223595F1300C5FBF1 /* SKSynthesizeModel.m in Sources */,
 				D7BC7ED823604DAB00A562DA /* SKLLDBTestVC.m in Sources */,
+				D79FEA9D2368419A00419AEC /* SKLinkListVC.m in Sources */,
 				D73A186123595F1300C5FBF1 /* SKRuntimeVC.m in Sources */,
 				D73A185F23595F1300C5FBF1 /* SKRuntimePerson.m in Sources */,
 				D73A186D23595F1300C5FBF1 /* KVOModel.m in Sources */,
@@ -789,12 +829,14 @@
 				D73A188723595F1300C5FBF1 /* ShortDemo1.m in Sources */,
 				D73A186823595F1300C5FBF1 /* SKObjectObjectVC.m in Sources */,
 				D73A185C23595F1300C5FBF1 /* SKRuntimeWeakObject.m in Sources */,
+				D717BDE723682B7300D085A8 /* SKBasicAlogrithmVC.m in Sources */,
 				D73A189323595F1300C5FBF1 /* AppDelegate.m in Sources */,
 				D73A185B23595F1300C5FBF1 /* SKRuntimeOtherObject.m in Sources */,
 				D73A189023595F1300C5FBF1 /* SKHomePageVC.m in Sources */,
 				D73A186623595F1300C5FBF1 /* SKSubObject.m in Sources */,
 				D73A187523595F1300C5FBF1 /* DownLoadManager.m in Sources */,
 				D73A187023595F1300C5FBF1 /* SKBlockVC.m in Sources */,
+				D79FEA9A2368411300419AEC /* SKLinkListNode.m in Sources */,
 				D73A186E23595F1300C5FBF1 /* SKKVCKVOVC.m in Sources */,
 				D73A186C23595F1300C5FBF1 /* Aspects.m in Sources */,
 				D73A188623595F1300C5FBF1 /* MoreTimeTest.m in Sources */,

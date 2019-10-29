@@ -381,7 +381,8 @@ vm_size_t memory_usage(void) {
            可参考类 NSObject+SKKVO 对KVO的实现
  
  
- 参考链接：如何自己动手实现 KVO  https://tech.glowing.com/cn/implement-kvo/
+ 参考链接：如何自己动手实现KVO  https://tech.glowing.com/cn/implement-kvo/
+         KVO使用及实现原理 https://www.ctolib.com/topics-137765.html
  
  */
 // 面试题解答：7.apple用什么方式实现对一个对象的KVO？
