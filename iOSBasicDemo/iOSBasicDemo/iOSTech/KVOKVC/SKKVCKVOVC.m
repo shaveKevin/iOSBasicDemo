@@ -9,12 +9,21 @@
 #import "SKKVCKVOVC.h"
 #import "KVOModel.h"
 #import <objc/runtime.h>
-#import <mach/mach_time.h>
+#import <mach/mach.h>
+#import "SKKVOStudentModel.h"
+#import "NSObject+SKKVO.h"
+
 
 // KVO - Key-Value- Observing 键值监听  用于监听某个对象中属性的改变
 // KVC - Key-Value- Coding 键值编码 主要用于不调用setter方法就更改或者访问对象的属性，这只是在动态地访问或更改对象的属性，而不是在编译期。
 @interface SKKVCKVOVC ()
 @property (nonatomic, strong) KVOModel *kvoModel;
+
+@property (nonatomic, strong) SKKVOStudentModel *selfSysModel;
+
+@property (nonatomic, strong) SKKVOStudentModel *testKVOModel;
+
+
 @end
 
 @implementation SKKVCKVOVC
@@ -22,7 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [self sortObjectMethod];
+    [self sysKVOModel];
 
 }
 
@@ -127,10 +136,12 @@
             NSUInteger j = arc4random()%1000000;
             [mutableArray addObject:@(j)];
         }
+        NSLog(@"使用集合运算符 调用之前cpu用了  %@  memory用了 %@ ",@([SKKVCKVOVC cpuUsage]),@([SKKVCKVOVC memoryUsage]));
         uint64_t startTime = mach_absolute_time();
         id sum = [mutableArray valueForKeyPath:@"@sum.self"];
         NSLog(@"计算数组中元素的sum为：%@",sum);
         [self timeOfMach:startTime];
+        NSLog(@"使用集合运算符 调用之后cpu用了  %@  memory用了 %@ ",@([SKKVCKVOVC cpuUsage]),@([SKKVCKVOVC memoryUsage]));
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self sortTypeMethod:mutableArray];
         });
@@ -139,15 +150,19 @@
 
 
 - (void)sortTypeMethod:(NSArray *)array {
+    NSLog(@"使用for循环 调用之前cpu用了  %@  memory用了 %@ ",@([SKKVCKVOVC cpuUsage]),@([SKKVCKVOVC memoryUsage]));
     uint64_t startTime = mach_absolute_time();
     NSUInteger sum = 0;
     for (NSUInteger i = 0; i < array.count; i ++) {
         NSUInteger j = [array[i] intValue];
         sum +=j;
     }
+
     NSLog(@"计算数组中元素的sum为：%@",@(sum));
     [self timeOfMach:startTime];
-
+    NSLog(@"使用for循环 调用之后cpu用了  %@  memory用了 %@ ",@([SKKVCKVOVC cpuUsage]),@([SKKVCKVOVC memoryUsage]));
+    
+    
 }
 
 - (void)methodCostTimeTest:(SEL)selector {
@@ -156,6 +171,31 @@
     [self timeOfMach:startTime];
     
 }
+
+// 手动设定实例变量的KVO
+- (void)kvomodelselfSysthis {
+    _selfSysModel = [[SKKVOStudentModel alloc]init];
+    // stdAge 检测的是实例变量
+    [_selfSysModel addObserver:self forKeyPath:@"stdAge" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    // stdName 监测的是属性变量
+    [_selfSysModel addObserver:self forKeyPath:@"stdName" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    _selfSysModel.stdName = @"Tom";
+    _selfSysModel.stdAge = @"12";
+    
+}
+// 自己实现kvo 不用系统的
+- (void)sysKVOModel {
+    _testKVOModel = [[SKKVOStudentModel alloc]init];
+    NSLog(@"添加观察者之前： %@  %@",_testKVOModel ,object_getClass(_testKVOModel));
+    [_testKVOModel sk_addObserver:self forKey:@"stdName" withBlock:^(id  _Nonnull observedObject, NSString * _Nonnull observeKey, id  _Nonnull oldValue, id  _Nonnull newValue) {
+        NSLog(@"observedObject===%@  observeKey===%@ oldValue===%@  newValue===%@",observedObject,observeKey,oldValue,newValue);
+    }];
+    _testKVOModel.stdName = @"kevin";
+    NSLog(@"添加观察者之后： %@  %@",_testKVOModel ,object_getClass(_testKVOModel));
+
+}
+
+
 // 注意 只要添加观察者都会调用这个方法(注意：只要观察者的类中实现了willChangeValueForKey或didChangeValueForKey方法 这个观察方法就不会响应)
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
@@ -177,125 +217,99 @@
     NSLog(@"方法耗时: %f ms",(CGFloat)cost / NSEC_PER_SEC * 1000.0);
 }
 
++ (float)cpuUsage {
+    return  cpu_usage();
+}
 
-//- (void)GetCpuUsage {
-//
-//    kern_return_t kr;
-//
-//    task_info_data_t tinfo;
-//
-//    mach_msg_type_number_t task_info_count;
-//
-//    task_info_count = TASK_INFO_MAX;
-//
-//    kr = task_info(mach_task_self(), TASK_BASIC_INFO, (task_info_t)tinfo, &task_info_count);
-//
-//    if(kr != KERN_SUCCESS) {
-//
-//        return;
-//
-//    }
-//
-//    task_basic_info_t      basic_info;
-//
-//    thread_array_t        thread_list;
-//
-//    mach_msg_type_number_t thread_count;
-//
-//    thread_info_data_t    thinfo;
-//
-//    mach_msg_type_number_t thread_info_count;
-//
-//    thread_basic_info_t basic_info_th;
-//
-//    uint32_t stat_thread =0;// Mach threads
-//
-//    basic_info = (task_basic_info_t)tinfo;
-//
-//    // get threads in the taskkr = task_threads(mach_task_self(), &thread_list, &thread_count);
-//
-//    if(kr != KERN_SUCCESS) {
-//
-//        return;
-//
-//    }
-//
-//    if(thread_count >0)
-//
-//        stat_thread += thread_count;
-//
-//    longtot_sec =0;
-//
-//    longtot_usec =0;
-//
-//    floattot_cpu =0;
-//
-//    int j;
-//
-//    for(j =0; j < thread_count; j++)
-//
-//    {
-//
-//        thread_info_count = THREAD_INFO_MAX;
-//
-//        kr = thread_info(thread_list[j], THREAD_BASIC_INFO,
-//
-//                        (thread_info_t)thinfo, &thread_info_count);
-//
-//        if(kr != KERN_SUCCESS) {
-//
-//            return;
-//
-//        }
-//
-//        basic_info_th = (thread_basic_info_t)thinfo;
-//
-//        if(!(basic_info_th->flags & TH_FLAGS_IDLE)) {
-//
-//            tot_sec = tot_sec + basic_info_th->user_time.seconds + basic_info_th->system_time.seconds;
-//
-//            tot_usec = tot_usec + basic_info_th->system_time.microseconds + basic_info_th->system_time.microseconds;
-//
-//            tot_cpu = tot_cpu + basic_info_th->cpu_usage / (float)TH_USAGE_SCALE *100.0;
-//
-//        }
-//
-//    } // for each thread
-//
-//    kr = vm_deallocate(mach_task_self(), (vm_offset_t)thread_list, thread_count *sizeof(thread_t));
-//
-//    assert(kr == KERN_SUCCESS);
-//
-//    NSLog(@"CPU Usage: %f \n", tot_cpu);
-//
-//}
-//
-//
-//- (void)GetCurrentTaskUsedMemory {
-//
-//    task_basic_info_data_t taskInfo;
-//
-//    mach_msg_type_number_t infoCount = TASK_BASIC_INFO_COUNT;
-//
-//    kern_return_t kernReturn = task_info(mach_task_self(),
-//
-//                                        TASK_BASIC_INFO, (task_info_t)&taskInfo, &infoCount);
-//
-//    if(kernReturn != KERN_SUCCESS) {
-//
-//        return;
-//
-//    }
-//
-//    NSLog(@"Memory Usage: %f", taskInfo.resident_size /1024.0/1024.0);
-//
-//}
+float cpu_usage()
+{
+    kern_return_t kr;
+    task_info_data_t tinfo;
+    mach_msg_type_number_t task_info_count;
+
+    task_info_count = TASK_INFO_MAX;
+    kr = task_info(mach_task_self(), TASK_BASIC_INFO, (task_info_t)tinfo, &task_info_count);
+    if (kr != KERN_SUCCESS) {
+        return -1;
+    }
+
+    task_basic_info_t      basic_info;
+    thread_array_t         thread_list;
+    mach_msg_type_number_t thread_count;
+
+    thread_info_data_t     thinfo;
+    mach_msg_type_number_t thread_info_count;
+
+    thread_basic_info_t basic_info_th;
+    uint32_t stat_thread = 0; // Mach threads
+
+    basic_info = (task_basic_info_t)tinfo;
+
+    // get threads in the task
+    kr = task_threads(mach_task_self(), &thread_list, &thread_count);
+    if (kr != KERN_SUCCESS) {
+        return -1;
+    }
+    if (thread_count > 0)
+        stat_thread += thread_count;
+
+    long tot_sec = 0;
+    long tot_usec = 0;
+    float tot_cpu = 0;
+    int j;
+
+    for (j = 0; j < thread_count; j++)
+    {
+        thread_info_count = THREAD_INFO_MAX;
+        kr = thread_info(thread_list[j], THREAD_BASIC_INFO,
+                         (thread_info_t)thinfo, &thread_info_count);
+        if (kr != KERN_SUCCESS) {
+            return -1;
+        }
+
+        basic_info_th = (thread_basic_info_t)thinfo;
+
+        if (!(basic_info_th->flags & TH_FLAGS_IDLE)) {
+            tot_sec = tot_sec + basic_info_th->user_time.seconds + basic_info_th->system_time.seconds;
+            tot_usec = tot_usec + basic_info_th->user_time.microseconds + basic_info_th->system_time.microseconds;
+            tot_cpu = tot_cpu + basic_info_th->cpu_usage / (float)TH_USAGE_SCALE * 100.0;
+        }
+
+    } // for each thread
+
+    kr = vm_deallocate(mach_task_self(), (vm_offset_t)thread_list, thread_count * sizeof(thread_t));
+    assert(kr == KERN_SUCCESS);
+
+    return tot_cpu;
+}
+
+// 有的是除以1024，有的是除以1000。
++ (float)memoryUsage
+{
+    vm_size_t memory = memory_usage();
+    return memory / 1000.0 /1000.0;
+}
+
+
+vm_size_t memory_usage(void) {
+    struct task_basic_info info;
+    mach_msg_type_number_t size = sizeof(info);
+    kern_return_t kerr = task_info(mach_task_self(), TASK_BASIC_INFO, (task_info_t)&info, &size);
+    return (kerr == KERN_SUCCESS) ? info.resident_size : 0; // size in bytes
+}
 
 - (void)dealloc {
     // 没有add的不要移除 或者加上try catch  如果没有addobserve 就去移除 那么会crash
     @try {
         [self.kvoModel removeObserver:self forKeyPath:@"age"];
         [self.kvoModel removeObserver:self forKeyPath:@"name"];
+        
+        [self.selfSysModel removeObserver:self forKeyPath:@"stdAge"];
+        [self.selfSysModel removeObserver:self forKeyPath:@"stdName"];
+        
+        [_testKVOModel sk_removeObserver:self forKey:@"stdName"];
+
+        
     } @catch (NSException *exception) {
         NSLog(@"异常原因： %@",exception);
     } @finally {
@@ -348,5 +362,32 @@
 
 // 面试题解答：4.KVC的keyPath中的集合运算符如何使用？
 /*
- 答:在集合对象或者普通对象的集合属性。 才能使用。。
+ 答:在集合对象或者普通对象的集合属性。 才能使用。。具体可以看setObjectMethod中的例子。。通过对比发现使用集合运算符没有直接计算的效率高（通过集合运算符调用时候消耗的cpu和内存相较于使用for循环的时候相差比较大。这是在数量级在10w左右的时候，如果再增加数量级，差别会更大）
+ */
+// 面试题解答：5.KVC和KVO的keyPath一定是属性么？
+/*
+    KVC支持实例变量
+    如果把一个对象的属性设定成属性，这个属性是个自动支持KVO的，如果这个对象是一个实例变量，那么这个KVO是需要我们自己来实现的。这个可以参考SKKVOStudentModel中关于实例变量的observer的实现
+    其中在`+ (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key `方法中 对所要观察的实例变量监测的时候做排除处理，同时在实现setter和getter的时候调用方法willChangeValueForKey 和didChangeValueForKey
+ */
+// 面试题解答：6.如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？
+/*
+ 答：
+ */
+
+
+// 附加：KVO 缺点
+/*
+  答：KVO 我们经常使用在观察某个属性或者实例变量是否发生改变，虽然好用，但是我们用的时候你有没有发现它有哪些缺点呢？
+     1.只能通过重写`-observeValueForKeyPath:ofObject:change:context:`方法来获取通知。想要用自己私有的selector不行。想要传一个block也不行。
+     2.还要处理父类的情况(如果父类和子类都监听同一个对象的同一个属性，但是有时候父类虽然监听了 但是不一定需要处理。虽然可以用context这个参数个来处理但是写起来感觉很别扭)
+     3.kvo如果不及时remove掉会造成crash
+     4.如果要监测的对象是tableview的contentsize 那么在监测的方法中需要一大堆判断才行
+ 
+ 关于KVO的吐槽可以参考链接：http://khanlou.com/2013/12/kvo-considered-harmful/
+ */
+//  附加：KVC原理是什么？
+/*
+ 答：KVC的全称是key  value coding 定义在NSKeyValueCoding.h中，kvc提供了一种间接访问其属性方法或成员变量的机制。可以用过字符串来访问对应的属性方法或成员变量。KVC的实现主要依赖其搜索规则
+ 
  */

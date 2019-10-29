@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		650EAEA170E9659055B10E12 /* Pods_iOSBasicDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EA8371E2221071062CFD67 /* Pods_iOSBasicDemo.framework */; };
+		D717BDBE2366CF7900D085A8 /* NSObject+SKKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = D717BDBD2366CF7900D085A8 /* NSObject+SKKVO.m */; };
+		D720129E23669A1D0072F534 /* SKKVOStudentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D720129D23669A1D0072F534 /* SKKVOStudentModel.m */; };
 		D73A184923595F1300C5FBF1 /* SKRunloopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A17B523595F1300C5FBF1 /* SKRunloopVC.m */; };
 		D73A184A23595F1300C5FBF1 /* SKTimerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A17B723595F1300C5FBF1 /* SKTimerTest.m */; };
 		D73A184B23595F1300C5FBF1 /* SKRunLoopObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A17B823595F1300C5FBF1 /* SKRunLoopObject.m */; };
@@ -80,6 +82,10 @@
 		84626E54F362A1FF3FC34E56 /* Pods-iOSBasicDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSBasicDemo.debug.xcconfig"; path = "Target Support Files/Pods-iOSBasicDemo/Pods-iOSBasicDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		89FB0B633FD6CEF111DF7626 /* Pods-iOSBasicDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSBasicDemo.release.xcconfig"; path = "Target Support Files/Pods-iOSBasicDemo/Pods-iOSBasicDemo.release.xcconfig"; sourceTree = "<group>"; };
 		8BB2E0137D895E7586529F58 /* Pods-AllKindOfThings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllKindOfThings.debug.xcconfig"; path = "Target Support Files/Pods-AllKindOfThings/Pods-AllKindOfThings.debug.xcconfig"; sourceTree = "<group>"; };
+		D717BDBC2366CF7900D085A8 /* NSObject+SKKVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SKKVO.h"; sourceTree = "<group>"; };
+		D717BDBD2366CF7900D085A8 /* NSObject+SKKVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SKKVO.m"; sourceTree = "<group>"; };
+		D720129C23669A1D0072F534 /* SKKVOStudentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKKVOStudentModel.h; sourceTree = "<group>"; };
+		D720129D23669A1D0072F534 /* SKKVOStudentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKKVOStudentModel.m; sourceTree = "<group>"; };
 		D73A17B523595F1300C5FBF1 /* SKRunloopVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKRunloopVC.m; sourceTree = "<group>"; };
 		D73A17B723595F1300C5FBF1 /* SKTimerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTimerTest.m; sourceTree = "<group>"; };
 		D73A17B823595F1300C5FBF1 /* SKRunLoopObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKRunLoopObject.m; sourceTree = "<group>"; };
@@ -423,6 +429,10 @@
 				D73A17FC23595F1300C5FBF1 /* KVOModel.m */,
 				D73A17FA23595F1300C5FBF1 /* SKKVCKVOVC.h */,
 				D73A17FD23595F1300C5FBF1 /* SKKVCKVOVC.m */,
+				D720129C23669A1D0072F534 /* SKKVOStudentModel.h */,
+				D720129D23669A1D0072F534 /* SKKVOStudentModel.m */,
+				D717BDBC2366CF7900D085A8 /* NSObject+SKKVO.h */,
+				D717BDBD2366CF7900D085A8 /* NSObject+SKKVO.m */,
 			);
 			path = KVOKVC;
 			sourceTree = "<group>";
@@ -792,6 +802,8 @@
 				D73A188823595F1300C5FBF1 /* BlockTest.m in Sources */,
 				D73A184B23595F1300C5FBF1 /* SKRunLoopObject.m in Sources */,
 				D73A188E23595F1300C5FBF1 /* main.m in Sources */,
+				D717BDBE2366CF7900D085A8 /* NSObject+SKKVO.m in Sources */,
+				D720129E23669A1D0072F534 /* SKKVOStudentModel.m in Sources */,
 				D73A187B23595F1300C5FBF1 /* PropertyDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
