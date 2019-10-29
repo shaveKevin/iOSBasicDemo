@@ -76,14 +76,15 @@ static void PrintDescription(NSString *name, id obj) {
 
 
 #pragma mark - Helpers
-// 工具 获取setter和getter方法
+// 工具 setter和getter转换
+// 将setter 变为getter
 static NSString *getterForSetter(NSString *setter)
 {
     if (setter.length <=0 || ![setter hasPrefix:@"set"] || ![setter hasSuffix:@":"]) {
         return nil;
     }
     
-    // remove 'set' at the begining and ':' at the end
+    // remove 'set' at the begining and ':' at the end  去掉字符串set和末尾的:并把得到的字符串首字母改为小写  例如：settter的值为etStdName:  经过处理后得到的字符串是stdName
     NSRange range = NSMakeRange(3, setter.length - 4);
     NSString *key = [setter substringWithRange:range];
     
@@ -95,14 +96,13 @@ static NSString *getterForSetter(NSString *setter)
     return key;
 }
 
-
-static NSString * setterForGetter(NSString *getter)
-{
+//  将getter 变为setter
+static NSString * setterForGetter(NSString *getter) {
     if (getter.length <= 0) {
         return nil;
     }
     
-    // upper case the first letter
+    // upper case the first letter 将首字母大写 例如：stdName  改为setStdName:
     NSString *firstLetter = [[getter substringToIndex:1] uppercaseString];
     NSString *remainingLetters = [getter substringFromIndex:1];
     
@@ -114,6 +114,7 @@ static NSString * setterForGetter(NSString *getter)
 
 
 #pragma mark - Overridden Methods
+// 重写setter 方法  新的setter 方法调用在原setter方法之后，然后通知每个观察者(调用之前传入的block)
 static void kvo_setter(id self, SEL _cmd, id newValue)
 {
     NSString *setterName = NSStringFromSelector(_cmd);
@@ -140,7 +141,7 @@ static void kvo_setter(id self, SEL _cmd, id newValue)
     // call super's setter, which is original class's setter method
     objc_msgSendSuperCasted(&superclazz, _cmd, newValue);
     
-    // look up observers and call the blocks
+    // look up observers and call the blocks 查询到观察者然后返回info
     NSMutableArray *observers = objc_getAssociatedObject(self, (__bridge const void *)(kSKKVOAssociatedObservers));
     for (SKObservationInfo *each in observers) {
         if ([each.key isEqualToString:getterName]) {
@@ -152,8 +153,7 @@ static void kvo_setter(id self, SEL _cmd, id newValue)
 }
 
 
-static Class kvo_class(id self, SEL _cmd)
-{
+static Class kvo_class(id self, SEL _cmd) {
     return class_getSuperclass(object_getClass(self));
 }
 
@@ -161,58 +161,67 @@ static Class kvo_class(id self, SEL _cmd)
 
 
 @implementation NSObject (SKKVO)
+// 简述实现逻辑：
+/*
+  1.检查对象有没有对应的setter方法没有就抛出异常。
+  2.检查对象isa指向的类是不是一个kvo类，如果不是，新建一个继承自原来类的子类，并把isa指向这个新建的子类。
+  3.检查对象的KVO类重写过setter方法没,如果没有 添加重写setter方法
+  4.添加观察者
+ 
+ */
 - (void)sk_addObserver:(NSObject *)observer forKey:(NSString *)key withBlock:(SKObservingBlock)block {
+    // 通过setterForGetter 获取setter的名字
     SEL setterSelector = NSSelectorFromString(setterForGetter(key));
+    // 由方法的名字通过class_getInstanceMethod 获取方法，如果没有方法就抛出异常
     Method setterMethod = class_getInstanceMethod([self class], setterSelector);
     if (!setterMethod) {
-          NSString *reason = [NSString stringWithFormat:@"Object %@ does not have a setter for key %@", self, key];
-          @throw [NSException exceptionWithName:NSInvalidArgumentException
-                                         reason:reason
-                                       userInfo:nil];
-          
-          return;
-      }
-      
-      Class clazz = object_getClass(self);
-      NSString *clazzName = NSStringFromClass(clazz);
-      
-      // if not an KVO class yet
-      if (![clazzName hasPrefix:kSKKVOClassPrefix]) {
-          clazz = [self makeKvoClassWithOriginalClassName:clazzName];
-          object_setClass(self, clazz);
-      }
-      
-      // add our kvo setter if this class (not superclasses) doesn't implement the setter?
-      if (![self hasSelector:setterSelector]) {
-          const char *types = method_getTypeEncoding(setterMethod);
-          class_addMethod(clazz, setterSelector, (IMP)kvo_setter, types);
-      }
-      
-      SKObservationInfo *info = [[SKObservationInfo alloc] initWithObserver:observer Key:key block:block];
-      NSMutableArray *observers = objc_getAssociatedObject(self, (__bridge const void *)(kSKKVOAssociatedObservers));
-      if (!observers) {
-          observers = [NSMutableArray array];
-          objc_setAssociatedObject(self, (__bridge const void *)(kSKKVOAssociatedObservers), observers, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-      }
-      [observers addObject:info];
+        NSString *reason = [NSString stringWithFormat:@"Object %@ does not have a setter for key %@", self, key];
+        @throw [NSException exceptionWithName:NSInvalidArgumentException
+                                       reason:reason
+                                     userInfo:nil];
+        return;
+    }
+    
+    Class clazz = object_getClass(self);
+    NSString *clazzName = NSStringFromClass(clazz);
+    // 检查类名有没有前缀 如果没有就去创建子类
+    // if not an KVO class yet 如果不存在kvo的类，去创建子类 同构setClass修改其isa指针
+    if (![clazzName hasPrefix:kSKKVOClassPrefix]) {
+        clazz = [self makeKvoClassWithOriginalClassName:clazzName];
+        object_setClass(self, clazz);
+    }
+    // add our kvo setter if this class (not superclasses) doesn't implement the setter?
+    // 如果该类没有setter方法 那就为创建的子类添加setter方法
+    if (![self hasSelector:setterSelector]) {
+        const char *types = method_getTypeEncoding(setterMethod);
+        class_addMethod(clazz, setterSelector, (IMP)kvo_setter, types);
+    }
+    // SKObservationInfo 类中保存的是观察者的信息。把观察者的信息放到associatedObject中，封装在SKObservationInfo中。
+    SKObservationInfo *info = [[SKObservationInfo alloc] initWithObserver:observer Key:key block:block];
+    NSMutableArray *observers = objc_getAssociatedObject(self, (__bridge const void *)(kSKKVOAssociatedObservers));
+    if (!observers) {
+        observers = [NSMutableArray array];
+        objc_setAssociatedObject(self, (__bridge const void *)(kSKKVOAssociatedObservers), observers, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+    [observers addObject:info];
 }
 
 // 移除观察者
 - (void)sk_removeObserver:(NSObject *)observer forKey:(NSString *)key {
     
     NSMutableArray* observers = objc_getAssociatedObject(self, (__bridge const void *)(kSKKVOAssociatedObservers));
-      SKObservationInfo *infoToRemove;
+    SKObservationInfo *infoToRemove;
     // 拿到所以观察者数组 然后遍历观察者信息 如果key 一致就移除观察者(其实这里我觉得并不仅仅需要判断key 还要判断对象是否一致。。如果同时观察几个对象并且这些对象都对同样的属性或者变量进行观察 那么，如果一样可能会移除的可能并不是目标对象的key)
-      for (SKObservationInfo* info in observers) {
-          if (info.observer == observer && [info.key isEqual:key]) {
-              infoToRemove = info;
-              break;
-          }
-      }
-      [observers removeObject:infoToRemove];
+    for (SKObservationInfo* info in observers) {
+        if (info.observer == observer && [info.key isEqual:key]) {
+            infoToRemove = info;
+            break;
+        }
+    }
+    [observers removeObject:infoToRemove];
 }
 
-//  替换kvo的method
+// 创建一个子类去伪装
 - (Class)makeKvoClassWithOriginalClassName:(NSString *)originalClazzName {
     NSString *kvoClazzName = [kSKKVOClassPrefix stringByAppendingString:originalClazzName];
     Class clazz = NSClassFromString(kvoClazzName);
@@ -221,15 +230,16 @@ static Class kvo_class(id self, SEL _cmd)
         return clazz;
     }
     
-    // class doesn't exist yet, make it
+    // class doesn't exist yet, make it  如果类不存在 new 一个 使用runtime
     Class originalClazz = object_getClass(self);
+    // 使用runtime的objc_allocateClassPair 方法去创建一个子类。传入一个父类 类型 额外的空间一般设置为0，然后会返回一个类
     Class kvoClazz = objc_allocateClassPair(originalClazz, kvoClazzName.UTF8String, 0);
     
-    // grab class method's signature so we can borrow it
+    // grab class method's signature so we can borrow it  紧接着 为类添加方法，也可以添加变量。这里只是重写了class方法 这和apple一样都是为了隐藏这个子类的存在。(这个指针就是他父类的指针)
     Method clazzMethod = class_getInstanceMethod(originalClazz, @selector(class));
     const char *types = method_getTypeEncoding(clazzMethod);
     class_addMethod(kvoClazz, @selector(class), (IMP)kvo_class, types);
-    
+    //使用objc_registerClassPair 告诉runtime这个类存在
     objc_registerClassPair(kvoClazz);
     
     return kvoClazz;

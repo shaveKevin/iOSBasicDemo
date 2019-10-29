@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-// 面试题：1.IB中User Defined Runtime Attributes如何使用？
+// 面试题：1.IBOutlet连出来的视图属性为什么可以被设置成weak?
 // 面试题：2.IB中User Defined Runtime Attributes如何使用？
 
 @interface SKIBOutletObj : NSObject

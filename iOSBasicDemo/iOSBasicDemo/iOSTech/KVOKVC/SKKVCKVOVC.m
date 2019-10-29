@@ -372,10 +372,39 @@ vm_size_t memory_usage(void) {
  */
 // 面试题解答：6.如何关闭默认的KVO的默认实现，并进入自定义的KVO实现？
 /*
- 答：
+ 答：  (1).关闭默认KVO的实现需要将类实现方法`automaticallyNotifiesObserversForKey:` 然后返回NO。
+       (2). 自定义kvo的实现有逻辑如下:
+           1.检查对象有没有对应的setter方法没有就抛出异常。
+           2.检查对象isa指向的类是不是一个kvo类，如果不是，新建一个继承自原来类的子类，并把isa指向这个新建的子类。
+           3.检查对象的KVO类重写过setter方法没,如果没有 添加重写setter方法
+           4.添加观察者
+           可参考类 NSObject+SKKVO 对KVO的实现
+ 
+ 
+ 参考链接：如何自己动手实现 KVO  https://tech.glowing.com/cn/implement-kvo/
+ 
  */
+// 面试题解答：7.apple用什么方式实现对一个对象的KVO？
+/*
+ 答：我们可以看apple文档对KVO的描述:
+ ```
+ Automatic key-value observing is implemented using a technique called isa-swizzling... When an observer is registered for an attribute of an object the isa pointer of the observed object is modified, pointing to an intermediate class rather than at the true class ...
+ ```
+在官方文档中，只是对kvo的实现做了简单的介绍，并未深入介绍。只是告诉我们使用了runtime技术。我们借助runtime来探究一下runtime的实现
 
+ 当观察一个对象时，一个新的类会被动态创建。这个类继承自该对象的原本的类，并重写了被观察属性的setter方法。重写的setter方法会负责在调用原setter方法之前和之后通知观察对象。值的更改。最后通过isa混写（isa-swizzling）把这个对象的isa指针指向这个新创建的子类。这样对象就神奇的变成了我们新创建的子类。
+ 这个使用的是黑魔法  使用isa混写isa-swizzling来实现kvo。
+ 
+ 下面是详细介绍：
+ 简直观察依赖于NSObject的两个方法`willChangeValueForKey`和`didChangeValueForKey`。在一个被观察者发生改变之前调用willChangeValueForKey记录旧值，当发生改变之后调用didChangeValueForKey记录新值。我们可以手动实现这些调用。一般我们希望在控制回调的时机才会这么做。改变通知会自动调用。
+ ps:如果主动调用willChangeValueForKey和didChangeValueForKey而又不屏蔽类中对该属性KVO的观察的时候，这个时候会调用两次`-observeValueForKeyPath:ofObject:change:context:`。第一次是setter 方法内部调用 的 另外一种是willChangeValueForKey和didChangeValueForKey共同其作用的。
+ 
+ “手动触发”的使用场景是什么？一般我们只在希望能控制“回调的调用时机”时才会这么做。
 
+ 而“回调的调用时机”就是在你调用 didChangeValueForKey: 方法时。
+ 
+ 参考链接：apple 对KVO实现的描述 https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/KeyValueObserving/Articles/KVOImplementation.html
+ */
 // 附加：KVO 缺点
 /*
   答：KVO 我们经常使用在观察某个属性或者实例变量是否发生改变，虽然好用，但是我们用的时候你有没有发现它有哪些缺点呢？
