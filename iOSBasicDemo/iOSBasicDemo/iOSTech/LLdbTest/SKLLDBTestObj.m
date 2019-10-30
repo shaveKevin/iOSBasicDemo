@@ -31,7 +31,7 @@
     6.call 方法调用
     7.bt 打印出调用的堆栈 thread backtrace
     8.thread return 跳转当前方法的执行
-    9. frame select 1 如果打印有10帧  跳转到第一帧
+    9.frame select 1 如果打印有10帧  跳转到第一帧
     10.frame variable 查看帧变量
     11.image lookup -address 查找崩溃位置
  

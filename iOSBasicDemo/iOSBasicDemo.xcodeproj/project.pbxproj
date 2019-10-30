@@ -71,6 +71,10 @@
 		D73A189423595F1300C5FBF1 /* SKPCBasicTechVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A184623595F1300C5FBF1 /* SKPCBasicTechVC.m */; };
 		D73A189A2359968300C5FBF1 /* SKBlockLocationObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A18992359968300C5FBF1 /* SKBlockLocationObj.m */; };
 		D73A18A02359C0FB00C5FBF1 /* SKGCDTestObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A189F2359C0FB00C5FBF1 /* SKGCDTestObj.m */; };
+		D7467B6B236975B40045FA76 /* SKKVCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7467B6A236975B40045FA76 /* SKKVCModel.m */; };
+		D7467B6E2369760D0045FA76 /* SKKVCTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7467B6D2369760D0045FA76 /* SKKVCTestModel.m */; };
+		D7467B7523697E390045FA76 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D7467B7323697E390045FA76 /* YYClassInfo.m */; };
+		D7467B7623697E390045FA76 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7467B7423697E390045FA76 /* NSObject+YYModel.m */; };
 		D79FEA9A2368411300419AEC /* SKLinkListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D79FEA992368411300419AEC /* SKLinkListNode.m */; };
 		D79FEA9D2368419A00419AEC /* SKLinkListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D79FEA9C2368419A00419AEC /* SKLinkListVC.m */; };
 		D7BC7ECE235EE89A00A562DA /* SKGCDPrintObj.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BC7ECD235EE89A00A562DA /* SKGCDPrintObj.m */; };
@@ -224,6 +228,15 @@
 		D73A189B235998CD00C5FBF1 /* SKBlockLocationObj-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKBlockLocationObj-arm64.cpp"; sourceTree = "<group>"; };
 		D73A189E2359C0FB00C5FBF1 /* SKGCDTestObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKGCDTestObj.h; sourceTree = "<group>"; };
 		D73A189F2359C0FB00C5FBF1 /* SKGCDTestObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKGCDTestObj.m; sourceTree = "<group>"; };
+		D7467B69236975B40045FA76 /* SKKVCModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKKVCModel.h; sourceTree = "<group>"; };
+		D7467B6A236975B40045FA76 /* SKKVCModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKKVCModel.m; sourceTree = "<group>"; };
+		D7467B6C2369760D0045FA76 /* SKKVCTestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKKVCTestModel.h; sourceTree = "<group>"; };
+		D7467B6D2369760D0045FA76 /* SKKVCTestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKKVCTestModel.m; sourceTree = "<group>"; };
+		D7467B7023697E390045FA76 /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
+		D7467B7123697E390045FA76 /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
+		D7467B7223697E390045FA76 /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
+		D7467B7323697E390045FA76 /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
+		D7467B7423697E390045FA76 /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
 		D78EEB062333283C0001467B /* 练习Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "练习Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D79FEA982368411300419AEC /* SKLinkListNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKLinkListNode.h; sourceTree = "<group>"; };
 		D79FEA992368411300419AEC /* SKLinkListNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKLinkListNode.m; sourceTree = "<group>"; };
@@ -306,9 +319,9 @@
 		D73A17B423595F1300C5FBF1 /* RunLoop */ = {
 			isa = PBXGroup;
 			children = (
-				D73A17B523595F1300C5FBF1 /* SKRunloopVC.m */,
 				D73A17B623595F1300C5FBF1 /* Class */,
 				D73A17BB23595F1300C5FBF1 /* SKRunloopVC.h */,
+				D73A17B523595F1300C5FBF1 /* SKRunloopVC.m */,
 			);
 			path = RunLoop;
 			sourceTree = "<group>";
@@ -316,10 +329,10 @@
 		D73A17B623595F1300C5FBF1 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				D73A17B723595F1300C5FBF1 /* SKTimerTest.m */,
+				D73A17BA23595F1300C5FBF1 /* SKRunLoopObject.h */,
 				D73A17B823595F1300C5FBF1 /* SKRunLoopObject.m */,
 				D73A17B923595F1300C5FBF1 /* SKTimerTest.h */,
-				D73A17BA23595F1300C5FBF1 /* SKRunLoopObject.h */,
+				D73A17B723595F1300C5FBF1 /* SKTimerTest.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -423,10 +436,10 @@
 		D73A17F423595F1300C5FBF1 /* Aspects */ = {
 			isa = PBXGroup;
 			children = (
-				D73A17F523595F1300C5FBF1 /* NSObject+SKHookSelector.m */,
 				D73A17F623595F1300C5FBF1 /* Aspects.h */,
-				D73A17F723595F1300C5FBF1 /* NSObject+SKHookSelector.h */,
 				D73A17F823595F1300C5FBF1 /* Aspects.m */,
+				D73A17F723595F1300C5FBF1 /* NSObject+SKHookSelector.h */,
+				D73A17F523595F1300C5FBF1 /* NSObject+SKHookSelector.m */,
 			);
 			path = Aspects;
 			sourceTree = "<group>";
@@ -434,6 +447,7 @@
 		D73A17F923595F1300C5FBF1 /* KVOKVC */ = {
 			isa = PBXGroup;
 			children = (
+				D7467B6F23697E230045FA76 /* YYModel */,
 				D73A17FB23595F1300C5FBF1 /* KVOModel.h */,
 				D73A17FC23595F1300C5FBF1 /* KVOModel.m */,
 				D73A17FA23595F1300C5FBF1 /* SKKVCKVOVC.h */,
@@ -442,6 +456,10 @@
 				D720129D23669A1D0072F534 /* SKKVOStudentModel.m */,
 				D717BDBC2366CF7900D085A8 /* NSObject+SKKVO.h */,
 				D717BDBD2366CF7900D085A8 /* NSObject+SKKVO.m */,
+				D7467B69236975B40045FA76 /* SKKVCModel.h */,
+				D7467B6A236975B40045FA76 /* SKKVCModel.m */,
+				D7467B6C2369760D0045FA76 /* SKKVCTestModel.h */,
+				D7467B6D2369760D0045FA76 /* SKKVCTestModel.m */,
 			);
 			path = KVOKVC;
 			sourceTree = "<group>";
@@ -590,6 +608,18 @@
 				D7BC7ECD235EE89A00A562DA /* SKGCDPrintObj.m */,
 			);
 			path = GCD;
+			sourceTree = "<group>";
+		};
+		D7467B6F23697E230045FA76 /* YYModel */ = {
+			isa = PBXGroup;
+			children = (
+				D7467B7123697E390045FA76 /* NSObject+YYModel.h */,
+				D7467B7423697E390045FA76 /* NSObject+YYModel.m */,
+				D7467B7223697E390045FA76 /* YYClassInfo.h */,
+				D7467B7323697E390045FA76 /* YYClassInfo.m */,
+				D7467B7023697E390045FA76 /* YYModel.h */,
+			);
+			path = YYModel;
 			sourceTree = "<group>";
 		};
 		D78EEAFD2333283C0001467B = {
@@ -819,6 +849,7 @@
 				D73A184A23595F1300C5FBF1 /* SKTimerTest.m in Sources */,
 				D73A18A02359C0FB00C5FBF1 /* SKGCDTestObj.m in Sources */,
 				D73A184F23595F1300C5FBF1 /* SKPropertyTestModel.m in Sources */,
+				D7467B6B236975B40045FA76 /* SKKVCModel.m in Sources */,
 				D73A187223595F1300C5FBF1 /* BlockTool.m in Sources */,
 				D73A187823595F1300C5FBF1 /* SSDemo.m in Sources */,
 				D73A185323595F1300C5FBF1 /* SKProprtyModel.m in Sources */,
@@ -832,6 +863,7 @@
 				D717BDE723682B7300D085A8 /* SKBasicAlogrithmVC.m in Sources */,
 				D73A189323595F1300C5FBF1 /* AppDelegate.m in Sources */,
 				D73A185B23595F1300C5FBF1 /* SKRuntimeOtherObject.m in Sources */,
+				D7467B7523697E390045FA76 /* YYClassInfo.m in Sources */,
 				D73A189023595F1300C5FBF1 /* SKHomePageVC.m in Sources */,
 				D73A186623595F1300C5FBF1 /* SKSubObject.m in Sources */,
 				D73A187523595F1300C5FBF1 /* DownLoadManager.m in Sources */,
@@ -846,6 +878,8 @@
 				D73A188E23595F1300C5FBF1 /* main.m in Sources */,
 				D717BDBE2366CF7900D085A8 /* NSObject+SKKVO.m in Sources */,
 				D720129E23669A1D0072F534 /* SKKVOStudentModel.m in Sources */,
+				D7467B7623697E390045FA76 /* NSObject+YYModel.m in Sources */,
+				D7467B6E2369760D0045FA76 /* SKKVCTestModel.m in Sources */,
 				D73A187B23595F1300C5FBF1 /* PropertyDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

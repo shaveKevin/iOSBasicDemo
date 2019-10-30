@@ -185,7 +185,7 @@ static Class kvo_class(id self, SEL _cmd) {
     Class clazz = object_getClass(self);
     NSString *clazzName = NSStringFromClass(clazz);
     // 检查类名有没有前缀 如果没有就去创建子类
-    // if not an KVO class yet 如果不存在kvo的类，去创建子类 同构setClass修改其isa指针
+    // if not an KVO class yet 如果不存在kvo的类，去创建子类 同构setClass修改其isa指针(伪装)
     if (![clazzName hasPrefix:kSKKVOClassPrefix]) {
         clazz = [self makeKvoClassWithOriginalClassName:clazzName];
         object_setClass(self, clazz);

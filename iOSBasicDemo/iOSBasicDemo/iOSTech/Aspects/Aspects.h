@@ -81,3 +81,5 @@ typedef NS_ENUM(NSUInteger, AspectErrorCode) {
 };
 
 extern NSString *const AspectErrorDomain;
+// 关于分析可参考链接： 面向切面编程之 Aspects 源码解析及应用 https://wereadteam.github.io/2016/06/30/Aspects/
+ 

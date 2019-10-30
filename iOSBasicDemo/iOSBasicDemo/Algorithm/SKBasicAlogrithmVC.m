@@ -57,10 +57,10 @@
 
 - (void)privateMethod {
     
-    [self findCommonViews];
+    [self findCommonSuperViews];
 }
 // 解法1:
-- (void)findCommonViews {
+- (void)findCommonSuperViews {
     // 找出v1所有的父视图
     NSMutableArray *array1 = [NSMutableArray array];
     UIView *tempView1 = self.view1;
@@ -97,6 +97,6 @@
 // 算法题分析：1.查找两个View的公共父控件
 /*
     答：这道题思路很明确：既然要找出两个view的公共父控件 首先分别找出两个view的superview放到数组里。
-       然后问题就变成了，找出两个数组之间的公共元素(不唯一的公共元素)。
+       然后问题就变成了，找出两个数组之间的公共元素(不唯一的公共元素)。这里采用倒序的方式进行对比。
 */
 @end

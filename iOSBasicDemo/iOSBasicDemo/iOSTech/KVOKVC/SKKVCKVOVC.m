@@ -12,6 +12,8 @@
 #import <mach/mach.h>
 #import "SKKVOStudentModel.h"
 #import "NSObject+SKKVO.h"
+#import "SKKVCModel.h"
+#import "SKKVCTestModel.h"
 
 
 // KVO - Key-Value- Observing 键值监听  用于监听某个对象中属性的改变
@@ -31,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [self sysKVOModel];
+    [self kvomodelselfSysthis];
 
 }
 
@@ -180,7 +182,8 @@
     // stdName 监测的是属性变量
     [_selfSysModel addObserver:self forKeyPath:@"stdName" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
     _selfSysModel.stdName = @"Tom";
-    _selfSysModel.stdAge = @"12";
+    // 使用点语法和setvalue都可以触发kvo 因为setvalue 调用的属性的setter方法
+    [_selfSysModel setValue:@"12" forKey:@"stdAge"];
     
 }
 // 自己实现kvo 不用系统的
@@ -195,7 +198,6 @@
 
 }
 
-
 // 注意 只要添加观察者都会调用这个方法(注意：只要观察者的类中实现了willChangeValueForKey或didChangeValueForKey方法 这个观察方法就不会响应)
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
@@ -208,6 +210,21 @@
     }
 }
 
+- (void)kvcUsageMethod {
+    
+    // KVC 使用  KVC 赋值的时候可以使用 setvalueforkey  也可以是使用 setValueForKeypath.keypath 可以使用点语法(具体下面会做分析)
+    SKKVCModel *kvcModel = [[SKKVCModel alloc]init];
+    [kvcModel setValue:@"kevin" forKey:@"name"];
+    [kvcModel setValue:@26 forKey:@"age"];
+    [kvcModel setValue:@"9529" forKey:@"id"];
+    SKKVCTestModel *testModel = [[SKKVCTestModel alloc]init];
+    [kvcModel setValue:testModel forKey:@"model"];
+    [kvcModel setValue:@"shave" forKeyPath:@"model.name"];
+    NSLog(@"kvcModel name  is %@  kvcmodel.model.name is %@",[kvcModel valueForKey:@"name"],[kvcModel valueForKeyPath:@"model.name"]);
+}
+
+
+#pragma mark - additions method-
 
 - (void)timeOfMach:(uint64_t)startTime {
     mach_timebase_info_data_t timebase;
@@ -221,8 +238,7 @@
     return  cpu_usage();
 }
 
-float cpu_usage()
-{
+float cpu_usage() {
     kern_return_t kr;
     task_info_data_t tinfo;
     mach_msg_type_number_t task_info_count;
@@ -284,8 +300,7 @@ float cpu_usage()
 }
 
 // 有的是除以1024，有的是除以1000。
-+ (float)memoryUsage
-{
++ (float)memoryUsage {
     vm_size_t memory = memory_usage();
     return memory / 1000.0 /1000.0;
 }
@@ -416,8 +431,34 @@ vm_size_t memory_usage(void) {
  
  关于KVO的吐槽可以参考链接：http://khanlou.com/2013/12/kvo-considered-harmful/
  */
-//  附加：KVC原理是什么？
+//  附加：KVC的实现原理是什么？
 /*
- 答：KVC的全称是key  value coding 定义在NSKeyValueCoding.h中，kvc提供了一种间接访问其属性方法或成员变量的机制。可以用过字符串来访问对应的属性方法或成员变量。KVC的实现主要依赖其搜索规则
+ 答：KVC的全称是key  value coding 定义在NSKeyValueCoding.h中，kvc提供了一种间接访问其属性方法或成员变量的机制。可以用过字符串来访问对应的属性方法或成员变量。KVC的实现主要依赖其搜索规则.
+ 搜索规则：KVC在通过key或者keypath的时候。可以查找属性方法，成员变量等。查找的时候可以兼容多种命名。
+ 官方文档是这样描述的：在KVC的实现中，依赖setter和getter的方法实现。所以方法命名应该符合苹果要求的规范，否者就会导致KVC失败。
+ 在了解搜索规则的时候有一个关键的属性我们需要了解`@property (class, readonly) BOOL accessInstanceVariablesDirectly;` 这个属性的意思是是否允许读取实例变量的值。如果是yes则在kvc的查找过程中，从内存中读取属性实例变量的值.（在没有找到存取器的时候才调用该方法）
+ 基础getter搜索模式：
+ 这是valueforkey:默认实现，给定一个key当做输入参数，开始下面的步骤，在这个接收valueForKey:方法调用的类内部进行操作。
+ 1.查找是否实现getter方法，依次匹配`-get<key>`和`-<key>`和 `is<key>`，如果找到，直接返回。
+ 需要注意的是:
+ 如果返回的是对象指针类型，则返回结果。
+ 如果返回的是NSNumber转化所支持的标量类型之一，则返回一个NSNumber否则将返回一个NSValue。
+ 2.当没有找到getter方法。调用`accessInstanceVariablesDirectly`询问，如果返回yes。则从 _<key>  _is<key> <key> is<key> 中找到对应的值。
+ 如果返回NO结束查找并调用valueForUndefinedKey:报异常。
+ 3.如果没有找到getter方法和属性值，就报valueForUndefinedKey: 异常。
+ 基础setter搜索模式：
+ 这是setValue:forKey的默认实现，给定输入参数value和key。试图在接受调用对象的内部，设置属性名为key的value，通过下面的步骤
+ 1.查找set<key>:或者_set<key>命名的setter。按照这个顺序，如果找到的话。调用这个方法并将值穿进去(根据调用的对象进行类型转换)
+ 2.如果设置setter 但是`accessInstanceVariablesDirectly`返回为yes，那么查找的命名规则为 _<key>  _is<key> <key> is<key>的实例变量。根据这个顺序将发现则将value赋值给实例变量。
+ 3.如果没有发现setter或实例变量，则调用setValueForUndefinedKey:方法。并抛出一个异常。
+ 由此可以看出：kvc的性能访问属性并没有直接访问的快(因为他要有按照搜索规则进行搜索) 本质上是操作方法列表以及在内存中去查找实例变量。这个操作对readonley以及protected成员变量，都可以正常访问。如果不想外界访问的话可以将accessInstanceVariablesDirectly设置为NO。
  
+ 在iOS 13之前 我们是可以使用私有变量去访问属性的。例如更改textfield的一些颜色属性。
+ 
+ 缺点：因为传入的setvalueforkey以及setvalueforkeypath valueforkey 以及 valuefotkeypath是一个字符串。所以编译器不在编译的时候不会报错。但是在运行的时候，如果设置或者获取的属性不存在。那么就会报undefinedkey 会crash。
+ //
+ */
+// 面试题解答：8.KVC能否触发KVO？说明理由。
+/*
+   答：会。原因是：KVC调用的就是setter方法，当然会触发KVO. 具体可参考KVC的实现原理以及kvo的实现原理。
  */
