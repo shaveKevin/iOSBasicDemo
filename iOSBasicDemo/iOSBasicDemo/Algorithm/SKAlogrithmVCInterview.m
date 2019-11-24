@@ -8,6 +8,7 @@
 
 #import "SKAlogrithmVCInterview.h"
 #import "SKCharReverse.h"
+#import "SKReverseList.h"
 
 @interface SKAlogrithmVCInterview ()
 
@@ -30,7 +31,10 @@
 }
 
 - (void)setupData {
+    // 字符串反转
     [self charReverse];
+    // 单链表反转
+    [self reverseNodeList];
 }
 
 - (void)setupLayout {
@@ -44,4 +48,13 @@
     printf("reverse result is %s \n",ch);
 }
 
+- (void)reverseNodeList {
+    // 创建单链表
+    struct Node *node =   constructNodeList();
+    printNodeList(node);
+    printf("=====================\n");
+    // 反转单链表
+    struct Node *newNode = reverseNodeList(node);
+    printNodeList(newNode);
+}
 @end
