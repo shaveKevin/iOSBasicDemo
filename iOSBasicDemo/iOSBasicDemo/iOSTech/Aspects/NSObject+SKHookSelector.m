@@ -16,8 +16,24 @@
 
 + (void)load {
     swizzleMethod([self class], @selector(doesNotRecognizeSelector:), @selector(swizzled_doesNotRecognizeSelector:));
+    
+    Method method1 = class_getInstanceMethod(self, @selector(methodTest));
+    Method method2 = class_getInstanceMethod(self, @selector(methodT));
+    method_exchangeImplementations(method1, method2);
 
 }
+
+- (void)methodTest {
+    NSLog(@"执行方法1");
+}
+
+- (void)methodT {
+    //  最后会变成objc_msgSend因为交换，方法就变成了调用methodTest。这里不会死循环。
+    [self methodT];
+    NSLog(@"执行方法2");
+
+}
+
 
 - (void)swizzled_doesNotRecognizeSelector:(SEL)aSelector {
     

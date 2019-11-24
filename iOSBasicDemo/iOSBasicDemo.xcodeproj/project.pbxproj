@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C73916C237AAB7C005E664F /* 三次握手，四次挥手.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C73916B237AAB7C005E664F /* 三次握手，四次挥手.png */; };
+		2CAB1624238ADFA900C418BA /* SKAlogrithmVCInterview.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB1623238ADFA900C418BA /* SKAlogrithmVCInterview.m */; };
+		2CAB1628238AE00C00C418BA /* SKCharReverse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB1627238AE00C00C418BA /* SKCharReverse.m */; };
+		2CAB162B238AEC6700C418BA /* SKReverseList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB162A238AEC6700C418BA /* SKReverseList.m */; };
 		650EAEA170E9659055B10E12 /* Pods_iOSBasicDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EA8371E2221071062CFD67 /* Pods_iOSBasicDemo.framework */; };
 		D717BDBE2366CF7900D085A8 /* NSObject+SKKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = D717BDBD2366CF7900D085A8 /* NSObject+SKKVO.m */; };
 		D717BDE723682B7300D085A8 /* SKBasicAlogrithmVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D717BDE623682B7300D085A8 /* SKBasicAlogrithmVC.m */; };
@@ -84,6 +88,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C73916B237AAB7C005E664F /* 三次握手，四次挥手.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "三次握手，四次挥手.png"; sourceTree = "<group>"; };
+		2CAB1622238ADFA900C418BA /* SKAlogrithmVCInterview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKAlogrithmVCInterview.h; sourceTree = "<group>"; };
+		2CAB1623238ADFA900C418BA /* SKAlogrithmVCInterview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKAlogrithmVCInterview.m; sourceTree = "<group>"; };
+		2CAB1626238AE00C00C418BA /* SKCharReverse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKCharReverse.h; sourceTree = "<group>"; };
+		2CAB1627238AE00C00C418BA /* SKCharReverse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKCharReverse.m; sourceTree = "<group>"; };
+		2CAB1629238AEC6700C418BA /* SKReverseList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKReverseList.h; sourceTree = "<group>"; };
+		2CAB162A238AEC6700C418BA /* SKReverseList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKReverseList.m; sourceTree = "<group>"; };
 		4A7FC359C60902B124FEBC2E /* Pods-AllKindOfThings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllKindOfThings.release.xcconfig"; path = "Target Support Files/Pods-AllKindOfThings/Pods-AllKindOfThings.release.xcconfig"; sourceTree = "<group>"; };
 		53EA8371E2221071062CFD67 /* Pods_iOSBasicDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSBasicDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84626E54F362A1FF3FC34E56 /* Pods-iOSBasicDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSBasicDemo.debug.xcconfig"; path = "Target Support Files/Pods-iOSBasicDemo/Pods-iOSBasicDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -265,6 +276,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CAB1625238ADFE800C418BA /* SKAlogrithmVCInterview */ = {
+			isa = PBXGroup;
+			children = (
+				2CAB1626238AE00C00C418BA /* SKCharReverse.h */,
+				2CAB1627238AE00C00C418BA /* SKCharReverse.m */,
+				2CAB1629238AEC6700C418BA /* SKReverseList.h */,
+				2CAB162A238AEC6700C418BA /* SKReverseList.m */,
+			);
+			name = SKAlogrithmVCInterview;
+			sourceTree = "<group>";
+		};
 		4B961B9B94CA06CED5241CD0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,8 +390,8 @@
 		D73A17D023595F1300C5FBF1 /* Runtime */ = {
 			isa = PBXGroup;
 			children = (
-				D73A17D123595F1300C5FBF1 /* SKRuntimeVC.h */,
 				D73A17D223595F1300C5FBF1 /* Class */,
+				D73A17D123595F1300C5FBF1 /* SKRuntimeVC.h */,
 				D73A17E023595F1300C5FBF1 /* SKRuntimeVC.m */,
 			);
 			path = Runtime;
@@ -378,19 +400,19 @@
 		D73A17D223595F1300C5FBF1 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				D73A17D323595F1300C5FBF1 /* SKRuntimeWeakObject.h */,
-				D73A17D423595F1300C5FBF1 /* SKRuntimeOtherObject.h */,
-				D73A17D523595F1300C5FBF1 /* SKRuntimePerson-arm64.cpp */,
-				D73A17D623595F1300C5FBF1 /* SKMessageSendAction.m */,
-				D73A17D723595F1300C5FBF1 /* NSObject+SKRuntimeAssociatedObject.h */,
-				D73A17D823595F1300C5FBF1 /* SKRuntimePerson.h */,
-				D73A17D923595F1300C5FBF1 /* SKRuntimeOtherObject.m */,
-				D73A17DA23595F1300C5FBF1 /* SKRuntimeWeakObject.m */,
 				D73A17DB23595F1300C5FBF1 /* NSObject+SKRuntimeAssociatedObject-arm64.cpp */,
-				D73A17DC23595F1300C5FBF1 /* SKMessageSendAction-arm64.cpp */,
-				D73A17DD23595F1300C5FBF1 /* SKRuntimePerson.m */,
+				D73A17D723595F1300C5FBF1 /* NSObject+SKRuntimeAssociatedObject.h */,
 				D73A17DE23595F1300C5FBF1 /* NSObject+SKRuntimeAssociatedObject.m */,
+				D73A17DC23595F1300C5FBF1 /* SKMessageSendAction-arm64.cpp */,
 				D73A17DF23595F1300C5FBF1 /* SKMessageSendAction.h */,
+				D73A17D623595F1300C5FBF1 /* SKMessageSendAction.m */,
+				D73A17D423595F1300C5FBF1 /* SKRuntimeOtherObject.h */,
+				D73A17D923595F1300C5FBF1 /* SKRuntimeOtherObject.m */,
+				D73A17D523595F1300C5FBF1 /* SKRuntimePerson-arm64.cpp */,
+				D73A17D823595F1300C5FBF1 /* SKRuntimePerson.h */,
+				D73A17DD23595F1300C5FBF1 /* SKRuntimePerson.m */,
+				D73A17D323595F1300C5FBF1 /* SKRuntimeWeakObject.h */,
+				D73A17DA23595F1300C5FBF1 /* SKRuntimeWeakObject.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -565,6 +587,7 @@
 				D79FEA94236840BB00419AEC /* SKLinkList */,
 				D73A183023595F1300C5FBF1 /* SKPCNetworkingVC.h */,
 				D73A183123595F1300C5FBF1 /* SKPCNetworkingVC.m */,
+				2C73916B237AAB7C005E664F /* 三次握手，四次挥手.png */,
 			);
 			path = PCBasicTech;
 			sourceTree = "<group>";
@@ -572,10 +595,13 @@
 		D73A183323595F1300C5FBF1 /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				2CAB1625238ADFE800C418BA /* SKAlogrithmVCInterview */,
 				D73A183423595F1300C5FBF1 /* SKSortAlgorithmVC.h */,
 				D73A183523595F1300C5FBF1 /* SKSortAlgorithmVC.m */,
 				D717BDE523682B7300D085A8 /* SKBasicAlogrithmVC.h */,
 				D717BDE623682B7300D085A8 /* SKBasicAlogrithmVC.m */,
+				2CAB1622238ADFA900C418BA /* SKAlogrithmVCInterview.h */,
+				2CAB1623238ADFA900C418BA /* SKAlogrithmVCInterview.m */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -745,6 +771,7 @@
 				D73A186423595F1300C5FBF1 /* 类继承经典图.png in Resources */,
 				D73A188C23595F1300C5FBF1 /* LaunchScreen.storyboard in Resources */,
 				D73A187123595F1300C5FBF1 /* Block的深度探究.jpg in Resources */,
+				2C73916C237AAB7C005E664F /* 三次握手，四次挥手.png in Resources */,
 				D73A188A23595F1300C5FBF1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -825,6 +852,7 @@
 				D7BC7ED823604DAB00A562DA /* SKLLDBTestVC.m in Sources */,
 				D79FEA9D2368419A00419AEC /* SKLinkListVC.m in Sources */,
 				D73A186123595F1300C5FBF1 /* SKRuntimeVC.m in Sources */,
+				2CAB1628238AE00C00C418BA /* SKCharReverse.m in Sources */,
 				D73A185F23595F1300C5FBF1 /* SKRuntimePerson.m in Sources */,
 				D73A186D23595F1300C5FBF1 /* KVOModel.m in Sources */,
 				D73A184923595F1300C5FBF1 /* SKRunloopVC.m in Sources */,
@@ -844,6 +872,7 @@
 				D73A186923595F1300C5FBF1 /* SKObjectObject.m in Sources */,
 				D73A188123595F1300C5FBF1 /* TestExpand+test.m in Sources */,
 				D73A186B23595F1300C5FBF1 /* NSObject+SKHookSelector.m in Sources */,
+				2CAB162B238AEC6700C418BA /* SKReverseList.m in Sources */,
 				D73A188523595F1300C5FBF1 /* TestExpand+Additions.m in Sources */,
 				D73A185A23595F1300C5FBF1 /* SKMessageSendAction.m in Sources */,
 				D73A184A23595F1300C5FBF1 /* SKTimerTest.m in Sources */,
@@ -867,6 +896,7 @@
 				D73A189023595F1300C5FBF1 /* SKHomePageVC.m in Sources */,
 				D73A186623595F1300C5FBF1 /* SKSubObject.m in Sources */,
 				D73A187523595F1300C5FBF1 /* DownLoadManager.m in Sources */,
+				2CAB1624238ADFA900C418BA /* SKAlogrithmVCInterview.m in Sources */,
 				D73A187023595F1300C5FBF1 /* SKBlockVC.m in Sources */,
 				D79FEA9A2368411300419AEC /* SKLinkListNode.m in Sources */,
 				D73A186E23595F1300C5FBF1 /* SKKVCKVOVC.m in Sources */,

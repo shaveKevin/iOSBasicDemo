@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)hookSelector;
 
+- (void)methodTest;
+
+- (void)methodT;
 @end
 
 NS_ASSUME_NONNULL_END

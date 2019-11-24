@@ -87,7 +87,7 @@ void testMethod (id  self, SEL  _cmd) {
 // 找到对应的标识 然后继续执行消息转发走到第一步，接着走forwardInvocation 创建一个NSInvocation对象，然后直接调用方法invokeWithTarget
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
     
-    return [super methodSignatureForSelector:aSelector];
+//    return [super methodSignatureForSelector:aSelector];
 
     NSLog(@"3.1挽救闪退 step three  :methodSignatureForSelector");
     // 当再次调用的时候resolveInstanceMethod 只会走一次。剩下的方法都会走。
@@ -103,7 +103,7 @@ void testMethod (id  self, SEL  _cmd) {
 // 这里实例是将方法转发给其他类
 - (void)forwardInvocation:(NSInvocation *)anInvocation {
     [super forwardInvocation:anInvocation];
-    return;
+//    return;
     NSLog(@"3.2挽救闪退 step three & step two :forwardInvocation");
     SEL sel = [anInvocation selector];
     SKRuntimeOtherObject  *obj  = [[SKRuntimeOtherObject alloc]init];

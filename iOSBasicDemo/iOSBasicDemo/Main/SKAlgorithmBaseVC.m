@@ -40,6 +40,10 @@ UITableViewDelegate
 
     [self addCellText:@"排序算法" class:@"SKSortAlgorithmVC"];
     [self addCellText:@"基础算法" class:@"SKBasicAlogrithmVC"];
+    [self addCellText:@"面试算法" class:@"SKAlogrithmVCInterview"];
+
+    
+    
 
 
     [self.tableView reloadData];

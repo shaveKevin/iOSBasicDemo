@@ -764,59 +764,74 @@ prepareMethodLists(Class cls, method_list_t **addedLists, int addedCount,
 // Attach method lists and properties and protocols from categories to a class.
 // Assumes the categories in cats are all loaded and sorted by load order, 
 // oldest categories first.
+// 将分类中的方法绑定到类中。通过runtime
 static void 
 attachCategories(Class cls, category_list *cats, bool flush_caches)
 {
     if (!cats) return;
     if (PrintReplacedMethods) printReplacements(cls, cats);
-
+    
     bool isMeta = cls->isMetaClass();
-
+    // 这里是二维数组 数组的每一个元素都是一个数组 数组里包含的元素都是method_t
+    // [[method_t,method_t],[method_t],...]
     // fixme rearrange to remove these intermediate allocations
     method_list_t **mlists = (method_list_t **)
-        malloc(cats->count * sizeof(*mlists));
+    malloc(cats->count * sizeof(*mlists));
     property_list_t **proplists = (property_list_t **)
-        malloc(cats->count * sizeof(*proplists));
+    malloc(cats->count * sizeof(*proplists));
     protocol_list_t **protolists = (protocol_list_t **)
-        malloc(cats->count * sizeof(*protolists));
-
+    malloc(cats->count * sizeof(*protolists));
+    
     // Count backwards through cats to get newest categories first
+    // 方法的参数
     int mcount = 0;
+    // 属性参数
     int propcount = 0;
+    // 协议参数
     int protocount = 0;
+    // 宿主中的分类的总数
     int i = cats->count;
+    
     bool fromBundle = NO;
+    // 这里是倒序遍历，最先访问的是最后编译的分类(最后编译的方法才会起作用)
     while (i--) {
+        // 获取一个分类
         auto& entry = cats->list[i];
-
+        // 获取该分类的方法列表
         method_list_t *mlist = entry.cat->methodsForMeta(isMeta);
+        
         if (mlist) {
+            // 最后编译的分类最先添加到分类数组中
             mlists[mcount++] = mlist;
             fromBundle |= entry.hi->isBundle();
         }
-
+        // 属性列表添加规则，同方法列表添加规则
         property_list_t *proplist = 
-            entry.cat->propertiesForMeta(isMeta, entry.hi);
+        entry.cat->propertiesForMeta(isMeta, entry.hi);
         if (proplist) {
             proplists[propcount++] = proplist;
         }
-
+        // 协议发方法添加规则 同方法列表添加规则
         protocol_list_t *protolist = entry.cat->protocols;
         if (protolist) {
             protolists[protocount++] = protolist;
         }
     }
-
+    //获取宿主类当中的rw数据，其中包含宿主类的方法列表信息
     auto rw = cls->data();
-
+    // 主要针对 分类中有关于内存管理相关方法情况下 一些特殊处理
     prepareMethodLists(cls, mlists, mcount, NO, fromBundle);
     rw->methods.attachLists(mlists, mcount);
     free(mlists);
     if (flush_caches  &&  mcount > 0) flushCaches(cls);
-
+    /*
+     rw代表类
+     methods代表类的方法列表
+     attachLists 方法的含义是 将含有mcount个元素的mlists 拼接到 rw的methods上
+     */
     rw->properties.attachLists(proplists, propcount);
     free(proplists);
-
+    
     rw->protocols.attachLists(protolists, protocount);
     free(protolists);
 }
@@ -908,16 +923,21 @@ static void remethodizeClass(Class cls)
     bool isMeta;
 
     runtimeLock.assertLocked();
-
+/*
+ 这里只分析实例方法添加的逻辑
+ 因此这里假设isMeta= NO;
+ 
+ */
     isMeta = cls->isMetaClass();
 
     // Re-methodizing: check for more categories
+    // 获取cls中为完成整合的所有的分类
     if ((cats = unattachedCategoriesForClass(cls, false/*not realizing*/))) {
         if (PrintConnecting) {
             _objc_inform("CLASS: attaching categories to class '%s' %s", 
                          cls->nameForLogging(), isMeta ? "(meta)" : "");
         }
-        
+        //如果有分类就将 cats拼接到cls中
         attachCategories(cls, cats, true /*flush caches*/);        
         free(cats);
     }
