@@ -17,12 +17,7 @@ void charReverse(char *cha) {
     char *end = cha + strlen(cha)-1;
     while (begin< end) {
         // 交换两个字符 同时移动指针
-        char temp = *begin;
-        printf("\n");
-        printf("begin is %s \n",begin);
-        printf("end is %s \n",end);
-        printf("\n");
-        
+        char temp = *begin;        
         *(begin ++) = *end;
         *(end --) = temp;
     }
