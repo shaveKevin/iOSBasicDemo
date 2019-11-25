@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C17BF73238BB67200E556EF /* SKFindMiddleCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17BF72238BB67200E556EF /* SKFindMiddleCount.m */; };
 		2C73916C237AAB7C005E664F /* 三次握手，四次挥手.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C73916B237AAB7C005E664F /* 三次握手，四次挥手.png */; };
 		2CA91B21238B7BDD006A46E7 /* SKCharReverse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B1B238B7BDD006A46E7 /* SKCharReverse.m */; };
 		2CA91B23238B7BDD006A46E7 /* SKReverseList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B1D238B7BDD006A46E7 /* SKReverseList.m */; };
 		2CA91B26238B7C17006A46E7 /* SKMergeSortedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B25238B7C17006A46E7 /* SKMergeSortedArray.m */; };
 		2CA91B29238B856A006A46E7 /* SKFindFirstChar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B28238B856A006A46E7 /* SKFindFirstChar.m */; };
+		2CA91B2C238BA8DE006A46E7 /* SKFindCommonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B2B238BA8DE006A46E7 /* SKFindCommonView.m */; };
 		2CAB1624238ADFA900C418BA /* SKAlogrithmVCInterview.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB1623238ADFA900C418BA /* SKAlogrithmVCInterview.m */; };
 		650EAEA170E9659055B10E12 /* Pods_iOSBasicDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EA8371E2221071062CFD67 /* Pods_iOSBasicDemo.framework */; };
 		D717BDBE2366CF7900D085A8 /* NSObject+SKKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = D717BDBD2366CF7900D085A8 /* NSObject+SKKVO.m */; };
@@ -90,6 +92,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C17BF71238BB67200E556EF /* SKFindMiddleCount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKFindMiddleCount.h; sourceTree = "<group>"; };
+		2C17BF72238BB67200E556EF /* SKFindMiddleCount.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKFindMiddleCount.m; sourceTree = "<group>"; };
 		2C73916B237AAB7C005E664F /* 三次握手，四次挥手.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "三次握手，四次挥手.png"; sourceTree = "<group>"; };
 		2CA91B1B238B7BDD006A46E7 /* SKCharReverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKCharReverse.m; sourceTree = "<group>"; };
 		2CA91B1D238B7BDD006A46E7 /* SKReverseList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKReverseList.m; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 		2CA91B25238B7C17006A46E7 /* SKMergeSortedArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKMergeSortedArray.m; sourceTree = "<group>"; };
 		2CA91B27238B856A006A46E7 /* SKFindFirstChar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKFindFirstChar.h; sourceTree = "<group>"; };
 		2CA91B28238B856A006A46E7 /* SKFindFirstChar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKFindFirstChar.m; sourceTree = "<group>"; };
+		2CA91B2A238BA8DE006A46E7 /* SKFindCommonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKFindCommonView.h; sourceTree = "<group>"; };
+		2CA91B2B238BA8DE006A46E7 /* SKFindCommonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKFindCommonView.m; sourceTree = "<group>"; };
 		2CAB1622238ADFA900C418BA /* SKAlogrithmVCInterview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKAlogrithmVCInterview.h; sourceTree = "<group>"; };
 		2CAB1623238ADFA900C418BA /* SKAlogrithmVCInterview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKAlogrithmVCInterview.m; sourceTree = "<group>"; };
 		4A7FC359C60902B124FEBC2E /* Pods-AllKindOfThings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllKindOfThings.release.xcconfig"; path = "Target Support Files/Pods-AllKindOfThings/Pods-AllKindOfThings.release.xcconfig"; sourceTree = "<group>"; };
@@ -293,6 +299,10 @@
 				2CA91B25238B7C17006A46E7 /* SKMergeSortedArray.m */,
 				2CA91B27238B856A006A46E7 /* SKFindFirstChar.h */,
 				2CA91B28238B856A006A46E7 /* SKFindFirstChar.m */,
+				2CA91B2A238BA8DE006A46E7 /* SKFindCommonView.h */,
+				2CA91B2B238BA8DE006A46E7 /* SKFindCommonView.m */,
+				2C17BF71238BB67200E556EF /* SKFindMiddleCount.h */,
+				2C17BF72238BB67200E556EF /* SKFindMiddleCount.m */,
 			);
 			path = SKAlogrithmVCInterview;
 			sourceTree = "<group>";
@@ -868,6 +878,7 @@
 				D73A184923595F1300C5FBF1 /* SKRunloopVC.m in Sources */,
 				D73A187E23595F1300C5FBF1 /* RetainCycleModule.m in Sources */,
 				D73A184D23595F1300C5FBF1 /* SKPropertyVC.m in Sources */,
+				2CA91B2C238BA8DE006A46E7 /* SKFindCommonView.m in Sources */,
 				D73A187D23595F1300C5FBF1 /* TestModel.m in Sources */,
 				D73A189423595F1300C5FBF1 /* SKPCBasicTechVC.m in Sources */,
 				D73A187F23595F1300C5FBF1 /* NSObject+Add.m in Sources */,
@@ -885,6 +896,7 @@
 				D73A188523595F1300C5FBF1 /* TestExpand+Additions.m in Sources */,
 				D73A185A23595F1300C5FBF1 /* SKMessageSendAction.m in Sources */,
 				D73A184A23595F1300C5FBF1 /* SKTimerTest.m in Sources */,
+				2C17BF73238BB67200E556EF /* SKFindMiddleCount.m in Sources */,
 				D73A18A02359C0FB00C5FBF1 /* SKGCDTestObj.m in Sources */,
 				D73A184F23595F1300C5FBF1 /* SKPropertyTestModel.m in Sources */,
 				D7467B6B236975B40045FA76 /* SKKVCModel.m in Sources */,

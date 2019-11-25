@@ -11,8 +11,14 @@
 #import "SKReverseList.h"
 #import "SKMergeSortedArray.h"
 #import "SKFindFirstChar.h"
+#import "SKFindCommonView.h"
+#import "SKFindMiddleCount.h"
 
 @interface SKAlogrithmVCInterview ()
+
+@property (nonatomic, strong) UIView *view1;
+
+@property (nonatomic, strong) UIView *view2;
 
 @end
 
@@ -29,7 +35,20 @@
 
 - (void)setupViews {
     self.view.backgroundColor = [UIColor whiteColor];
+    UIView *viewSuper = [[UIView alloc]init];
+    viewSuper.frame = CGRectMake(100, 20, 200, 100);
+    viewSuper.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:viewSuper];
+    
+    self.view1 = [[UIView alloc]init];
+    self.view1.backgroundColor = [UIColor redColor];
+    self.view1.frame = CGRectMake(0, 0, 50, 30);
 
+    [viewSuper addSubview:self.view1];
+    self.view2 = [[UIView alloc]init];
+    self.view2.backgroundColor = [UIColor orangeColor];
+    self.view2.frame = CGRectMake(0, 40, 50, 30);
+    [viewSuper addSubview:self.view2];
 }
 
 - (void)setupData {
@@ -41,6 +60,10 @@
     [self mergeSortedArray];
     // 查找字符串第一个只出现一次的字符
     [self findFirstChar];
+    //查找两个View的公共父控件
+    [self findCommonView];
+    // 无序数组中查找中位数
+    [self findMiddleCount];
 }
 
 - (void)setupLayout {
@@ -84,4 +107,21 @@
     char fc = findFirstChar(cha);
     printf("\nthis char is %c\n",fc);
 }
+
+- (void)findCommonView {
+    SKFindCommonView *find = [[SKFindCommonView alloc]init];
+    NSArray *viewArray =   [find findCommonSuperView:self.view1 other:self.view2];
+    if (viewArray.count == 0) {
+        NSLog(@"no common superview");
+        return;
+    }
+    NSLog(@"公共视图总数为：%@",@(viewArray.count));
+}
+
+- (void)findMiddleCount {
+    int list[9] = {12,3,10,8,6,7,11,13,9};
+    int middle = findMiddleCount(list, 9);
+    printf("\n middle is %d\n",middle);
+}
+
 @end
