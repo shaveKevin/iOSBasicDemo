@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C17BF73238BB67200E556EF /* SKFindMiddleCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17BF72238BB67200E556EF /* SKFindMiddleCount.m */; };
+		2C3FB0EF238FC20900AA181D /* SKSameTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3FB0EE238FC20900AA181D /* SKSameTree.m */; };
 		2C73916C237AAB7C005E664F /* 三次握手，四次挥手.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C73916B237AAB7C005E664F /* 三次握手，四次挥手.png */; };
 		2CA91B21238B7BDD006A46E7 /* SKCharReverse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B1B238B7BDD006A46E7 /* SKCharReverse.m */; };
 		2CA91B23238B7BDD006A46E7 /* SKReverseList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B1D238B7BDD006A46E7 /* SKReverseList.m */; };
@@ -94,6 +95,8 @@
 /* Begin PBXFileReference section */
 		2C17BF71238BB67200E556EF /* SKFindMiddleCount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKFindMiddleCount.h; sourceTree = "<group>"; };
 		2C17BF72238BB67200E556EF /* SKFindMiddleCount.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKFindMiddleCount.m; sourceTree = "<group>"; };
+		2C3FB0ED238FC20900AA181D /* SKSameTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSameTree.h; sourceTree = "<group>"; };
+		2C3FB0EE238FC20900AA181D /* SKSameTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSameTree.m; sourceTree = "<group>"; };
 		2C73916B237AAB7C005E664F /* 三次握手，四次挥手.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "三次握手，四次挥手.png"; sourceTree = "<group>"; };
 		2CA91B1B238B7BDD006A46E7 /* SKCharReverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKCharReverse.m; sourceTree = "<group>"; };
 		2CA91B1D238B7BDD006A46E7 /* SKReverseList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKReverseList.m; sourceTree = "<group>"; };
@@ -288,6 +291,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C3FB0EC238FC1FA00AA181D /* SKTree */ = {
+			isa = PBXGroup;
+			children = (
+				2C3FB0ED238FC20900AA181D /* SKSameTree.h */,
+				2C3FB0EE238FC20900AA181D /* SKSameTree.m */,
+			);
+			path = SKTree;
+			sourceTree = "<group>";
+		};
 		2CA91B1A238B7BDD006A46E7 /* SKAlogrithmVCInterview */ = {
 			isa = PBXGroup;
 			children = (
@@ -615,6 +627,7 @@
 		D73A183323595F1300C5FBF1 /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				2C3FB0EC238FC1FA00AA181D /* SKTree */,
 				2CA91B1A238B7BDD006A46E7 /* SKAlogrithmVCInterview */,
 				D73A183423595F1300C5FBF1 /* SKSortAlgorithmVC.h */,
 				D73A183523595F1300C5FBF1 /* SKSortAlgorithmVC.m */,
@@ -879,6 +892,7 @@
 				D73A187E23595F1300C5FBF1 /* RetainCycleModule.m in Sources */,
 				D73A184D23595F1300C5FBF1 /* SKPropertyVC.m in Sources */,
 				2CA91B2C238BA8DE006A46E7 /* SKFindCommonView.m in Sources */,
+				2C3FB0EF238FC20900AA181D /* SKSameTree.m in Sources */,
 				D73A187D23595F1300C5FBF1 /* TestModel.m in Sources */,
 				D73A189423595F1300C5FBF1 /* SKPCBasicTechVC.m in Sources */,
 				D73A187F23595F1300C5FBF1 /* NSObject+Add.m in Sources */,
