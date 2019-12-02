@@ -13,7 +13,7 @@
 - (instancetype)init {
     
     if (self = [super init]) {
-        [self threadMethondFourDemo];
+        [self dispatch_semaphore];
     }
     return self;
 }
@@ -92,6 +92,20 @@
   在同步线程中 任务2 加到了主线程。并且 任务3 必须等任务2 完成之后才能执行。但是这个时候 while(1)的时候 没有跳出逻辑，这里会因为循环造成阻塞。不会执行 任务2  这个时候任务3 也不会执行了。
        任务5 由于循环阻塞也不会执行。
  */
-
+/*
+ 信号量的使用场景 粒度较小 相比较队列和barrier来说粒度算是小的
+  可以当做锁来用当数量为0时加锁 不为0 的时候可以访问
+ */
+- (void)dispatch_semaphore {
+    dispatch_semaphore_t semphore = dispatch_semaphore_create(1);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // 当前信号量的值不为0 的时候执行 如果为0 那么就等待  然后信号量做-1操作
+        dispatch_semaphore_wait(semphore, DISPATCH_TIME_FOREVER);
+        NSLog(@"wait");
+        // 信号量+1操作
+        dispatch_semaphore_signal(semphore);
+    });
+    
+}
 
 @end

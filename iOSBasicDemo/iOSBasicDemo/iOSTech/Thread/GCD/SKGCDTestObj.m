@@ -84,7 +84,8 @@
 
 - (void)createDispatchNotify {
     
-  // 除了使用队列的形式来实现 我们还可以用group来实现上面的功能
+  // 除了使用队列的形式来实现 我们还可以用group来实现上面的功能(通过这种方式也可以创建一个并行队列)  主线程的队列是串行的
+    // 一般来说并行的队列用于处理数据以及其他 主线程的主队列用于处理UI的显示
     dispatch_queue_t groupQueue  = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_group_t group = dispatch_group_create();
     dispatch_group_async(group, groupQueue, ^{
