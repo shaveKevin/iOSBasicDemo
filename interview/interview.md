@@ -16,7 +16,7 @@
 * 你对flutter和RN有什么看法
 * 性能优化你做了哪些工作
 * socket和tcp udp有什么区别，socket原理是什么，socket在app之间传输用的什么。引申到http如何使用长连接 keep-alive的使用。
-* gcd的底层实现
+* gcd的底层实现。我们能开辟的最大线程数是多少？默认值是多少？
 * gcd中的notify和barrier有什么区别
 
 #### 2.算法题
