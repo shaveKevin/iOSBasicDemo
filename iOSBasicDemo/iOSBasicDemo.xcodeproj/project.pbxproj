@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2C17BF73238BB67200E556EF /* SKFindMiddleCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17BF72238BB67200E556EF /* SKFindMiddleCount.m */; };
 		2C3FB0EF238FC20900AA181D /* SKSameTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3FB0EE238FC20900AA181D /* SKSameTree.m */; };
+		2C66F5492397B440008A5CFC /* SKTraggedPointTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A17C223595F1300C5FBF1 /* SKTraggedPointTest.m */; };
+		2C66F54C2397B63F008A5CFC /* SKTraggedPointSubClass+SKTraggedPointSub.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66F5442397B353008A5CFC /* SKTraggedPointSubClass+SKTraggedPointSub.m */; };
+		2C66F54D2397B647008A5CFC /* SKTraggedPointTest+SKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF9D6D62397AE56007D8875 /* SKTraggedPointTest+SKCategory.m */; };
+		2C66F5502397B6E8008A5CFC /* SKTraggedPointTest+SKCategoryCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66F54F2397B6E8008A5CFC /* SKTraggedPointTest+SKCategoryCategory.m */; };
 		2C73916C237AAB7C005E664F /* 三次握手，四次挥手.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C73916B237AAB7C005E664F /* 三次握手，四次挥手.png */; };
 		2CA91B21238B7BDD006A46E7 /* SKCharReverse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B1B238B7BDD006A46E7 /* SKCharReverse.m */; };
 		2CA91B23238B7BDD006A46E7 /* SKReverseList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B1D238B7BDD006A46E7 /* SKReverseList.m */; };
@@ -16,6 +20,7 @@
 		2CA91B29238B856A006A46E7 /* SKFindFirstChar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B28238B856A006A46E7 /* SKFindFirstChar.m */; };
 		2CA91B2C238BA8DE006A46E7 /* SKFindCommonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B2B238BA8DE006A46E7 /* SKFindCommonView.m */; };
 		2CAB1624238ADFA900C418BA /* SKAlogrithmVCInterview.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB1623238ADFA900C418BA /* SKAlogrithmVCInterview.m */; };
+		2CF9D6DA2397B269007D8875 /* SKTraggedPointSubClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF9D6D92397B269007D8875 /* SKTraggedPointSubClass.m */; };
 		650EAEA170E9659055B10E12 /* Pods_iOSBasicDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EA8371E2221071062CFD67 /* Pods_iOSBasicDemo.framework */; };
 		D717BDBE2366CF7900D085A8 /* NSObject+SKKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = D717BDBD2366CF7900D085A8 /* NSObject+SKKVO.m */; };
 		D717BDE723682B7300D085A8 /* SKBasicAlogrithmVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D717BDE623682B7300D085A8 /* SKBasicAlogrithmVC.m */; };
@@ -25,7 +30,6 @@
 		D73A184B23595F1300C5FBF1 /* SKRunLoopObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A17B823595F1300C5FBF1 /* SKRunLoopObject.m */; };
 		D73A184C23595F1300C5FBF1 /* 对象释放时机图.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D73A17BF23595F1300C5FBF1 /* 对象释放时机图.jpg */; };
 		D73A184D23595F1300C5FBF1 /* SKPropertyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A17C123595F1300C5FBF1 /* SKPropertyVC.m */; };
-		D73A184E23595F1300C5FBF1 /* SKTraggedPointTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A17C223595F1300C5FBF1 /* SKTraggedPointTest.m */; };
 		D73A184F23595F1300C5FBF1 /* SKPropertyTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A17C323595F1300C5FBF1 /* SKPropertyTestModel.m */; };
 		D73A185223595F1300C5FBF1 /* SKSynthesizeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A17C623595F1300C5FBF1 /* SKSynthesizeModel.m */; };
 		D73A185323595F1300C5FBF1 /* SKProprtyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A17C723595F1300C5FBF1 /* SKProprtyModel.m */; };
@@ -97,6 +101,10 @@
 		2C17BF72238BB67200E556EF /* SKFindMiddleCount.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKFindMiddleCount.m; sourceTree = "<group>"; };
 		2C3FB0ED238FC20900AA181D /* SKSameTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSameTree.h; sourceTree = "<group>"; };
 		2C3FB0EE238FC20900AA181D /* SKSameTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKSameTree.m; sourceTree = "<group>"; };
+		2C66F5432397B353008A5CFC /* SKTraggedPointSubClass+SKTraggedPointSub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKTraggedPointSubClass+SKTraggedPointSub.h"; sourceTree = "<group>"; };
+		2C66F5442397B353008A5CFC /* SKTraggedPointSubClass+SKTraggedPointSub.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SKTraggedPointSubClass+SKTraggedPointSub.m"; sourceTree = "<group>"; };
+		2C66F54E2397B6E8008A5CFC /* SKTraggedPointTest+SKCategoryCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKTraggedPointTest+SKCategoryCategory.h"; sourceTree = "<group>"; };
+		2C66F54F2397B6E8008A5CFC /* SKTraggedPointTest+SKCategoryCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SKTraggedPointTest+SKCategoryCategory.m"; sourceTree = "<group>"; };
 		2C73916B237AAB7C005E664F /* 三次握手，四次挥手.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "三次握手，四次挥手.png"; sourceTree = "<group>"; };
 		2CA91B1B238B7BDD006A46E7 /* SKCharReverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKCharReverse.m; sourceTree = "<group>"; };
 		2CA91B1D238B7BDD006A46E7 /* SKReverseList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKReverseList.m; sourceTree = "<group>"; };
@@ -110,6 +118,10 @@
 		2CA91B2B238BA8DE006A46E7 /* SKFindCommonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKFindCommonView.m; sourceTree = "<group>"; };
 		2CAB1622238ADFA900C418BA /* SKAlogrithmVCInterview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKAlogrithmVCInterview.h; sourceTree = "<group>"; };
 		2CAB1623238ADFA900C418BA /* SKAlogrithmVCInterview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKAlogrithmVCInterview.m; sourceTree = "<group>"; };
+		2CF9D6D52397AE56007D8875 /* SKTraggedPointTest+SKCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKTraggedPointTest+SKCategory.h"; sourceTree = "<group>"; };
+		2CF9D6D62397AE56007D8875 /* SKTraggedPointTest+SKCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SKTraggedPointTest+SKCategory.m"; sourceTree = "<group>"; };
+		2CF9D6D82397B269007D8875 /* SKTraggedPointSubClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKTraggedPointSubClass.h; sourceTree = "<group>"; };
+		2CF9D6D92397B269007D8875 /* SKTraggedPointSubClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKTraggedPointSubClass.m; sourceTree = "<group>"; };
 		4A7FC359C60902B124FEBC2E /* Pods-AllKindOfThings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllKindOfThings.release.xcconfig"; path = "Target Support Files/Pods-AllKindOfThings/Pods-AllKindOfThings.release.xcconfig"; sourceTree = "<group>"; };
 		53EA8371E2221071062CFD67 /* Pods_iOSBasicDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSBasicDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84626E54F362A1FF3FC34E56 /* Pods-iOSBasicDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSBasicDemo.debug.xcconfig"; path = "Target Support Files/Pods-iOSBasicDemo/Pods-iOSBasicDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -413,6 +425,14 @@
 				D73A17C423595F1300C5FBF1 /* SKTraggedPointTest-arm64.cpp */,
 				D73A17CB23595F1300C5FBF1 /* SKTraggedPointTest.h */,
 				D73A17C223595F1300C5FBF1 /* SKTraggedPointTest.m */,
+				2CF9D6D82397B269007D8875 /* SKTraggedPointSubClass.h */,
+				2CF9D6D92397B269007D8875 /* SKTraggedPointSubClass.m */,
+				2C66F5432397B353008A5CFC /* SKTraggedPointSubClass+SKTraggedPointSub.h */,
+				2C66F5442397B353008A5CFC /* SKTraggedPointSubClass+SKTraggedPointSub.m */,
+				2CF9D6D52397AE56007D8875 /* SKTraggedPointTest+SKCategory.h */,
+				2CF9D6D62397AE56007D8875 /* SKTraggedPointTest+SKCategory.m */,
+				2C66F54E2397B6E8008A5CFC /* SKTraggedPointTest+SKCategoryCategory.h */,
+				2C66F54F2397B6E8008A5CFC /* SKTraggedPointTest+SKCategoryCategory.m */,
 				D7BC7ECF23604C9300A562DA /* SKIBOutletObj.h */,
 				D7BC7ED023604C9300A562DA /* SKIBOutletObj.m */,
 			);
@@ -875,8 +895,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C66F5502397B6E8008A5CFC /* SKTraggedPointTest+SKCategoryCategory.m in Sources */,
+				2C66F54C2397B63F008A5CFC /* SKTraggedPointSubClass+SKTraggedPointSub.m in Sources */,
+				2C66F54D2397B647008A5CFC /* SKTraggedPointTest+SKCategory.m in Sources */,
+				2CF9D6DA2397B269007D8875 /* SKTraggedPointSubClass.m in Sources */,
 				D73A188223595F1300C5FBF1 /* TestExpand.m in Sources */,
-				D73A184E23595F1300C5FBF1 /* SKTraggedPointTest.m in Sources */,
+				2C66F5492397B440008A5CFC /* SKTraggedPointTest.m in Sources */,
 				D73A185423595F1300C5FBF1 /* SKAutoReleaseTestObj.m in Sources */,
 				D73A189223595F1300C5FBF1 /* SKUINavigationController.m in Sources */,
 				D73A188023595F1300C5FBF1 /* NSObject+Addition.m in Sources */,

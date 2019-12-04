@@ -14,6 +14,14 @@
 @end
 @implementation SKTraggedPointTest
 
++(void)load {
+    NSLog(@"当前类的load");
+}
+
++(void)initialize {
+    NSLog(@"当前类的initialize");
+
+}
 - (instancetype)init {
     
     if (self = [super init]) {
@@ -30,7 +38,21 @@
     return self;
 }
 
-
+/*
+ 方法的执行顺序
+ 当前类的load
+ 子类的load
+ (分类和子类分类的+load方法的执行顺序依赖于他们的编译顺序)
+ 分类的load
+ 子类分类的load
+ 
+ 
+initialize 执行顺序
+ app运行过程中只会触发一次，如果分类和当前类同时存在那么分类会覆盖掉本类的initialize方法调用。优先级是 分类优先于分类子类执行。如果分类较多只会执行一个，最后一个被添加进去的分类会覆盖掉原先分类的initialize方法
+ 分类的initialize
+ 子类分类的initialize
+ 
+ */
 
 
 @end
