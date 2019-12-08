@@ -11,6 +11,7 @@
 #import <Masonry/Masonry.h>
 #import <DSTBaseDevUtils/DSTWeakProxy.h>
 #import "SKTimerTest.h"
+#import "SKLifeCycleVC.h"
 
 @interface SKRunloopVC ()
 
@@ -32,6 +33,9 @@
     [self setupData];
     [self setupLayout];
     [self methodActions];
+    [self forCycleTest];
+    NSLog(@"A Class === viewDidLoad");
+
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -45,6 +49,8 @@
      [self.timerTest  testGCDTimer];
 
      */
+    
+    NSLog(@"A Class === viewDidAppear");
 
   
 }
@@ -74,6 +80,23 @@
     [stopBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     
     
+    UIButton *pushBtn   = [UIButton buttonWithType:UIButtonTypeCustom];
+    [pushBtn setTitle:@"跳转按钮" forState:UIControlStateNormal];
+    [self.view addSubview:pushBtn];
+    [pushBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(terminalBtn.mas_bottom).offset(40);
+        make.left.equalTo(terminalBtn.mas_left).offset(0);
+    }];
+    [pushBtn addTarget:self action:@selector(pushAction) forControlEvents:UIControlEventTouchUpInside];
+    [pushBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    
+    
+}
+
+
+- (void)pushAction {
+    SKLifeCycleVC  *vc = [[SKLifeCycleVC alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)setupData {
@@ -125,6 +148,9 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+    
+    NSLog(@"A Class === viewWillDisappear");
+
     // 注意:这样写不保险，首先不能确定这里消失的时机 是否要停掉定时器.
   //   [self stopTimer];
 }
@@ -157,6 +183,9 @@
 }
 
 - (void)dealloc {
+    
+    NSLog(@"A Class === dealloc");
+
     if (_schemeTimer) {
         _schemeTimer = nil;
         NSLog(@"已销毁 ===timer  %@",_schemeTimer);
@@ -164,4 +193,66 @@
         NSLog(@"不存在");
     }
 }
+
+// break 结束当前循环 continue跳出本次循环
+- (void)forCycleTest {
+    
+    NSArray *array = @[@1,@3,@4,@6,@8];
+    for (NSInteger i = 0; i < array.count; i++) {
+        NSLog(@"i  is %@",array[i]);
+    }
+    for (id obj in array) {
+        if ([obj isEqualToNumber:@3]) {
+            continue;
+        }
+        NSLog(@"obj is %@",obj);
+    }
+    
+}
+
+
+- (void)loadView {
+    [super loadView];
+    NSLog(@"A Class === loadView");
+
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"A Class === viewWillAppear");
+
+}
+
+
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    NSLog(@"A Class === viewDidDisappear");
+}
+
 @end
+
+/*
+ 生命周期相关
+刚进入A的时候 方法执行顺序是:
+ A  loadView
+ A  viewdidload
+ A  viewwillappear
+ A  viewdidappear
+
+ 当从A push到B的时候，方法执行顺序是:
+ 
+B  loadview
+B  viewdidload
+A  viewwilldisappear
+B viewwillappear
+A viewdiddisappear
+B viewdidappear
+ 
+当从B 返回到A的时候，方法执行顺序是:
+ B viewwilldisppear
+ A  viewwillappear
+ B  viewdiddisappear
+ A  viewdidappear
+ B dealloc
+ */
