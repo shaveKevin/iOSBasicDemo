@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SfC-5U-zg8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SfC-5U-zg8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -140,17 +140,17 @@
             </objects>
             <point key="canvasLocation" x="761" y="514"/>
         </scene>
-        <!--我的-->
+        <!--新功能-->
         <scene sceneID="pST-iV-EnT">
             <objects>
-                <viewController id="aTs-8Y-loR" customClass="SKPersonalCenterVC" sceneMemberID="viewController">
+                <viewController id="aTs-8Y-loR" customClass="SKNewFeatureVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dfo-2x-flL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="W9c-2B-hGV"/>
                     </view>
-                    <navigationItem key="navigationItem" title="我的" id="r3u-xr-KC2">
+                    <navigationItem key="navigationItem" title="新功能" id="r3u-xr-KC2">
                         <barButtonItem key="backBarButtonItem" title=" " id="Wal-cT-Msc"/>
                     </navigationItem>
                 </viewController>
@@ -158,11 +158,11 @@
             </objects>
             <point key="canvasLocation" x="2068" y="1238"/>
         </scene>
-        <!--我的-->
+        <!--新功能-->
         <scene sceneID="VNc-he-1tw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0bv-c9-NHY" customClass="SKUINavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的" image="tabbar_icon_mine_normal" selectedImage="tabbar_icon_mine_select" id="2TD-M4-lH1"/>
+                    <tabBarItem key="tabBarItem" title="新功能" image="tabbar_icon_mine_normal" selectedImage="tabbar_icon_mine_select" id="2TD-M4-lH1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yXc-Ds-7MY">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

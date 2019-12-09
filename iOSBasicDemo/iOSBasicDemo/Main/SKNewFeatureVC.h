@@ -1,5 +1,5 @@
 //
-//  SKPersonalCenterVC.h
+//  SKNewFeatureVC.h
 //  iOSBasicDemo
 //
 //  Created by shavekevin on 2019/9/20.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SKPersonalCenterVC : UIViewController
+@interface SKNewFeatureVC : UIViewController
 
 @end
 

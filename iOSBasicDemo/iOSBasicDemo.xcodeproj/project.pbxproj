@@ -15,6 +15,9 @@
 		2C66F5502397B6E8008A5CFC /* SKTraggedPointTest+SKCategoryCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66F54F2397B6E8008A5CFC /* SKTraggedPointTest+SKCategoryCategory.m */; };
 		2C66F593239D43FB008A5CFC /* SKLifeCycleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66F592239D43FB008A5CFC /* SKLifeCycleVC.m */; };
 		2C73916C237AAB7C005E664F /* 三次握手，四次挥手.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C73916B237AAB7C005E664F /* 三次握手，四次挥手.png */; };
+		2C8EE5F8239EB2CC00887599 /* SKDartModeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5F7239EB2CC00887599 /* SKDartModeVC.m */; };
+		2C8EE5FB239EB54E00887599 /* UIView+SKDarkModeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5FA239EB54E00887599 /* UIView+SKDarkModeColor.m */; };
+		2C8EE5FE239EB7A100887599 /* UIColor+SKDarkModeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5FD239EB7A100887599 /* UIColor+SKDarkModeColor.m */; };
 		2CA91B21238B7BDD006A46E7 /* SKCharReverse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B1B238B7BDD006A46E7 /* SKCharReverse.m */; };
 		2CA91B23238B7BDD006A46E7 /* SKReverseList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B1D238B7BDD006A46E7 /* SKReverseList.m */; };
 		2CA91B26238B7C17006A46E7 /* SKMergeSortedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B25238B7C17006A46E7 /* SKMergeSortedArray.m */; };
@@ -79,7 +82,7 @@
 		D73A188E23595F1300C5FBF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A183A23595F1300C5FBF1 /* main.m */; };
 		D73A188F23595F1300C5FBF1 /* SKAlgorithmBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A184023595F1300C5FBF1 /* SKAlgorithmBaseVC.m */; };
 		D73A189023595F1300C5FBF1 /* SKHomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A184123595F1300C5FBF1 /* SKHomePageVC.m */; };
-		D73A189123595F1300C5FBF1 /* SKPersonalCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A184223595F1300C5FBF1 /* SKPersonalCenterVC.m */; };
+		D73A189123595F1300C5FBF1 /* SKNewFeatureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A184223595F1300C5FBF1 /* SKNewFeatureVC.m */; };
 		D73A189223595F1300C5FBF1 /* SKUINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A184323595F1300C5FBF1 /* SKUINavigationController.m */; };
 		D73A189323595F1300C5FBF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A184423595F1300C5FBF1 /* AppDelegate.m */; };
 		D73A189423595F1300C5FBF1 /* SKPCBasicTechVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A184623595F1300C5FBF1 /* SKPCBasicTechVC.m */; };
@@ -109,6 +112,12 @@
 		2C66F591239D43FB008A5CFC /* SKLifeCycleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKLifeCycleVC.h; sourceTree = "<group>"; };
 		2C66F592239D43FB008A5CFC /* SKLifeCycleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKLifeCycleVC.m; sourceTree = "<group>"; };
 		2C73916B237AAB7C005E664F /* 三次握手，四次挥手.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "三次握手，四次挥手.png"; sourceTree = "<group>"; };
+		2C8EE5F6239EB2CC00887599 /* SKDartModeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKDartModeVC.h; sourceTree = "<group>"; };
+		2C8EE5F7239EB2CC00887599 /* SKDartModeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKDartModeVC.m; sourceTree = "<group>"; };
+		2C8EE5F9239EB54E00887599 /* UIView+SKDarkModeColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SKDarkModeColor.h"; sourceTree = "<group>"; };
+		2C8EE5FA239EB54E00887599 /* UIView+SKDarkModeColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+SKDarkModeColor.m"; sourceTree = "<group>"; };
+		2C8EE5FC239EB7A100887599 /* UIColor+SKDarkModeColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+SKDarkModeColor.h"; sourceTree = "<group>"; };
+		2C8EE5FD239EB7A100887599 /* UIColor+SKDarkModeColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SKDarkModeColor.m"; sourceTree = "<group>"; };
 		2CA91B1B238B7BDD006A46E7 /* SKCharReverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKCharReverse.m; sourceTree = "<group>"; };
 		2CA91B1D238B7BDD006A46E7 /* SKReverseList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKReverseList.m; sourceTree = "<group>"; };
 		2CA91B1E238B7BDD006A46E7 /* SKCharReverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKCharReverse.h; sourceTree = "<group>"; };
@@ -253,11 +262,11 @@
 		D73A183A23595F1300C5FBF1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D73A183C23595F1300C5FBF1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D73A183D23595F1300C5FBF1 /* SKUINavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKUINavigationController.h; sourceTree = "<group>"; };
-		D73A183E23595F1300C5FBF1 /* SKPersonalCenterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKPersonalCenterVC.h; sourceTree = "<group>"; };
+		D73A183E23595F1300C5FBF1 /* SKNewFeatureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKNewFeatureVC.h; sourceTree = "<group>"; };
 		D73A183F23595F1300C5FBF1 /* SKPCBasicTechVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKPCBasicTechVC.h; sourceTree = "<group>"; };
 		D73A184023595F1300C5FBF1 /* SKAlgorithmBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKAlgorithmBaseVC.m; sourceTree = "<group>"; };
 		D73A184123595F1300C5FBF1 /* SKHomePageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKHomePageVC.m; sourceTree = "<group>"; };
-		D73A184223595F1300C5FBF1 /* SKPersonalCenterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKPersonalCenterVC.m; sourceTree = "<group>"; };
+		D73A184223595F1300C5FBF1 /* SKNewFeatureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKNewFeatureVC.m; sourceTree = "<group>"; };
 		D73A184323595F1300C5FBF1 /* SKUINavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKUINavigationController.m; sourceTree = "<group>"; };
 		D73A184423595F1300C5FBF1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D73A184523595F1300C5FBF1 /* SKAlgorithmBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKAlgorithmBaseVC.h; sourceTree = "<group>"; };
@@ -313,6 +322,27 @@
 				2C3FB0EE238FC20900AA181D /* SKSameTree.m */,
 			);
 			path = SKTree;
+			sourceTree = "<group>";
+		};
+		2C8EE5F4239EB29700887599 /* NewFeature */ = {
+			isa = PBXGroup;
+			children = (
+				2C8EE5F5239EB2BB00887599 /* DartMode */,
+			);
+			path = NewFeature;
+			sourceTree = "<group>";
+		};
+		2C8EE5F5239EB2BB00887599 /* DartMode */ = {
+			isa = PBXGroup;
+			children = (
+				2C8EE5F6239EB2CC00887599 /* SKDartModeVC.h */,
+				2C8EE5F7239EB2CC00887599 /* SKDartModeVC.m */,
+				2C8EE5F9239EB54E00887599 /* UIView+SKDarkModeColor.h */,
+				2C8EE5FA239EB54E00887599 /* UIView+SKDarkModeColor.m */,
+				2C8EE5FC239EB7A100887599 /* UIColor+SKDarkModeColor.h */,
+				2C8EE5FD239EB7A100887599 /* UIColor+SKDarkModeColor.m */,
+			);
+			path = DartMode;
 			sourceTree = "<group>";
 		};
 		2CA91B1A238B7BDD006A46E7 /* SKAlogrithmVCInterview */ = {
@@ -371,6 +401,7 @@
 		D73A17B323595F1300C5FBF1 /* iOSTech */ = {
 			isa = PBXGroup;
 			children = (
+				2C8EE5F4239EB29700887599 /* NewFeature */,
 				D7BC7ED223604CC000A562DA /* LLdbTest */,
 				D73A17B423595F1300C5FBF1 /* RunLoop */,
 				D73A17BC23595F1300C5FBF1 /* Property */,
@@ -668,17 +699,17 @@
 			isa = PBXGroup;
 			children = (
 				D73A183C23595F1300C5FBF1 /* AppDelegate.h */,
-				D73A183D23595F1300C5FBF1 /* SKUINavigationController.h */,
-				D73A183E23595F1300C5FBF1 /* SKPersonalCenterVC.h */,
-				D73A183F23595F1300C5FBF1 /* SKPCBasicTechVC.h */,
-				D73A184023595F1300C5FBF1 /* SKAlgorithmBaseVC.m */,
-				D73A184123595F1300C5FBF1 /* SKHomePageVC.m */,
-				D73A184223595F1300C5FBF1 /* SKPersonalCenterVC.m */,
-				D73A184323595F1300C5FBF1 /* SKUINavigationController.m */,
 				D73A184423595F1300C5FBF1 /* AppDelegate.m */,
 				D73A184523595F1300C5FBF1 /* SKAlgorithmBaseVC.h */,
-				D73A184623595F1300C5FBF1 /* SKPCBasicTechVC.m */,
+				D73A184023595F1300C5FBF1 /* SKAlgorithmBaseVC.m */,
 				D73A184723595F1300C5FBF1 /* SKHomePageVC.h */,
+				D73A184123595F1300C5FBF1 /* SKHomePageVC.m */,
+				D73A183F23595F1300C5FBF1 /* SKPCBasicTechVC.h */,
+				D73A184623595F1300C5FBF1 /* SKPCBasicTechVC.m */,
+				D73A183E23595F1300C5FBF1 /* SKNewFeatureVC.h */,
+				D73A184223595F1300C5FBF1 /* SKNewFeatureVC.m */,
+				D73A183D23595F1300C5FBF1 /* SKUINavigationController.h */,
+				D73A184323595F1300C5FBF1 /* SKUINavigationController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -948,8 +979,9 @@
 				D73A187823595F1300C5FBF1 /* SSDemo.m in Sources */,
 				D73A185323595F1300C5FBF1 /* SKProprtyModel.m in Sources */,
 				D73A188923595F1300C5FBF1 /* SKPCNetworkingVC.m in Sources */,
+				2C8EE5F8239EB2CC00887599 /* SKDartModeVC.m in Sources */,
 				D73A186223595F1300C5FBF1 /* SKDelegateVC.m in Sources */,
-				D73A189123595F1300C5FBF1 /* SKPersonalCenterVC.m in Sources */,
+				D73A189123595F1300C5FBF1 /* SKNewFeatureVC.m in Sources */,
 				D73A187A23595F1300C5FBF1 /* SubDemo.m in Sources */,
 				D73A188723595F1300C5FBF1 /* ShortDemo1.m in Sources */,
 				2CA91B23238B7BDD006A46E7 /* SKReverseList.m in Sources */,
@@ -967,6 +999,7 @@
 				D73A187023595F1300C5FBF1 /* SKBlockVC.m in Sources */,
 				D79FEA9A2368411300419AEC /* SKLinkListNode.m in Sources */,
 				D73A186E23595F1300C5FBF1 /* SKKVCKVOVC.m in Sources */,
+				2C8EE5FB239EB54E00887599 /* UIView+SKDarkModeColor.m in Sources */,
 				D73A186C23595F1300C5FBF1 /* Aspects.m in Sources */,
 				D73A188623595F1300C5FBF1 /* MoreTimeTest.m in Sources */,
 				D73A186323595F1300C5FBF1 /* SKDelegateTestView.m in Sources */,
@@ -974,6 +1007,7 @@
 				D73A188823595F1300C5FBF1 /* BlockTest.m in Sources */,
 				D73A184B23595F1300C5FBF1 /* SKRunLoopObject.m in Sources */,
 				D73A188E23595F1300C5FBF1 /* main.m in Sources */,
+				2C8EE5FE239EB7A100887599 /* UIColor+SKDarkModeColor.m in Sources */,
 				D717BDBE2366CF7900D085A8 /* NSObject+SKKVO.m in Sources */,
 				D720129E23669A1D0072F534 /* SKKVOStudentModel.m in Sources */,
 				D7467B7623697E390045FA76 /* NSObject+YYModel.m in Sources */,
