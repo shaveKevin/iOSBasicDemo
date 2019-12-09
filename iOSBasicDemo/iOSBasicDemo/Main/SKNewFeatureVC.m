@@ -8,6 +8,7 @@
 
 #import "SKNewFeatureVC.h"
 #import <Masonry/Masonry.h>
+#import <SKBridging-Header-Swift.h>
 
 static NSString *const cellIdentifier = @"cellIdentifier";
 
@@ -38,6 +39,9 @@ UITableViewDelegate
     self.titles = @[].mutableCopy;
     self.classNames = @[].mutableCopy;
     [self addCellText:@"DartMode适配" class:@"SKDartModeVC"];
+    
+    [self addCellText:@"Swift混编" class:@"SKSwiftFeatureVC"];
+
     [self.tableView reloadData];
     
 }
@@ -58,6 +62,7 @@ UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *className = self.classNames[indexPath.row];
+    // OC和 swift混编的时候 如何根据这个来获得对应的类？
     Class class = NSClassFromString(className);
     if (class) {
         UIViewController *ctrl = class.new;

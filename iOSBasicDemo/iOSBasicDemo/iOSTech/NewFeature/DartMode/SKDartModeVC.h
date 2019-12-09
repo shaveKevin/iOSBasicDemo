@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+// 面试题：夜间模式你是怎么适配的？
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SKDartModeVC : UIViewController

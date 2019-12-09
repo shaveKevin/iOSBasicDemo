@@ -18,6 +18,7 @@
 		2C8EE5F8239EB2CC00887599 /* SKDartModeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5F7239EB2CC00887599 /* SKDartModeVC.m */; };
 		2C8EE5FB239EB54E00887599 /* UIView+SKDarkModeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5FA239EB54E00887599 /* UIView+SKDarkModeColor.m */; };
 		2C8EE5FE239EB7A100887599 /* UIColor+SKDarkModeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5FD239EB7A100887599 /* UIColor+SKDarkModeColor.m */; };
+		2C8EE602239EC21D00887599 /* SKSwiftFeatureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE601239EC21D00887599 /* SKSwiftFeatureVC.swift */; };
 		2CA91B21238B7BDD006A46E7 /* SKCharReverse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B1B238B7BDD006A46E7 /* SKCharReverse.m */; };
 		2CA91B23238B7BDD006A46E7 /* SKReverseList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B1D238B7BDD006A46E7 /* SKReverseList.m */; };
 		2CA91B26238B7C17006A46E7 /* SKMergeSortedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B25238B7C17006A46E7 /* SKMergeSortedArray.m */; };
@@ -118,6 +119,8 @@
 		2C8EE5FA239EB54E00887599 /* UIView+SKDarkModeColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+SKDarkModeColor.m"; sourceTree = "<group>"; };
 		2C8EE5FC239EB7A100887599 /* UIColor+SKDarkModeColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+SKDarkModeColor.h"; sourceTree = "<group>"; };
 		2C8EE5FD239EB7A100887599 /* UIColor+SKDarkModeColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SKDarkModeColor.m"; sourceTree = "<group>"; };
+		2C8EE600239EC21D00887599 /* iOSBasicDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSBasicDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		2C8EE601239EC21D00887599 /* SKSwiftFeatureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKSwiftFeatureVC.swift; sourceTree = "<group>"; };
 		2CA91B1B238B7BDD006A46E7 /* SKCharReverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKCharReverse.m; sourceTree = "<group>"; };
 		2CA91B1D238B7BDD006A46E7 /* SKReverseList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKReverseList.m; sourceTree = "<group>"; };
 		2CA91B1E238B7BDD006A46E7 /* SKCharReverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKCharReverse.h; sourceTree = "<group>"; };
@@ -345,6 +348,15 @@
 			path = DartMode;
 			sourceTree = "<group>";
 		};
+		2C8EE5FF239EC1EA00887599 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				2C8EE601239EC21D00887599 /* SKSwiftFeatureVC.swift */,
+				2C8EE600239EC21D00887599 /* iOSBasicDemo-Bridging-Header.h */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
 		2CA91B1A238B7BDD006A46E7 /* SKAlogrithmVCInterview */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +413,7 @@
 		D73A17B323595F1300C5FBF1 /* iOSTech */ = {
 			isa = PBXGroup;
 			children = (
+				2C8EE5FF239EC1EA00887599 /* Swift */,
 				2C8EE5F4239EB29700887599 /* NewFeature */,
 				D7BC7ED223604CC000A562DA /* LLdbTest */,
 				D73A17B423595F1300C5FBF1 /* RunLoop */,
@@ -828,6 +841,7 @@
 				TargetAttributes = {
 					D78EEB052333283C0001467B = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -944,6 +958,7 @@
 				D73A185223595F1300C5FBF1 /* SKSynthesizeModel.m in Sources */,
 				D7BC7ED823604DAB00A562DA /* SKLLDBTestVC.m in Sources */,
 				D79FEA9D2368419A00419AEC /* SKLinkListVC.m in Sources */,
+				2C8EE602239EC21D00887599 /* SKSwiftFeatureVC.swift in Sources */,
 				D73A186123595F1300C5FBF1 /* SKRuntimeVC.m in Sources */,
 				2CA91B21238B7BDD006A46E7 /* SKCharReverse.m in Sources */,
 				D73A185F23595F1300C5FBF1 /* SKRuntimePerson.m in Sources */,
@@ -1155,6 +1170,7 @@
 			baseConfigurationReference = 84626E54F362A1FF3FC34E56 /* Pods-iOSBasicDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M6834L34N9;
 				ENABLE_BITCODE = NO;
@@ -1170,6 +1186,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shavekevin.-";
 				PRODUCT_NAME = "练习Demo";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOSBasicDemo/iOSTech/Swift/iOSBasicDemo-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "SKBridging-Header-Swift.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 arm64e";
 			};
@@ -1180,6 +1200,7 @@
 			baseConfigurationReference = 89FB0B633FD6CEF111DF7626 /* Pods-iOSBasicDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M6834L34N9;
 				ENABLE_BITCODE = NO;
@@ -1195,6 +1216,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shavekevin.-";
 				PRODUCT_NAME = "练习Demo";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOSBasicDemo/iOSTech/Swift/iOSBasicDemo-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "SKBridging-Header-Swift.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 arm64e";
 			};
