@@ -34,9 +34,6 @@
     }
     return resultsArray;
 }
-
-
-
 - (NSArray *)findSuperView:(UIView *)view{
     // 定义所有父视图的数组
     NSMutableArray *viewOneSuperArray = [NSMutableArray array];

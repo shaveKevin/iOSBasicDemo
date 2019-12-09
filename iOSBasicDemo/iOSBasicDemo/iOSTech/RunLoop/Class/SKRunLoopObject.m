@@ -115,7 +115,7 @@
  
     每当runloop的内容发生变化时，runloop都会自动将_commonModeItems里的source/observe/timer同步到具有common标记的所有mode里。
  
-   有时候你需要一个timer，在两个mode中都能得到回调，一种方法就是将这个timer分别加入到这两个mode。还有一种方式，就是讲timer加入到顶层的runloop的commonModeItems。 这样commonModeItems被runloop自动更新到所有具有common属性的mode里去。
+   有时候你需要一个timer，在两个mode中都能得到回调，一种方法就是将这个timer分别加入到这两个mode。还有一种方式，就是将timer加入到顶层的runloop的commonModeItems。 这样commonModeItems被runloop自动更新到所有具有common属性的mode里去。
  
   可以参考链接：https://blog.csdn.net/jeffasd/article/details/52022460
  */
