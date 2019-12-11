@@ -19,6 +19,7 @@
 		2C8EE5FB239EB54E00887599 /* UIView+SKDarkModeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5FA239EB54E00887599 /* UIView+SKDarkModeColor.m */; };
 		2C8EE5FE239EB7A100887599 /* UIColor+SKDarkModeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5FD239EB7A100887599 /* UIColor+SKDarkModeColor.m */; };
 		2C8EE602239EC21D00887599 /* SKSwiftFeatureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE601239EC21D00887599 /* SKSwiftFeatureVC.swift */; };
+		2C8EE604239F494600887599 /* SwiftNameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE603239F494600887599 /* SwiftNameSpace.swift */; };
 		2CA91B21238B7BDD006A46E7 /* SKCharReverse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B1B238B7BDD006A46E7 /* SKCharReverse.m */; };
 		2CA91B23238B7BDD006A46E7 /* SKReverseList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B1D238B7BDD006A46E7 /* SKReverseList.m */; };
 		2CA91B26238B7C17006A46E7 /* SKMergeSortedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B25238B7C17006A46E7 /* SKMergeSortedArray.m */; };
@@ -121,6 +122,7 @@
 		2C8EE5FD239EB7A100887599 /* UIColor+SKDarkModeColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SKDarkModeColor.m"; sourceTree = "<group>"; };
 		2C8EE600239EC21D00887599 /* iOSBasicDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSBasicDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		2C8EE601239EC21D00887599 /* SKSwiftFeatureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKSwiftFeatureVC.swift; sourceTree = "<group>"; };
+		2C8EE603239F494600887599 /* SwiftNameSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNameSpace.swift; sourceTree = "<group>"; };
 		2CA91B1B238B7BDD006A46E7 /* SKCharReverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKCharReverse.m; sourceTree = "<group>"; };
 		2CA91B1D238B7BDD006A46E7 /* SKReverseList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKReverseList.m; sourceTree = "<group>"; };
 		2CA91B1E238B7BDD006A46E7 /* SKCharReverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKCharReverse.h; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				2C8EE601239EC21D00887599 /* SKSwiftFeatureVC.swift */,
+				2C8EE603239F494600887599 /* SwiftNameSpace.swift */,
 				2C8EE600239EC21D00887599 /* iOSBasicDemo-Bridging-Header.h */,
 			);
 			path = Swift;
@@ -521,11 +524,11 @@
 		D73A17E123595F1300C5FBF1 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				D73A17E223595F1300C5FBF1 /* SKDelegateTestView.h */,
 				D73A17E323595F1300C5FBF1 /* SKDelegateProtocal.h */,
-				D73A17E423595F1300C5FBF1 /* SKDelegateVC.m */,
+				D73A17E223595F1300C5FBF1 /* SKDelegateTestView.h */,
 				D73A17E523595F1300C5FBF1 /* SKDelegateTestView.m */,
 				D73A17E623595F1300C5FBF1 /* SKDelegateVC.h */,
+				D73A17E423595F1300C5FBF1 /* SKDelegateVC.m */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -534,14 +537,14 @@
 			isa = PBXGroup;
 			children = (
 				D73A17E823595F1300C5FBF1 /* 类继承经典图.png */,
-				D73A17E923595F1300C5FBF1 /* SKSubObject-arm64.cpp */,
-				D73A17EA23595F1300C5FBF1 /* SKObjectObject.h */,
-				D73A17EB23595F1300C5FBF1 /* SKObjectObjectVC.h */,
-				D73A17EC23595F1300C5FBF1 /* SKSubObject.m */,
 				D73A17ED23595F1300C5FBF1 /* SKObjectObject-arm64.cpp */,
-				D73A17EE23595F1300C5FBF1 /* SKObjectObjectVC.m */,
+				D73A17EA23595F1300C5FBF1 /* SKObjectObject.h */,
 				D73A17EF23595F1300C5FBF1 /* SKObjectObject.m */,
+				D73A17EB23595F1300C5FBF1 /* SKObjectObjectVC.h */,
+				D73A17EE23595F1300C5FBF1 /* SKObjectObjectVC.m */,
+				D73A17E923595F1300C5FBF1 /* SKSubObject-arm64.cpp */,
 				D73A17F023595F1300C5FBF1 /* SKSubObject.h */,
+				D73A17EC23595F1300C5FBF1 /* SKSubObject.m */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -1002,6 +1005,7 @@
 				2CA91B23238B7BDD006A46E7 /* SKReverseList.m in Sources */,
 				D73A186823595F1300C5FBF1 /* SKObjectObjectVC.m in Sources */,
 				D73A185C23595F1300C5FBF1 /* SKRuntimeWeakObject.m in Sources */,
+				2C8EE604239F494600887599 /* SwiftNameSpace.swift in Sources */,
 				D717BDE723682B7300D085A8 /* SKBasicAlogrithmVC.m in Sources */,
 				D73A189323595F1300C5FBF1 /* AppDelegate.m in Sources */,
 				2CA91B26238B7C17006A46E7 /* SKMergeSortedArray.m in Sources */,

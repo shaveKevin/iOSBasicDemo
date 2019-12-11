@@ -102,7 +102,7 @@
 // 面试题解答：能否向编译后得到的类增加实例变量？能否向运行时创建的类中添加实例变量，为什么？
 /*
      答:不能向编译后得到的类增加实例变量；能向运行时创建的类中添加实例变量。
-   因为编译后的类已经注册在runtime中，类结构体中的objc_ivar_list实例变量的丽娜表和instance_size 实例变量的内存大小已经确定，同时runtime会调用
+   因为编译后的类已经注册在runtime中，类结构体中的objc_ivar_list实例变量的列表和instance_size 实例变量的内存大小已经确定，同时runtime会调用
    class_setIvarLayout或class_setWeakivarLayout来处理strong weak引用。所以不能向存在的类添加实例变量。
     运行时创建的类是可以增加实例变量的，调用clas_addIvar函数。但是这得在调用objc_allocateClassPair之后，objc_registerPiar之前。
  */

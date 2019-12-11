@@ -31,6 +31,7 @@ UITableViewDelegate
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self initData];
+    
 }
 
 
@@ -62,7 +63,7 @@ UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *className = self.classNames[indexPath.row];
-    // OC和 swift混编的时候 如何根据这个来获得对应的类？
+    // OC和 swift混编的时候 如何根据这个来获得对应的类？  这就牵扯到命名空间了
     Class class = NSClassFromString(className);
     if (class) {
         UIViewController *ctrl = class.new;
