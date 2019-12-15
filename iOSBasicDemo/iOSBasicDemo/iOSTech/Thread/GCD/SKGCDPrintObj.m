@@ -13,7 +13,7 @@
 - (instancetype)init {
     
     if (self = [super init]) {
-        [self dispatch_semaphore];
+        [self asyncConcurrent];
     }
     return self;
 }
@@ -106,6 +106,26 @@
         dispatch_semaphore_signal(semphore);
     });
     
+}
+// 异步执行+并发队列
+- (void)asyncConcurrent {
+    // 创建并发队列 并发队列只有在异步才会有作用。否则就相当于一个串行队列  同步会卡着线程 等线程执行完之后在继续向后执行，异步不会卡线程。
+    dispatch_queue_t queue = dispatch_queue_create("com.shavekevin.test", DISPATCH_QUEUE_CONCURRENT);
+    NSLog(@"队列之前");
+    dispatch_async(queue, ^{
+        NSLog(@"任务1");
+    });
+    
+    dispatch_async(queue, ^{
+          NSLog(@"任务2");
+      });
+    
+    dispatch_async(queue, ^{
+          NSLog(@"任务3");
+      });
+    NSLog(@"队列之后");
+
+    // 执行结果 队列之前 队列之后   任务1 2 3 顺序不定   这里是开辟了新的线程。其中打印的队列之前和队列之后的结果  是因为这是在主线程中执行的。会立即执行，没有等待。在新线程中执行任务，不做等待，可以继续执行任务。
 }
 
 @end

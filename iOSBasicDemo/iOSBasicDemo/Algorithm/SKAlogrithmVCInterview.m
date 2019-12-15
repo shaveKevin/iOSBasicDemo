@@ -13,6 +13,8 @@
 #import "SKFindFirstChar.h"
 #import "SKFindCommonView.h"
 #import "SKFindMiddleCount.h"
+#import "SKSwapTwoNumber.h"
+
 // 两个大数相加
 @interface SKAlogrithmVCInterview ()
 
@@ -64,6 +66,8 @@
     [self findCommonView];
     // 无序数组中查找中位数
     [self findMiddleCount];
+    // 交换两个数
+    [self swapTwoNumber];
 }
 
 - (void)setupLayout {
@@ -122,6 +126,13 @@
     int list[9] = {12,3,10,8,6,7,11,13,9};
     int middle = findMiddleCount(list, 9);
     printf("\n middle is %d\n",middle);
+}
+
+- (void)swapTwoNumber {
+    SKSwapTwoNumber *swap = [[SKSwapTwoNumber alloc]init];
+    NSLog(@"temp = %@",[swap swapTempTwoNumber:100 number2:200]);
+    NSLog(@"add = %@",[swap swapAddTwoNumber:100 number2:200]);
+    NSLog(@"xor = %@",[swap swapXorTwoNumber:100 number2:200]);
 }
  
 @end
