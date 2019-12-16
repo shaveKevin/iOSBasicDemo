@@ -38,3 +38,23 @@
  */
 // 参考链接：iOS之LLDB常用命令  https://www.jianshu.com/p/7fb43e0b956a
   
+// 补充：
+/*
+ -ObjC, -all_load, -force_load
+ ld链接静态库的时候，只有.a中的某个.o符号被引用的时候，这个.o才会被链接器写到最后的二进制文件里，否则会被丢掉，这三个链接选项都是解决保留代码的问题。
+
+ • -ObjC 保留所有Objective C的代码
+
+ • -force_load 保留某一个静态库的全部代码
+
+ • -all_load 保留参与链接的全部的静态库代码
+ 
+ 
+ reexport
+ 假设我有个动态库A，A会链接B，我希望其他链接A动态库也能直接访问到B的符号，从而隐藏B的实现，应该怎么做呢？
+
+ 答案就是：reexport。
+
+ 这点在libSystem上体现的尤为明显，libSystem.dylib reexport了像malloc，dyld，macho等更底层动态库的符号。
+ 
+ */
