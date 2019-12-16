@@ -1,4 +1,4 @@
-# iOSInterViewBaseicDemo
+# iOSBaseicDemo
 
 基础知识练习(个人练习Demo)
 
@@ -22,5 +22,3 @@
 ### 算法
 
  * 算法
-
-### 面试题总结
