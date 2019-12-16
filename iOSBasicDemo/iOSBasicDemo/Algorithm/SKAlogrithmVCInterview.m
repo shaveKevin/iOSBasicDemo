@@ -14,6 +14,7 @@
 #import "SKFindCommonView.h"
 #import "SKFindMiddleCount.h"
 #import "SKSwapTwoNumber.h"
+#import "SKArrayFindNum.h"
 
 // 两个大数相加
 @interface SKAlogrithmVCInterview ()
@@ -68,6 +69,8 @@
     [self findMiddleCount];
     // 交换两个数
     [self swapTwoNumber];
+    // 找出有序数组中的指定值
+    [self arrayFindNum];
 }
 
 - (void)setupLayout {
@@ -135,4 +138,9 @@
     NSLog(@"xor = %@",[swap swapXorTwoNumber:100 number2:200]);
 }
  
+
+- (void)arrayFindNum {
+    SKArrayFindNum *num = [[SKArrayFindNum alloc]init];
+    
+}
 @end

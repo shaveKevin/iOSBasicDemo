@@ -15,6 +15,7 @@
 		2C5B21FC23A681BF0018EA68 /* SKSlimObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B21FB23A681BF0018EA68 /* SKSlimObj.m */; };
 		2C5B21FF23A681E40018EA68 /* SKBatteryObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B21FE23A681E40018EA68 /* SKBatteryObj.m */; };
 		2C5B220323A68C750018EA68 /* SKFPSObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B220223A68C750018EA68 /* SKFPSObj.m */; };
+		2C5B220623A7583F0018EA68 /* SKArrayFindNum.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B220523A7583F0018EA68 /* SKArrayFindNum.m */; };
 		2C66F5492397B440008A5CFC /* SKTraggedPointTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A17C223595F1300C5FBF1 /* SKTraggedPointTest.m */; };
 		2C66F54C2397B63F008A5CFC /* SKTraggedPointSubClass+SKTraggedPointSub.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66F5442397B353008A5CFC /* SKTraggedPointSubClass+SKTraggedPointSub.m */; };
 		2C66F54D2397B647008A5CFC /* SKTraggedPointTest+SKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF9D6D62397AE56007D8875 /* SKTraggedPointTest+SKCategory.m */; };
@@ -127,6 +128,8 @@
 		2C5B21FE23A681E40018EA68 /* SKBatteryObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKBatteryObj.m; sourceTree = "<group>"; };
 		2C5B220123A68C750018EA68 /* SKFPSObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKFPSObj.h; sourceTree = "<group>"; };
 		2C5B220223A68C750018EA68 /* SKFPSObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKFPSObj.m; sourceTree = "<group>"; };
+		2C5B220423A7583F0018EA68 /* SKArrayFindNum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKArrayFindNum.h; sourceTree = "<group>"; };
+		2C5B220523A7583F0018EA68 /* SKArrayFindNum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKArrayFindNum.m; sourceTree = "<group>"; };
 		2C66F5432397B353008A5CFC /* SKTraggedPointSubClass+SKTraggedPointSub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKTraggedPointSubClass+SKTraggedPointSub.h"; sourceTree = "<group>"; };
 		2C66F5442397B353008A5CFC /* SKTraggedPointSubClass+SKTraggedPointSub.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SKTraggedPointSubClass+SKTraggedPointSub.m"; sourceTree = "<group>"; };
 		2C66F54E2397B6E8008A5CFC /* SKTraggedPointTest+SKCategoryCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKTraggedPointTest+SKCategoryCategory.h"; sourceTree = "<group>"; };
@@ -469,6 +472,8 @@
 				2C17BF72238BB67200E556EF /* SKFindMiddleCount.m */,
 				2C5B21EC23A375D00018EA68 /* SKSwapTwoNumber.h */,
 				2C5B21ED23A375D00018EA68 /* SKSwapTwoNumber.m */,
+				2C5B220423A7583F0018EA68 /* SKArrayFindNum.h */,
+				2C5B220523A7583F0018EA68 /* SKArrayFindNum.m */,
 			);
 			path = SKAlogrithmVCInterview;
 			sourceTree = "<group>";
@@ -1049,6 +1054,7 @@
 				2C66F54C2397B63F008A5CFC /* SKTraggedPointSubClass+SKTraggedPointSub.m in Sources */,
 				2C66F54D2397B647008A5CFC /* SKTraggedPointTest+SKCategory.m in Sources */,
 				2CF9D6DA2397B269007D8875 /* SKTraggedPointSubClass.m in Sources */,
+				2C5B220623A7583F0018EA68 /* SKArrayFindNum.m in Sources */,
 				D73A188223595F1300C5FBF1 /* TestExpand.m in Sources */,
 				2C66F5492397B440008A5CFC /* SKTraggedPointTest.m in Sources */,
 				D73A185423595F1300C5FBF1 /* SKAutoReleaseTestObj.m in Sources */,
