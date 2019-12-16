@@ -1,3 +1,5 @@
+## 此算法repo 作废。已启用其他repo 如有开放可能。会及时通知。
+
 # AlgorithmExercise
 菜鸟开发的的算法之路
 坚持打卡
