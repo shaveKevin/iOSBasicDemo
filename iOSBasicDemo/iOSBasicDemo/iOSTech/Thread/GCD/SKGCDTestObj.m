@@ -17,7 +17,7 @@
     return self;
 }
 
-
+// 使用sync函数往当前串行队列中添加任务的时候，会产生死锁。
 // 创建串行队列
 - (void)createSerialQueue  {
     // 创建串行队列

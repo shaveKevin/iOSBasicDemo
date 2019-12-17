@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 // 查找第一次出现的只出现一次的字符
 char findFirstChar(char *cha);
 
+int firstUniqChar(char * s);
+
 @end
 
 NS_ASSUME_NONNULL_END

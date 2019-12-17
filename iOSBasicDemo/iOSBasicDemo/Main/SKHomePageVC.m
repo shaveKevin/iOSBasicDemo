@@ -48,6 +48,7 @@ UITableViewDelegate
     [self addCellText:@"对象" class:@"SKObjectObjectVC"];
     [self addCellText:@"UI" class:@"SKSegementVC"];
     [self addCellText:@"锁相关" class:@"SKLockListVC"];
+    [self addCellText:@"分类延展" class:@"SKCategoryExtentionVC"];
 
 
     

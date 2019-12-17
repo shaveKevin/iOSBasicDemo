@@ -67,4 +67,24 @@ void printNodeList(struct Node *head) {
     }
 }
 
+
+
+
+struct ListNode {
+    int val;
+   struct ListNode *next;
+};
+
+struct ListNode* reverseList(struct ListNode* head){
+    struct ListNode *p = head;
+    struct ListNode *newH = NULL;
+    while (p!= NULL) {
+        struct ListNode *temp = p->next;
+        p->next = newH;
+        newH = p;
+        p = temp;
+    }
+    return newH;
+}
+
 @end

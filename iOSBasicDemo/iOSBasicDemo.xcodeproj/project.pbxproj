@@ -16,6 +16,11 @@
 		2C5B21FF23A681E40018EA68 /* SKBatteryObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B21FE23A681E40018EA68 /* SKBatteryObj.m */; };
 		2C5B220323A68C750018EA68 /* SKFPSObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B220223A68C750018EA68 /* SKFPSObj.m */; };
 		2C5B220623A7583F0018EA68 /* SKArrayFindNum.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B220523A7583F0018EA68 /* SKArrayFindNum.m */; };
+		2C5B220A23A7D4750018EA68 /* SKBasicSortObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B220923A7D4750018EA68 /* SKBasicSortObj.m */; };
+		2C5B220D23A7D64D0018EA68 /* SKGCDObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B220C23A7D64D0018EA68 /* SKGCDObj.m */; };
+		2C5B221E23A9604C0018EA68 /* SKCategoryExtentionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B221D23A9604C0018EA68 /* SKCategoryExtentionVC.m */; };
+		2C5B222223A960990018EA68 /* SKCategoryObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B222123A960990018EA68 /* SKCategoryObj.m */; };
+		2C5B222523A960B60018EA68 /* SKCategoryObj+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B222423A960B60018EA68 /* SKCategoryObj+Category.m */; };
 		2C66F5492397B440008A5CFC /* SKTraggedPointTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A17C223595F1300C5FBF1 /* SKTraggedPointTest.m */; };
 		2C66F54C2397B63F008A5CFC /* SKTraggedPointSubClass+SKTraggedPointSub.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66F5442397B353008A5CFC /* SKTraggedPointSubClass+SKTraggedPointSub.m */; };
 		2C66F54D2397B647008A5CFC /* SKTraggedPointTest+SKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF9D6D62397AE56007D8875 /* SKTraggedPointTest+SKCategory.m */; };
@@ -130,6 +135,16 @@
 		2C5B220223A68C750018EA68 /* SKFPSObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKFPSObj.m; sourceTree = "<group>"; };
 		2C5B220423A7583F0018EA68 /* SKArrayFindNum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKArrayFindNum.h; sourceTree = "<group>"; };
 		2C5B220523A7583F0018EA68 /* SKArrayFindNum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKArrayFindNum.m; sourceTree = "<group>"; };
+		2C5B220823A7D4750018EA68 /* SKBasicSortObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKBasicSortObj.h; sourceTree = "<group>"; };
+		2C5B220923A7D4750018EA68 /* SKBasicSortObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKBasicSortObj.m; sourceTree = "<group>"; };
+		2C5B220B23A7D64D0018EA68 /* SKGCDObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKGCDObj.h; sourceTree = "<group>"; };
+		2C5B220C23A7D64D0018EA68 /* SKGCDObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKGCDObj.m; sourceTree = "<group>"; };
+		2C5B221C23A9604C0018EA68 /* SKCategoryExtentionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKCategoryExtentionVC.h; sourceTree = "<group>"; };
+		2C5B221D23A9604C0018EA68 /* SKCategoryExtentionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKCategoryExtentionVC.m; sourceTree = "<group>"; };
+		2C5B222023A960990018EA68 /* SKCategoryObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKCategoryObj.h; sourceTree = "<group>"; };
+		2C5B222123A960990018EA68 /* SKCategoryObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKCategoryObj.m; sourceTree = "<group>"; };
+		2C5B222323A960B60018EA68 /* SKCategoryObj+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKCategoryObj+Category.h"; sourceTree = "<group>"; };
+		2C5B222423A960B60018EA68 /* SKCategoryObj+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SKCategoryObj+Category.m"; sourceTree = "<group>"; };
 		2C66F5432397B353008A5CFC /* SKTraggedPointSubClass+SKTraggedPointSub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKTraggedPointSubClass+SKTraggedPointSub.h"; sourceTree = "<group>"; };
 		2C66F5442397B353008A5CFC /* SKTraggedPointSubClass+SKTraggedPointSub.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SKTraggedPointSubClass+SKTraggedPointSub.m"; sourceTree = "<group>"; };
 		2C66F54E2397B6E8008A5CFC /* SKTraggedPointTest+SKCategoryCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKTraggedPointTest+SKCategoryCategory.h"; sourceTree = "<group>"; };
@@ -413,6 +428,36 @@
 			path = FPS;
 			sourceTree = "<group>";
 		};
+		2C5B220723A7D45E0018EA68 /* SKBasicSort */ = {
+			isa = PBXGroup;
+			children = (
+				2C5B220823A7D4750018EA68 /* SKBasicSortObj.h */,
+				2C5B220923A7D4750018EA68 /* SKBasicSortObj.m */,
+			);
+			path = SKBasicSort;
+			sourceTree = "<group>";
+		};
+		2C5B221823A960050018EA68 /* CategoryExtention */ = {
+			isa = PBXGroup;
+			children = (
+				2C5B221F23A9606C0018EA68 /* Category */,
+				2C5B221C23A9604C0018EA68 /* SKCategoryExtentionVC.h */,
+				2C5B221D23A9604C0018EA68 /* SKCategoryExtentionVC.m */,
+			);
+			path = CategoryExtention;
+			sourceTree = "<group>";
+		};
+		2C5B221F23A9606C0018EA68 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				2C5B222023A960990018EA68 /* SKCategoryObj.h */,
+				2C5B222123A960990018EA68 /* SKCategoryObj.m */,
+				2C5B222323A960B60018EA68 /* SKCategoryObj+Category.h */,
+				2C5B222423A960B60018EA68 /* SKCategoryObj+Category.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		2C8EE5F4239EB29700887599 /* NewFeature */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,6 +560,7 @@
 		D73A17B323595F1300C5FBF1 /* iOSTech */ = {
 			isa = PBXGroup;
 			children = (
+				2C5B221823A960050018EA68 /* CategoryExtention */,
 				2C5B21EF23A6814B0018EA68 /* Optimization */,
 				2C8EE64123A10DC900887599 /* Lock */,
 				2C8EE5FF239EC1EA00887599 /* Swift */,
@@ -800,6 +846,7 @@
 		D73A183323595F1300C5FBF1 /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				2C5B220723A7D45E0018EA68 /* SKBasicSort */,
 				2C3FB0EC238FC1FA00AA181D /* SKTree */,
 				2CA91B1A238B7BDD006A46E7 /* SKAlogrithmVCInterview */,
 				D73A183423595F1300C5FBF1 /* SKSortAlgorithmVC.h */,
@@ -838,6 +885,8 @@
 				D73A189F2359C0FB00C5FBF1 /* SKGCDTestObj.m */,
 				D7BC7ECC235EE89A00A562DA /* SKGCDPrintObj.h */,
 				D7BC7ECD235EE89A00A562DA /* SKGCDPrintObj.m */,
+				2C5B220B23A7D64D0018EA68 /* SKGCDObj.h */,
+				2C5B220C23A7D64D0018EA68 /* SKGCDObj.m */,
 			);
 			path = GCD;
 			sourceTree = "<group>";
@@ -1049,10 +1098,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C5B220A23A7D4750018EA68 /* SKBasicSortObj.m in Sources */,
 				2C8EE64923A10E2300887599 /* SKLockListObj.m in Sources */,
 				2C66F5502397B6E8008A5CFC /* SKTraggedPointTest+SKCategoryCategory.m in Sources */,
 				2C66F54C2397B63F008A5CFC /* SKTraggedPointSubClass+SKTraggedPointSub.m in Sources */,
 				2C66F54D2397B647008A5CFC /* SKTraggedPointTest+SKCategory.m in Sources */,
+				2C5B221E23A9604C0018EA68 /* SKCategoryExtentionVC.m in Sources */,
+				2C5B220D23A7D64D0018EA68 /* SKGCDObj.m in Sources */,
 				2CF9D6DA2397B269007D8875 /* SKTraggedPointSubClass.m in Sources */,
 				2C5B220623A7583F0018EA68 /* SKArrayFindNum.m in Sources */,
 				D73A188223595F1300C5FBF1 /* TestExpand.m in Sources */,
@@ -1098,6 +1150,7 @@
 				D73A184A23595F1300C5FBF1 /* SKTimerTest.m in Sources */,
 				2C17BF73238BB67200E556EF /* SKFindMiddleCount.m in Sources */,
 				D73A18A02359C0FB00C5FBF1 /* SKGCDTestObj.m in Sources */,
+				2C5B222223A960990018EA68 /* SKCategoryObj.m in Sources */,
 				D73A184F23595F1300C5FBF1 /* SKPropertyTestModel.m in Sources */,
 				D7467B6B236975B40045FA76 /* SKKVCModel.m in Sources */,
 				D73A187223595F1300C5FBF1 /* BlockTool.m in Sources */,
@@ -1114,6 +1167,7 @@
 				D73A186823595F1300C5FBF1 /* SKObjectObjectVC.m in Sources */,
 				D73A185C23595F1300C5FBF1 /* SKRuntimeWeakObject.m in Sources */,
 				2C8EE604239F494600887599 /* SwiftNameSpace.swift in Sources */,
+				2C5B222523A960B60018EA68 /* SKCategoryObj+Category.m in Sources */,
 				D717BDE723682B7300D085A8 /* SKBasicAlogrithmVC.m in Sources */,
 				D73A189323595F1300C5FBF1 /* AppDelegate.m in Sources */,
 				2CA91B26238B7C17006A46E7 /* SKMergeSortedArray.m in Sources */,

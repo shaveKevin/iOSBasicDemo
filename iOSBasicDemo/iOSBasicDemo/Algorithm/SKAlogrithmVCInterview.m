@@ -113,6 +113,11 @@
     char cha[] = "acedssaddaaddf";
     char fc = findFirstChar(cha);
     printf("\nthis char is %c\n",fc);
+    
+    char cha1[] = "loveleetcode";
+    int num = firstUniqChar(cha1);
+    NSLog(@"%@",@(num));
+    
 }
 
 - (void)findCommonView {

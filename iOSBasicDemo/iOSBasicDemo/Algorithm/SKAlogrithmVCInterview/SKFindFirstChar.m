@@ -38,4 +38,47 @@ char  findFirstChar(char *cha) {
     return result;
 }
 
+
+
+int firstUniqChar(char * s) {
+    if (s== NULL) {
+        return -1;
+    }
+    int array[256];
+    for (int i = 0;i < 256;i ++) {
+        array[i] = 0;
+    }
+    char *p = s;
+    while (*p!= '\0') {
+        array[*(p++)]++;
+    }
+    p = s;
+    //采用while循环比for循环要高效的多。
+    while (*p!= '\0') {
+        if (array[*p] == 1) {
+            return (int)(p-s);
+        }
+        p++;
+    }
+    return -1;
+}
+
+// 求解方法大同小异 都是用hash的思想来处理
+int firstUniqCharTwo(char * s) {
+    
+    if (s==NULL) {
+        return -1;
+    }
+    int map[128] = {0};
+    for (char *p = s; *p; p++) {
+        map[*p]++;
+    }
+    for (char *p=s; *p; p++) {
+        if (map[*p] == 1) {
+            return (int)(p-s);
+        }
+    }
+    return -1;
+}
+
 @end
