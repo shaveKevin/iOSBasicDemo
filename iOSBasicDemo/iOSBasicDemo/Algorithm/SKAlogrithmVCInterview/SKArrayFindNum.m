@@ -30,7 +30,6 @@ bool findNumFromArray(int num[4][4],int row, int column,int result) {
             for (int j = 0; j < column; j++) {
                 if (num[i][j] == result) {
                     return true;
-                    break;
                 }
             }
         }

@@ -15,6 +15,7 @@
 #import "SKFindMiddleCount.h"
 #import "SKSwapTwoNumber.h"
 #import "SKArrayFindNum.h"
+#import "SKHasCycle.h"
 
 // 两个大数相加
 @interface SKAlogrithmVCInterview ()
@@ -71,6 +72,8 @@
     [self swapTwoNumber];
     // 找出有序数组中的指定值
     [self arrayFindNum];
+    // 链表中是否有环
+    [self hasCycle];
 }
 
 - (void)setupLayout {
@@ -147,5 +150,10 @@
 - (void)arrayFindNum {
     SKArrayFindNum *num = [[SKArrayFindNum alloc]init];
     
+}
+
+- (void)hasCycle{
+    SKHasCycle *cycle = [[SKHasCycle alloc]init];
+    [cycle hasCycle];
 }
 @end

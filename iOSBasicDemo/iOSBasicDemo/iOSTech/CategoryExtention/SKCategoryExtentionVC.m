@@ -38,6 +38,7 @@
 }
 
 - (void)privateMethod {
+    // 当分类和原类都有相同的方法的时候，优先执行原类方法
     SKCategoryObj *obj = [SKCategoryObj new];
 //    [obj testCategoryObjMethod];
 
