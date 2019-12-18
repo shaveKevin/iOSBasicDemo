@@ -45,4 +45,28 @@ void mergeSortedArray(int a[], int aLen, int b[], int bLen,int result[]) {
         i ++;
     }
 }
+
+void merge(int* nums1, int nums1Size, int m, int* nums2, int nums2Size, int n){
+    int p = 0;
+    int q = 0;
+    int i = 0;
+    int result[m+n];
+    while (p < m && q < n) {
+        if (nums1[p] <= nums2[q]) {
+            result[i] = nums1[p++];
+        } else {
+            result[i] = nums2[q++];
+        }
+        i++;
+    }
+    while (p<m) {
+        result[i++] = nums1[p++];
+    }
+    while (q<n) {
+        result[i++] = nums2[q++];
+    }
+    for (int i = 0; i <  sizeof(result) / sizeof(int); i++) {
+        nums1[i] = result[i];
+    }
+}
 @end

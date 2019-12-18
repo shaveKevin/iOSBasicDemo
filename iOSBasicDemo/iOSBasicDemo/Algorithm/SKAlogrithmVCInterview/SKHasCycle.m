@@ -81,4 +81,6 @@ void initLinkList(Node ** linkList) {
     (*linkList)->next = NULL;
 }
 
+
+
 @end
