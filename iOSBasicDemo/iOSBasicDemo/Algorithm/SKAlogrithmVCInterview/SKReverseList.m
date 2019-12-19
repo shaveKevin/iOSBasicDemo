@@ -87,4 +87,21 @@ struct ListNode* reverseList(struct ListNode* head){
     return newH;
 }
 
+struct  ListNode *reverseListNode (struct ListNode *head) {
+    
+    if (head == NULL || head->next == NULL) {
+        return head;
+    }
+    // 其实这个解法就相当于双向链表的前驱和后继 找到前驱和后继就可以进行指针的指向
+    struct ListNode *prevNode = NULL;
+    struct ListNode *nextNode = NULL;
+    while (head!= NULL) {
+        nextNode = head->next;
+        head->next = prevNode;
+        prevNode = head;
+        head = nextNode;
+    }
+    return prevNode;
+}
+
 @end
