@@ -9,6 +9,7 @@
 #import "SKThreadLearningVC.h"
 #import "SKGCDTestObj.h"
 #import "SKGCDPrintObj.h"
+#import "SKGCDObj.h"
 
 @interface SKThreadLearningVC ()
 
@@ -25,6 +26,8 @@
     [self setupLayout];
     [self privateMethod];
     [self threadMethodListAction];
+    
+    [self threadMethodAction];
     
 }
 
@@ -58,6 +61,10 @@
 - (void)threadMethodListAction {
     SKGCDPrintObj *printObj = [[SKGCDPrintObj alloc]init];
 
+}
+
+- (void)threadMethodAction {
+    SKGCDObj *obj = [[SKGCDObj alloc]init];
 }
 
 @end

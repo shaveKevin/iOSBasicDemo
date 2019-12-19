@@ -13,7 +13,7 @@
 - (instancetype)init {
     
     if (self = [super init]) {
-        [self threadMethod03];
+        [self threadMethod07];
     }
     return self;
 }
@@ -122,6 +122,40 @@
 }
 - (void)additionMethod {
     NSLog(@"2");
+}
+
+
+- (void)threadMethod07 {
+   // 打印结果1 然后crash。[SKGCDObj performSelector:onThread:withObject:waitUntilDone:modes:]: target thread exited while waiting for the perform'  start  。执行完block中任务的时候，线程退出。所以要想保证线程存在。就在当前线程中启用runloop。
+    // 但是如果在thread之后把当前block中任务 添加到runloop中就可以正常打印1  2
+    NSThread *thread = [[NSThread alloc]initWithBlock:^{
+        NSLog(@"1");
+        //
+        [[NSRunLoop currentRunLoop] addPort:[NSPort port] forMode:NSDefaultRunLoopMode];
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+    }];
+    [thread start];
+    [self performSelector:@selector(additionMethod) onThread:thread withObject:nil waitUntilDone:YES];
+
+}
+
+
+- (void)threadMethod08 {
+    // 实现异步执行任务1 和任务2 当任务1和任务2 都执行完毕之后 再主线程中执行任务3
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_group_async(group, queue, ^{
+        NSLog(@"任务1");
+    });
+    dispatch_group_async(group, queue, ^{
+           NSLog(@"任务2");
+       });
+    //  group中其他任务都执行完之后 才会执行notify中的任务
+    dispatch_group_notify(group, queue, ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"任务2");
+        });
+    });
 }
 
 @end
