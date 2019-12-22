@@ -10,9 +10,9 @@
 #import "SKGCDTestObj.h"
 #import "SKGCDPrintObj.h"
 #import "SKGCDObj.h"
+#import "SKGCDSafeAnalysis.h"
 
 @interface SKThreadLearningVC ()
-
 
 @end
 
@@ -28,6 +28,8 @@
     [self threadMethodListAction];
     
     [self threadMethodAction];
+    
+    [self gcdSafeAnalysis];
     
 }
 
@@ -65,6 +67,11 @@
 
 - (void)threadMethodAction {
     SKGCDObj *obj = [[SKGCDObj alloc]init];
+}
+
+- (void)gcdSafeAnalysis {
+    SKGCDSafeAnalysis *safe = [[SKGCDSafeAnalysis alloc]init];
+    
 }
 
 @end

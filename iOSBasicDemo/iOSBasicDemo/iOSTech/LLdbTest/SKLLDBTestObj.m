@@ -34,6 +34,7 @@
     9.frame select 1 如果打印有10帧  跳转到第一帧
     10.frame variable 查看帧变量
     11.image lookup -address 查找崩溃位置
+    12. si  命令   stepin  进入到方法中  假如汇编指令有一个bl跳转指令，si会单步进入bl指令的子函数内部
  
  */
 // 参考链接：iOS之LLDB常用命令  https://www.jianshu.com/p/7fb43e0b956a
