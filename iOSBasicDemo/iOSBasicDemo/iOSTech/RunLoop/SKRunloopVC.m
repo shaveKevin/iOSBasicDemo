@@ -21,6 +21,8 @@
 
 @property (nonatomic, strong) SKTimerTest  *timerTest;
 
+@property (nonatomic, copy) NSString *taskID;
+
 
 @end
 
@@ -91,7 +93,30 @@
     [pushBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     
     
+    
+    UIButton *timerBtn   = [UIButton buttonWithType:UIButtonTypeCustom];
+    [timerBtn setTitle:@"定时器1" forState:UIControlStateNormal];
+    [self.view addSubview:timerBtn];
+    [timerBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(pushBtn.mas_bottom).offset(40);
+        make.left.equalTo(terminalBtn.mas_left).offset(0);
+    }];
+    [timerBtn addTarget:self action:@selector(timerAction) forControlEvents:UIControlEventTouchUpInside];
+    [timerBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    
+    UIButton *cancelBtn   = [UIButton buttonWithType:UIButtonTypeCustom];
+    [cancelBtn setTitle:@"定时器1取消" forState:UIControlStateNormal];
+    [self.view addSubview:cancelBtn];
+    [cancelBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(pushBtn.mas_bottom).offset(40);
+        make.left.equalTo(stopBtn.mas_left).offset(0);
+    }];
+    [cancelBtn addTarget:self action:@selector(cancelAction) forControlEvents:UIControlEventTouchUpInside];
+    [cancelBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+
+    
 }
+
 
 
 - (void)pushAction {
@@ -99,6 +124,15 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (void)timerAction{
+    self.taskID = [SKTimerTest executeTask:^{
+        NSLog(@"====%@===",[NSThread currentThread]);
+    } startAt:2 timeInterval:5 repeats:YES async:NO];
+}
+
+- (void)cancelAction {
+    [SKTimerTest cancelTask:self.taskID];
+}
 - (void)setupData {
     self.timeValue = 0;
 }
@@ -185,7 +219,8 @@
 - (void)dealloc {
     
     NSLog(@"A Class === dealloc");
-
+    // 注意定时器不会主动销毁，在dealloc的时候要记得销毁
+    [SKTimerTest cancelTask:self.taskID];
     if (_schemeTimer) {
         _schemeTimer = nil;
         NSLog(@"已销毁 ===timer  %@",_schemeTimer);

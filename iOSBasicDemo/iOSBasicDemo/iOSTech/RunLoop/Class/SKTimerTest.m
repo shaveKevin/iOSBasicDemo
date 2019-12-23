@@ -24,6 +24,9 @@ static uint64_t nanos_to_abs(uint64_t nanos) {
 }
 
 
+static NSMutableDictionary *timerDict;
+static dispatch_semaphore_t semphore;
+
 @interface SKTimerTest  ()
 
 @property (nonatomic, assign) NSInteger  timeValue;
@@ -32,6 +35,7 @@ static uint64_t nanos_to_abs(uint64_t nanos) {
 
 @property(nonatomic, strong) dispatch_source_t timer;
 
+@property (nonatomic, strong) dispatch_source_t sourceTimer;
 
 @end
 
@@ -60,9 +64,19 @@ static uint64_t nanos_to_abs(uint64_t nanos) {
  NSTimer的使用范围要广泛的多，各种需要单次或者循环定时处理的任务都可以使用。
  
  总结：一般来说NSTimer已经足够用，如果想要精度高一点的可以使用gcd的或者CADisplayLink，但是CADisplayLink 有限制。刷新频率根据系统的屏幕刷新频率，这也限制了使用的场景。mach_absolute_time 这个精确度更高一点一般用于计算函数的执行时间。
+ 
+ CADisplayLink和NSTimer会对target产生强引用，如果target又对他们产生强引用，就会产生循环引用。
  */
  //
 @implementation SKTimerTest
+
++ (void)initialize {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        timerDict = [NSMutableDictionary dictionary];
+        semphore = dispatch_semaphore_create(1);
+    });
+}
 
 - (instancetype)init {
     
@@ -88,9 +102,9 @@ static uint64_t nanos_to_abs(uint64_t nanos) {
 }
 
 - (void)testGCDTimer {
-    if (self.timer) {
-          dispatch_cancel(self.timer);
-          self.timer = nil;
+    if (_timer) {
+        dispatch_source_cancel(_timer);
+          _timer = nil;
       }
     // 创建主队列
       dispatch_queue_t queue = dispatch_get_main_queue();
@@ -104,7 +118,7 @@ static uint64_t nanos_to_abs(uint64_t nanos) {
       dispatch_source_set_timer(self.timer, start, interval, 0);
       //设置定时器定时方法回调
       __weak typeof(self) weakSelf = self;
-      dispatch_source_set_event_handler(self.timer, ^{
+      dispatch_source_set_event_handler(weakSelf.timer, ^{
           //定时器需要执行的操作
           [weakSelf addMethod];
       });
@@ -148,6 +162,7 @@ void waitSeconds(int seconds) {
 }
 
 // 依然需要注意循环引用
+// 保证调用频率和屏幕的刷帧频率一致，60fps
 - (CADisplayLink *)displayLink {
     if (!_displayLink) {
         _displayLink = [CADisplayLink displayLinkWithTarget:[DSTWeakProxy proxyWithTarget:self] selector:@selector(addMethod)];
@@ -173,6 +188,44 @@ void waitSeconds(int seconds) {
 
 - (void)dealloc {
     [self endTimer];
+}
+
++ (NSString *)executeTask:(void (^)(void))action startAt:(NSTimeInterval)start timeInterval:(NSTimeInterval)timeInterval repeats:(BOOL)repeats async:(BOOL)async {
+    
+    //  如果任务不存在。开始时间小于0. 时间间隔小于0并且重复定时器，那么不创建定时器返回为空。
+    if(!action || start < 0 || (timeInterval < 0 && repeats))return nil;
+    // 创建队列
+    dispatch_queue_t queue = async?dispatch_get_global_queue(0, 0):dispatch_get_main_queue();
+    // 创建定时器
+    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+    dispatch_source_set_timer(timer,
+                              dispatch_time(DISPATCH_TIME_NOW, start * NSEC_PER_SEC),
+                              timeInterval * NSEC_PER_SEC, 0);
+    // 加锁  字典的存取都要保证安全
+    dispatch_semaphore_wait(semphore, DISPATCH_TIME_FOREVER);
+    NSString *timerID = [NSString stringWithFormat:@"%zd",timerDict.count];
+    timerDict[timerID] = timer;
+    dispatch_semaphore_signal(semphore);
+    dispatch_source_set_event_handler(timer, ^{
+        action();
+        // 如果不需要重复执行。那么就取消掉。定时器取消就是销毁。
+        if (!repeats) {
+            [self cancelTask:timerID];
+        }
+    });
+    dispatch_resume(timer);
+    return timerID;
+}
+
++ (void)cancelTask:(NSString *)taskID {
+    if (taskID.length == 0) return;
+    dispatch_semaphore_wait(semphore, DISPATCH_TIME_FOREVER);
+    dispatch_source_t timer = timerDict[taskID];
+    if (timer) {
+        dispatch_source_cancel(timer);
+    }
+    [timerDict removeObjectForKey:taskID];
+    dispatch_semaphore_signal(semphore);
 }
 
 @end
