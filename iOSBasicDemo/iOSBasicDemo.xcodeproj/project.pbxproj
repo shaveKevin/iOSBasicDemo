@@ -29,6 +29,7 @@
 		2C73916C237AAB7C005E664F /* 三次握手，四次挥手.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C73916B237AAB7C005E664F /* 三次握手，四次挥手.png */; };
 		2C7779E723AA2747007F1834 /* SKHasCycle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7779E623AA2747007F1834 /* SKHasCycle.m */; };
 		2C7779ED23ABD79E007F1834 /* SKGCDSafeAnalysis.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7779EC23ABD79E007F1834 /* SKGCDSafeAnalysis.m */; };
+		2C7779F023B0B481007F1834 /* SKGCDAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7779EF23B0B481007F1834 /* SKGCDAdditions.m */; };
 		2C8EE5F8239EB2CC00887599 /* SKDartModeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5F7239EB2CC00887599 /* SKDartModeVC.m */; };
 		2C8EE5FB239EB54E00887599 /* UIView+SKDarkModeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5FA239EB54E00887599 /* UIView+SKDarkModeColor.m */; };
 		2C8EE5FE239EB7A100887599 /* UIColor+SKDarkModeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5FD239EB7A100887599 /* UIColor+SKDarkModeColor.m */; };
@@ -158,6 +159,8 @@
 		2C7779E623AA2747007F1834 /* SKHasCycle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKHasCycle.m; sourceTree = "<group>"; };
 		2C7779EB23ABD79E007F1834 /* SKGCDSafeAnalysis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKGCDSafeAnalysis.h; sourceTree = "<group>"; };
 		2C7779EC23ABD79E007F1834 /* SKGCDSafeAnalysis.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKGCDSafeAnalysis.m; sourceTree = "<group>"; };
+		2C7779EE23B0B481007F1834 /* SKGCDAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKGCDAdditions.h; sourceTree = "<group>"; };
+		2C7779EF23B0B481007F1834 /* SKGCDAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKGCDAdditions.m; sourceTree = "<group>"; };
 		2C8EE5F6239EB2CC00887599 /* SKDartModeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKDartModeVC.h; sourceTree = "<group>"; };
 		2C8EE5F7239EB2CC00887599 /* SKDartModeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKDartModeVC.m; sourceTree = "<group>"; };
 		2C8EE5F9239EB54E00887599 /* UIView+SKDarkModeColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SKDarkModeColor.h"; sourceTree = "<group>"; };
@@ -897,6 +900,8 @@
 				2C5B220C23A7D64D0018EA68 /* SKGCDObj.m */,
 				2C7779EB23ABD79E007F1834 /* SKGCDSafeAnalysis.h */,
 				2C7779EC23ABD79E007F1834 /* SKGCDSafeAnalysis.m */,
+				2C7779EE23B0B481007F1834 /* SKGCDAdditions.h */,
+				2C7779EF23B0B481007F1834 /* SKGCDAdditions.m */,
 			);
 			path = GCD;
 			sourceTree = "<group>";
@@ -1146,6 +1151,7 @@
 				D73A189A2359968300C5FBF1 /* SKBlockLocationObj.m in Sources */,
 				D7BC7ED523604CDB00A562DA /* SKLLDBTestObj.m in Sources */,
 				2C5B220323A68C750018EA68 /* SKFPSObj.m in Sources */,
+				2C7779F023B0B481007F1834 /* SKGCDAdditions.m in Sources */,
 				D7BC7ED123604C9300A562DA /* SKIBOutletObj.m in Sources */,
 				D73A186023595F1300C5FBF1 /* NSObject+SKRuntimeAssociatedObject.m in Sources */,
 				D73A186A23595F1300C5FBF1 /* SKThreadLearningVC.m in Sources */,
