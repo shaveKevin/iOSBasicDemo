@@ -6,10 +6,10 @@
 //  Copyright © 2019 小风. All rights reserved.
 //
 
-#import "SKTraggedPointTest+SKCategoryCategory.h"
+#import "SKTaggedPointTest+SKCategoryCategory.h"
 
 
-@implementation SKTraggedPointTest (SKCategoryCategory)
+@implementation SKTaggedPointTest (SKCategoryCategory)
 +(void)load {
     NSLog(@"我是当前类分类的另一个load");
 }

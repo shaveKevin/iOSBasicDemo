@@ -31,14 +31,14 @@
 		2C7779FF23B12F34007F1834 /* SKAutoReleaseTestObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7779FC23B12F34007F1834 /* SKAutoReleaseTestObj.m */; };
 		2C777A0023B12F34007F1834 /* 对象释放时机图.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C7779FD23B12F34007F1834 /* 对象释放时机图.jpg */; };
 		2C777A0923B12FD2007F1834 /* SKSynthesizeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A0623B12FD2007F1834 /* SKSynthesizeModel.m */; };
-		2C777A1523B12FDB007F1834 /* SKTraggedPointTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A0A23B12FDB007F1834 /* SKTraggedPointTest.m */; };
-		2C777A1623B12FDC007F1834 /* SKTraggedPointTest+SKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A0C23B12FDB007F1834 /* SKTraggedPointTest+SKCategory.m */; };
-		2C777A1723B12FDC007F1834 /* SKTraggedPointTest+SKCategoryCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A0E23B12FDB007F1834 /* SKTraggedPointTest+SKCategoryCategory.m */; };
-		2C777A1823B12FDC007F1834 /* SKTraggedPointSubClass+SKTraggedPointSub.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A1023B12FDB007F1834 /* SKTraggedPointSubClass+SKTraggedPointSub.m */; };
-		2C777A1A23B12FDC007F1834 /* SKTraggedPointSubClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A1323B12FDB007F1834 /* SKTraggedPointSubClass.m */; };
 		2C777A2423B12FE3007F1834 /* SKProprtyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A1E23B12FE3007F1834 /* SKProprtyModel.m */; };
 		2C777A2623B12FE3007F1834 /* SKPropertyTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A2123B12FE3007F1834 /* SKPropertyTestModel.m */; };
 		2C777A2923B12FEB007F1834 /* SKIBOutletObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A2723B12FEB007F1834 /* SKIBOutletObj.m */; };
+		2C777A3A23B2225B007F1834 /* SKTaggedPointTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A3123B2225B007F1834 /* SKTaggedPointTest.m */; };
+		2C777A3B23B2225B007F1834 /* SKTaggedPointSubClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A3423B2225B007F1834 /* SKTaggedPointSubClass.m */; };
+		2C777A3C23B2225B007F1834 /* SKTaggedPointSubClass+SKTraggedPointSub.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A3523B2225B007F1834 /* SKTaggedPointSubClass+SKTraggedPointSub.m */; };
+		2C777A3E23B2225B007F1834 /* SKTaggedPointTest+SKCategoryCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A3723B2225B007F1834 /* SKTaggedPointTest+SKCategoryCategory.m */; };
+		2C777A3F23B2225B007F1834 /* SKTaggedPointTest+SKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A3923B2225B007F1834 /* SKTaggedPointTest+SKCategory.m */; };
 		2C8EE5F8239EB2CC00887599 /* SKDartModeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5F7239EB2CC00887599 /* SKDartModeVC.m */; };
 		2C8EE5FB239EB54E00887599 /* UIView+SKDarkModeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5FA239EB54E00887599 /* UIView+SKDarkModeColor.m */; };
 		2C8EE5FE239EB7A100887599 /* UIColor+SKDarkModeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5FD239EB7A100887599 /* UIColor+SKDarkModeColor.m */; };
@@ -169,17 +169,6 @@
 		2C777A0523B12FD2007F1834 /* SKSynthesizeModel-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKSynthesizeModel-arm64.cpp"; sourceTree = "<group>"; };
 		2C777A0623B12FD2007F1834 /* SKSynthesizeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSynthesizeModel.m; sourceTree = "<group>"; };
 		2C777A0723B12FD2007F1834 /* SKSynthesizeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSynthesizeModel.h; sourceTree = "<group>"; };
-		2C777A0A23B12FDB007F1834 /* SKTraggedPointTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTraggedPointTest.m; sourceTree = "<group>"; };
-		2C777A0B23B12FDB007F1834 /* SKTraggedPointTest+SKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKTraggedPointTest+SKCategory.h"; sourceTree = "<group>"; };
-		2C777A0C23B12FDB007F1834 /* SKTraggedPointTest+SKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKTraggedPointTest+SKCategory.m"; sourceTree = "<group>"; };
-		2C777A0D23B12FDB007F1834 /* SKTraggedPointTest+SKCategoryCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKTraggedPointTest+SKCategoryCategory.h"; sourceTree = "<group>"; };
-		2C777A0E23B12FDB007F1834 /* SKTraggedPointTest+SKCategoryCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKTraggedPointTest+SKCategoryCategory.m"; sourceTree = "<group>"; };
-		2C777A0F23B12FDB007F1834 /* SKTraggedPointSubClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTraggedPointSubClass.h; sourceTree = "<group>"; };
-		2C777A1023B12FDB007F1834 /* SKTraggedPointSubClass+SKTraggedPointSub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKTraggedPointSubClass+SKTraggedPointSub.m"; sourceTree = "<group>"; };
-		2C777A1123B12FDB007F1834 /* SKTraggedPointTest-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKTraggedPointTest-arm64.cpp"; sourceTree = "<group>"; };
-		2C777A1223B12FDB007F1834 /* SKTraggedPointTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTraggedPointTest.h; sourceTree = "<group>"; };
-		2C777A1323B12FDB007F1834 /* SKTraggedPointSubClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTraggedPointSubClass.m; sourceTree = "<group>"; };
-		2C777A1423B12FDB007F1834 /* SKTraggedPointSubClass+SKTraggedPointSub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKTraggedPointSubClass+SKTraggedPointSub.h"; sourceTree = "<group>"; };
 		2C777A1B23B12FE3007F1834 /* SKProprtyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKProprtyModel.h; sourceTree = "<group>"; };
 		2C777A1C23B12FE3007F1834 /* SKProprtyModel-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKProprtyModel-arm64.cpp"; sourceTree = "<group>"; };
 		2C777A1D23B12FE3007F1834 /* SKPropertyTestModel-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKPropertyTestModel-arm64.cpp"; sourceTree = "<group>"; };
@@ -189,6 +178,17 @@
 		2C777A2123B12FE3007F1834 /* SKPropertyTestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKPropertyTestModel.m; sourceTree = "<group>"; };
 		2C777A2723B12FEB007F1834 /* SKIBOutletObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKIBOutletObj.m; sourceTree = "<group>"; };
 		2C777A2823B12FEB007F1834 /* SKIBOutletObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKIBOutletObj.h; sourceTree = "<group>"; };
+		2C777A2F23B2225B007F1834 /* SKTaggedPointSubClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTaggedPointSubClass.h; sourceTree = "<group>"; };
+		2C777A3023B2225B007F1834 /* SKTraggedPointSubClass+SKTraggedPointSub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKTraggedPointSubClass+SKTraggedPointSub.h"; sourceTree = "<group>"; };
+		2C777A3123B2225B007F1834 /* SKTaggedPointTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTaggedPointTest.m; sourceTree = "<group>"; };
+		2C777A3223B2225B007F1834 /* SKTaggedPointTest+SKCategoryCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKTaggedPointTest+SKCategoryCategory.h"; sourceTree = "<group>"; };
+		2C777A3323B2225B007F1834 /* SKTaggedPointTest+SKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKTaggedPointTest+SKCategory.h"; sourceTree = "<group>"; };
+		2C777A3423B2225B007F1834 /* SKTaggedPointSubClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTaggedPointSubClass.m; sourceTree = "<group>"; };
+		2C777A3523B2225B007F1834 /* SKTaggedPointSubClass+SKTraggedPointSub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKTaggedPointSubClass+SKTraggedPointSub.m"; sourceTree = "<group>"; };
+		2C777A3623B2225B007F1834 /* SKTaggedPointTest-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SKTaggedPointTest-arm64.cpp"; sourceTree = "<group>"; };
+		2C777A3723B2225B007F1834 /* SKTaggedPointTest+SKCategoryCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKTaggedPointTest+SKCategoryCategory.m"; sourceTree = "<group>"; };
+		2C777A3823B2225B007F1834 /* SKTaggedPointTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTaggedPointTest.h; sourceTree = "<group>"; };
+		2C777A3923B2225B007F1834 /* SKTaggedPointTest+SKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKTaggedPointTest+SKCategory.m"; sourceTree = "<group>"; };
 		2C8EE5F6239EB2CC00887599 /* SKDartModeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKDartModeVC.h; sourceTree = "<group>"; };
 		2C8EE5F7239EB2CC00887599 /* SKDartModeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKDartModeVC.m; sourceTree = "<group>"; };
 		2C8EE5F9239EB54E00887599 /* UIView+SKDarkModeColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SKDarkModeColor.h"; sourceTree = "<group>"; };
@@ -509,24 +509,6 @@
 			path = SKSynthesize;
 			sourceTree = "<group>";
 		};
-		2C777A0223B12F4C007F1834 /* SKTraggedPoint */ = {
-			isa = PBXGroup;
-			children = (
-				2C777A0F23B12FDB007F1834 /* SKTraggedPointSubClass.h */,
-				2C777A1323B12FDB007F1834 /* SKTraggedPointSubClass.m */,
-				2C777A1423B12FDB007F1834 /* SKTraggedPointSubClass+SKTraggedPointSub.h */,
-				2C777A1023B12FDB007F1834 /* SKTraggedPointSubClass+SKTraggedPointSub.m */,
-				2C777A1123B12FDB007F1834 /* SKTraggedPointTest-arm64.cpp */,
-				2C777A1223B12FDB007F1834 /* SKTraggedPointTest.h */,
-				2C777A0A23B12FDB007F1834 /* SKTraggedPointTest.m */,
-				2C777A0B23B12FDB007F1834 /* SKTraggedPointTest+SKCategory.h */,
-				2C777A0C23B12FDB007F1834 /* SKTraggedPointTest+SKCategory.m */,
-				2C777A0D23B12FDB007F1834 /* SKTraggedPointTest+SKCategoryCategory.h */,
-				2C777A0E23B12FDB007F1834 /* SKTraggedPointTest+SKCategoryCategory.m */,
-			);
-			path = SKTraggedPoint;
-			sourceTree = "<group>";
-		};
 		2C777A0323B12F53007F1834 /* SKIBOutlet */ = {
 			isa = PBXGroup;
 			children = (
@@ -548,6 +530,24 @@
 				2C777A1E23B12FE3007F1834 /* SKProprtyModel.m */,
 			);
 			path = SKProperty;
+			sourceTree = "<group>";
+		};
+		2C777A2E23B2225B007F1834 /* SKTaggedPoint */ = {
+			isa = PBXGroup;
+			children = (
+				2C777A2F23B2225B007F1834 /* SKTaggedPointSubClass.h */,
+				2C777A3423B2225B007F1834 /* SKTaggedPointSubClass.m */,
+				2C777A3523B2225B007F1834 /* SKTaggedPointSubClass+SKTraggedPointSub.m */,
+				2C777A3623B2225B007F1834 /* SKTaggedPointTest-arm64.cpp */,
+				2C777A3823B2225B007F1834 /* SKTaggedPointTest.h */,
+				2C777A3123B2225B007F1834 /* SKTaggedPointTest.m */,
+				2C777A3323B2225B007F1834 /* SKTaggedPointTest+SKCategory.h */,
+				2C777A3923B2225B007F1834 /* SKTaggedPointTest+SKCategory.m */,
+				2C777A3223B2225B007F1834 /* SKTaggedPointTest+SKCategoryCategory.h */,
+				2C777A3723B2225B007F1834 /* SKTaggedPointTest+SKCategoryCategory.m */,
+				2C777A3023B2225B007F1834 /* SKTraggedPointSubClass+SKTraggedPointSub.h */,
+			);
+			path = SKTaggedPoint;
 			sourceTree = "<group>";
 		};
 		2C8EE5F4239EB29700887599 /* NewFeature */ = {
@@ -699,9 +699,9 @@
 		D73A17BC23595F1300C5FBF1 /* Property */ = {
 			isa = PBXGroup;
 			children = (
+				2C777A2E23B2225B007F1834 /* SKTaggedPoint */,
 				2C777A0423B12F9C007F1834 /* SKProperty */,
 				2C777A0323B12F53007F1834 /* SKIBOutlet */,
-				2C777A0223B12F4C007F1834 /* SKTraggedPoint */,
 				2C777A0123B12F3F007F1834 /* SKSynthesize */,
 				2C7779F923B12F12007F1834 /* SKAutorelease */,
 				2C7779F123B12E57007F1834 /* SKStoreage */,
@@ -1176,6 +1176,7 @@
 			files = (
 				2C5B220A23A7D4750018EA68 /* SKBasicSortObj.m in Sources */,
 				2C8EE64923A10E2300887599 /* SKLockListObj.m in Sources */,
+				2C777A3B23B2225B007F1834 /* SKTaggedPointSubClass.m in Sources */,
 				2C5B221E23A9604C0018EA68 /* SKCategoryExtentionVC.m in Sources */,
 				2C5B220D23A7D64D0018EA68 /* SKGCDObj.m in Sources */,
 				2C5B220623A7583F0018EA68 /* SKArrayFindNum.m in Sources */,
@@ -1188,14 +1189,12 @@
 				2C7779FF23B12F34007F1834 /* SKAutoReleaseTestObj.m in Sources */,
 				D7BC7ED823604DAB00A562DA /* SKLLDBTestVC.m in Sources */,
 				D79FEA9D2368419A00419AEC /* SKLinkListVC.m in Sources */,
-				2C777A1823B12FDC007F1834 /* SKTraggedPointSubClass+SKTraggedPointSub.m in Sources */,
 				2C8EE602239EC21D00887599 /* SKSwiftFeatureVC.swift in Sources */,
-				2C777A1523B12FDB007F1834 /* SKTraggedPointTest.m in Sources */,
 				D73A186123595F1300C5FBF1 /* SKRuntimeVC.m in Sources */,
 				2CA91B21238B7BDD006A46E7 /* SKCharReverse.m in Sources */,
-				2C777A1723B12FDC007F1834 /* SKTraggedPointTest+SKCategoryCategory.m in Sources */,
 				D73A185F23595F1300C5FBF1 /* SKRuntimePerson.m in Sources */,
 				2C777A0923B12FD2007F1834 /* SKSynthesizeModel.m in Sources */,
+				2C777A3F23B2225B007F1834 /* SKTaggedPointTest+SKCategory.m in Sources */,
 				2C777A2923B12FEB007F1834 /* SKIBOutletObj.m in Sources */,
 				2C777A2423B12FE3007F1834 /* SKProprtyModel.m in Sources */,
 				D73A186D23595F1300C5FBF1 /* KVOModel.m in Sources */,
@@ -1205,13 +1204,13 @@
 				2C7779E723AA2747007F1834 /* SKHasCycle.m in Sources */,
 				2CA91B2C238BA8DE006A46E7 /* SKFindCommonView.m in Sources */,
 				2C777A2623B12FE3007F1834 /* SKPropertyTestModel.m in Sources */,
-				2C777A1623B12FDC007F1834 /* SKTraggedPointTest+SKCategory.m in Sources */,
 				2C3FB0EF238FC20900AA181D /* SKSameTree.m in Sources */,
 				D73A187D23595F1300C5FBF1 /* TestModel.m in Sources */,
 				D73A189423595F1300C5FBF1 /* SKPCBasicTechVC.m in Sources */,
 				D73A187F23595F1300C5FBF1 /* NSObject+Add.m in Sources */,
 				D73A189A2359968300C5FBF1 /* SKBlockLocationObj.m in Sources */,
 				D7BC7ED523604CDB00A562DA /* SKLLDBTestObj.m in Sources */,
+				2C777A3A23B2225B007F1834 /* SKTaggedPointTest.m in Sources */,
 				2C5B220323A68C750018EA68 /* SKFPSObj.m in Sources */,
 				2C7779F023B0B481007F1834 /* SKGCDAdditions.m in Sources */,
 				D73A186023595F1300C5FBF1 /* NSObject+SKRuntimeAssociatedObject.m in Sources */,
@@ -1242,8 +1241,8 @@
 				D73A187A23595F1300C5FBF1 /* SubDemo.m in Sources */,
 				D73A188723595F1300C5FBF1 /* ShortDemo1.m in Sources */,
 				2CA91B23238B7BDD006A46E7 /* SKReverseList.m in Sources */,
-				2C777A1A23B12FDC007F1834 /* SKTraggedPointSubClass.m in Sources */,
 				D73A186823595F1300C5FBF1 /* SKObjectObjectVC.m in Sources */,
+				2C777A3C23B2225B007F1834 /* SKTaggedPointSubClass+SKTraggedPointSub.m in Sources */,
 				D73A185C23595F1300C5FBF1 /* SKRuntimeWeakObject.m in Sources */,
 				2C8EE604239F494600887599 /* SwiftNameSpace.swift in Sources */,
 				2C5B222523A960B60018EA68 /* SKCategoryObj+Category.m in Sources */,
@@ -1273,6 +1272,7 @@
 				D717BDBE2366CF7900D085A8 /* NSObject+SKKVO.m in Sources */,
 				D720129E23669A1D0072F534 /* SKKVOStudentModel.m in Sources */,
 				D7467B7623697E390045FA76 /* NSObject+YYModel.m in Sources */,
+				2C777A3E23B2225B007F1834 /* SKTaggedPointTest+SKCategoryCategory.m in Sources */,
 				2C7779F823B12E8D007F1834 /* SKStoreageObj.m in Sources */,
 				D7467B6E2369760D0045FA76 /* SKKVCTestModel.m in Sources */,
 				D73A187B23595F1300C5FBF1 /* PropertyDemo.m in Sources */,

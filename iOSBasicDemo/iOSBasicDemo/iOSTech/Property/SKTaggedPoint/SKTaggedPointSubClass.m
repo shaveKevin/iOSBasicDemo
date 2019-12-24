@@ -6,9 +6,9 @@
 //  Copyright © 2019 小风. All rights reserved.
 //
 
-#import "SKTraggedPointSubClass.h"
+#import "SKTaggedPointSubClass.h"
 
-@implementation SKTraggedPointSubClass
+@implementation SKTaggedPointSubClass
 +(void)load {
     NSLog(@"子类的load");
 }

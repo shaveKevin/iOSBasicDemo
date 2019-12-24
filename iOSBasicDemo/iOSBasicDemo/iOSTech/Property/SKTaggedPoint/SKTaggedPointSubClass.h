@@ -1,17 +1,16 @@
 //
-//  SKTraggedPointSubClass+SKTraggedPointSub.h
+//  SKTraggedPointSubClass.h
 //  iOSBasicDemo
 //
 //  Created by shavekevin on 2019/12/4.
 //  Copyright © 2019 小风. All rights reserved.
 //
 
-
-#import "SKTraggedPointSubClass.h"
+#import "SKTaggedPointTest.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SKTraggedPointSubClass (SKTraggedPointSub)
+@interface SKTaggedPointSubClass : SKTaggedPointTest
 
 @end
 

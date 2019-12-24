@@ -9,7 +9,7 @@
 #import "SKPropertyVC.h"
 #import <Masonry/Masonry.h>
 #import "SKPropertyTestModel.h"
-#import "SKTraggedPointSubClass.h"
+#import "SKTaggedPointSubClass.h"
 
 @interface SKPropertyVC ()
 
@@ -150,7 +150,7 @@ __weak id  reference = nil;
 }
 
 - (void)traggPointTest {
-    SKTraggedPointSubClass *test = [[SKTraggedPointSubClass alloc]init];
+    SKTaggedPointSubClass *test = [[SKTaggedPointSubClass alloc]init];
     
 }
 

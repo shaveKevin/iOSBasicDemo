@@ -1,5 +1,5 @@
 //
-//  SKTraggedPointTest+SKCategory.h
+//  SKTraggedPointTest+SKCategoryCategory.h
 //  iOSBasicDemo
 //
 //  Created by shavekevin on 2019/12/4.
@@ -7,11 +7,12 @@
 //
 
 
-#import "SKTraggedPointTest.h"
+
+#import "SKTaggedPointTest.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SKTraggedPointTest (SKCategory)
+@interface SKTaggedPointTest (SKCategoryCategory)
 
 @end
 

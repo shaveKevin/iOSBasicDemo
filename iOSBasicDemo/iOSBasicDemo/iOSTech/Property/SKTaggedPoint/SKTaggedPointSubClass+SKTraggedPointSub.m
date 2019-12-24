@@ -10,7 +10,7 @@
 
 
 
-@implementation SKTraggedPointSubClass (SKTraggedPointSub)
+@implementation SKTaggedPointSubClass (SKTraggedPointSub)
 +(void)load {
     NSLog(@"子类分类的load");
 }
