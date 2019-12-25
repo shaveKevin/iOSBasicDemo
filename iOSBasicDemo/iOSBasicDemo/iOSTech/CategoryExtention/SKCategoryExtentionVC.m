@@ -45,7 +45,7 @@
     u_int count = 0;
     Method *methods = class_copyMethodList([obj class], &count);
     NSInteger index = 0;
-    for (int i = count; i >0; i--) {
+    for (int i = count - 1; i >0; i--) {
         SEL name = method_getName(methods[i]);
         NSString *strName =  [NSString stringWithCString:sel_getName(name) encoding:kCFStringEncodingUTF8];
         if ([strName isEqualToString:@"testCategoryObjMethod"]) {

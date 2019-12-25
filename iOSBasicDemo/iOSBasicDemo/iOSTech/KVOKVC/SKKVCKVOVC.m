@@ -448,7 +448,7 @@ vm_size_t memory_usage(void) {
  3.如果没有找到getter方法和属性值，就报valueForUndefinedKey: 异常。
  基础setter搜索模式：
  这是setValue:forKey的默认实现，给定输入参数value和key。试图在接受调用对象的内部，设置属性名为key的value，通过下面的步骤
- 1.查找set<key>:或者_set<key>命名的setter。按照这个顺序，如果找到的话。调用这个方法并将值穿进去(根据调用的对象进行类型转换)
+ 1.查找set<key>:或者_set<key>命名的setter。按照这个顺序，如果找到的话。调用这个方法并将值传进去(根据调用的对象进行类型转换)
  2.如果设置setter 但是`accessInstanceVariablesDirectly`返回为yes，那么查找的命名规则为 _<key>  _is<key> <key> is<key>的实例变量。根据这个顺序将发现则将value赋值给实例变量。
  3.如果没有发现setter或实例变量，则调用setValueForUndefinedKey:方法。并抛出一个异常。
  由此可以看出：kvc的性能访问属性并没有直接访问的快(因为他要有按照搜索规则进行搜索) 本质上是操作方法列表以及在内存中去查找实例变量。这个操作对readonley以及protected成员变量，都可以正常访问。如果不想外界访问的话可以将accessInstanceVariablesDirectly设置为NO。

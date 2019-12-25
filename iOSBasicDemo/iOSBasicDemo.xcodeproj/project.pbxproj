@@ -39,13 +39,12 @@
 		2C777A3C23B2225B007F1834 /* SKTaggedPointSubClass+SKTraggedPointSub.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A3523B2225B007F1834 /* SKTaggedPointSubClass+SKTraggedPointSub.m */; };
 		2C777A3E23B2225B007F1834 /* SKTaggedPointTest+SKCategoryCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A3723B2225B007F1834 /* SKTaggedPointTest+SKCategoryCategory.m */; };
 		2C777A3F23B2225B007F1834 /* SKTaggedPointTest+SKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A3923B2225B007F1834 /* SKTaggedPointTest+SKCategory.m */; };
+		2C777A4223B36C59007F1834 /* SKRuntimeObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A4123B36C59007F1834 /* SKRuntimeObj.m */; };
 		2C8EE5F8239EB2CC00887599 /* SKDartModeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5F7239EB2CC00887599 /* SKDartModeVC.m */; };
 		2C8EE5FB239EB54E00887599 /* UIView+SKDarkModeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5FA239EB54E00887599 /* UIView+SKDarkModeColor.m */; };
 		2C8EE5FE239EB7A100887599 /* UIColor+SKDarkModeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5FD239EB7A100887599 /* UIColor+SKDarkModeColor.m */; };
 		2C8EE602239EC21D00887599 /* SKSwiftFeatureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE601239EC21D00887599 /* SKSwiftFeatureVC.swift */; };
 		2C8EE604239F494600887599 /* SwiftNameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE603239F494600887599 /* SwiftNameSpace.swift */; };
-		2C8EE64623A10DF800887599 /* SKLockListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE64523A10DF800887599 /* SKLockListVC.m */; };
-		2C8EE64923A10E2300887599 /* SKLockListObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE64823A10E2300887599 /* SKLockListObj.m */; };
 		2CA91B21238B7BDD006A46E7 /* SKCharReverse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B1B238B7BDD006A46E7 /* SKCharReverse.m */; };
 		2CA91B23238B7BDD006A46E7 /* SKReverseList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B1D238B7BDD006A46E7 /* SKReverseList.m */; };
 		2CA91B26238B7C17006A46E7 /* SKMergeSortedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B25238B7C17006A46E7 /* SKMergeSortedArray.m */; };
@@ -189,6 +188,8 @@
 		2C777A3723B2225B007F1834 /* SKTaggedPointTest+SKCategoryCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKTaggedPointTest+SKCategoryCategory.m"; sourceTree = "<group>"; };
 		2C777A3823B2225B007F1834 /* SKTaggedPointTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTaggedPointTest.h; sourceTree = "<group>"; };
 		2C777A3923B2225B007F1834 /* SKTaggedPointTest+SKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKTaggedPointTest+SKCategory.m"; sourceTree = "<group>"; };
+		2C777A4023B36C59007F1834 /* SKRuntimeObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKRuntimeObj.h; sourceTree = "<group>"; };
+		2C777A4123B36C59007F1834 /* SKRuntimeObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKRuntimeObj.m; sourceTree = "<group>"; };
 		2C8EE5F6239EB2CC00887599 /* SKDartModeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKDartModeVC.h; sourceTree = "<group>"; };
 		2C8EE5F7239EB2CC00887599 /* SKDartModeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKDartModeVC.m; sourceTree = "<group>"; };
 		2C8EE5F9239EB54E00887599 /* UIView+SKDarkModeColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SKDarkModeColor.h"; sourceTree = "<group>"; };
@@ -198,10 +199,6 @@
 		2C8EE600239EC21D00887599 /* iOSBasicDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSBasicDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		2C8EE601239EC21D00887599 /* SKSwiftFeatureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKSwiftFeatureVC.swift; sourceTree = "<group>"; };
 		2C8EE603239F494600887599 /* SwiftNameSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNameSpace.swift; sourceTree = "<group>"; };
-		2C8EE64423A10DF800887599 /* SKLockListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKLockListVC.h; sourceTree = "<group>"; };
-		2C8EE64523A10DF800887599 /* SKLockListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKLockListVC.m; sourceTree = "<group>"; };
-		2C8EE64723A10E2300887599 /* SKLockListObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKLockListObj.h; sourceTree = "<group>"; };
-		2C8EE64823A10E2300887599 /* SKLockListObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKLockListObj.m; sourceTree = "<group>"; };
 		2CA91B1B238B7BDD006A46E7 /* SKCharReverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKCharReverse.m; sourceTree = "<group>"; };
 		2CA91B1D238B7BDD006A46E7 /* SKReverseList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKReverseList.m; sourceTree = "<group>"; };
 		2CA91B1E238B7BDD006A46E7 /* SKCharReverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKCharReverse.h; sourceTree = "<group>"; };
@@ -581,17 +578,6 @@
 			path = Swift;
 			sourceTree = "<group>";
 		};
-		2C8EE64123A10DC900887599 /* Lock */ = {
-			isa = PBXGroup;
-			children = (
-				2C8EE64423A10DF800887599 /* SKLockListVC.h */,
-				2C8EE64523A10DF800887599 /* SKLockListVC.m */,
-				2C8EE64723A10E2300887599 /* SKLockListObj.h */,
-				2C8EE64823A10E2300887599 /* SKLockListObj.m */,
-			);
-			path = Lock;
-			sourceTree = "<group>";
-		};
 		2CA91B1A238B7BDD006A46E7 /* SKAlogrithmVCInterview */ = {
 			isa = PBXGroup;
 			children = (
@@ -656,7 +642,6 @@
 			children = (
 				2C5B221823A960050018EA68 /* CategoryExtention */,
 				2C5B21EF23A6814B0018EA68 /* Optimization */,
-				2C8EE64123A10DC900887599 /* Lock */,
 				2C8EE5FF239EC1EA00887599 /* Swift */,
 				2C8EE5F4239EB29700887599 /* NewFeature */,
 				D7BC7ED223604CC000A562DA /* LLdbTest */,
@@ -665,7 +650,7 @@
 				D73A17D023595F1300C5FBF1 /* Runtime */,
 				D73A17E123595F1300C5FBF1 /* Delegate */,
 				D73A17E723595F1300C5FBF1 /* Object */,
-				D73A17F123595F1300C5FBF1 /* Thread */,
+				D73A17F123595F1300C5FBF1 /* Thread&Lock */,
 				D73A17F423595F1300C5FBF1 /* Aspects */,
 				D73A17F923595F1300C5FBF1 /* KVOKVC */,
 				D73A17FE23595F1300C5FBF1 /* Block */,
@@ -736,6 +721,8 @@
 				D73A17DD23595F1300C5FBF1 /* SKRuntimePerson.m */,
 				D73A17D323595F1300C5FBF1 /* SKRuntimeWeakObject.h */,
 				D73A17DA23595F1300C5FBF1 /* SKRuntimeWeakObject.m */,
+				2C777A4023B36C59007F1834 /* SKRuntimeObj.h */,
+				2C777A4123B36C59007F1834 /* SKRuntimeObj.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -768,14 +755,14 @@
 			path = Object;
 			sourceTree = "<group>";
 		};
-		D73A17F123595F1300C5FBF1 /* Thread */ = {
+		D73A17F123595F1300C5FBF1 /* Thread&Lock */ = {
 			isa = PBXGroup;
 			children = (
 				D73A17F223595F1300C5FBF1 /* SKThreadLearningVC.h */,
 				D73A17F323595F1300C5FBF1 /* SKThreadLearningVC.m */,
 				D73A189D2359C0D900C5FBF1 /* GCD */,
 			);
-			path = Thread;
+			path = "Thread&Lock";
 			sourceTree = "<group>";
 		};
 		D73A17F423595F1300C5FBF1 /* Aspects */ = {
@@ -1175,7 +1162,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C5B220A23A7D4750018EA68 /* SKBasicSortObj.m in Sources */,
-				2C8EE64923A10E2300887599 /* SKLockListObj.m in Sources */,
 				2C777A3B23B2225B007F1834 /* SKTaggedPointSubClass.m in Sources */,
 				2C5B221E23A9604C0018EA68 /* SKCategoryExtentionVC.m in Sources */,
 				2C5B220D23A7D64D0018EA68 /* SKGCDObj.m in Sources */,
@@ -1184,7 +1170,6 @@
 				D73A189223595F1300C5FBF1 /* SKUINavigationController.m in Sources */,
 				D73A188023595F1300C5FBF1 /* NSObject+Addition.m in Sources */,
 				D73A188F23595F1300C5FBF1 /* SKAlgorithmBaseVC.m in Sources */,
-				2C8EE64623A10DF800887599 /* SKLockListVC.m in Sources */,
 				2C7779ED23ABD79E007F1834 /* SKGCDSafeAnalysis.m in Sources */,
 				2C7779FF23B12F34007F1834 /* SKAutoReleaseTestObj.m in Sources */,
 				D7BC7ED823604DAB00A562DA /* SKLLDBTestVC.m in Sources */,
@@ -1197,6 +1182,7 @@
 				2C777A3F23B2225B007F1834 /* SKTaggedPointTest+SKCategory.m in Sources */,
 				2C777A2923B12FEB007F1834 /* SKIBOutletObj.m in Sources */,
 				2C777A2423B12FE3007F1834 /* SKProprtyModel.m in Sources */,
+				2C777A4223B36C59007F1834 /* SKRuntimeObj.m in Sources */,
 				D73A186D23595F1300C5FBF1 /* KVOModel.m in Sources */,
 				D73A184923595F1300C5FBF1 /* SKRunloopVC.m in Sources */,
 				2C5B21EE23A375D00018EA68 /* SKSwapTwoNumber.m in Sources */,

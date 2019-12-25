@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 // 面试题:3.不手动指定autoreleasepool的前提下，一个autorealese对象在什么时刻释放？（比如在一个vc的viewDidLoad中创建）
 // 面试题:4.苹果是如何实现autoreleasepool的？
 // 面试题:5.什么时候需要使用autoreleaseopool来解决问题？用来解决什么问题？
-
+// 面试题:6. 数组的初始化 alloc init 和 array 有什么区别？
 @interface SKAutoReleaseTestObj : NSObject
 
 @end

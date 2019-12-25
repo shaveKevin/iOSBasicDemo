@@ -22,6 +22,8 @@
         [array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             // 这里被一个局部@autoreleasepool包围着---- （这个没发现那里来的)
             NSLog(@"纳尼");
+            
+          
         }];
         
     }
@@ -272,3 +274,49 @@
  ```
  
  */
+
+
+/*
+ self.dataArray =   [NSMutableArray array];
+     self.dataArray =   [[NSMutableArray alloc]init];
+ 两个不同的是 在底层实现的mrc中 [NSMutableArray array] = [[[NSMutableArray alloc]init]autorelease]   在array方法中自己添加了autorelease方法。
+ */
+
+// 可以通过以下私有函数来查看自动释放池的情况  extern void _objc_autoreleasePoolPrint(void);
+
+/*
+ 补充：在64bit中，引用计数可以直接存储在优化过的isa指针中，也可能存储在SideTable类中
+ struct SideTable {
+     spinlock_t slock;
+     RefouuntMap refcnts;
+     weak_table_t  weak_table;
+ };
+ refcnts是一个存放着对象引用计数的散列表
+ 
+ 当一个对象要释放时，会自动调用dealloc，接下的调用轨迹是
+ dealloc
+ _objc_rootDealloc
+ rootDealloc
+ object_dispose
+ objc_destructInstance、free
+ 
+ 自动释放池
+ 自动释放池的主要底层数据结构是：__AtAutoreleasePool、AutoreleasePoolPage
+
+ 调用了autorelease的对象最终都是通过AutoreleasePoolPage对象来管理的
+源码分析：clang @autoreleasepool
+objc4源码：NSObject.mm
+每个AutoreleasePoolPage对象占用4096字节内存，除了用来存放它内部的成员变量，剩下的空间用来存放autorelease对象的地址
+ 所有的AutoreleasePoolPage对象通过双向链表的形式连接在一起
+ 调用push方法会将一个POOL_BOUNDARY入栈，并且返回其存放的内存地址
+ 调用pop方法时传入一个POOL_BOUNDARY的内存地址，会从最后一个入栈的对象开始发送release消息，直到遇到这个POOL_BOUNDARY
+id *next指向了下一个能存放autorelease对象地址的区域
+Runloop和Autorelease
+iOS在主线程的Runloop中注册了2个Observer
+第1个Observer监听了kCFRunLoopEntry事件，会调用objc_autoreleasePoolPush()
+第2个Observer
+监听了kCFRunLoopBeforeWaiting事件，会调用objc_autoreleasePoolPop()、objc_autoreleasePoolPush()
+监听了kCFRunLoopBeforeExit事件，会调用objc_autoreleasePoolPop()
+ */
+
+
