@@ -137,5 +137,38 @@
 * 你认为你在众多面试者中脱颖而出的理由是什么？
 * 用五个词来概括下自己。
 
+## 面试题补充-来自大灰灰大佬
+
+* 结构体的字节对齐和OC对象的字节对齐？
+* instance（实例对象）、class（类对象）、meta-class（元类对象）分别储存了什么信息？为什么要设计元类？
+* KVO的具体实现流程？访问成员变量（类似self->age）会触发KVO嘛？KVC会触发KVO嘛？KVO的两个核心调用方法是？
+* KVC的原理？getter 和 setter 的搜索策略是什么？KVC 有什么实际的应用？
+*  Catagory 和 extension 分别的使用场合和特点是什么？
+*  Catagory 的实现原理是什么？Catagory 有哪些用处？Catagory 有什么局限？
+* Class 和 他的 Catagory 同名方法的调用顺序是什么？Catagory A 和 Catagory B 同名方法的调用顺序是如何？如果想要不按照系统顺序执行要怎么做？
+* +load 和 +initialize 的调用时机和顺序？两者区别是什么？
+* Catagory 有 +load 方法么？+load 是什么时候调用的？能继承么？会覆盖Class 的 +load 么？
+* Catagory关联对象（AssociateObject）的底层实现是什么？
+* block 的本质是什么？block 的底层实现是怎样的？block 的变量捕获是什么原理？block 的类型有哪些？什么情况下会把栈上的 block 赋值到堆上？
+（block 我真的好多都没记住啊...）
+* isa 指针是什么？里面有哪些特殊的位数？什么是TaggedPointer的优化？
+* class 的底层结构是什么样的？
+* method_t 里包含什么？
+* super 的本质是什么？
+* OC的消息机制有几步？
+* 如何防止类似 unrecognized selector 的错误？_objc_msgForward能干什么？
+* runtime 有哪些应用？方法替换（method - Swizzling）有什么缺点？如何安全的进行方法替换？
+* RunLoop 的本质是什么？
+* Runloop和线程是什么关系？
+* Runloop的底层数据结构是什么样的？有几种 运行模式（mode）？每个运行模式下面的 CFRunloopMode 是哪些？他们分别是什么职责？
+* Runloop 的监听状态有哪几种？
+* Runloop 的工作流程大概是什么样的？
+* Runloop 有哪些应用？
+* 多线程，异步执行（async）一个performSelector 会执行么？如果加上 afterDelay呢？
+* 你知道 iOS 有哪些锁？性能分别怎么样？
+* 自旋锁和互斥锁怎么选择？
+* 引用计数怎么实现的？weak怎么实现的？sideTable的 底层结构是怎么样的？ weak指针做了什么操作？
+* AutoReleasePool（自动释放池） 的底层实现是什么？他怎么实现及时释放的？子线程的释放时机是怎么样的？
+* 对象的 release 是怎么处理的？
 
 
