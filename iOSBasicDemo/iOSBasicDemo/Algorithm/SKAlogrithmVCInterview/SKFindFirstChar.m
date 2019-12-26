@@ -38,8 +38,6 @@ char  findFirstChar(char *cha) {
     return result;
 }
 
-
-
 int firstUniqChar(char * s) {
     if (s== NULL) {
         return -1;

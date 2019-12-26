@@ -12,6 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SKBasicSortObj : NSObject
 
+
+/**
+ 冒泡排序
+ 时间复杂度：O(n^2)
+ */
+void bubbldSort (int array[_Nonnull],int length);
+
 @end
 
 NS_ASSUME_NONNULL_END

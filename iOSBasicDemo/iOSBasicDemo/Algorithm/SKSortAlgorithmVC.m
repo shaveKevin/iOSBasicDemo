@@ -7,8 +7,11 @@
 //
 
 #import "SKSortAlgorithmVC.h"
+#import "SKBasicSortObj.h"
 
 @interface SKSortAlgorithmVC ()
+
+//@property (nonatomic, strong) SKBasicSortObj *sortObj;
 
 @end
 

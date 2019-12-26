@@ -10,4 +10,21 @@
 
 @implementation SKBasicSortObj
 
+/**
+冒泡排序
+时间复杂度：O(n^2)
+*/
+void bubbldSort (int array[],int length) {
+    int  temp = 0;
+    for (int i = 0; i < length; i ++) {
+        for (int j = 0; j < length -1; j++) {
+            if (array[i]< array[j]) {
+                temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+    }
+}
+
 @end
