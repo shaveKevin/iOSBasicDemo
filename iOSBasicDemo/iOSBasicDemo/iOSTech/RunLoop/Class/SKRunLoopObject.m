@@ -45,6 +45,7 @@
 - (void)printLogRef {
     self.timerNumber++;
     NSLog(@"==========%@===============",@(self.timerNumber));
+ 
 }
 
 
@@ -82,10 +83,25 @@
  ```
   重点是这个UIApplicationMain()函数，这个方法会为main thread 设置一个NSRunLoop对象，这就解释了：为什么我们可以应用在无人操作的时候休息。需要它干活的时候又能马上响应。
  
-   2.对于其他线程来说，runloop默认是没有启动的。如果你需要更多的线程交互则可以手动配置和启动。如果线程只是去执行长时间的已确定的任务则不需要。
+   2.对于其他线程来说，runloop默认是没有启动的。在第一次获取的时候创建。如果你需要更多的线程交互则可以手动配置和启动。如果线程只是去执行长时间的已确定的任务则不需要。
  
    3.在任何一个cocoa程序的线程中，都可以通过下面的代码来获取当前线程的runloop
    `NSRunLoop *currentLoop = [NSRunLoop currentRunLoop];`
+   4.runloop会现在线程结束的时候销毁。
+ 
+ 附加：
+ runloop保存在一个全局的dictionary中，线程作为key，runloop作为value。
+ 与runloop相关的有五个类
+ cfRunloopref
+ cfrunloopmoderef
+ cfrunloopsourceref
+ cfrunlooptimerref
+ cfrunloopobserverref
+ 
+ 
+ CFRunloopModeRef代表了Runloop的运行模式。
+ 一个runloop包含若干个Mode
+
  
 参考链接：
         Objective-C之run loop详解:https://blog.csdn.net/wzzvictory/article/details/9237973
@@ -168,5 +184,46 @@
  可参考： CFRunLoop https://github.com/ming1016/study/wiki/CFRunLoop
          RunLoop源码学习  https://blog.csdn.net/M316625387/article/details/83178369
  */
+// runloop基本作用：
+/*
+ 答: 保持程序的持续运行
+    处理app的各种事件
+    节省cpu资源，提高程序的性能：该做事的时候做事，该休息的时候休息。
+ // 获取当前runloop对象
+  NSRunLoop *runloop = [NSRunLoop currentRunLoop];
+  CFRunLoopRef runloopRef = CFRunLoopGetCurrent();
+ */
 
-
+//
+/* __CFRunLoopMode 源码
+ struct __CFRunLoopMode {
+     CFRuntimeBase _base;
+     pthread_mutex_t _lock;
+     CFStringRef _name;
+     Boolean _stopped;
+     char _padding[3];
+     CFMutableSetRef _sources0;
+     CFMutableSetRef _sources1;
+     CFMutableArrayRef _observers;
+     CFMutableArrayRef _timers;
+     CFMutableDictionaryRef _portToV1SourceMap;
+     __CFPortSet _portSet;
+     CFIndex _observerMask;
+ #if USE_DISPATCH_SOURCE_FOR_TIMERS
+     dispatch_source_t _timerSource;
+     dispatch_queue_t _queue;
+     Boolean _timerFired; // set to true by the source when a timer has fired
+     Boolean _dispatchTimerArmed;
+ #endif
+ #if USE_MK_TIMER_TOO
+     mach_port_t _timerPort;
+     Boolean _mkTimerArmed;
+ #endif
+ #if DEPLOYMENT_TARGET_WINDOWS
+     DWORD _msgQMask;
+     void (*_msgPump)(void);
+ #endif
+     uint64_t _timerSoftDeadline;
+     uint64_t _timerHardDeadline;
+ };
+ */
