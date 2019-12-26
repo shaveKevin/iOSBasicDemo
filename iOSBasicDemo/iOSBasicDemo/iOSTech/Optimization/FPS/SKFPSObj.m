@@ -20,7 +20,6 @@
    平时所说的“卡顿”主要是因为在主线程执行了比较耗时的操作
     可以添加Observer到主线程RunLoop中，通过监听RunLoop状态切换的耗时，以达到监控卡顿的目的
  
- 
  CPU 优化：
  1.尽量用轻量级的对象，比如用不到事件处理的地方，可以考虑使用CALayer取代UIView
  2.不要频繁地调用UIView的相关属性，比如frame、bounds、transform等属性，尽量减少不必要的修改
@@ -35,9 +34,6 @@ GPU优化：
  3.尽量减少视图数量和层次
  4.减少透明的视图（alpha<1），不透明的就设置opaque为YES
  5.尽量避免出现离屏渲染
-
- 
-
 
  */
 // cpu和gpu相关
@@ -66,9 +62,5 @@ Off-Screen Rendering：离屏渲染，在当前屏幕缓冲区以外新开辟一
  3.圆角，同时设置layer.masksToBounds = YES、layer.cornerRadius大于0（考虑通过CoreGraphics绘制裁剪圆角，或者叫美工提供圆角图片
 ）
  4.阴影，layer.shadowXXX(如果设置了layer.shadowPath就不会产生离屏渲染)
-
-
- 
-
  */
 

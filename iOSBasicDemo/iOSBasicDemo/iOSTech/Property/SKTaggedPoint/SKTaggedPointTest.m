@@ -18,15 +18,10 @@
 
 + (void)load {
     NSLog(@"当前类的load");
-    
-   
-
-    
 }
 
 + (void)initialize {
     NSLog(@"当前类的initialize");
-
 }
 
 - (instancetype)init {
