@@ -41,6 +41,8 @@
 		2C777A3F23B2225B007F1834 /* SKTaggedPointTest+SKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A3923B2225B007F1834 /* SKTaggedPointTest+SKCategory.m */; };
 		2C777A4223B36C59007F1834 /* SKRuntimeObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A4123B36C59007F1834 /* SKRuntimeObj.m */; };
 		2C777B8C23B4F6A9007F1834 /* SKAliveThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777B8B23B4F6A9007F1834 /* SKAliveThread.m */; };
+		2C777B9323B50897007F1834 /* LXDBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777B8F23B50897007F1834 /* LXDBacktraceLogger.m */; };
+		2C777B9423B50897007F1834 /* LXDAppFluecyMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777B9223B50897007F1834 /* LXDAppFluecyMonitor.m */; };
 		2C8EE5F8239EB2CC00887599 /* SKDartModeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5F7239EB2CC00887599 /* SKDartModeVC.m */; };
 		2C8EE5FB239EB54E00887599 /* UIView+SKDarkModeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5FA239EB54E00887599 /* UIView+SKDarkModeColor.m */; };
 		2C8EE5FE239EB7A100887599 /* UIColor+SKDarkModeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5FD239EB7A100887599 /* UIColor+SKDarkModeColor.m */; };
@@ -193,6 +195,10 @@
 		2C777A4123B36C59007F1834 /* SKRuntimeObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKRuntimeObj.m; sourceTree = "<group>"; };
 		2C777B8A23B4F6A9007F1834 /* SKAliveThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKAliveThread.h; sourceTree = "<group>"; };
 		2C777B8B23B4F6A9007F1834 /* SKAliveThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKAliveThread.m; sourceTree = "<group>"; };
+		2C777B8F23B50897007F1834 /* LXDBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDBacktraceLogger.m; sourceTree = "<group>"; };
+		2C777B9023B50897007F1834 /* LXDBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDBacktraceLogger.h; sourceTree = "<group>"; };
+		2C777B9123B50897007F1834 /* LXDAppFluecyMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDAppFluecyMonitor.h; sourceTree = "<group>"; };
+		2C777B9223B50897007F1834 /* LXDAppFluecyMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDAppFluecyMonitor.m; sourceTree = "<group>"; };
 		2C8EE5F6239EB2CC00887599 /* SKDartModeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKDartModeVC.h; sourceTree = "<group>"; };
 		2C8EE5F7239EB2CC00887599 /* SKDartModeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKDartModeVC.m; sourceTree = "<group>"; };
 		2C8EE5F9239EB54E00887599 /* UIView+SKDarkModeColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SKDarkModeColor.h"; sourceTree = "<group>"; };
@@ -434,6 +440,7 @@
 		2C5B220023A68C5A0018EA68 /* FPS */ = {
 			isa = PBXGroup;
 			children = (
+				2C777B8D23B50897007F1834 /* LXDAppFluecyMonitor */,
 				2C5B220123A68C750018EA68 /* SKFPSObj.h */,
 				2C5B220223A68C750018EA68 /* SKFPSObj.m */,
 			);
@@ -548,6 +555,25 @@
 				2C777A3023B2225B007F1834 /* SKTraggedPointSubClass+SKTraggedPointSub.h */,
 			);
 			path = SKTaggedPoint;
+			sourceTree = "<group>";
+		};
+		2C777B8D23B50897007F1834 /* LXDAppFluecyMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				2C777B8E23B50897007F1834 /* Backtrace */,
+				2C777B9123B50897007F1834 /* LXDAppFluecyMonitor.h */,
+				2C777B9223B50897007F1834 /* LXDAppFluecyMonitor.m */,
+			);
+			path = LXDAppFluecyMonitor;
+			sourceTree = "<group>";
+		};
+		2C777B8E23B50897007F1834 /* Backtrace */ = {
+			isa = PBXGroup;
+			children = (
+				2C777B8F23B50897007F1834 /* LXDBacktraceLogger.m */,
+				2C777B9023B50897007F1834 /* LXDBacktraceLogger.h */,
+			);
+			path = Backtrace;
 			sourceTree = "<group>";
 		};
 		2C8EE5F4239EB29700887599 /* NewFeature */ = {
@@ -1174,6 +1200,7 @@
 				D73A188223595F1300C5FBF1 /* TestExpand.m in Sources */,
 				D73A189223595F1300C5FBF1 /* SKUINavigationController.m in Sources */,
 				D73A188023595F1300C5FBF1 /* NSObject+Addition.m in Sources */,
+				2C777B9323B50897007F1834 /* LXDBacktraceLogger.m in Sources */,
 				D73A188F23595F1300C5FBF1 /* SKAlgorithmBaseVC.m in Sources */,
 				2C7779ED23ABD79E007F1834 /* SKGCDSafeAnalysis.m in Sources */,
 				2C7779FF23B12F34007F1834 /* SKAutoReleaseTestObj.m in Sources */,
@@ -1206,6 +1233,7 @@
 				2C5B220323A68C750018EA68 /* SKFPSObj.m in Sources */,
 				2C7779F023B0B481007F1834 /* SKGCDAdditions.m in Sources */,
 				D73A186023595F1300C5FBF1 /* NSObject+SKRuntimeAssociatedObject.m in Sources */,
+				2C777B9423B50897007F1834 /* LXDAppFluecyMonitor.m in Sources */,
 				D73A186A23595F1300C5FBF1 /* SKThreadLearningVC.m in Sources */,
 				D73A188B23595F1300C5FBF1 /* SKSortAlgorithmVC.m in Sources */,
 				D7BC7ECE235EE89A00A562DA /* SKGCDPrintObj.m in Sources */,
