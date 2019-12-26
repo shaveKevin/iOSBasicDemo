@@ -61,6 +61,111 @@
 - (void)asycTimerAction {
     
 }
+
+// 添加observer监听runloop的所有状态
+- (void)runloopAddobserve {
+    //创建
+    CFRunLoopObserverRef oberver = CFRunLoopObserverCreate(kCFAllocatorDefault, kCFRunLoopAllActivities, YES, 0, CFRunLoopObserverCallBackMethod, NULL);
+    //添加观察者
+    CFRunLoopAddObserver(CFRunLoopGetMain(), oberver, kCFRunLoopCommonModes);
+    // 释放观察者
+    CFRelease(oberver);
+    
+}
+
+- (void)runloopAddobserveMethod {
+    CFRunLoopObserverRef oberver = CFRunLoopObserverCreateWithHandler(kCFAllocatorDefault, kCFRunLoopAllActivities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
+        switch (activity) {
+             case kCFRunLoopEntry:
+             {
+                 NSLog(@"kCFRunLoopEntry");
+                 // c语言copy和create出来的需要release
+                 CFRunLoopMode mode =  CFRunLoopCopyCurrentMode(CFRunLoopGetCurrent());
+                 NSLog(@"kCFRunLoopEntry = %@",mode);
+                 CFRelease(mode);
+             }
+                 break;
+             case kCFRunLoopBeforeTimers:
+             {
+                 NSLog(@"kCFRunLoopBeforeTimers");
+             }
+                 break;
+             case kCFRunLoopBeforeSources:
+             {
+                 NSLog(@"kCFRunLoopBeforeSources");
+             }
+                 break;
+             case kCFRunLoopBeforeWaiting:
+             {
+                 NSLog(@"kCFRunLoopBeforeWaiting");
+             }
+                 break;
+             case kCFRunLoopAfterWaiting:
+             {
+                 // 唤醒
+                 NSLog(@"kCFRunLoopAfterWaiting");
+             }
+                 break;
+             case kCFRunLoopExit:
+             {
+                 NSLog(@"kCFRunLoopExit");
+             }
+                 break;
+                 
+             default:
+                 break;
+         }
+    });
+    // 添加到runloop
+    CFRunLoopAddObserver(CFRunLoopGetMain(), oberver, kCFRunLoopCommonModes);
+    // 释放
+    CFRelease(oberver);
+}
+
+void CFRunLoopObserverCallBackMethod(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info){
+    switch (activity) {
+        case kCFRunLoopEntry:
+        {
+            NSLog(@"kCFRunLoopEntry");
+            // c语言copy和create出来的需要release
+            CFRunLoopMode mode =  CFRunLoopCopyCurrentMode(CFRunLoopGetCurrent());
+            NSLog(@"kCFRunLoopEntry = %@",mode);
+            CFRelease(mode);
+        }
+            break;
+        case kCFRunLoopBeforeTimers:
+        {
+            NSLog(@"kCFRunLoopBeforeTimers");
+        }
+            break;
+        case kCFRunLoopBeforeSources:
+        {
+            NSLog(@"kCFRunLoopBeforeSources");
+        }
+            break;
+        case kCFRunLoopBeforeWaiting:
+        {
+            NSLog(@"kCFRunLoopBeforeWaiting");
+        }
+            break;
+        case kCFRunLoopAfterWaiting:
+        {
+            // 唤醒
+            NSLog(@"kCFRunLoopAfterWaiting");
+        }
+            break;
+        case kCFRunLoopExit:
+        {
+            NSLog(@"kCFRunLoopExit");
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+
 @end
 
 //  面试题解答：1.runloop和线程有什么关系？
@@ -100,8 +205,31 @@
  
  
  CFRunloopModeRef代表了Runloop的运行模式。
- 一个runloop包含若干个Mode
-
+ 一个runloop包含若干个Mode，每个mode又包含若干个source0 source1 source2 observer
+ runloop启动时只能选择一个mode。作为currentmode
+ 如果要切换mode  只能退出当前loop  再重新选择一个mode进入。
+ 不同组的Source0/Source1/Timer/Observer能分隔开来，互不影响
+ 如果Mode里没有任何Source0/Source1/Timer/Observer，RunLoop会立马退出
+ 
+ Source0 处理的事件
+ 1.触摸事件
+ 2.performselector:onthread
+ 
+ 
+ Source1
+ 1.基于port的线程间通信
+ 2.系统时间捕捉
+ 
+ 
+ Timers
+ 1.NSTimer
+ 2.performselector:afterDelay
+ 
+ Observers
+ 1.用于监听Runloop的状态
+ 2.UI刷新(beforewaiting)
+ 3.autoreleasepool
+ 
  
 参考链接：
         Objective-C之run loop详解:https://blog.csdn.net/wzzvictory/article/details/9237973
@@ -112,17 +240,18 @@
 /*
  答： mode主要是用来指定时间运行循环中的优先级的。主要分为以下几个：
      * NSDefaultRunLoopMode (kCFRunLoopDefaultMode): 默认，空闲状态
-     * UITrackingRunloopMode:scrollview 滑动的时候
+     * UITrackingRunloopMode:scrollview 滑动的时候保证界面滑动不受其他mode影响
      * UIInitializationRunLoopMode: 启动的时候(私有)
      * NSRunLoopCommonModes （mode 集合）
      
     苹果提供的公开API有两个：
      1. NSDefaultRunLoopMode (kCFRunLoopDefaultMode)
-     2. NSRunLoopCommonModes (kCFRunLoopCommonModes)// 用来标记一个操作为common的字符串
+     2. NSRunLoopCommonModes (kCFRunLoopCommonModes)// 用来标记一个操作为common的字符串，并不是真正的模式。使用他的时候表明了 timer在设置了common标记的模式下都可以运行。
+ // timer能在_commonModes集合下所有的模式中运行
  
  */
 
-// 其他：
+// 其他： 
 /*
     1.主线程的runloop自动创建，子线程的runloop默认不创建(在子线程中调用`NSRunLoop *currentLoop = [NSRunLoop currentRunLoop]` 获取runloop对象的时候，就会创建runloop)
     
@@ -184,6 +313,19 @@
  可参考： CFRunLoop https://github.com/ming1016/study/wiki/CFRunLoop
          RunLoop源码学习  https://blog.csdn.net/M316625387/article/details/83178369
  */
+
+// 面试题解答：5.runloop有什么应用?
+/*
+ 答：1.控制线程的生命周期(线程包保活，例如AFNetworking)
+    2.解决NSTimer在滑动停止工作的问题
+    3.监控应用卡顿
+    4.性能优化
+ */
+//  面试题解答：6.如何实现一个持久的线程?
+/*
+ 答：采用runloop来实现。
+ */
+
 // runloop基本作用：
 /*
  答: 保持程序的持续运行
@@ -226,4 +368,24 @@
      uint64_t _timerSoftDeadline;
      uint64_t _timerHardDeadline;
  };
+ */
+//  runloop运行逻辑
+/*
+ 1.通知obervers：进入loop
+ 2.通知obervers：即将处理timers
+ 3.通知obervers：即将处理sources
+ 4.处理blocks
+ 5.处理source0(可能会再次处理blocks)
+ 6.如果存在source1，跳转到第8步。
+ 7.通知observers：开始休眠(等待消息唤醒)
+ 8.通知observers：结束休眠(被某个消息唤醒)
+ -01.处理timer
+ -02.处理gcd asynct to main queue
+ -03.处理source1
+ 9.处理blocks
+ 10.根据前面执行结果，决定如何操作
+ -01.回到第2步
+ -02.退出loop
+ 11.通知obervers：退出loop
+
  */

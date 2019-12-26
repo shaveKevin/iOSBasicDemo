@@ -40,6 +40,7 @@
 		2C777A3E23B2225B007F1834 /* SKTaggedPointTest+SKCategoryCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A3723B2225B007F1834 /* SKTaggedPointTest+SKCategoryCategory.m */; };
 		2C777A3F23B2225B007F1834 /* SKTaggedPointTest+SKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A3923B2225B007F1834 /* SKTaggedPointTest+SKCategory.m */; };
 		2C777A4223B36C59007F1834 /* SKRuntimeObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777A4123B36C59007F1834 /* SKRuntimeObj.m */; };
+		2C777B8C23B4F6A9007F1834 /* SKAliveThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777B8B23B4F6A9007F1834 /* SKAliveThread.m */; };
 		2C8EE5F8239EB2CC00887599 /* SKDartModeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5F7239EB2CC00887599 /* SKDartModeVC.m */; };
 		2C8EE5FB239EB54E00887599 /* UIView+SKDarkModeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5FA239EB54E00887599 /* UIView+SKDarkModeColor.m */; };
 		2C8EE5FE239EB7A100887599 /* UIColor+SKDarkModeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5FD239EB7A100887599 /* UIColor+SKDarkModeColor.m */; };
@@ -190,6 +191,8 @@
 		2C777A3923B2225B007F1834 /* SKTaggedPointTest+SKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKTaggedPointTest+SKCategory.m"; sourceTree = "<group>"; };
 		2C777A4023B36C59007F1834 /* SKRuntimeObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKRuntimeObj.h; sourceTree = "<group>"; };
 		2C777A4123B36C59007F1834 /* SKRuntimeObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKRuntimeObj.m; sourceTree = "<group>"; };
+		2C777B8A23B4F6A9007F1834 /* SKAliveThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKAliveThread.h; sourceTree = "<group>"; };
+		2C777B8B23B4F6A9007F1834 /* SKAliveThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKAliveThread.m; sourceTree = "<group>"; };
 		2C8EE5F6239EB2CC00887599 /* SKDartModeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKDartModeVC.h; sourceTree = "<group>"; };
 		2C8EE5F7239EB2CC00887599 /* SKDartModeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKDartModeVC.m; sourceTree = "<group>"; };
 		2C8EE5F9239EB54E00887599 /* UIView+SKDarkModeColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SKDarkModeColor.h"; sourceTree = "<group>"; };
@@ -677,6 +680,8 @@
 				D73A17B823595F1300C5FBF1 /* SKRunLoopObject.m */,
 				D73A17B923595F1300C5FBF1 /* SKTimerTest.h */,
 				D73A17B723595F1300C5FBF1 /* SKTimerTest.m */,
+				2C777B8A23B4F6A9007F1834 /* SKAliveThread.h */,
+				2C777B8B23B4F6A9007F1834 /* SKAliveThread.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -1194,6 +1199,7 @@
 				D73A187D23595F1300C5FBF1 /* TestModel.m in Sources */,
 				D73A189423595F1300C5FBF1 /* SKPCBasicTechVC.m in Sources */,
 				D73A187F23595F1300C5FBF1 /* NSObject+Add.m in Sources */,
+				2C777B8C23B4F6A9007F1834 /* SKAliveThread.m in Sources */,
 				D73A189A2359968300C5FBF1 /* SKBlockLocationObj.m in Sources */,
 				D7BC7ED523604CDB00A562DA /* SKLLDBTestObj.m in Sources */,
 				2C777A3A23B2225B007F1834 /* SKTaggedPointTest.m in Sources */,

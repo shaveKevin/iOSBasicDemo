@@ -18,7 +18,7 @@ struct TreeNode {
 // 采用递归的方式进行判断
 bool isSameTree(struct  TreeNode *p, struct TreeNode *q) {
    // 首先判断两个是否都为空 两个都为空树的话 说明一样
-    if (p == NULL && q == NULL) {
+    if (p  == NULL && q == NULL) {
         return  true;
     }
     // 如果两个都不为空 但是有一个为空，那么就为空

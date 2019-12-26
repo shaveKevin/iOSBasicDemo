@@ -24,6 +24,12 @@
 @property (nonatomic, copy) NSString *taskID;
 
 
+@property (nonatomic, strong) NSThread * currentThread;
+
+@property (nonatomic, assign) BOOL  isAlive;
+
+
+
 @end
 
 @implementation SKRunloopVC
@@ -31,6 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.isAlive = NO;
     [self setupViews];
     [self setupData];
     [self setupLayout];
@@ -38,8 +45,38 @@
     [self forCycleTest];
     NSLog(@"A Class === viewDidLoad");
 
+
+
 }
 
+
+- (void)testThreadMethod {
+    __weak typeof(self)weakSelf = self;
+    self.currentThread = [[NSThread alloc]initWithBlock:^{
+        NSLog(@"线程开始: %@",[NSThread currentThread]);
+        [[NSRunLoop currentRunLoop] addPort:[[NSPort alloc]init] forMode:NSRunLoopCommonModes];
+        // NSRunloop的run方法是停不掉的，他专门用于开启一个永不销毁的线程(NSRunloop)
+        // 这里不要使用strong 会产生循环引用
+        while (weakSelf&& !weakSelf.isAlive) {
+            [[NSRunLoop currentRunLoop] runMode:NSRunLoopCommonModes beforeDate:[NSDate distantFuture]];
+        }
+        //        [[NSRunLoop currentRunLoop] run];
+        NSLog(@"线程结束: %@",[NSThread currentThread]);
+    }];
+    
+    [self.currentThread start];
+}
+
+// 用于停止子线程需要执行的任务
+- (void)stopThread {
+    // 设置停止标记
+    self.isAlive = YES;
+    // 停掉runloop
+    CFRunLoopStop(CFRunLoopGetCurrent());
+    // 清空线程
+    self.currentThread = nil;
+    
+}
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     // 1. 纳秒级定时器测试
@@ -57,6 +94,9 @@
   
 }
 
+- (void)testMethod {
+    NSLog(@"当前线程为:%@",[NSThread currentThread]);
+}
 - (void)setupViews {
     
     self.view.backgroundColor = [UIColor whiteColor];
@@ -190,6 +230,16 @@
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self stopTimer];
+    [self stopThreadMethod];
+    
+
+}
+
+- (void)stopThreadMethod {
+    //waitUntilDone:为NO表示的是不等testMethod执行完毕就继续往下执行。如果为  YES表明需要等待testMethod执行完之后继续往下走。
+    if (self.currentThread) {
+        [self  performSelectorOnMainThread:@selector(testMethod) withObject:nil waitUntilDone:NO];
+    }
 }
 
 - (void)runloopState {
@@ -227,7 +277,10 @@
     } else {
         NSLog(@"不存在");
     }
+// 销毁线程
+    [self stopThreadMethod];
 }
+
 
 // break 结束当前循环 continue跳出本次循环
 - (void)forCycleTest {
