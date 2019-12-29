@@ -43,6 +43,9 @@
 		2C777B8C23B4F6A9007F1834 /* SKAliveThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777B8B23B4F6A9007F1834 /* SKAliveThread.m */; };
 		2C777B9323B50897007F1834 /* LXDBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777B8F23B50897007F1834 /* LXDBacktraceLogger.m */; };
 		2C777B9423B50897007F1834 /* LXDAppFluecyMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777B9223B50897007F1834 /* LXDAppFluecyMonitor.m */; };
+		2C777B9823B84489007F1834 /* SKAppSignVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777B9723B84489007F1834 /* SKAppSignVC.m */; };
+		2C777B9C23B844B3007F1834 /* SKAppSignObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777B9B23B844B3007F1834 /* SKAppSignObj.m */; };
+		2C777BA023B8B2B0007F1834 /* SKLLVMClang.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777B9F23B8B2B0007F1834 /* SKLLVMClang.m */; };
 		2C8EE5F8239EB2CC00887599 /* SKDartModeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5F7239EB2CC00887599 /* SKDartModeVC.m */; };
 		2C8EE5FB239EB54E00887599 /* UIView+SKDarkModeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5FA239EB54E00887599 /* UIView+SKDarkModeColor.m */; };
 		2C8EE5FE239EB7A100887599 /* UIColor+SKDarkModeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5FD239EB7A100887599 /* UIColor+SKDarkModeColor.m */; };
@@ -199,6 +202,12 @@
 		2C777B9023B50897007F1834 /* LXDBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDBacktraceLogger.h; sourceTree = "<group>"; };
 		2C777B9123B50897007F1834 /* LXDAppFluecyMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDAppFluecyMonitor.h; sourceTree = "<group>"; };
 		2C777B9223B50897007F1834 /* LXDAppFluecyMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDAppFluecyMonitor.m; sourceTree = "<group>"; };
+		2C777B9623B84489007F1834 /* SKAppSignVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKAppSignVC.h; sourceTree = "<group>"; };
+		2C777B9723B84489007F1834 /* SKAppSignVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKAppSignVC.m; sourceTree = "<group>"; };
+		2C777B9A23B844B3007F1834 /* SKAppSignObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKAppSignObj.h; sourceTree = "<group>"; };
+		2C777B9B23B844B3007F1834 /* SKAppSignObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKAppSignObj.m; sourceTree = "<group>"; };
+		2C777B9E23B8B2B0007F1834 /* SKLLVMClang.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKLLVMClang.h; sourceTree = "<group>"; };
+		2C777B9F23B8B2B0007F1834 /* SKLLVMClang.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKLLVMClang.m; sourceTree = "<group>"; };
 		2C8EE5F6239EB2CC00887599 /* SKDartModeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKDartModeVC.h; sourceTree = "<group>"; };
 		2C8EE5F7239EB2CC00887599 /* SKDartModeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKDartModeVC.m; sourceTree = "<group>"; };
 		2C8EE5F9239EB54E00887599 /* UIView+SKDarkModeColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SKDarkModeColor.h"; sourceTree = "<group>"; };
@@ -576,6 +585,34 @@
 			path = Backtrace;
 			sourceTree = "<group>";
 		};
+		2C777B9523B84471007F1834 /* APPSign */ = {
+			isa = PBXGroup;
+			children = (
+				2C777B9923B84499007F1834 /* Class */,
+				2C777B9623B84489007F1834 /* SKAppSignVC.h */,
+				2C777B9723B84489007F1834 /* SKAppSignVC.m */,
+			);
+			path = APPSign;
+			sourceTree = "<group>";
+		};
+		2C777B9923B84499007F1834 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				2C777B9A23B844B3007F1834 /* SKAppSignObj.h */,
+				2C777B9B23B844B3007F1834 /* SKAppSignObj.m */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		2C777B9D23B8B294007F1834 /* LLVM&Clang */ = {
+			isa = PBXGroup;
+			children = (
+				2C777B9E23B8B2B0007F1834 /* SKLLVMClang.h */,
+				2C777B9F23B8B2B0007F1834 /* SKLLVMClang.m */,
+			);
+			path = "LLVM&Clang";
+			sourceTree = "<group>";
+		};
 		2C8EE5F4239EB29700887599 /* NewFeature */ = {
 			isa = PBXGroup;
 			children = (
@@ -669,6 +706,8 @@
 		D73A17B323595F1300C5FBF1 /* iOSTech */ = {
 			isa = PBXGroup;
 			children = (
+				2C777B9D23B8B294007F1834 /* LLVM&Clang */,
+				2C777B9523B84471007F1834 /* APPSign */,
 				2C5B221823A960050018EA68 /* CategoryExtention */,
 				2C5B21EF23A6814B0018EA68 /* Optimization */,
 				2C8EE5FF239EC1EA00887599 /* Swift */,
@@ -1228,6 +1267,7 @@
 				D73A187F23595F1300C5FBF1 /* NSObject+Add.m in Sources */,
 				2C777B8C23B4F6A9007F1834 /* SKAliveThread.m in Sources */,
 				D73A189A2359968300C5FBF1 /* SKBlockLocationObj.m in Sources */,
+				2C777BA023B8B2B0007F1834 /* SKLLVMClang.m in Sources */,
 				D7BC7ED523604CDB00A562DA /* SKLLDBTestObj.m in Sources */,
 				2C777A3A23B2225B007F1834 /* SKTaggedPointTest.m in Sources */,
 				2C5B220323A68C750018EA68 /* SKFPSObj.m in Sources */,
@@ -1236,6 +1276,7 @@
 				2C777B9423B50897007F1834 /* LXDAppFluecyMonitor.m in Sources */,
 				D73A186A23595F1300C5FBF1 /* SKThreadLearningVC.m in Sources */,
 				D73A188B23595F1300C5FBF1 /* SKSortAlgorithmVC.m in Sources */,
+				2C777B9823B84489007F1834 /* SKAppSignVC.m in Sources */,
 				D7BC7ECE235EE89A00A562DA /* SKGCDPrintObj.m in Sources */,
 				D73A187323595F1300C5FBF1 /* SemaphoreTest.m in Sources */,
 				D73A186923595F1300C5FBF1 /* SKObjectObject.m in Sources */,
@@ -1255,6 +1296,7 @@
 				D73A187823595F1300C5FBF1 /* SSDemo.m in Sources */,
 				2C5B21FC23A681BF0018EA68 /* SKSlimObj.m in Sources */,
 				D73A188923595F1300C5FBF1 /* SKPCNetworkingVC.m in Sources */,
+				2C777B9C23B844B3007F1834 /* SKAppSignObj.m in Sources */,
 				2C8EE5F8239EB2CC00887599 /* SKDartModeVC.m in Sources */,
 				D73A186223595F1300C5FBF1 /* SKDelegateVC.m in Sources */,
 				D73A189123595F1300C5FBF1 /* SKNewFeatureVC.m in Sources */,

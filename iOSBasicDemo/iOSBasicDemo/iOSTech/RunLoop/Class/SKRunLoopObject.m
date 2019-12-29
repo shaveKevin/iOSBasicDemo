@@ -214,12 +214,12 @@ void CFRunLoopObserverCallBackMethod(CFRunLoopObserverRef observer, CFRunLoopAct
  Source0 处理的事件
  1.触摸事件
  2.performselector:onthread
- 
+ (处理app内部事件，app自己负责管理(触发),比如：UIEvent CFSocket)
  
  Source1
  1.基于port的线程间通信
  2.系统时间捕捉
- 
+ (由runloop和内核管理，mach port驱动，如:CFMachPort、CFMessagePort)
  
  Timers
  1.NSTimer
