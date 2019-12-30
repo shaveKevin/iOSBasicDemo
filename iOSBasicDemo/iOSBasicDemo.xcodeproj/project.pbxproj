@@ -51,6 +51,7 @@
 		2C8EE5FE239EB7A100887599 /* UIColor+SKDarkModeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5FD239EB7A100887599 /* UIColor+SKDarkModeColor.m */; };
 		2C8EE602239EC21D00887599 /* SKSwiftFeatureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE601239EC21D00887599 /* SKSwiftFeatureVC.swift */; };
 		2C8EE604239F494600887599 /* SwiftNameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE603239F494600887599 /* SwiftNameSpace.swift */; };
+		2C94481C23BA534800376C64 /* SKValidParentheses.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C94481B23BA534800376C64 /* SKValidParentheses.m */; };
 		2CA91B21238B7BDD006A46E7 /* SKCharReverse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B1B238B7BDD006A46E7 /* SKCharReverse.m */; };
 		2CA91B23238B7BDD006A46E7 /* SKReverseList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B1D238B7BDD006A46E7 /* SKReverseList.m */; };
 		2CA91B26238B7C17006A46E7 /* SKMergeSortedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B25238B7C17006A46E7 /* SKMergeSortedArray.m */; };
@@ -217,6 +218,8 @@
 		2C8EE600239EC21D00887599 /* iOSBasicDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSBasicDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		2C8EE601239EC21D00887599 /* SKSwiftFeatureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKSwiftFeatureVC.swift; sourceTree = "<group>"; };
 		2C8EE603239F494600887599 /* SwiftNameSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNameSpace.swift; sourceTree = "<group>"; };
+		2C94481A23BA534800376C64 /* SKValidParentheses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKValidParentheses.h; sourceTree = "<group>"; };
+		2C94481B23BA534800376C64 /* SKValidParentheses.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKValidParentheses.m; sourceTree = "<group>"; };
 		2CA91B1B238B7BDD006A46E7 /* SKCharReverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKCharReverse.m; sourceTree = "<group>"; };
 		2CA91B1D238B7BDD006A46E7 /* SKReverseList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKReverseList.m; sourceTree = "<group>"; };
 		2CA91B1E238B7BDD006A46E7 /* SKCharReverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKCharReverse.h; sourceTree = "<group>"; };
@@ -665,6 +668,8 @@
 				2C5B220523A7583F0018EA68 /* SKArrayFindNum.m */,
 				2C7779E523AA2747007F1834 /* SKHasCycle.h */,
 				2C7779E623AA2747007F1834 /* SKHasCycle.m */,
+				2C94481A23BA534800376C64 /* SKValidParentheses.h */,
+				2C94481B23BA534800376C64 /* SKValidParentheses.m */,
 			);
 			path = SKAlogrithmVCInterview;
 			sourceTree = "<group>";
@@ -1234,6 +1239,7 @@
 				2C5B220A23A7D4750018EA68 /* SKBasicSortObj.m in Sources */,
 				2C777A3B23B2225B007F1834 /* SKTaggedPointSubClass.m in Sources */,
 				2C5B221E23A9604C0018EA68 /* SKCategoryExtentionVC.m in Sources */,
+				2C94481C23BA534800376C64 /* SKValidParentheses.m in Sources */,
 				2C5B220D23A7D64D0018EA68 /* SKGCDObj.m in Sources */,
 				2C5B220623A7583F0018EA68 /* SKArrayFindNum.m in Sources */,
 				D73A188223595F1300C5FBF1 /* TestExpand.m in Sources */,
