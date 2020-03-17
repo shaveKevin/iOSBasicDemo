@@ -78,5 +78,12 @@ int firstUniqCharTwo(char * s) {
     }
     return -1;
 }
-
+// 查找只出现一次的数字
+int singleNumber(int* nums, int numsSize) {
+    int temp = nums[0];
+    for (int i = 1;i < numsSize;i++){
+        temp = temp^nums[i];
+    }
+    return temp;
+}
 @end

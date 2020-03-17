@@ -64,6 +64,8 @@
     [self mergeSortedArray];
     // 查找字符串第一个只出现一次的字符
     [self findFirstChar];
+    // 查找只出现一次的数字
+    [self singleNumber];
     //查找两个View的公共父控件
     [self findCommonView];
     // 无序数组中查找中位数
@@ -122,6 +124,16 @@
     NSLog(@"%@",@(num));
     
 }
+
+
+- (void)singleNumber {
+    
+    int nums[5] ={1,2,3,2,1};
+    int temp = singleNumber(nums, 5);
+    NSLog(@"singleNumber is %@",@(temp));
+    
+}
+
 
 - (void)findCommonView {
     SKFindCommonView *find = [[SKFindCommonView alloc]init];
