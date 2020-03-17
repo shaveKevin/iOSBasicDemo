@@ -12,7 +12,7 @@
 // 实现以下场景：
 // 1.同一时间，只能有一个线程进行写的操作。
 // 2.同一时间，允许有多个线程进行读的操作。
-// 3.同一时间，不允许机油写的操作，又有读的操作。
+// 3.同一时间，不允许既有写的操作，又有读的操作。
 @interface SKGCDAdditions  ()
 
 @property (nonatomic, assign) pthread_rwlock_t lock;

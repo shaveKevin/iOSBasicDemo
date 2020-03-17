@@ -301,7 +301,7 @@
 
 - (void)synchronizedMethod {
     // 线程同步 其中self是锁对象。如果传的对象不一致，那么不是同一把锁。如果不是同一把锁那么可能就锁不住对象。 如果有其他对象在操作这个锁，那么他就会进入等待。
-    @synchronized (self) {// objc_sync_enter
+    @synchronized (self) {// objc_sy nc_enter
         NSLog(@"synchronized");
     }//objc_sync_exit
 // 底层是hashmap实现 以 传入的参数为key 根据这个key 找到对应的mutex锁

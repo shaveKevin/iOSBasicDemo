@@ -15,7 +15,14 @@ struct TreeNode {
     struct TreeNode *parent;
 };
 
+
+@interface SKSameTree ()
+{
+    struct TreeNode root;
+}
+@end
 @implementation SKSameTree
+
 
 // 采用递归的方式进行判断
 bool isSameTree(struct  TreeNode *p, struct TreeNode *q) {
@@ -61,6 +68,5 @@ void postorderTraversal(struct TreeNode *node) {
 }
 // 层序遍历：从上往下 从左到右依次访问每一个结点
 // 思路：使用队列 1.将根结点入队 2. 循环执行下面操作，直到队列为空。(将头结点a出队，进行访问。 将a的左子结点入队，将a的右子结点 入队)
-
 
 @end

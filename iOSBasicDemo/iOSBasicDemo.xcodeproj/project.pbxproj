@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2C17BF73238BB67200E556EF /* SKFindMiddleCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17BF72238BB67200E556EF /* SKFindMiddleCount.m */; };
 		2C3FB0EF238FC20900AA181D /* SKSameTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3FB0EE238FC20900AA181D /* SKSameTree.m */; };
+		2C477C9323F58FD900C2F190 /* SKBasicSortObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B220923A7D4750018EA68 /* SKBasicSortObj.m */; };
+		2C477C9423F590C400C2F190 /* SKNewFeatureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A184223595F1300C5FBF1 /* SKNewFeatureVC.m */; };
+		2C477C9523F5910500C2F190 /* SKDartModeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5F7239EB2CC00887599 /* SKDartModeVC.m */; };
 		2C5B21EE23A375D00018EA68 /* SKSwapTwoNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B21ED23A375D00018EA68 /* SKSwapTwoNumber.m */; };
 		2C5B21F623A681600018EA68 /* SKSpeedObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B21F523A681600018EA68 /* SKSpeedObj.m */; };
 		2C5B21F923A681900018EA68 /* SKStorageObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B21F823A681900018EA68 /* SKStorageObj.m */; };
@@ -16,7 +19,6 @@
 		2C5B21FF23A681E40018EA68 /* SKBatteryObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B21FE23A681E40018EA68 /* SKBatteryObj.m */; };
 		2C5B220323A68C750018EA68 /* SKFPSObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B220223A68C750018EA68 /* SKFPSObj.m */; };
 		2C5B220623A7583F0018EA68 /* SKArrayFindNum.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B220523A7583F0018EA68 /* SKArrayFindNum.m */; };
-		2C5B220A23A7D4750018EA68 /* SKBasicSortObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B220923A7D4750018EA68 /* SKBasicSortObj.m */; };
 		2C5B220D23A7D64D0018EA68 /* SKGCDObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B220C23A7D64D0018EA68 /* SKGCDObj.m */; };
 		2C5B221E23A9604C0018EA68 /* SKCategoryExtentionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B221D23A9604C0018EA68 /* SKCategoryExtentionVC.m */; };
 		2C5B222223A960990018EA68 /* SKCategoryObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B222123A960990018EA68 /* SKCategoryObj.m */; };
@@ -46,7 +48,6 @@
 		2C777B9823B84489007F1834 /* SKAppSignVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777B9723B84489007F1834 /* SKAppSignVC.m */; };
 		2C777B9C23B844B3007F1834 /* SKAppSignObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777B9B23B844B3007F1834 /* SKAppSignObj.m */; };
 		2C777BA023B8B2B0007F1834 /* SKLLVMClang.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C777B9F23B8B2B0007F1834 /* SKLLVMClang.m */; };
-		2C8EE5F8239EB2CC00887599 /* SKDartModeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5F7239EB2CC00887599 /* SKDartModeVC.m */; };
 		2C8EE5FB239EB54E00887599 /* UIView+SKDarkModeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5FA239EB54E00887599 /* UIView+SKDarkModeColor.m */; };
 		2C8EE5FE239EB7A100887599 /* UIColor+SKDarkModeColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE5FD239EB7A100887599 /* UIColor+SKDarkModeColor.m */; };
 		2C8EE602239EC21D00887599 /* SKSwiftFeatureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE601239EC21D00887599 /* SKSwiftFeatureVC.swift */; };
@@ -109,7 +110,6 @@
 		D73A188E23595F1300C5FBF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A183A23595F1300C5FBF1 /* main.m */; };
 		D73A188F23595F1300C5FBF1 /* SKAlgorithmBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A184023595F1300C5FBF1 /* SKAlgorithmBaseVC.m */; };
 		D73A189023595F1300C5FBF1 /* SKHomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A184123595F1300C5FBF1 /* SKHomePageVC.m */; };
-		D73A189123595F1300C5FBF1 /* SKNewFeatureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A184223595F1300C5FBF1 /* SKNewFeatureVC.m */; };
 		D73A189223595F1300C5FBF1 /* SKUINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A184323595F1300C5FBF1 /* SKUINavigationController.m */; };
 		D73A189323595F1300C5FBF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A184423595F1300C5FBF1 /* AppDelegate.m */; };
 		D73A189423595F1300C5FBF1 /* SKPCBasicTechVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A184623595F1300C5FBF1 /* SKPCBasicTechVC.m */; };
@@ -1236,7 +1236,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C5B220A23A7D4750018EA68 /* SKBasicSortObj.m in Sources */,
+				2C477C9523F5910500C2F190 /* SKDartModeVC.m in Sources */,
+				2C477C9423F590C400C2F190 /* SKNewFeatureVC.m in Sources */,
+				2C477C9323F58FD900C2F190 /* SKBasicSortObj.m in Sources */,
 				2C777A3B23B2225B007F1834 /* SKTaggedPointSubClass.m in Sources */,
 				2C5B221E23A9604C0018EA68 /* SKCategoryExtentionVC.m in Sources */,
 				2C94481C23BA534800376C64 /* SKValidParentheses.m in Sources */,
@@ -1303,9 +1305,7 @@
 				2C5B21FC23A681BF0018EA68 /* SKSlimObj.m in Sources */,
 				D73A188923595F1300C5FBF1 /* SKPCNetworkingVC.m in Sources */,
 				2C777B9C23B844B3007F1834 /* SKAppSignObj.m in Sources */,
-				2C8EE5F8239EB2CC00887599 /* SKDartModeVC.m in Sources */,
 				D73A186223595F1300C5FBF1 /* SKDelegateVC.m in Sources */,
-				D73A189123595F1300C5FBF1 /* SKNewFeatureVC.m in Sources */,
 				D73A187A23595F1300C5FBF1 /* SubDemo.m in Sources */,
 				D73A188723595F1300C5FBF1 /* ShortDemo1.m in Sources */,
 				2CA91B23238B7BDD006A46E7 /* SKReverseList.m in Sources */,
