@@ -16,6 +16,7 @@
 #import "SKSwapTwoNumber.h"
 #import "SKArrayFindNum.h"
 #import "SKHasCycle.h"
+#import "SKMaxProfit.h"
 
 // 两个大数相加
 @interface SKAlogrithmVCInterview ()
@@ -76,6 +77,8 @@
     [self arrayFindNum];
     // 链表中是否有环
     [self hasCycle];
+    // 股票最大利润
+    [self maxProfit];
 }
 
 - (void)setupLayout {
@@ -167,5 +170,12 @@
 - (void)hasCycle{
     SKHasCycle *cycle = [[SKHasCycle alloc]init];
     [cycle hasCycle];
+}
+
+
+- (void)maxProfit {
+    int priceArray[6] = {3,1,5,3,6,4};
+    printf("\n maxProfit is %d\n",maxProfit(priceArray, 6));
+
 }
 @end

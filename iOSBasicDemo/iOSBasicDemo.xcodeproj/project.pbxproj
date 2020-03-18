@@ -59,6 +59,7 @@
 		2CA91B29238B856A006A46E7 /* SKFindFirstChar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B28238B856A006A46E7 /* SKFindFirstChar.m */; };
 		2CA91B2C238BA8DE006A46E7 /* SKFindCommonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B2B238BA8DE006A46E7 /* SKFindCommonView.m */; };
 		2CAB1624238ADFA900C418BA /* SKAlogrithmVCInterview.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB1623238ADFA900C418BA /* SKAlogrithmVCInterview.m */; };
+		2CDDB81824221F72004D03CB /* SKMaxProfit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDB81724221F72004D03CB /* SKMaxProfit.m */; };
 		650EAEA170E9659055B10E12 /* Pods_iOSBasicDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EA8371E2221071062CFD67 /* Pods_iOSBasicDemo.framework */; };
 		D717BDBE2366CF7900D085A8 /* NSObject+SKKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = D717BDBD2366CF7900D085A8 /* NSObject+SKKVO.m */; };
 		D717BDE723682B7300D085A8 /* SKBasicAlogrithmVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D717BDE623682B7300D085A8 /* SKBasicAlogrithmVC.m */; };
@@ -232,6 +233,8 @@
 		2CA91B2B238BA8DE006A46E7 /* SKFindCommonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKFindCommonView.m; sourceTree = "<group>"; };
 		2CAB1622238ADFA900C418BA /* SKAlogrithmVCInterview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKAlogrithmVCInterview.h; sourceTree = "<group>"; };
 		2CAB1623238ADFA900C418BA /* SKAlogrithmVCInterview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKAlogrithmVCInterview.m; sourceTree = "<group>"; };
+		2CDDB81624221F72004D03CB /* SKMaxProfit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKMaxProfit.h; sourceTree = "<group>"; };
+		2CDDB81724221F72004D03CB /* SKMaxProfit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKMaxProfit.m; sourceTree = "<group>"; };
 		4A7FC359C60902B124FEBC2E /* Pods-AllKindOfThings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllKindOfThings.release.xcconfig"; path = "Target Support Files/Pods-AllKindOfThings/Pods-AllKindOfThings.release.xcconfig"; sourceTree = "<group>"; };
 		53EA8371E2221071062CFD67 /* Pods_iOSBasicDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSBasicDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84626E54F362A1FF3FC34E56 /* Pods-iOSBasicDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSBasicDemo.debug.xcconfig"; path = "Target Support Files/Pods-iOSBasicDemo/Pods-iOSBasicDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -670,6 +673,8 @@
 				2C7779E623AA2747007F1834 /* SKHasCycle.m */,
 				2C94481A23BA534800376C64 /* SKValidParentheses.h */,
 				2C94481B23BA534800376C64 /* SKValidParentheses.m */,
+				2CDDB81624221F72004D03CB /* SKMaxProfit.h */,
+				2CDDB81724221F72004D03CB /* SKMaxProfit.m */,
 			);
 			path = SKAlogrithmVCInterview;
 			sourceTree = "<group>";
@@ -1243,6 +1248,7 @@
 				2C5B221E23A9604C0018EA68 /* SKCategoryExtentionVC.m in Sources */,
 				2C94481C23BA534800376C64 /* SKValidParentheses.m in Sources */,
 				2C5B220D23A7D64D0018EA68 /* SKGCDObj.m in Sources */,
+				2CDDB81824221F72004D03CB /* SKMaxProfit.m in Sources */,
 				2C5B220623A7583F0018EA68 /* SKArrayFindNum.m in Sources */,
 				D73A188223595F1300C5FBF1 /* TestExpand.m in Sources */,
 				D73A189223595F1300C5FBF1 /* SKUINavigationController.m in Sources */,
