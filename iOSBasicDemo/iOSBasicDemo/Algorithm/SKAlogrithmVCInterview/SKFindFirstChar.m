@@ -79,11 +79,33 @@ int firstUniqCharTwo(char * s) {
     return -1;
 }
 // 查找只出现一次的数字
+// 时间复杂度0(n)
 int singleNumber(int* nums, int numsSize) {
     int temp = nums[0];
     for (int i = 1;i < numsSize;i++){
         temp = temp^nums[i];
     }
     return temp;
+}
+// 暴力解法：时间复杂度0(n^2)
+int singleNUmserTwo(int* nums, int numsSize) {
+    int symple = 1;
+    int i;
+    for ( i= 0; i < numsSize; i++) {
+        symple = 1;
+        for (int j = 0; j < numsSize; j++) {
+            if(i==j) {
+                continue;
+            }
+            if (nums[i] == nums[j]) {
+                symple = 2;
+                break;
+            }
+        }
+        if (symple == 1) {
+            return nums[i];
+        }
+    }
+    return nums[i];
 }
 @end
