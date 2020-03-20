@@ -6,9 +6,9 @@
 //  Copyright © 2020 小风. All rights reserved.
 //
 
-#import "SKMaxProfit.h"
+#import "SKMaxProfitTwo.h"
 
-@implementation SKMaxProfit
+@implementation SKMaxProfitTwo
 // 贪心算法来处理
 int maxProfit(int* prices, int pricesSize){
     int maxP = 0;

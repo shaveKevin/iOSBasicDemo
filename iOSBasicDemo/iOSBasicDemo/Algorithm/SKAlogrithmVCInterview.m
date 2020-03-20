@@ -16,7 +16,7 @@
 #import "SKSwapTwoNumber.h"
 #import "SKArrayFindNum.h"
 #import "SKHasCycle.h"
-#import "SKMaxProfit.h"
+#import "SKMaxProfitTwo.h"
 
 // 两个大数相加
 @interface SKAlogrithmVCInterview ()

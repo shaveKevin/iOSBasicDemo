@@ -44,11 +44,13 @@
      print(nums[i]);
  }
  */
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SKRemoveDuplicates : NSObject
 
 int removeDuplicates(int* nums, int numsSize);
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -9,7 +9,11 @@
 /* Begin PBXBuildFile section */
 		2C0011382423DDD200900770 /* SKRemoveDuplicates.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0011372423DDD200900770 /* SKRemoveDuplicates.m */; };
 		2C00113D2423DE5500900770 /* SKContainsDuplicate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0011392423DE5400900770 /* SKContainsDuplicate.m */; };
-		2C00113E2423DE5500900770 /* SKMaxProfit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C00113B2423DE5400900770 /* SKMaxProfit.m */; };
+		2C00113E2423DE5500900770 /* SKMaxProfitTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C00113B2423DE5400900770 /* SKMaxProfitTwo.m */; };
+		2C0011422424B75F00900770 /* SKWeChatQA.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0011412424B75F00900770 /* SKWeChatQA.m */; };
+		2C001146242529B600900770 /* SKCanMeasureWater.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C001145242529B600900770 /* SKCanMeasureWater.m */; };
+		2C00114924252C9200900770 /* SKMaxProfitOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C00114824252C9200900770 /* SKMaxProfitOne.m */; };
+		2C00114C2425333200900770 /* SKRotateArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C00114B2425333200900770 /* SKRotateArray.m */; };
 		2C17BF73238BB67200E556EF /* SKFindMiddleCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17BF72238BB67200E556EF /* SKFindMiddleCount.m */; };
 		2C3FB0EF238FC20900AA181D /* SKSameTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3FB0EE238FC20900AA181D /* SKSameTree.m */; };
 		2C477C9323F58FD900C2F190 /* SKBasicSortObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B220923A7D4750018EA68 /* SKBasicSortObj.m */; };
@@ -133,9 +137,17 @@
 		2C0011362423DDD200900770 /* SKRemoveDuplicates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKRemoveDuplicates.h; sourceTree = "<group>"; };
 		2C0011372423DDD200900770 /* SKRemoveDuplicates.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKRemoveDuplicates.m; sourceTree = "<group>"; };
 		2C0011392423DE5400900770 /* SKContainsDuplicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKContainsDuplicate.m; sourceTree = "<group>"; };
-		2C00113A2423DE5400900770 /* SKMaxProfit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKMaxProfit.h; sourceTree = "<group>"; };
-		2C00113B2423DE5400900770 /* SKMaxProfit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKMaxProfit.m; sourceTree = "<group>"; };
+		2C00113A2423DE5400900770 /* SKMaxProfitTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKMaxProfitTwo.h; sourceTree = "<group>"; };
+		2C00113B2423DE5400900770 /* SKMaxProfitTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKMaxProfitTwo.m; sourceTree = "<group>"; };
 		2C00113C2423DE5500900770 /* SKContainsDuplicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKContainsDuplicate.h; sourceTree = "<group>"; };
+		2C0011402424B75F00900770 /* SKWeChatQA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKWeChatQA.h; sourceTree = "<group>"; };
+		2C0011412424B75F00900770 /* SKWeChatQA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKWeChatQA.m; sourceTree = "<group>"; };
+		2C001144242529B600900770 /* SKCanMeasureWater.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKCanMeasureWater.h; sourceTree = "<group>"; };
+		2C001145242529B600900770 /* SKCanMeasureWater.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKCanMeasureWater.m; sourceTree = "<group>"; };
+		2C00114724252C9200900770 /* SKMaxProfitOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKMaxProfitOne.h; sourceTree = "<group>"; };
+		2C00114824252C9200900770 /* SKMaxProfitOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKMaxProfitOne.m; sourceTree = "<group>"; };
+		2C00114A2425333200900770 /* SKRotateArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKRotateArray.h; sourceTree = "<group>"; };
+		2C00114B2425333200900770 /* SKRotateArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKRotateArray.m; sourceTree = "<group>"; };
 		2C17BF71238BB67200E556EF /* SKFindMiddleCount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKFindMiddleCount.h; sourceTree = "<group>"; };
 		2C17BF72238BB67200E556EF /* SKFindMiddleCount.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKFindMiddleCount.m; sourceTree = "<group>"; };
 		2C3FB0ED238FC20900AA181D /* SKSameTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSameTree.h; sourceTree = "<group>"; };
@@ -406,12 +418,34 @@
 			children = (
 				2C00113C2423DE5500900770 /* SKContainsDuplicate.h */,
 				2C0011392423DE5400900770 /* SKContainsDuplicate.m */,
-				2C00113A2423DE5400900770 /* SKMaxProfit.h */,
-				2C00113B2423DE5400900770 /* SKMaxProfit.m */,
+				2C00113A2423DE5400900770 /* SKMaxProfitTwo.h */,
+				2C00113B2423DE5400900770 /* SKMaxProfitTwo.m */,
 				2C0011362423DDD200900770 /* SKRemoveDuplicates.h */,
 				2C0011372423DDD200900770 /* SKRemoveDuplicates.m */,
+				2C00114724252C9200900770 /* SKMaxProfitOne.h */,
+				2C00114824252C9200900770 /* SKMaxProfitOne.m */,
+				2C00114A2425333200900770 /* SKRotateArray.h */,
+				2C00114B2425333200900770 /* SKRotateArray.m */,
 			);
 			path = Easy;
+			sourceTree = "<group>";
+		};
+		2C00113F2424ABDD00900770 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				2C0011402424B75F00900770 /* SKWeChatQA.h */,
+				2C0011412424B75F00900770 /* SKWeChatQA.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		2C001143242529A800900770 /* Medium */ = {
+			isa = PBXGroup;
+			children = (
+				2C001144242529B600900770 /* SKCanMeasureWater.h */,
+				2C001145242529B600900770 /* SKCanMeasureWater.m */,
+			);
+			path = Medium;
 			sourceTree = "<group>";
 		};
 		2C3FB0EC238FC1FA00AA181D /* SKTree */ = {
@@ -673,6 +707,7 @@
 			isa = PBXGroup;
 			children = (
 				2C0011352423DDB700900770 /* Easy */,
+				2C001143242529A800900770 /* Medium */,
 				2CA91B1E238B7BDD006A46E7 /* SKCharReverse.h */,
 				2CA91B1B238B7BDD006A46E7 /* SKCharReverse.m */,
 				2CA91B1F238B7BDD006A46E7 /* SKReverseList.h */,
@@ -734,6 +769,7 @@
 		D73A17B323595F1300C5FBF1 /* iOSTech */ = {
 			isa = PBXGroup;
 			children = (
+				2C00113F2424ABDD00900770 /* Other */,
 				2C777B9D23B8B294007F1834 /* LLVM&Clang */,
 				2C777B9523B84471007F1834 /* APPSign */,
 				2C5B221823A960050018EA68 /* CategoryExtention */,
@@ -1290,7 +1326,9 @@
 				D73A184923595F1300C5FBF1 /* SKRunloopVC.m in Sources */,
 				2C5B21EE23A375D00018EA68 /* SKSwapTwoNumber.m in Sources */,
 				D73A187E23595F1300C5FBF1 /* RetainCycleModule.m in Sources */,
+				2C00114924252C9200900770 /* SKMaxProfitOne.m in Sources */,
 				2C7779E723AA2747007F1834 /* SKHasCycle.m in Sources */,
+				2C00114C2425333200900770 /* SKRotateArray.m in Sources */,
 				2CA91B2C238BA8DE006A46E7 /* SKFindCommonView.m in Sources */,
 				2C777A2623B12FE3007F1834 /* SKPropertyTestModel.m in Sources */,
 				2C3FB0EF238FC20900AA181D /* SKSameTree.m in Sources */,
@@ -1310,6 +1348,7 @@
 				D73A188B23595F1300C5FBF1 /* SKSortAlgorithmVC.m in Sources */,
 				2C777B9823B84489007F1834 /* SKAppSignVC.m in Sources */,
 				D7BC7ECE235EE89A00A562DA /* SKGCDPrintObj.m in Sources */,
+				2C0011422424B75F00900770 /* SKWeChatQA.m in Sources */,
 				D73A187323595F1300C5FBF1 /* SemaphoreTest.m in Sources */,
 				D73A186923595F1300C5FBF1 /* SKObjectObject.m in Sources */,
 				D73A188123595F1300C5FBF1 /* TestExpand+test.m in Sources */,
@@ -1333,9 +1372,10 @@
 				D73A187A23595F1300C5FBF1 /* SubDemo.m in Sources */,
 				D73A188723595F1300C5FBF1 /* ShortDemo1.m in Sources */,
 				2CA91B23238B7BDD006A46E7 /* SKReverseList.m in Sources */,
+				2C001146242529B600900770 /* SKCanMeasureWater.m in Sources */,
 				D73A186823595F1300C5FBF1 /* SKObjectObjectVC.m in Sources */,
 				2C777A3C23B2225B007F1834 /* SKTaggedPointSubClass+SKTraggedPointSub.m in Sources */,
-				2C00113E2423DE5500900770 /* SKMaxProfit.m in Sources */,
+				2C00113E2423DE5500900770 /* SKMaxProfitTwo.m in Sources */,
 				D73A185C23595F1300C5FBF1 /* SKRuntimeWeakObject.m in Sources */,
 				2C8EE604239F494600887599 /* SwiftNameSpace.swift in Sources */,
 				2C5B222523A960B60018EA68 /* SKCategoryObj+Category.m in Sources */,

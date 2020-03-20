@@ -37,7 +37,7 @@
  */
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SKMaxProfit : NSObject
+@interface SKMaxProfitTwo : NSObject
 
 int maxProfit(int* prices, int pricesSize);
 
