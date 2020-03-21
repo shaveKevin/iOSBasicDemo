@@ -14,6 +14,10 @@
 		2C001146242529B600900770 /* SKCanMeasureWater.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C001145242529B600900770 /* SKCanMeasureWater.m */; };
 		2C00114924252C9200900770 /* SKMaxProfitOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C00114824252C9200900770 /* SKMaxProfitOne.m */; };
 		2C00114C2425333200900770 /* SKRotateArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C00114B2425333200900770 /* SKRotateArray.m */; };
+		2C00114F24267B5800900770 /* SKLevelOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C00114E24267B5800900770 /* SKLevelOrder.m */; };
+		2C0011522426874C00900770 /* SKGetIntersectionNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0011512426874C00900770 /* SKGetIntersectionNode.m */; };
+		2C00115524268BB700900770 /* SKMinIncrementForUnique.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C00115424268BB700900770 /* SKMinIncrementForUnique.m */; };
+		2C0011582426957300900770 /* SKIntersect.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0011572426957300900770 /* SKIntersect.m */; };
 		2C17BF73238BB67200E556EF /* SKFindMiddleCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17BF72238BB67200E556EF /* SKFindMiddleCount.m */; };
 		2C3FB0EF238FC20900AA181D /* SKSameTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3FB0EE238FC20900AA181D /* SKSameTree.m */; };
 		2C477C9323F58FD900C2F190 /* SKBasicSortObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B220923A7D4750018EA68 /* SKBasicSortObj.m */; };
@@ -148,6 +152,14 @@
 		2C00114824252C9200900770 /* SKMaxProfitOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKMaxProfitOne.m; sourceTree = "<group>"; };
 		2C00114A2425333200900770 /* SKRotateArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKRotateArray.h; sourceTree = "<group>"; };
 		2C00114B2425333200900770 /* SKRotateArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKRotateArray.m; sourceTree = "<group>"; };
+		2C00114D24267B5800900770 /* SKLevelOrder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKLevelOrder.h; sourceTree = "<group>"; };
+		2C00114E24267B5800900770 /* SKLevelOrder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKLevelOrder.m; sourceTree = "<group>"; };
+		2C0011502426874C00900770 /* SKGetIntersectionNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKGetIntersectionNode.h; sourceTree = "<group>"; };
+		2C0011512426874C00900770 /* SKGetIntersectionNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKGetIntersectionNode.m; sourceTree = "<group>"; };
+		2C00115324268BB700900770 /* SKMinIncrementForUnique.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKMinIncrementForUnique.h; sourceTree = "<group>"; };
+		2C00115424268BB700900770 /* SKMinIncrementForUnique.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKMinIncrementForUnique.m; sourceTree = "<group>"; };
+		2C0011562426957300900770 /* SKIntersect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKIntersect.h; sourceTree = "<group>"; };
+		2C0011572426957300900770 /* SKIntersect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKIntersect.m; sourceTree = "<group>"; };
 		2C17BF71238BB67200E556EF /* SKFindMiddleCount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKFindMiddleCount.h; sourceTree = "<group>"; };
 		2C17BF72238BB67200E556EF /* SKFindMiddleCount.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKFindMiddleCount.m; sourceTree = "<group>"; };
 		2C3FB0ED238FC20900AA181D /* SKSameTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSameTree.h; sourceTree = "<group>"; };
@@ -426,6 +438,10 @@
 				2C00114824252C9200900770 /* SKMaxProfitOne.m */,
 				2C00114A2425333200900770 /* SKRotateArray.h */,
 				2C00114B2425333200900770 /* SKRotateArray.m */,
+				2C0011562426957300900770 /* SKIntersect.h */,
+				2C0011572426957300900770 /* SKIntersect.m */,
+				2C0011502426874C00900770 /* SKGetIntersectionNode.h */,
+				2C0011512426874C00900770 /* SKGetIntersectionNode.m */,
 			);
 			path = Easy;
 			sourceTree = "<group>";
@@ -444,6 +460,10 @@
 			children = (
 				2C001144242529B600900770 /* SKCanMeasureWater.h */,
 				2C001145242529B600900770 /* SKCanMeasureWater.m */,
+				2C00114D24267B5800900770 /* SKLevelOrder.h */,
+				2C00114E24267B5800900770 /* SKLevelOrder.m */,
+				2C00115324268BB700900770 /* SKMinIncrementForUnique.h */,
+				2C00115424268BB700900770 /* SKMinIncrementForUnique.m */,
 			);
 			path = Medium;
 			sourceTree = "<group>";
@@ -1350,6 +1370,8 @@
 				D7BC7ECE235EE89A00A562DA /* SKGCDPrintObj.m in Sources */,
 				2C0011422424B75F00900770 /* SKWeChatQA.m in Sources */,
 				D73A187323595F1300C5FBF1 /* SemaphoreTest.m in Sources */,
+				2C0011522426874C00900770 /* SKGetIntersectionNode.m in Sources */,
+				2C00114F24267B5800900770 /* SKLevelOrder.m in Sources */,
 				D73A186923595F1300C5FBF1 /* SKObjectObject.m in Sources */,
 				D73A188123595F1300C5FBF1 /* TestExpand+test.m in Sources */,
 				D73A186B23595F1300C5FBF1 /* NSObject+SKHookSelector.m in Sources */,
@@ -1368,6 +1390,7 @@
 				2C5B21FC23A681BF0018EA68 /* SKSlimObj.m in Sources */,
 				D73A188923595F1300C5FBF1 /* SKPCNetworkingVC.m in Sources */,
 				2C777B9C23B844B3007F1834 /* SKAppSignObj.m in Sources */,
+				2C0011582426957300900770 /* SKIntersect.m in Sources */,
 				D73A186223595F1300C5FBF1 /* SKDelegateVC.m in Sources */,
 				D73A187A23595F1300C5FBF1 /* SubDemo.m in Sources */,
 				D73A188723595F1300C5FBF1 /* ShortDemo1.m in Sources */,
@@ -1388,6 +1411,7 @@
 				D73A189023595F1300C5FBF1 /* SKHomePageVC.m in Sources */,
 				D73A186623595F1300C5FBF1 /* SKSubObject.m in Sources */,
 				D73A187523595F1300C5FBF1 /* DownLoadManager.m in Sources */,
+				2C00115524268BB700900770 /* SKMinIncrementForUnique.m in Sources */,
 				2CAB1624238ADFA900C418BA /* SKAlogrithmVCInterview.m in Sources */,
 				D73A187023595F1300C5FBF1 /* SKBlockVC.m in Sources */,
 				D79FEA9A2368411300419AEC /* SKLinkListNode.m in Sources */,
