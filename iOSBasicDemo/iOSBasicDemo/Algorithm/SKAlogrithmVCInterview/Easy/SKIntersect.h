@@ -33,7 +33,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SKIntersect : NSObject
-
+// 先进行排序然后进行位置定位
 int* intersect(int* nums1, int nums1Size, int* nums2, int nums2Size, int* returnSize);
 
 @end
