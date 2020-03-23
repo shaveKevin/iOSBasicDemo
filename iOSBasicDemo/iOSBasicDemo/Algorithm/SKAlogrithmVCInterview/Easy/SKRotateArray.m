@@ -18,7 +18,7 @@
  向右旋转 3 步: [5,6,7,1,2,3,4]
  */
 // 暴力法是每次只移动一个元素
-void rotate(int* nums, int numsSize, int k){
+void rotateArray(int* nums, int numsSize, int k){
     int temp,previous;
     for (int  i = 0; i < k; i ++) {
         // 拿到最后一个元素
@@ -32,7 +32,7 @@ void rotate(int* nums, int numsSize, int k){
     }
 }
 // 使用额外数组  这个就是我们要把我们需要改变的 把原来数组里下标为i的放到(i+k）% 数组长度的位置  用的就是取余。
-void rotateTwo(int* nums, int numsSize, int k){
+void rotateArrayTwo(int* nums, int numsSize, int k){
     int array[numsSize];
     for (int i = 0; i < numsSize; i ++) {
         array[(i + k)%numsSize] = nums[i];
@@ -42,7 +42,7 @@ void rotateTwo(int* nums, int numsSize, int k){
     }
 }
 // 可以使用反转数组来处理 首先反转整个数组，然后反转numberSize-k个元素
-void rotateThree(int* nums, int numsSize, int k) {
+void rotateArrayThree(int* nums, int numsSize, int k) {
     k %= numsSize;
     // 反转所有数字
     reverse(nums, 0, numsSize-1);

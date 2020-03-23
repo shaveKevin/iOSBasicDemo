@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SKRotateArray : NSObject
 
-void rotate(int* nums, int numsSize, int k);
+void rotateArray(int* nums, int numsSize, int k);
 
 @end
 

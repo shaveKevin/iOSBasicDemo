@@ -18,6 +18,7 @@
 		2C0011522426874C00900770 /* SKGetIntersectionNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0011512426874C00900770 /* SKGetIntersectionNode.m */; };
 		2C00115524268BB700900770 /* SKMinIncrementForUnique.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C00115424268BB700900770 /* SKMinIncrementForUnique.m */; };
 		2C0011582426957300900770 /* SKIntersect.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0011572426957300900770 /* SKIntersect.m */; };
+		2C00115B242915FB00900770 /* SKPlusOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C00115A242915FB00900770 /* SKPlusOne.m */; };
 		2C17BF73238BB67200E556EF /* SKFindMiddleCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17BF72238BB67200E556EF /* SKFindMiddleCount.m */; };
 		2C3FB0EF238FC20900AA181D /* SKSameTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3FB0EE238FC20900AA181D /* SKSameTree.m */; };
 		2C477C9323F58FD900C2F190 /* SKBasicSortObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B220923A7D4750018EA68 /* SKBasicSortObj.m */; };
@@ -70,6 +71,9 @@
 		2CA91B29238B856A006A46E7 /* SKFindFirstChar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B28238B856A006A46E7 /* SKFindFirstChar.m */; };
 		2CA91B2C238BA8DE006A46E7 /* SKFindCommonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B2B238BA8DE006A46E7 /* SKFindCommonView.m */; };
 		2CAB1624238ADFA900C418BA /* SKAlogrithmVCInterview.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAB1623238ADFA900C418BA /* SKAlogrithmVCInterview.m */; };
+		2CCB937624292FB100721924 /* SKMoveZeroes.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB937524292FB100721924 /* SKMoveZeroes.m */; };
+		2CCB937924293BA600721924 /* SKIsValidSudoku.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB937824293BA600721924 /* SKIsValidSudoku.m */; };
+		2CCB937C24293C6600721924 /* SKRotateImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB937B24293C6600721924 /* SKRotateImage.m */; };
 		650EAEA170E9659055B10E12 /* Pods_iOSBasicDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EA8371E2221071062CFD67 /* Pods_iOSBasicDemo.framework */; };
 		D717BDBE2366CF7900D085A8 /* NSObject+SKKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = D717BDBD2366CF7900D085A8 /* NSObject+SKKVO.m */; };
 		D717BDE723682B7300D085A8 /* SKBasicAlogrithmVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D717BDE623682B7300D085A8 /* SKBasicAlogrithmVC.m */; };
@@ -160,6 +164,8 @@
 		2C00115424268BB700900770 /* SKMinIncrementForUnique.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKMinIncrementForUnique.m; sourceTree = "<group>"; };
 		2C0011562426957300900770 /* SKIntersect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKIntersect.h; sourceTree = "<group>"; };
 		2C0011572426957300900770 /* SKIntersect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKIntersect.m; sourceTree = "<group>"; };
+		2C001159242915FB00900770 /* SKPlusOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKPlusOne.h; sourceTree = "<group>"; };
+		2C00115A242915FB00900770 /* SKPlusOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKPlusOne.m; sourceTree = "<group>"; };
 		2C17BF71238BB67200E556EF /* SKFindMiddleCount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKFindMiddleCount.h; sourceTree = "<group>"; };
 		2C17BF72238BB67200E556EF /* SKFindMiddleCount.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKFindMiddleCount.m; sourceTree = "<group>"; };
 		2C3FB0ED238FC20900AA181D /* SKSameTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSameTree.h; sourceTree = "<group>"; };
@@ -265,6 +271,12 @@
 		2CA91B2B238BA8DE006A46E7 /* SKFindCommonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKFindCommonView.m; sourceTree = "<group>"; };
 		2CAB1622238ADFA900C418BA /* SKAlogrithmVCInterview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKAlogrithmVCInterview.h; sourceTree = "<group>"; };
 		2CAB1623238ADFA900C418BA /* SKAlogrithmVCInterview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKAlogrithmVCInterview.m; sourceTree = "<group>"; };
+		2CCB937424292FB100721924 /* SKMoveZeroes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKMoveZeroes.h; sourceTree = "<group>"; };
+		2CCB937524292FB100721924 /* SKMoveZeroes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKMoveZeroes.m; sourceTree = "<group>"; };
+		2CCB937724293BA600721924 /* SKIsValidSudoku.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKIsValidSudoku.h; sourceTree = "<group>"; };
+		2CCB937824293BA600721924 /* SKIsValidSudoku.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKIsValidSudoku.m; sourceTree = "<group>"; };
+		2CCB937A24293C6600721924 /* SKRotateImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKRotateImage.h; sourceTree = "<group>"; };
+		2CCB937B24293C6600721924 /* SKRotateImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKRotateImage.m; sourceTree = "<group>"; };
 		4A7FC359C60902B124FEBC2E /* Pods-AllKindOfThings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllKindOfThings.release.xcconfig"; path = "Target Support Files/Pods-AllKindOfThings/Pods-AllKindOfThings.release.xcconfig"; sourceTree = "<group>"; };
 		53EA8371E2221071062CFD67 /* Pods_iOSBasicDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSBasicDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84626E54F362A1FF3FC34E56 /* Pods-iOSBasicDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSBasicDemo.debug.xcconfig"; path = "Target Support Files/Pods-iOSBasicDemo/Pods-iOSBasicDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -440,6 +452,10 @@
 				2C00114B2425333200900770 /* SKRotateArray.m */,
 				2C0011562426957300900770 /* SKIntersect.h */,
 				2C0011572426957300900770 /* SKIntersect.m */,
+				2C001159242915FB00900770 /* SKPlusOne.h */,
+				2C00115A242915FB00900770 /* SKPlusOne.m */,
+				2CCB937424292FB100721924 /* SKMoveZeroes.h */,
+				2CCB937524292FB100721924 /* SKMoveZeroes.m */,
 				2C0011502426874C00900770 /* SKGetIntersectionNode.h */,
 				2C0011512426874C00900770 /* SKGetIntersectionNode.m */,
 			);
@@ -464,6 +480,10 @@
 				2C00114E24267B5800900770 /* SKLevelOrder.m */,
 				2C00115324268BB700900770 /* SKMinIncrementForUnique.h */,
 				2C00115424268BB700900770 /* SKMinIncrementForUnique.m */,
+				2CCB937724293BA600721924 /* SKIsValidSudoku.h */,
+				2CCB937824293BA600721924 /* SKIsValidSudoku.m */,
+				2CCB937A24293C6600721924 /* SKRotateImage.h */,
+				2CCB937B24293C6600721924 /* SKRotateImage.m */,
 			);
 			path = Medium;
 			sourceTree = "<group>";
@@ -1366,6 +1386,7 @@
 				2C777B9423B50897007F1834 /* LXDAppFluecyMonitor.m in Sources */,
 				D73A186A23595F1300C5FBF1 /* SKThreadLearningVC.m in Sources */,
 				D73A188B23595F1300C5FBF1 /* SKSortAlgorithmVC.m in Sources */,
+				2CCB937C24293C6600721924 /* SKRotateImage.m in Sources */,
 				2C777B9823B84489007F1834 /* SKAppSignVC.m in Sources */,
 				D7BC7ECE235EE89A00A562DA /* SKGCDPrintObj.m in Sources */,
 				2C0011422424B75F00900770 /* SKWeChatQA.m in Sources */,
@@ -1393,6 +1414,7 @@
 				2C0011582426957300900770 /* SKIntersect.m in Sources */,
 				D73A186223595F1300C5FBF1 /* SKDelegateVC.m in Sources */,
 				D73A187A23595F1300C5FBF1 /* SubDemo.m in Sources */,
+				2CCB937624292FB100721924 /* SKMoveZeroes.m in Sources */,
 				D73A188723595F1300C5FBF1 /* ShortDemo1.m in Sources */,
 				2CA91B23238B7BDD006A46E7 /* SKReverseList.m in Sources */,
 				2C001146242529B600900770 /* SKCanMeasureWater.m in Sources */,
@@ -1419,6 +1441,7 @@
 				2C5B21F623A681600018EA68 /* SKSpeedObj.m in Sources */,
 				2C8EE5FB239EB54E00887599 /* UIView+SKDarkModeColor.m in Sources */,
 				2C5B21FF23A681E40018EA68 /* SKBatteryObj.m in Sources */,
+				2CCB937924293BA600721924 /* SKIsValidSudoku.m in Sources */,
 				D73A186C23595F1300C5FBF1 /* Aspects.m in Sources */,
 				D73A188623595F1300C5FBF1 /* MoreTimeTest.m in Sources */,
 				D73A186323595F1300C5FBF1 /* SKDelegateTestView.m in Sources */,
@@ -1429,6 +1452,7 @@
 				2C8EE5FE239EB7A100887599 /* UIColor+SKDarkModeColor.m in Sources */,
 				D717BDBE2366CF7900D085A8 /* NSObject+SKKVO.m in Sources */,
 				D720129E23669A1D0072F534 /* SKKVOStudentModel.m in Sources */,
+				2C00115B242915FB00900770 /* SKPlusOne.m in Sources */,
 				D7467B7623697E390045FA76 /* NSObject+YYModel.m in Sources */,
 				2C777A3E23B2225B007F1834 /* SKTaggedPointTest+SKCategoryCategory.m in Sources */,
 				2C7779F823B12E8D007F1834 /* SKStoreageObj.m in Sources */,

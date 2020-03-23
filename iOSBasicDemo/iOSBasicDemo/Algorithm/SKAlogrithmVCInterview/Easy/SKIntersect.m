@@ -24,31 +24,26 @@ int* intersect(int* nums1, int nums1Size, int* nums2, int nums2Size, int* return
     // 排序
     qsort(nums1, nums1Size, sizeof(nums1[0]), compareMethod);
     qsort(nums2, nums2Size, sizeof(nums2[0]), compareMethod);
-    int t = 0;
-    // 排序之后对两个数组进行遍历，把一致的放到数组1中
-    for (int i = 0,j = 0; (i < nums1Size && j<nums2Size);) {
+    // 排序之后对两个数组进行遍历，把一致的放到数组temp中
+    int *temp =  (int *)malloc((nums1Size > nums2Size?nums2Size:nums1Size)*sizeof(int));
+    if (!temp) {
+        printf("malloc  failed");
+        return NULL;
+    }
+    int t = 0,i = 0,j = 0;
+    while  (i < nums1Size && j< nums2Size) {
         if (nums1[i] == nums2[j]) {
-            nums1[t] = nums1[i];
-            t++;
+            temp[t++] = nums1[i];
             i++;
             j++;
-        } else if (nums1[i]> nums2[j]) {
+        } else if (nums1[i] > nums2[j]) {
             j++;
         } else {
             i++;
         }
     }
     *returnSize = t;
-    int *temp =  (int *)malloc(t*sizeof(int));
-    if (!temp) {
-        printf("malloc  failed");
-        return NULL;
-    }
-    for (int m = 0; m < t; m ++) {
-        temp[m] = nums1[m];
-    }
     return temp;
-
 }
 
 @end
