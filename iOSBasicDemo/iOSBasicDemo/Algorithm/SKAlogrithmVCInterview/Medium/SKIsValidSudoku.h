@@ -65,6 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface SKIsValidSudoku : NSObject
 
+// 这道题按照题意 先判断行 在判断列 最后判断九宫格， 三个都满足才是有效的数独。  分步来做
 bool isValidSudoku(char** board, int boardSize, int* boardColSize);
 
 @end

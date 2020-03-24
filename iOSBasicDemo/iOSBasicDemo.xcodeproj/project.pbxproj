@@ -74,6 +74,7 @@
 		2CCB937624292FB100721924 /* SKMoveZeroes.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB937524292FB100721924 /* SKMoveZeroes.m */; };
 		2CCB937924293BA600721924 /* SKIsValidSudoku.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB937824293BA600721924 /* SKIsValidSudoku.m */; };
 		2CCB937C24293C6600721924 /* SKRotateImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB937B24293C6600721924 /* SKRotateImage.m */; };
+		2CCB937F242A05D500721924 /* SKReverseInt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB937E242A05D500721924 /* SKReverseInt.m */; };
 		650EAEA170E9659055B10E12 /* Pods_iOSBasicDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EA8371E2221071062CFD67 /* Pods_iOSBasicDemo.framework */; };
 		D717BDBE2366CF7900D085A8 /* NSObject+SKKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = D717BDBD2366CF7900D085A8 /* NSObject+SKKVO.m */; };
 		D717BDE723682B7300D085A8 /* SKBasicAlogrithmVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D717BDE623682B7300D085A8 /* SKBasicAlogrithmVC.m */; };
@@ -277,6 +278,8 @@
 		2CCB937824293BA600721924 /* SKIsValidSudoku.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKIsValidSudoku.m; sourceTree = "<group>"; };
 		2CCB937A24293C6600721924 /* SKRotateImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKRotateImage.h; sourceTree = "<group>"; };
 		2CCB937B24293C6600721924 /* SKRotateImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKRotateImage.m; sourceTree = "<group>"; };
+		2CCB937D242A05D500721924 /* SKReverseInt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKReverseInt.h; sourceTree = "<group>"; };
+		2CCB937E242A05D500721924 /* SKReverseInt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKReverseInt.m; sourceTree = "<group>"; };
 		4A7FC359C60902B124FEBC2E /* Pods-AllKindOfThings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllKindOfThings.release.xcconfig"; path = "Target Support Files/Pods-AllKindOfThings/Pods-AllKindOfThings.release.xcconfig"; sourceTree = "<group>"; };
 		53EA8371E2221071062CFD67 /* Pods_iOSBasicDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSBasicDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84626E54F362A1FF3FC34E56 /* Pods-iOSBasicDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSBasicDemo.debug.xcconfig"; path = "Target Support Files/Pods-iOSBasicDemo/Pods-iOSBasicDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -456,6 +459,8 @@
 				2C00115A242915FB00900770 /* SKPlusOne.m */,
 				2CCB937424292FB100721924 /* SKMoveZeroes.h */,
 				2CCB937524292FB100721924 /* SKMoveZeroes.m */,
+				2CCB937D242A05D500721924 /* SKReverseInt.h */,
+				2CCB937E242A05D500721924 /* SKReverseInt.m */,
 				2C0011502426874C00900770 /* SKGetIntersectionNode.h */,
 				2C0011512426874C00900770 /* SKGetIntersectionNode.m */,
 			);
@@ -1421,6 +1426,7 @@
 				D73A186823595F1300C5FBF1 /* SKObjectObjectVC.m in Sources */,
 				2C777A3C23B2225B007F1834 /* SKTaggedPointSubClass+SKTraggedPointSub.m in Sources */,
 				2C00113E2423DE5500900770 /* SKMaxProfitTwo.m in Sources */,
+				2CCB937F242A05D500721924 /* SKReverseInt.m in Sources */,
 				D73A185C23595F1300C5FBF1 /* SKRuntimeWeakObject.m in Sources */,
 				2C8EE604239F494600887599 /* SwiftNameSpace.swift in Sources */,
 				2C5B222523A960B60018EA68 /* SKCategoryObj+Category.m in Sources */,
