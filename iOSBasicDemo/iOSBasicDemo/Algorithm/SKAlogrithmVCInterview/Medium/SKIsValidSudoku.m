@@ -11,7 +11,7 @@
 // C 库函数 void *memset(void *str, int c, size_t n) 复制字符 c（一个无符号字符）到参数 str 所指向的字符串的前 n 个字符。
 
 @implementation SKIsValidSudoku
-// 如果当前数独中有'.'字符 把它设置为-1。
+// 如果当前数独中有'.'字符 把它设置为-'1'。
 int trans(char cur) {
     if (cur == '.') {
         return -1;
