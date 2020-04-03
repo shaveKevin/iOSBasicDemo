@@ -40,7 +40,7 @@
 // 面试题解答:2.ARC通过什么方式帮助开发者管理内存？
 /*
    答：ARC是automatic reference counting的缩写。和mrc相比，arc不仅仅是在编译期添加 retain/release/autorelease 那么简单。在编译器和运行期两部分共同帮助开发者管理内存。
- 在编译器，arc用的是更底层的c接口实现的retain/release/autorelease,这样做性能更好，也是为什么不能在arc环境下手动retain/release/autorelease
+ 在编译期，arc用的是更底层的c接口实现的retain/release/autorelease,这样做性能更好，也是为什么不能在arc环境下手动retain/release/autorelease
  同时对同一上下文的同一对象成对retain/release操作进行优化(即忽略掉不必要的操作)；arc也包含运行期组件，这个地方做的优化比较复杂，但也不能被忽略。
  */
 
@@ -52,7 +52,7 @@
  2. 系统自动去释放- 不手动指定autoreleasepool
   autorelease对象出了作用域之后，会被添加到最近一次创建的自动释放池中，并会在当前的runloop迭代结束时释放。(它能解释的原因是系统在每个runloop迭代中都加入了自动适当push和pop)
  释放的时机可以看图：(对象释放时机图.jpg)
-  从程序启动到加载完成时一个完整的运行循环，然后会停下来，等待用户交互，用户的每一次交互都会启动一次运行循环，用来处理用户所有的点击事件，触摸事件。
+  从程序启动到加载完成是一个完整的运行循环，然后会停下来，等待用户交互，用户的每一次交互都会启动一次运行循环，用来处理用户所有的点击事件，触摸事件。
   我们都知道：所有的autorelease对象，在出了作用域之后，会自动添加到最近创建的自动释放池中。 释放时机是当前的runloop迭代结束
   但是如果每次都放进应用程序的main.m中，迟早有被撑满的一刻，这个过程中必定有一个释放的动作，什么时候？
    在一个完整的运行循环结束之前，会被销毁。
@@ -134,7 +134,7 @@
  autoreleasepoolpage是c++实现的一个类，通过源码NSObject类中 641行 class AutoreleasePoolPage  可以看出
  1.AutoreleasePoolPage 没有单独的结构，而是由若干个AutoreleasePoolPage以双向链表形式组合而成。(对应AutoreleasePoolPage源码中的` AutoreleasePoolPage * const parent;
     AutoreleasePoolPage *child;`  parent和child指针)
- 2.AutoreleasePool是按照线程一一对应的。(在AutoreleasePoolPage结构体中pthread_t const thread; 这个thread指的是当前页线程，如果对象所占不仅仅是一个page那么一个thread可以存在page)POOL_SENTINEL（哨兵对象）他只是nil的别名
+ 2.AutoreleasePool是按照线程一一对应的。(在AutoreleasePoolPage结构体中pthread_t const thread; 这个thread指的是当前页线程，如果对象所占不仅仅是一个page那么一个thread可以存在 多个page)POOL_SENTINEL（哨兵对象）他只是nil的别名
  3.AutoreleasePoolPage每个对象都会开辟4096字节结存(也就是虚拟内存一页的大小)除了源码中给出的实例变量所占的空间，剩下的空间全部用来存储autorelease对象的地址(注意这里只是存的地址而已。。。) 如果添加的对象太多地址存储不下，那么就会开辟下一个page
  4.源码中的id *next 指针作为游标指向栈顶最新add进来的autorelease对象的下一个地址。
  5.magic 用于对当前 AutoreleasePoolPage 完整性的校验

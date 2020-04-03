@@ -80,7 +80,7 @@ BOOL  isTaggedPoint(id pointer) {
 - (void)taggedPointedMethod01 {
     // 运行会crash 因为这个时候是对象
     // @"*** -[%s %s]: message sent to deallocated instance %p"
-    // 对象在赋值的时候会调用setName:方法 底层调用的时候会 先释放旧值 然后赋新值。 如果多个线程都访问这个对象的时候，可能多个线程会调用[_nameStr release];方法 这样就会重复释放，会crash。解决方案可以在赋值前后加锁。不建议把属性设置为atomic 因为这个加锁会很耗性能。
+    // 对象在赋值的时候会调用setName:方法 底层调用的时候会 先释放旧值 然后赋新值。 如果多个线程都访问这个对象的时候，可能多个线程会调用[_nameStr release];方法 这样就会重复释放，会crash。解决方案可以在赋值前后加锁。不建议把属性设置为atomic 因为这个加锁会很耗性能。 这个指针叫悬垂指针 悬垂指针指的是被释放掉对象的指针。野指针指的是没有初始化的指针。
     /*
      - (void)setNameStr:(NSString *)nameStr {
          if (_nameStr!=nameStr) {

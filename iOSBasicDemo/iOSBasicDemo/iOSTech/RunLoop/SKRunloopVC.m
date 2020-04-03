@@ -232,11 +232,10 @@
     [self stopTimer];
     [self stopThreadMethod];
     
-
 }
 
 - (void)stopThreadMethod {
-    //waitUntilDone:为NO表示的是不等testMethod执行完毕就继续往下执行。如果为  YES表明需要等待testMethod执行完之后继续往下走。
+    //waitUntilDone:为NO表示的是不等testMethod执行完毕就继续往下执行。如果为  Y           ES表明需要等待testMethod执行完之后继续往下走。
     if (self.currentThread) {
         [self  performSelectorOnMainThread:@selector(testMethod) withObject:nil waitUntilDone:NO];
     }

@@ -63,3 +63,20 @@
 }
 
 @end
+
+//面试题：分类和延展有什么区别？
+/*
+ 答：生成的文件不同
+ 新建Category会生成 .h 和 .m 两个文件，而新建Extension仅生成一个 .h 文件。
+ Category不能添加类属性，而Extension添加私有属性或变量。
+ Category添加的方法会被子类继承，而Extension添加的方法、属性不能被子类继承（因为它们是private的）。
+ Category可以为自定义的类或者framework框架中的类增加方法，而Extension只能为自定义的类添加方法（因为OC是闭源的，系统的 .m 方法不可见）
+ Category是@interface 本类名 (分类名)、@implementation 本类名(分类名)，而Extension是 @interface 本类名 ()。
+ 分类中在 .h 中声明、在 .m 中实现的方法为公开方法，可被外部访问；Extension中的方法为私有方法、变量为私有变量，外界无法直接访问。
+ （OC中因为没有真正意义上的私有方法，所以可以通过选择器访问）。
+ （PS：如果公开方法、私有方法声明的方法名相同，经测试只要实现了该方法就是公开方法）。
+ 可以把Extension理解为特殊的Category。
+
+ 参考资料：https://www.jianshu.com/p/b30f7f0ef77c
+ 
+ */

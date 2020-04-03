@@ -53,6 +53,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(asycTimerAction) userInfo:nil repeats:YES];
         [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
+        // 注意这里线程是在子线程 只有在主线程runloop才默认打开。这里需要获取到当前线程然后开启runloop.
         [[NSRunLoop currentRunLoop] run];
     });
     // runloop 用来循环处理响应事件，每个线程都有一个runloop。apple不允许自己创建runloop而且只有主线程的runloop是默认打开的。其他线程的runloop需要使用就必须手动打开。scheduledTimerWithTimeInterval这个方法创建好NSTimer以后会自动将它添加到当前线程的runloop中，非主线程只有调用run方法定时器才能开始工作。
@@ -269,7 +270,7 @@ void CFRunLoopObserverCallBackMethod(CFRunLoopObserverRef observer, CFRunLoopAct
 //  面试题解答：3.以+ scheduledTimerWithTimeInterval...的方式触发的timer，在滑动页面上的列表时，timer会暂定回调，为什么？如何解决？
 
 /*
-  runloop只能运行在一种model下，如果要切换mode，当前的loop需要停下来重启生成新的。利用这个机制，scrollview在滚动过程中，NSDefaultLoopMode(kCFRunLoopDefaultMode)的mode会切换到UITrackingRunLoopDefaultMode来保证scrollview的流畅滑动。只能在NSDefaultRunLoopMode模式下处理的时间会影响scrollview的滑动。
+  runloop只能运行在一种mode下，如果要切换mode，当前的loop需要停下来重启生成新的。利用这个机制，scrollview在滚动过程中，NSDefaultLoopMode(kCFRunLoopDefaultMode)的mode会切换到UITrackingRunLoopDefaultMode来保证scrollview的流畅滑动。只能在NSDefaultRunLoopMode模式下处理的时间会影响scrollview的滑动。
       如果我们把一个NSTimer对象以NSDefaultRunLoopMode(kCFRunloopDefaultMode)添加到主运行循环中的时候，scrollview滚动过程会因为mode的切换，而导致NSTimer将不再被调度。
  同时因为mode还是可以定制的；所以。timer及时会被scrollview的滑动影响的问题可以通过将timer添加到NSRunloopCommonModes（kCFRunLoopCommonModes）来解决。
  
@@ -316,7 +317,7 @@ void CFRunLoopObserverCallBackMethod(CFRunLoopObserverRef observer, CFRunLoopAct
 
 // 面试题解答：5.runloop有什么应用?
 /*
- 答：1.控制线程的生命周期(线程包保活，例如AFNetworking)
+ 答：1.控制线程的生命周期(线程保活，例如AFNetworking)
     2.解决NSTimer在滑动停止工作的问题
     3.监控应用卡顿
     4.性能优化
