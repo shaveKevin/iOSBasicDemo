@@ -36,16 +36,15 @@ APP启动时间的优化，主要是针对冷启动进行优化
 调用C++静态初始化器和__attribute__((constructor))修饰的函数
 到此为止，可执行文件和动态库中所有的符号(Class，Protocol，Selector，IMP，…)都已经按格式成功加载到内存中，被runtime 所管理
 
- 总结一下：
-APP的启动由dyld主导，将可执行文件加载到内存，顺便加载所有依赖的动态库
-并由runtime负责加载成objc定义的结构
-所有初始化工作结束后，dyld就会调用main函数
-接下来就是UIApplicationMain函数，AppDelegate的application:didFinishLaunchingWithOptions:方法
-
 三.main
  所有初始化工作结束后，dyld就会调用main函数
  接下来就是UIApplicationMain函数，AppDelegate的application:didFinishLaunchingWithOptions:方法
 
+  总结一下：
+ APP的启动由dyld主导，将可执行文件加载到内存，顺便加载所有依赖的动态库
+ 并由runtime负责加载成objc定义的结构
+ 所有初始化工作结束后，dyld就会调用main函数
+ 接下来就是UIApplicationMain函数，AppDelegate的application:didFinishLaunchingWithOptions:方法
  
 APP的启动优化：
  按照不同的阶段

@@ -17,7 +17,7 @@
 /*
    1.子类包括父类的成员变量 以及自己的成员变量都会存储在对应的存储空间中。
    2.每一个对象内部有一个isa指针。指向它的类对象，类对象保存着本对象的方法列表(因为对象能够接受的消息列表) 成员变量列表以及属性列表
-    子类的内部也有一个isa指针指向元对象(meta class)，元对象内部存放的是类方法列表，类列表内部还有一个super class的指针。指向它的父类对象。(类方法和实例方法存储在不同的存储单元里)
+    子类(注意这是一个类不是实例)的内部也有一个isa指针指向元对象(meta class)，元对象内部存放的是类方法列表，类列表内部还有一个super class的指针。指向它的父类对象。(类方法和实例方法存储在不同的存储单元里)
  // 根对象就是NSObject 它的superclass为nil。
  // 类对象既然称之为对象，那它也是一个实例。类对象中也有一个isa指针指向它的元类(meta class) 即类对象是元类的实例。
  OC 中的对象结构图：
@@ -29,7 +29,7 @@
  类的实例变量
 
  // 名字解释： ISA  metaClass
- OC的运行时是动态的，为每个类的定义生成了两个Objc_class 一个是普通的class 另外一个是metaclass 我们自己实现的时候可以在运行期创建这两个objc_classs数据结构，然后使用objc_addClass将class注册到运行系统中，以此动态地创建一个新的类。（meta是Class对象的类。）
+ OC的运行时是动态的，为每个类的定义生成了两个Objc_class 一个是普通的class 另外一个是metaclass 我们自己实现的时候可以在运行期创建这两个objc_class数据结构，然后使用objc_addClass将class注册到运行系统中，以此动态地创建一个新的类。（meta是Class对象的类。）
  ISA是一个指针：(一个对象的isa指针指向了这个类对象。一个类对象的isa指向了它的元类metaclass)
  metaClass也是一个指针：metaClass的isa指向的是根metaClass.如果该metaClass是根，metaClass指向自身，metaClasse的super Class指向父metaClass,如果该metaClas是根，则指向该metaClass对应的类。
    其中根对象就是NSObject，它的superclass指针指向nil

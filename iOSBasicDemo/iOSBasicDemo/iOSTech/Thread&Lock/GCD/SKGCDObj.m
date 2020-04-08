@@ -13,7 +13,7 @@
 - (instancetype)init {
     
     if (self = [super init]) {
-        [self threadMethod07];
+        [self threadMethod08];
     }
     return self;
 }
@@ -51,8 +51,8 @@
 
 }
 
+
 - (void)threadMethod03 {
-    // 会产生死锁
     NSLog(@"执行任务1");
     dispatch_queue_t queue = dispatch_queue_create("com.shavekevin.queue", DISPATCH_QUEUE_SERIAL);
     dispatch_sync(queue, ^{// 0
@@ -73,9 +73,8 @@
        */
 }
 
-
 - (void)threadMethod04 {
-    // 不会产生死锁
+    
     dispatch_queue_t queue1 = dispatch_queue_create("quque01", DISPATCH_QUEUE_SERIAL);
     dispatch_queue_t queue2 = dispatch_queue_create("quque02", DISPATCH_QUEUE_CONCURRENT);
     NSLog(@"执行任务1");
@@ -94,7 +93,6 @@
 
 
 - (void)threadMethod05 {
-    // 不会产生死锁
     dispatch_queue_t queue = dispatch_queue_create("quque", DISPATCH_QUEUE_CONCURRENT);
     NSLog(@"执行任务1");
     dispatch_sync(queue, ^{// 0
@@ -105,7 +103,7 @@
         NSLog(@"执行任务4");
     });
     NSLog(@"执行任务5");
-    // 虽然是相同队列 但是不是串行的，并发可以不用等当前队列执行完再执行。 并发不会阻塞线程。
+    // 虽然是相同队列 但是不是串行的，并发可以不用等当前队列执行完再执行。 并发不会阻塞线程。 因为是同步，不会阻塞线程，所以是按照顺序执行 1  2 3  4 5
 }
 
 
@@ -153,9 +151,10 @@
     //  group中其他任务都执行完之后 才会执行notify中的任务
     dispatch_group_notify(group, queue, ^{
         dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog(@"任务2");
+            NSLog(@"任务3");
         });
     });
+    // 打印结果1 和2 顺序不定 但是 1和2 都执行完之后再执行3
 }
 
 @end

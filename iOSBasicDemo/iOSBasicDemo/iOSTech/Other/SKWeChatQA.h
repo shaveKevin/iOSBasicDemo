@@ -19,6 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
  return 0;
  }
  */
+
+//面试题：NSDictionary是怎么实现的？它的查找方式是什么样的？
+
 - (void)replacePrintWorld;
 @end
 

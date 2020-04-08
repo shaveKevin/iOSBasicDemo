@@ -57,7 +57,8 @@
 /*
  runtime 对注册的类，会进行布局，对于weak对象会放入一个hash表中。用weak指向的对象内存地址作为key，当次对象的引用计数为0的时候会dealloc
  假如weak指向的对象内存地址是a，那么就会以a为键，在这个weak表中搜索，找到所有以a为键的weak对象，从而设置为nil。
- 
+ __weak typeof(self)weakSelf = self;
+
  ---------------------下面是一段伪代码------------------
  设计 objc_storeWeak(&a,b);// a是weak修饰的对象  b是赋值对象也即是属性变量 属于a下的属性变量
  objc_storeWeak函数把第二个参数 - 赋值对象(b)的内存地址作为key， 将第一个参数--weak修饰的属性变量(a)的内存地址(&a)作为value 注册到weak表中。

@@ -60,6 +60,8 @@ typedef void(^My_BlockCycle)(int a,int b);
     // block 所在内存位置
     [self blockLocation];
     
+    [self blockAutoConn];
+    
 }
 
 - (void)myBlockOne {
@@ -119,6 +121,7 @@ typedef void(^My_BlockCycle)(int a,int b);
         self.ageTest = 100;
         NSLog(@"== ageTest is %@",@(self.ageTest));
         NSLog(@"====block使用中ageTest===%p",&self->_ageTest);
+        // age 只要在block中不管有没有执行block 这个时候age会被block 捕获
     };
     // 对变量赋值
     age =  18;
@@ -126,7 +129,7 @@ typedef void(^My_BlockCycle)(int a,int b);
     NSLog(@"== ageTest的值 is %@",@(self.ageTest));
     NSLog(@"====block使用外ageTest===%p",&self->_ageTest);
 
-// 通过打印age 的地址可以发现，block中的age其实已经不是原来的age了。并且是在block实现的时候进行捕获。捕获之后存储在block内部结构中( clang之后可以看出)
+// 通过打印age 的地址可以发现，block中的age其实已经不是原来的age了。并且是在block实现的时候进行捕获。捕获之后存储在block内部结构中(clang之后可以看出)
 // 在block内部中如果对变量进行赋值的时候会发现报错 Variable is not assignable (missing __block type specifier)
     // self.ageTest中 全部变量不被捕获。 通过xcrun 可以看出。 当然通过打印self.ageTest的地址也可以看出.
     // 局部变量被捕获，(block中的变量没有用__block 修饰的话 在block 外部地址是不变的。而在内部被捕获,地址发生改变(改变仅仅发生在block内部)
@@ -223,7 +226,7 @@ typedef void(^My_BlockCycle)(int a,int b);
      
      答：栈上的block，如果其所属的变量作用域结束，该block就被废弃，如同一般的自动变量。当然block中的__block变量也同时被废弃。
      为了解决栈块在其变量作用域结束之后被废弃(释放)的问题，我们需要把block复制到堆中，延长其生命周期。开启arc的时候，
-     大多数啊情况下编译器会恰当地判断是否要将block从栈赋值到堆，
+     大多数情况下编译器会恰当地判断是否要将block从栈赋值到堆，
      如果有，自动生成将block从栈上复制到堆上的代码。block的复制执行操作是copy实例方法。block只要调用了copy方法，栈块就会变成堆块。
      block变量作用域结束时，栈上的__block变量和block一同被废弃。复制到堆上的__block变量和block在变量作用域结束时不受影响。
      
@@ -240,7 +243,7 @@ typedef void(^My_BlockCycle)(int a,int b);
      block变量作用域就结束了。block会被释放掉，但是在arc下有效，
      因为在这种情况下，编译器会自动完成复制。
      
-     在非arc情况下则需要开发者调用copyd方法手动复制，现在基本上都是在用arc，所以这种复制内容不再研究。
+     在非arc情况下则需要开发者调用copy方法手动复制，现在基本上都是在用arc，所以这种复制内容不再研究。
      
      将block从栈上复制到堆上相当消耗CPU，所以当block设置在栈上也能够使用时，就不要复制了。因为此时的复制只是在浪费CPU资源。
      block的复制操作执行的是copy实例方法，不同类型的block使用copy方法的效果如下：
@@ -257,7 +260,7 @@ typedef void(^My_BlockCycle)(int a,int b);
      从上面可以知道，block在堆中的copy会造成引用计数增加，这与其他的OC对象是一样的
      虽然block在栈中也是以对象的身份存在的，但是栈块没有引用计数，因为不需要，栈内的内存由编译器自动分配释放。
      
-     不管block存储域在何处，用copyg方法复制都不会引起任何问题，在不确定时调用copy方法即可。
+     不管block存储域在何处，用copy方法复制都不会引起任何问题，在不确定时调用copy方法即可。
      在arc有效的时候，多次调用copy方法完全没有问题。
      blk = [[[[block copy]copy]copy]copy];
      经过多次复制，变量blk仍然持有block的强引用，该block不会被废弃。
@@ -432,7 +435,7 @@ typedef void(^My_BlockCycle)(int a,int b);
     //. 3.将block赋值给附有__strong修饰符id类型的类或block类型的成员变量
     //. 4.在方法名中含有usingblock的cocoa框架方法或GCD中的api传递的block时
     //. block从栈复制到堆上的时候copy方法被调用。
-    //. 释放复制到堆上的block 谁都不持有block而使其被废弃的是偶调用dispose函数。相当于dealloc实例方法。
+    //. 释放复制到堆上的block 谁都不持有block而使其被废弃的是调用dispose函数。相当于dealloc实例方法。
     //（如果没人持有就放弃走dealloc方法）
     // 如果block不复制到堆上，则其不会持有截获的对象，对象会随着变量作用域的结束而结束
     // 野指针是指的是没有初始化的指针
@@ -498,7 +501,7 @@ typedef void(^My_BlockCycle)(int a,int b);
     //  xcrun -sdk iphoneos clang -arch arm64 -rewrite-objc ViewController.m -o ViewController-arm64.cpp
     self.dataArry = array;
     [self.dataArry removeObjectAtIndex:0];
-    // 使用自旋锁的目的是确保临界区只有一个线程可以访问，自旋锁的实现思路很简单，理论来说只要定义一个全局变量，用来表示锁可可用情况即可，自旋锁是使用忙等机制如果在临界区域执行时间过长，不建议使用自旋锁，因为在while循环中，线程处于忙等状态。拜拜浪费CPU时间，最终因为超时被操作系统抢占时间片。
+    // 使用自旋锁的目的是确保临界区只有一个线程可以访问，自旋锁的实现思路很简单，理论来说只要定义一个全局变量，用来表示锁可可用情况即可，自旋锁是使用忙等机制如果在临界区域执行时间过长，不建议使用自旋锁，因为在while循环中，线程处于忙等状态。白白浪费CPU时间，最终因为超时被操作系统抢占时间片。
     
 
     
@@ -681,7 +684,7 @@ typedef void(^My_BlockCycle)(int a,int b);
 
 
  例如：test_canRetainCycle中block外部的的__weak 和  block内部的__strong
- (其中加__weak的时候是为了在block内部使用的时候不会强引用当前对象，不会造成引用计数+1，防止了循环引用。而用__strong的目的是一旦进入block执行，假设不允许self在这个执行过程中释放，就需要加入strongself，block执行完毕之后这个strongself会自动释放，m不会存在循环引用问题，如果要在block内多次访问self，那么需要使用strongself)
+ (其中加__weak的时候是为了在block内部使用的时候不会强引用当前对象，不会造成引用计数+1，防止了循环引用。而用__strong的目的是一旦进入block执行，假设不允许self在这个执行过程中释放，就需要加入strongself，block执行完毕之后这个strongself会自动释放，不会存在循环引用问题，如果要在block内多次访问self，那么需要使用strongself)
 
  循环引用的检测可以参考FB开源的一个工具：FBRetainCycleDetector 腾讯在此基础上也封装了一个工具：MLeaksFinder  具体可以github搜索
  */

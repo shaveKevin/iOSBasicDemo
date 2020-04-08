@@ -36,3 +36,9 @@ NSLog(@"helloWorld");
 
 
 @end
+
+//面试题答案：NSDictionary是怎么实现的？它的查找方式是什么样的？
+/*
+ 答：参考链接：https://juejin.im/post/5c510617f265da613f2fdac4
+   源码地址：https://opensource.apple.com/source/CF/CF-368/Collections.subproj/   NSDictionary是CFDictionary是对应的。
+ */

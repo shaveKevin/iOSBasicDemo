@@ -88,7 +88,7 @@
 }
  
 - (void)pthread_mutex {
-    // 初始化锁(这是结构题变量) 注意：加锁再次进行加锁的时候就会造成死锁。
+    // 初始化锁(这是结构体变量) 注意：加锁再次进行加锁的时候就会造成死锁。
     //pthread_mutex 是一个互斥锁，如果用另外一种方式创建锁的时候，设置其属性是递归的时候就不会造成死锁。
     pthread_mutex_t mutexLock = PTHREAD_MUTEX_INITIALIZER;
     // 加锁

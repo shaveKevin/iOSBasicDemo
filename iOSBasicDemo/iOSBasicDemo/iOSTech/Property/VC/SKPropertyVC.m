@@ -180,8 +180,8 @@ __weak id  reference = nil;
     // 这里能解决一个面试题： 为什么用property声明NSString  NSArray NSDictionary 经常使用关键字copy?
     // 答:因为他们有对应的可变类型NSMutableString NSMutableArray  NSMutableDictionary 他们之间可能进行赋值操作。为了确保对象中的字符串数值不会无意间变动，应该在设置新值的时候copy一份。
    //简单总结一下：
-   // 1. [不可变对象 copy]  --浅复制 --- 地址不变
-  // 2.[不可变对象 mutableCopy]  --深复制 --地址发生变化
+   // 1. [不可变对象 copy]  --浅复制 --- 地址不变   拷贝的是地址
+  // 2.[不可变对象 mutableCopy]  --深复制 --地址发生变化  拷贝的是值
     NSString *immutableString = @"拷贝";
     NSString *commtableString = [immutableString copy];
     NSString *mutableString = [immutableString mutableCopy];
@@ -221,7 +221,7 @@ __weak id  reference = nil;
     NSLog(@"deepCopyArray  is ====%@,  deepCopyArray  address is %p",deepCopyArray,deepCopyArray[0]);
     
     // 3.[可变对象  copy] 单层深复制
-    // 4. [不可变对象 mutableCopy] 单层深复制
+    // 4. [可变对象 mutableCopy] 单层深复制
     // 值不变，对象地址发生改变。
     NSMutableArray *array  = dataArray.mutableCopy;
     NSMutableArray *arrayCopy = [array copy];

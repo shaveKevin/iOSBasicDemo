@@ -14,7 +14,7 @@
 /*
   *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[SKMessageSendAction testUnrecognizedSelector]: unrecognized selector sent to instance 0x2836ac510'
  */
-// 面试解答：
+// 面试解答：什么时候会报unrecognized selector的异常？xianx
 /*
  简单来说，当调用对象某个方法，但是这个对象并没有实现这个方法的时候，可以通过消息转发来解决。
   objc在向一个对象发送消息的时候，runtime会根据对象的指针找到对应所属的类，然后在这个类的方法类表以及父类的方法列表中
@@ -37,7 +37,7 @@
 }
 // 只要代码走到这里证明目标对象没有实现这个方法  这里可以做的操作是：
 /*
-  1. 为了保证不闪退，可以新增一个方法保证app正常运行。如果这里需要处理逻辑问题并且会影响业务,建议还是让让闪退吧
+  1. 为了保证不闪退，可以新增一个方法保证app正常运行。如果这里需要处理逻辑问题并且会影响业务,建议还是让闪退吧
  
   2. 添加埋点上报异常信息(这个在debug模式下可以不用上报)
  */

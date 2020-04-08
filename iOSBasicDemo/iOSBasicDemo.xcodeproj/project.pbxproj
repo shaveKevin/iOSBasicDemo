@@ -107,7 +107,6 @@
 		D73A187023595F1300C5FBF1 /* SKBlockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A180123595F1300C5FBF1 /* SKBlockVC.m */; };
 		D73A187123595F1300C5FBF1 /* Block的深度探究.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D73A180223595F1300C5FBF1 /* Block的深度探究.jpg */; };
 		D73A187223595F1300C5FBF1 /* BlockTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A180523595F1300C5FBF1 /* BlockTool.m */; };
-		D73A187323595F1300C5FBF1 /* SemaphoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A180723595F1300C5FBF1 /* SemaphoreTest.m */; };
 		D73A187523595F1300C5FBF1 /* DownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A180F23595F1300C5FBF1 /* DownLoadManager.m */; };
 		D73A187823595F1300C5FBF1 /* SSDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A181623595F1300C5FBF1 /* SSDemo.m */; };
 		D73A187A23595F1300C5FBF1 /* SubDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D73A181823595F1300C5FBF1 /* SubDemo.m */; };
@@ -355,7 +354,6 @@
 		D73A180423595F1300C5FBF1 /* PropertyDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyDemo.h; sourceTree = "<group>"; };
 		D73A180523595F1300C5FBF1 /* BlockTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockTool.m; sourceTree = "<group>"; };
 		D73A180623595F1300C5FBF1 /* NSObject+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Addition.h"; sourceTree = "<group>"; };
-		D73A180723595F1300C5FBF1 /* SemaphoreTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SemaphoreTest.m; sourceTree = "<group>"; };
 		D73A180823595F1300C5FBF1 /* NSObject+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Add.h"; sourceTree = "<group>"; };
 		D73A180923595F1300C5FBF1 /* PropertyDemo-arm64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "PropertyDemo-arm64.cpp"; sourceTree = "<group>"; };
 		D73A180A23595F1300C5FBF1 /* RetainCycleModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetainCycleModule.h; sourceTree = "<group>"; };
@@ -378,7 +376,6 @@
 		D73A181E23595F1300C5FBF1 /* TestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
 		D73A181F23595F1300C5FBF1 /* RetainCycleModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetainCycleModule.m; sourceTree = "<group>"; };
 		D73A182023595F1300C5FBF1 /* NSObject+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Add.m"; sourceTree = "<group>"; };
-		D73A182123595F1300C5FBF1 /* SemaphoreTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SemaphoreTest.h; sourceTree = "<group>"; };
 		D73A182223595F1300C5FBF1 /* NSObject+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Addition.m"; sourceTree = "<group>"; };
 		D73A182423595F1300C5FBF1 /* TestExpand+test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TestExpand+test.m"; sourceTree = "<group>"; };
 		D73A182523595F1300C5FBF1 /* TestExpand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestExpand.m; sourceTree = "<group>"; };
@@ -1015,33 +1012,31 @@
 		D73A180323595F1300C5FBF1 /* BlockTest */ = {
 			isa = PBXGroup;
 			children = (
-				D73A180423595F1300C5FBF1 /* PropertyDemo.h */,
+				D73A181123595F1300C5FBF1 /* BlockTest.h */,
+				D73A182E23595F1300C5FBF1 /* BlockTest.m */,
+				D73A181B23595F1300C5FBF1 /* BlockTool.h */,
 				D73A180523595F1300C5FBF1 /* BlockTool.m */,
-				D73A180623595F1300C5FBF1 /* NSObject+Addition.h */,
-				D73A180723595F1300C5FBF1 /* SemaphoreTest.m */,
-				D73A180823595F1300C5FBF1 /* NSObject+Add.h */,
-				D73A180923595F1300C5FBF1 /* PropertyDemo-arm64.cpp */,
-				D73A180A23595F1300C5FBF1 /* RetainCycleModule.h */,
-				D73A180B23595F1300C5FBF1 /* TestModel.h */,
-				D73A180C23595F1300C5FBF1 /* ShortDemo1.h */,
 				D73A180D23595F1300C5FBF1 /* DownLoadManager */,
 				D73A181023595F1300C5FBF1 /* MoreTimeTest.h */,
-				D73A181123595F1300C5FBF1 /* BlockTest.h */,
-				D73A181223595F1300C5FBF1 /* ShortDemo1-arm64.cpp */,
-				D73A181323595F1300C5FBF1 /* SubDemo */,
-				D73A181A23595F1300C5FBF1 /* Time */,
-				D73A181B23595F1300C5FBF1 /* BlockTool.h */,
-				D73A181C23595F1300C5FBF1 /* PropertyDemo.m */,
-				D73A181D23595F1300C5FBF1 /* NSObject+Addition-arm64.cpp */,
-				D73A181E23595F1300C5FBF1 /* TestModel.m */,
-				D73A181F23595F1300C5FBF1 /* RetainCycleModule.m */,
-				D73A182023595F1300C5FBF1 /* NSObject+Add.m */,
-				D73A182123595F1300C5FBF1 /* SemaphoreTest.h */,
-				D73A182223595F1300C5FBF1 /* NSObject+Addition.m */,
-				D73A182323595F1300C5FBF1 /* TestExpanded */,
 				D73A182C23595F1300C5FBF1 /* MoreTimeTest.m */,
+				D73A180823595F1300C5FBF1 /* NSObject+Add.h */,
+				D73A182023595F1300C5FBF1 /* NSObject+Add.m */,
+				D73A181D23595F1300C5FBF1 /* NSObject+Addition-arm64.cpp */,
+				D73A180623595F1300C5FBF1 /* NSObject+Addition.h */,
+				D73A182223595F1300C5FBF1 /* NSObject+Addition.m */,
+				D73A180923595F1300C5FBF1 /* PropertyDemo-arm64.cpp */,
+				D73A180423595F1300C5FBF1 /* PropertyDemo.h */,
+				D73A181C23595F1300C5FBF1 /* PropertyDemo.m */,
+				D73A180A23595F1300C5FBF1 /* RetainCycleModule.h */,
+				D73A181F23595F1300C5FBF1 /* RetainCycleModule.m */,
+				D73A181223595F1300C5FBF1 /* ShortDemo1-arm64.cpp */,
+				D73A180C23595F1300C5FBF1 /* ShortDemo1.h */,
 				D73A182D23595F1300C5FBF1 /* ShortDemo1.m */,
-				D73A182E23595F1300C5FBF1 /* BlockTest.m */,
+				D73A181323595F1300C5FBF1 /* SubDemo */,
+				D73A182323595F1300C5FBF1 /* TestExpanded */,
+				D73A180B23595F1300C5FBF1 /* TestModel.h */,
+				D73A181E23595F1300C5FBF1 /* TestModel.m */,
+				D73A181A23595F1300C5FBF1 /* Time */,
 			);
 			path = BlockTest;
 			sourceTree = "<group>";
@@ -1416,7 +1411,6 @@
 				2C777B9823B84489007F1834 /* SKAppSignVC.m in Sources */,
 				D7BC7ECE235EE89A00A562DA /* SKGCDPrintObj.m in Sources */,
 				2C0011422424B75F00900770 /* SKWeChatQA.m in Sources */,
-				D73A187323595F1300C5FBF1 /* SemaphoreTest.m in Sources */,
 				2C0011522426874C00900770 /* SKGetIntersectionNode.m in Sources */,
 				2C00114F24267B5800900770 /* SKLevelOrder.m in Sources */,
 				D73A186923595F1300C5FBF1 /* SKObjectObject.m in Sources */,

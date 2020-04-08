@@ -136,7 +136,7 @@
     AutoreleasePoolPage *child;`  parent和child指针)
  2.AutoreleasePool是按照线程一一对应的。(在AutoreleasePoolPage结构体中pthread_t const thread; 这个thread指的是当前页线程，如果对象所占不仅仅是一个page那么一个thread可以存在 多个page)POOL_SENTINEL（哨兵对象）他只是nil的别名
  3.AutoreleasePoolPage每个对象都会开辟4096字节结存(也就是虚拟内存一页的大小)除了源码中给出的实例变量所占的空间，剩下的空间全部用来存储autorelease对象的地址(注意这里只是存的地址而已。。。) 如果添加的对象太多地址存储不下，那么就会开辟下一个page
- 4.源码中的id *next 指针作为游标指向栈顶最新add进来的autorelease对象的下一个地址。
+ 4.源码中的id *next 指针作为游标指向栈顶最新add进来的autorelease对象的下一个地址。  也就是说next指针指的地址就是要插入元素的位置，插入或者release之后next指针会随之改变
  5.magic 用于对当前 AutoreleasePoolPage 完整性的校验
  6.一个AutoreleasePoolPage的空间被占满的时候，会新建一个AutoreleasePoolPage对象，连接链表，后来的autorelease对象在新的page加入。
  所以向一个对象发送- autorelease消息，就是将这个对象加入到AutoreleasepoolPage的栈顶next指向的位置。
@@ -147,7 +147,7 @@
  objc_autoreleasePoolPush()的返回值是这个哨兵对象的地址，被objc_autoreleasePoolPop(哨兵对象)作为入参。
  
  1. 根据传入的哨兵对象的地址找到哨兵对象所在的page
- 2. 在当前page中，将晚于哨兵对象的插入的所以autorelease对象发送一次release消息，并向回移动next到正确位置。
+ 2. 在当前page中，将晚于哨兵对象的插入的所以autorelease对象发送一次release消息，并移动next到正确位置。
  3. 从最新加入的对象一直向前清理，可以向前跨越多个page，直到找到哨兵所在的page。
  
 假如下面模拟的是哨兵对象以及其他对象在pool中的位置
@@ -218,7 +218,7 @@
  这里分为三种不同的情况
  1. 有hotpage并且hotpage不满的时候，这个时候后直接把需要autorelease对象添加到autoreleasepoolpage中
  2. 当有hotpage并且hotpage满的时候。这个时候会初始化一个新的页面 然后调用add方法把对象添加到autoreleasepoolpage中
- 3. 没有hotpage的时候。这个时候回创建一个page 然后调用dd方法把对象添加到autoreleasepoolpage中
+ 3. 没有hotpage的时候。这个时候回创建一个page 然后调用add方法把对象添加到autoreleasepoolpage中
 
  参考链接：   1. 黑幕后的autorelease http://blog.sunnyxx.com/2014/10/15/behind-autorelease/
 
@@ -249,7 +249,7 @@
 
  在任何一个时间点上，线程是可结合的（joinable），或者是分离的（detached）。一个可结合的线程能够被其他线程收回其资源和杀死；在被其他线程回收之前，它的存储器资源（如栈）是不释放的。相反，一个分离的线程是不能被其他线程回收或杀死的，它的存储器资源在它终止时由系统自动释放。
 
- 线程的分离状态决定一个线程以什么样的方式来终止自己。在默认情况下线程是非分离状态的，这种情况下，原有的线程等待创建的线程结束。只有当pthread_join（）函数返回时，创建的线程才算终止，才能释放自己占用的系统资源。而分离线程不是这样子的，它没有被其他的线程所等待，自己运行结束了，线程也就终止了，马上释放系统资源。程序员应该根据自己的需要，选择适当的分离状态。所以如果我们在创建线程时就知道不需要了解线程的终止状态，则可以pthread_attr_t结构中的detachstate线程属性，让线程以分离状态启动。
+ 线程的分离状态决定一个线程以什么样的方式来终止自己。在默认情况下线程是非分离状态的，这种情况下，原有的线程等待创建的线程结束。只有当pthread_join()函数返回时，创建的线程才算终止，才能释放自己占用的系统资源。而分离线程不是这样子的，它没有被其他的线程所等待，自己运行结束了，线程也就终止了，马上释放系统资源。程序员应该根据自己的需要，选择适当的分离状态。所以如果我们在创建线程时就知道不需要了解线程的终止状态，则可以pthread_attr_t结构中的detachstate线程属性，让线程以分离状态启动。
 
  由此可知，线程占用的资源要释放的前提是线程终止，如果加了autoreleasepool相关对象会在pool执行完毕后释放，避免过多的延迟释放造成程序占用过多的内存。如果是一个长寿命的线程的话，应该创建更多的Autorelease Pool来达到这个目的。例如线程中用到了run loop的时候，每一次的迭代都需要创建Autorelease Pool。
 
