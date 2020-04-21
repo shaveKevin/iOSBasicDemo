@@ -19,6 +19,10 @@
 		2C00115524268BB700900770 /* SKMinIncrementForUnique.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C00115424268BB700900770 /* SKMinIncrementForUnique.m */; };
 		2C0011582426957300900770 /* SKIntersect.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0011572426957300900770 /* SKIntersect.m */; };
 		2C00115B242915FB00900770 /* SKPlusOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C00115A242915FB00900770 /* SKPlusOne.m */; };
+		2C115438244426CA000E56CC /* SKFindNumberIn2DArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C115437244426CA000E56CC /* SKFindNumberIn2DArray.m */; };
+		2C11543B24442A66000E56CC /* SKFindRepeatNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C11543A24442A66000E56CC /* SKFindRepeatNumber.m */; };
+		2C11543E244442C5000E56CC /* SKLengthOfLongestSubstring.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C11543D244442C5000E56CC /* SKLengthOfLongestSubstring.m */; };
+		2C11544124444458000E56CC /* SKConstructArr.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C11544024444458000E56CC /* SKConstructArr.m */; };
 		2C17BF73238BB67200E556EF /* SKFindMiddleCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17BF72238BB67200E556EF /* SKFindMiddleCount.m */; };
 		2C3FB0EF238FC20900AA181D /* SKSameTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3FB0EE238FC20900AA181D /* SKSameTree.m */; };
 		2C477C9323F58FD900C2F190 /* SKBasicSortObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B220923A7D4750018EA68 /* SKBasicSortObj.m */; };
@@ -170,6 +174,14 @@
 		2C0011572426957300900770 /* SKIntersect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKIntersect.m; sourceTree = "<group>"; };
 		2C001159242915FB00900770 /* SKPlusOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKPlusOne.h; sourceTree = "<group>"; };
 		2C00115A242915FB00900770 /* SKPlusOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKPlusOne.m; sourceTree = "<group>"; };
+		2C115436244426CA000E56CC /* SKFindNumberIn2DArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKFindNumberIn2DArray.h; sourceTree = "<group>"; };
+		2C115437244426CA000E56CC /* SKFindNumberIn2DArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKFindNumberIn2DArray.m; sourceTree = "<group>"; };
+		2C11543924442A66000E56CC /* SKFindRepeatNumber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKFindRepeatNumber.h; sourceTree = "<group>"; };
+		2C11543A24442A66000E56CC /* SKFindRepeatNumber.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKFindRepeatNumber.m; sourceTree = "<group>"; };
+		2C11543C244442C5000E56CC /* SKLengthOfLongestSubstring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKLengthOfLongestSubstring.h; sourceTree = "<group>"; };
+		2C11543D244442C5000E56CC /* SKLengthOfLongestSubstring.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKLengthOfLongestSubstring.m; sourceTree = "<group>"; };
+		2C11543F24444458000E56CC /* SKConstructArr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKConstructArr.h; sourceTree = "<group>"; };
+		2C11544024444458000E56CC /* SKConstructArr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKConstructArr.m; sourceTree = "<group>"; };
 		2C17BF71238BB67200E556EF /* SKFindMiddleCount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKFindMiddleCount.h; sourceTree = "<group>"; };
 		2C17BF72238BB67200E556EF /* SKFindMiddleCount.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKFindMiddleCount.m; sourceTree = "<group>"; };
 		2C3FB0ED238FC20900AA181D /* SKSameTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKSameTree.h; sourceTree = "<group>"; };
@@ -468,6 +480,12 @@
 				2C00115A242915FB00900770 /* SKPlusOne.m */,
 				2CCB937424292FB100721924 /* SKMoveZeroes.h */,
 				2CCB937524292FB100721924 /* SKMoveZeroes.m */,
+				2C115436244426CA000E56CC /* SKFindNumberIn2DArray.h */,
+				2C115437244426CA000E56CC /* SKFindNumberIn2DArray.m */,
+				2C11543924442A66000E56CC /* SKFindRepeatNumber.h */,
+				2C11543A24442A66000E56CC /* SKFindRepeatNumber.m */,
+				2C11543F24444458000E56CC /* SKConstructArr.h */,
+				2C11544024444458000E56CC /* SKConstructArr.m */,
 				2CCB937D242A05D500721924 /* SKReverseInt.h */,
 				2CCB937E242A05D500721924 /* SKReverseInt.m */,
 				2CCB9380242B9AB400721924 /* SKReverseString.h */,
@@ -506,6 +524,8 @@
 				2CCB93872433977B00721924 /* SKSortArray.m */,
 				2CCB938924347AAB00721924 /* SKMaxDepthAfterSplit.h */,
 				2CCB938A24347AAB00721924 /* SKMaxDepthAfterSplit.m */,
+				2C11543C244442C5000E56CC /* SKLengthOfLongestSubstring.h */,
+				2C11543D244442C5000E56CC /* SKLengthOfLongestSubstring.m */,
 			);
 			path = Medium;
 			sourceTree = "<group>";
@@ -1366,6 +1386,7 @@
 				D73A188223595F1300C5FBF1 /* TestExpand.m in Sources */,
 				D73A189223595F1300C5FBF1 /* SKUINavigationController.m in Sources */,
 				D73A188023595F1300C5FBF1 /* NSObject+Addition.m in Sources */,
+				2C11543B24442A66000E56CC /* SKFindRepeatNumber.m in Sources */,
 				2C777B9323B50897007F1834 /* LXDBacktraceLogger.m in Sources */,
 				2C00113D2423DE5500900770 /* SKContainsDuplicate.m in Sources */,
 				D73A188F23595F1300C5FBF1 /* SKAlgorithmBaseVC.m in Sources */,
@@ -1379,6 +1400,7 @@
 				D73A185F23595F1300C5FBF1 /* SKRuntimePerson.m in Sources */,
 				2C777A0923B12FD2007F1834 /* SKSynthesizeModel.m in Sources */,
 				2C777A3F23B2225B007F1834 /* SKTaggedPointTest+SKCategory.m in Sources */,
+				2C11544124444458000E56CC /* SKConstructArr.m in Sources */,
 				2C777A2923B12FEB007F1834 /* SKIBOutletObj.m in Sources */,
 				2C777A2423B12FE3007F1834 /* SKProprtyModel.m in Sources */,
 				2C777A4223B36C59007F1834 /* SKRuntimeObj.m in Sources */,
@@ -1433,6 +1455,7 @@
 				D73A188923595F1300C5FBF1 /* SKPCNetworkingVC.m in Sources */,
 				2C777B9C23B844B3007F1834 /* SKAppSignObj.m in Sources */,
 				2C0011582426957300900770 /* SKIntersect.m in Sources */,
+				2C11543E244442C5000E56CC /* SKLengthOfLongestSubstring.m in Sources */,
 				D73A186223595F1300C5FBF1 /* SKDelegateVC.m in Sources */,
 				D73A187A23595F1300C5FBF1 /* SubDemo.m in Sources */,
 				2CCB937624292FB100721924 /* SKMoveZeroes.m in Sources */,
@@ -1457,6 +1480,7 @@
 				D73A187523595F1300C5FBF1 /* DownLoadManager.m in Sources */,
 				2C00115524268BB700900770 /* SKMinIncrementForUnique.m in Sources */,
 				2CAB1624238ADFA900C418BA /* SKAlogrithmVCInterview.m in Sources */,
+				2C115438244426CA000E56CC /* SKFindNumberIn2DArray.m in Sources */,
 				D73A187023595F1300C5FBF1 /* SKBlockVC.m in Sources */,
 				2CCB938B24347AAB00721924 /* SKMaxDepthAfterSplit.m in Sources */,
 				D79FEA9A2368411300419AEC /* SKLinkListNode.m in Sources */,
