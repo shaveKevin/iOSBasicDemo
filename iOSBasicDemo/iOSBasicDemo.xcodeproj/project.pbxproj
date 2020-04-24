@@ -39,6 +39,7 @@
 		2C5B221E23A9604C0018EA68 /* SKCategoryExtentionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B221D23A9604C0018EA68 /* SKCategoryExtentionVC.m */; };
 		2C5B222223A960990018EA68 /* SKCategoryObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B222123A960990018EA68 /* SKCategoryObj.m */; };
 		2C5B222523A960B60018EA68 /* SKCategoryObj+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5B222423A960B60018EA68 /* SKCategoryObj+Category.m */; };
+		2C6493842451224300282BFE /* SKCoinLcci.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6493832451224300282BFE /* SKCoinLcci.m */; };
 		2C66F593239D43FB008A5CFC /* SKLifeCycleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66F592239D43FB008A5CFC /* SKLifeCycleVC.m */; };
 		2C73916C237AAB7C005E664F /* 三次握手，四次挥手.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C73916B237AAB7C005E664F /* 三次握手，四次挥手.png */; };
 		2C7779E723AA2747007F1834 /* SKHasCycle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7779E623AA2747007F1834 /* SKHasCycle.m */; };
@@ -210,6 +211,8 @@
 		2C5B222123A960990018EA68 /* SKCategoryObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKCategoryObj.m; sourceTree = "<group>"; };
 		2C5B222323A960B60018EA68 /* SKCategoryObj+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKCategoryObj+Category.h"; sourceTree = "<group>"; };
 		2C5B222423A960B60018EA68 /* SKCategoryObj+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SKCategoryObj+Category.m"; sourceTree = "<group>"; };
+		2C6493822451224300282BFE /* SKCoinLcci.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKCoinLcci.h; sourceTree = "<group>"; };
+		2C6493832451224300282BFE /* SKCoinLcci.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKCoinLcci.m; sourceTree = "<group>"; };
 		2C66F591239D43FB008A5CFC /* SKLifeCycleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKLifeCycleVC.h; sourceTree = "<group>"; };
 		2C66F592239D43FB008A5CFC /* SKLifeCycleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKLifeCycleVC.m; sourceTree = "<group>"; };
 		2C73916B237AAB7C005E664F /* 三次握手，四次挥手.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "三次握手，四次挥手.png"; sourceTree = "<group>"; };
@@ -526,6 +529,8 @@
 				2CCB938A24347AAB00721924 /* SKMaxDepthAfterSplit.m */,
 				2C11543C244442C5000E56CC /* SKLengthOfLongestSubstring.h */,
 				2C11543D244442C5000E56CC /* SKLengthOfLongestSubstring.m */,
+				2C6493822451224300282BFE /* SKCoinLcci.h */,
+				2C6493832451224300282BFE /* SKCoinLcci.m */,
 			);
 			path = Medium;
 			sourceTree = "<group>";
@@ -1452,6 +1457,7 @@
 				D73A187223595F1300C5FBF1 /* BlockTool.m in Sources */,
 				D73A187823595F1300C5FBF1 /* SSDemo.m in Sources */,
 				2C5B21FC23A681BF0018EA68 /* SKSlimObj.m in Sources */,
+				2C6493842451224300282BFE /* SKCoinLcci.m in Sources */,
 				D73A188923595F1300C5FBF1 /* SKPCNetworkingVC.m in Sources */,
 				2C777B9C23B844B3007F1834 /* SKAppSignObj.m in Sources */,
 				2C0011582426957300900770 /* SKIntersect.m in Sources */,
