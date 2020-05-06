@@ -70,6 +70,7 @@
 		2C8EE602239EC21D00887599 /* SKSwiftFeatureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE601239EC21D00887599 /* SKSwiftFeatureVC.swift */; };
 		2C8EE604239F494600887599 /* SwiftNameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8EE603239F494600887599 /* SwiftNameSpace.swift */; };
 		2C94481C23BA534800376C64 /* SKValidParentheses.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C94481B23BA534800376C64 /* SKValidParentheses.m */; };
+		2CA25007245A5EFB00433CCF /* SKHappy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA25006245A5EFB00433CCF /* SKHappy.m */; };
 		2CA91B21238B7BDD006A46E7 /* SKCharReverse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B1B238B7BDD006A46E7 /* SKCharReverse.m */; };
 		2CA91B23238B7BDD006A46E7 /* SKReverseList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B1D238B7BDD006A46E7 /* SKReverseList.m */; };
 		2CA91B26238B7C17006A46E7 /* SKMergeSortedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA91B25238B7C17006A46E7 /* SKMergeSortedArray.m */; };
@@ -278,6 +279,8 @@
 		2C8EE603239F494600887599 /* SwiftNameSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNameSpace.swift; sourceTree = "<group>"; };
 		2C94481A23BA534800376C64 /* SKValidParentheses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKValidParentheses.h; sourceTree = "<group>"; };
 		2C94481B23BA534800376C64 /* SKValidParentheses.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKValidParentheses.m; sourceTree = "<group>"; };
+		2CA25005245A5EFB00433CCF /* SKHappy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKHappy.h; sourceTree = "<group>"; };
+		2CA25006245A5EFB00433CCF /* SKHappy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKHappy.m; sourceTree = "<group>"; };
 		2CA91B1B238B7BDD006A46E7 /* SKCharReverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKCharReverse.m; sourceTree = "<group>"; };
 		2CA91B1D238B7BDD006A46E7 /* SKReverseList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKReverseList.m; sourceTree = "<group>"; };
 		2CA91B1E238B7BDD006A46E7 /* SKCharReverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKCharReverse.h; sourceTree = "<group>"; };
@@ -497,6 +500,8 @@
 				2CCB9384242E5A1E00721924 /* SKHasGroupsSizeX.m */,
 				2C0011502426874C00900770 /* SKGetIntersectionNode.h */,
 				2C0011512426874C00900770 /* SKGetIntersectionNode.m */,
+				2CA25005245A5EFB00433CCF /* SKHappy.h */,
+				2CA25006245A5EFB00433CCF /* SKHappy.m */,
 			);
 			path = Easy;
 			sourceTree = "<group>";
@@ -790,7 +795,7 @@
 			path = Swift;
 			sourceTree = "<group>";
 		};
-		2CA91B1A238B7BDD006A46E7 /* SKAlogrithmVCInterview */ = {
+		2CA91B1A238B7BDD006A46E7 /* SKAlogrithmVCLeetCode */ = {
 			isa = PBXGroup;
 			children = (
 				2C0011352423DDB700900770 /* Easy */,
@@ -816,7 +821,7 @@
 				2C94481A23BA534800376C64 /* SKValidParentheses.h */,
 				2C94481B23BA534800376C64 /* SKValidParentheses.m */,
 			);
-			path = SKAlogrithmVCInterview;
+			path = SKAlogrithmVCLeetCode;
 			sourceTree = "<group>";
 		};
 		4B961B9B94CA06CED5241CD0 /* Pods */ = {
@@ -1126,7 +1131,7 @@
 			children = (
 				2C5B220723A7D45E0018EA68 /* SKBasicSort */,
 				2C3FB0EC238FC1FA00AA181D /* SKTree */,
-				2CA91B1A238B7BDD006A46E7 /* SKAlogrithmVCInterview */,
+				2CA91B1A238B7BDD006A46E7 /* SKAlogrithmVCLeetCode */,
 				D73A183423595F1300C5FBF1 /* SKSortAlgorithmVC.h */,
 				D73A183523595F1300C5FBF1 /* SKSortAlgorithmVC.m */,
 				D717BDE523682B7300D085A8 /* SKBasicAlogrithmVC.h */,
@@ -1487,6 +1492,7 @@
 				2C00115524268BB700900770 /* SKMinIncrementForUnique.m in Sources */,
 				2CAB1624238ADFA900C418BA /* SKAlogrithmVCInterview.m in Sources */,
 				2C115438244426CA000E56CC /* SKFindNumberIn2DArray.m in Sources */,
+				2CA25007245A5EFB00433CCF /* SKHappy.m in Sources */,
 				D73A187023595F1300C5FBF1 /* SKBlockVC.m in Sources */,
 				2CCB938B24347AAB00721924 /* SKMaxDepthAfterSplit.m in Sources */,
 				D79FEA9A2368411300419AEC /* SKLinkListNode.m in Sources */,
