@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 // 面试题：3.http和https有什么区别？
 // 面试题：4.网络请求的状态码都表示什么？
 // 面试题：5.公钥和私钥有什么区别？都应用在哪里？
-
+// 面试题：6.简单介绍一下WKWebView默认缓存策略
 @interface SKPCNetworkingVC : UIViewController
 
 @end

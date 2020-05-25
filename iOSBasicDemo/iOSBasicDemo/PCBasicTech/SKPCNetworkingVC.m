@@ -54,3 +54,13 @@
  参考：面试官，不要再问我三次握手和四次挥手
  https://blog.csdn.net/hyg0811/article/details/102366854
  */
+// 面试题解答：6.简单介绍一下WKWebView默认缓存策略
+/*
+ 1. 是否有缓存，没有则直接发起请求，有则进行下一步
+ 2.是否每次都得进行资源更新校验（响应头是否有 Cache-Control:no-cache 或 Pragma:no-cache 字段），不需要则进入 3，需要则进入 4）
+ 3.缓存是否过期（响应头，Cache-Control:max-age、Expires、Last-Modified 启发式缓存），没过期则使用缓存，不发起请求，过期了则进入 4
+ 4.客户端发起资源更新校验请求（请求头，If-Modified-Since: Last-Modified 值、If-None-Match: ETag 值），如果资源没有更新，服务器返回 304，客户端使用缓存；如果资源有更新，服务器返回 200和资源
+
+ 参考链接：1.https://juejin.im/post/5df75e3a6fb9a016266459da   WKWebView 默认缓存策略与 HTTP 缓存协议
+ 2. https://zhuanlan.zhihu.com/p/60357719 可能是最被误用的 HTTP 响应头之一 Cache-Control: must-revalidate
+ */
